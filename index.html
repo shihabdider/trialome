@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oncology Trialome Live-Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for tree visualization */
+        
+        /* Container for horizontal tree layout */
+        .tree-container {
+            display: flex;
+            flex-direction: column;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        /* Tree generation (depth level) */
+        .tree-generation {
+            display: flex;
+            gap: 2rem;
+            min-width: min-content;
+            align-items: flex-start;
+        }
+        
+        /* Node card styling */
+        .tree-node {
+            min-width: 200px;
+            padding: 1rem;
+            background: white;
+            border: 2px solid #d1d5db;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .tree-node:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-color: #9ca3af;
+        }
+        
+        .tree-node.active {
+            border-color: #3b82f6;
+            border-width: 3px;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .tree-node.highlighted {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        
+        /* Heatmap colors (Research View) */
+        .tree-node.heatmap-red {
+            background-color: #fee2e2;
+        }
+        
+        .tree-node.heatmap-yellow {
+            background-color: #fef3c7;
+        }
+        
+        .tree-node.heatmap-green {
+            background-color: #dcfce7;
+        }
+        
+        /* Node type badges */
+        .node-type-badge {
+            display: inline-block;
+            font-size: 0.625rem;
+            padding: 0.25rem 0.5rem;
+            margin-top: 0.5rem;
+            border-radius: 0.25rem;
+            background: #f3f4f6;
+            color: #6b7280;
+            font-weight: 600;
+        }
+        
+        /* Container for child nodes in a column */
+        .tree-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        /* Connectors between parent and children */
+        .tree-node-wrapper {
+            position: relative;
+        }
+        
+        /* Vertical connector from parent to children */
+        .children-connector {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Line connecting parent to child group */
+        .children-connector::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -1rem;
+            width: 2px;
+            height: 1rem;
+            background-color: #d1d5db;
+        }
+        
+        /* Container for multiple children - draws horizontal line */
+        .children-group {
+            position: relative;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        /* Horizontal connector line between children */
+        .children-group::before {
+            content: '';
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #d1d5db;
+        }
+        
+        /* Vertical line from horizontal connector to each child */
+        .tree-node-wrapper::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -1rem;
+            width: 2px;
+            height: 1rem;
+            background-color: #d1d5db;
+        }
+        
+        /* First child doesn't need the before line (already covered by children-group) */
+        .tree-node-wrapper:first-child::before {
+            content: '';
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="w-full px-6 py-4">
+            <div class="flex items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Oncology Trialome Live-Guide</h1>
+                    <p class="text-sm text-gray-500 mt-1">NCCN Clinical Decision Trees + ClinicalTrials.gov</p>
+                </div>
+                
+                <!-- Global Controls -->
+                <div class="flex items-center gap-6">
+                    <!-- Disease Selector -->
+                    <div class="flex flex-col gap-1">
+                        <label for="disease-select" class="text-xs font-semibold text-gray-700">Disease</label>
+                        <select 
+                            id="disease-select" 
+                            class="px-3 py-2 border border-gray-300 rounded-md text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                            <option value="">Select a disease...</option>
+                        </select>
+                    </div>
+                    
+                    <!-- View Toggle -->
+                    <div class="flex flex-col gap-1">
+                        <label for="view-toggle" class="text-xs font-semibold text-gray-700">View Mode</label>
+                        <div class="flex items-center gap-2 bg-gray-100 p-1 rounded-md">
+                            <button 
+                                id="clinical-view-btn" 
+                                class="view-toggle-btn px-3 py-1 rounded text-sm font-medium bg-white text-gray-900 shadow-sm"
+                                data-view="clinical"
+                            >
+                                Clinical
+                            </button>
+                            <button 
+                                id="research-view-btn" 
+                                class="view-toggle-btn px-3 py-1 rounded text-sm font-medium text-gray-600 hover:text-gray-900"
+                                data-view="research"
+                            >
+                                Research
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Canvas -->
+    <main class="h-[calc(100vh-120px)] overflow-auto bg-gray-50">
+        <div id="tree-canvas" class="tree-container">
+            <div class="text-center text-gray-500 py-8">
+                Select a disease to begin
+            </div>
+        </div>
+    </main>
+    
+    <!-- Trial Modal (hidden by default) -->
+    <div id="trial-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full mx-4 max-h-96 overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+                <h2 id="modal-title" class="text-xl font-bold text-gray-900"></h2>
+                <button 
+                    id="modal-close-btn" 
+                    class="text-gray-500 hover:text-gray-700 text-2xl leading-none"
+                >
+                    ×
+                </button>
+            </div>
+            <div id="modal-content" class="px-6 py-4">
+                <p class="text-gray-600">Loading trials...</p>
+            </div>
+            <div class="border-t border-gray-200 px-6 py-3 bg-gray-50">
+                <a 
+                    id="view-all-link" 
+                    href="#" 
+                    target="_blank" 
+                    class="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                    View all on ClinicalTrials.gov →
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Data and Script -->
+    <script src="data.js"></script>
+    <script>
+        // Global state
+        const state = {
+            currentDisease: null,
+            currentView: 'clinical', // 'clinical' or 'research'
+            selectedNodeId: null,
+            trialCache: {}, // Cache API responses
+        };
+        
+        /**
+         * Initialize the app - populate disease selector
+         */
+        function initApp() {
+            const diseaseSelect = document.getElementById('disease-select');
+            const diseases = Object.keys(TREES).sort();
+            
+            diseases.forEach(disease => {
+                const option = document.createElement('option');
+                option.value = disease;
+                option.textContent = disease.replace(/_/g, ' ');
+                diseaseSelect.appendChild(option);
+            });
+            
+            // Event listeners
+            diseaseSelect.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    loadDisease(e.target.value);
+                }
+            });
+            
+            // View toggle buttons
+            document.getElementById('clinical-view-btn').addEventListener('click', () => {
+                switchView('clinical');
+            });
+            
+            document.getElementById('research-view-btn').addEventListener('click', () => {
+                switchView('research');
+            });
+            
+            // Modal close
+            document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+            document.getElementById('trial-modal').addEventListener('click', (e) => {
+                if (e.target === document.getElementById('trial-modal')) {
+                    closeModal();
+                }
+            });
+        }
+        
+        /**
+         * Switch between Clinical and Research view
+         */
+        function switchView(view) {
+            state.currentView = view;
+            
+            // Update button styles
+            const clinicalBtn = document.getElementById('clinical-view-btn');
+            const researchBtn = document.getElementById('research-view-btn');
+            
+            if (view === 'clinical') {
+                clinicalBtn.classList.add('bg-white', 'text-gray-900', 'shadow-sm');
+                clinicalBtn.classList.remove('text-gray-600', 'hover:text-gray-900');
+                researchBtn.classList.remove('bg-white', 'text-gray-900', 'shadow-sm');
+                researchBtn.classList.add('text-gray-600', 'hover:text-gray-900');
+            } else {
+                researchBtn.classList.add('bg-white', 'text-gray-900', 'shadow-sm');
+                researchBtn.classList.remove('text-gray-600', 'hover:text-gray-900');
+                clinicalBtn.classList.remove('bg-white', 'text-gray-900', 'shadow-sm');
+                clinicalBtn.classList.add('text-gray-600', 'hover:text-gray-900');
+            }
+            
+            // Re-render current disease
+            if (state.currentDisease) {
+                loadDisease(state.currentDisease);
+            }
+        }
+        
+        /**
+         * Load and render a disease tree
+         */
+        function loadDisease(disease) {
+            state.currentDisease = disease;
+            state.selectedNodeId = null;
+            
+            const canvas = document.getElementById('tree-canvas');
+            canvas.innerHTML = '';
+            
+            const tree = TREES[disease];
+            if (!tree || !tree.root) {
+                canvas.innerHTML = '<div class="text-center text-red-500">Error: Tree data not found</div>';
+                return;
+            }
+            
+            // Render the tree
+            renderTree(tree.root, canvas);
+            
+            // If research view, fetch trial data for all treatment nodes
+            if (state.currentView === 'research') {
+                fetchAllTrialCounts(tree.root);
+            }
+        }
+        
+        /**
+         * Recursively render a tree starting from a node
+         * Organizes nodes by generation (depth) for horizontal layout
+         */
+        function renderTree(rootNode, container) {
+            // Collect nodes by generation (BFS)
+            const generations = [];
+            const queue = [{ node: rootNode, generation: 0 }];
+            const visited = new Set();
+            
+            while (queue.length > 0) {
+                const { node, generation } = queue.shift();
+                
+                if (visited.has(node.id)) continue;
+                visited.add(node.id);
+                
+                // Initialize generation array if needed
+                if (!generations[generation]) {
+                    generations[generation] = [];
+                }
+                
+                generations[generation].push(node);
+                
+                // Add children to queue
+                if (node.children && node.children.length > 0) {
+                    node.children.forEach(child => {
+                        queue.push({ node: child, generation: generation + 1 });
+                    });
+                }
+            }
+            
+            // Render each generation
+            generations.forEach((nodes, genIndex) => {
+                const genDiv = document.createElement('div');
+                genDiv.className = 'tree-generation';
+                
+                nodes.forEach(node => {
+                    const nodeEl = createNodeElement(node);
+                    genDiv.appendChild(nodeEl);
+                });
+                
+                container.appendChild(genDiv);
+            });
+        }
+        
+        /**
+         * Create a DOM element for a node
+         */
+        function createNodeElement(node) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'tree-node-wrapper';
+            
+            const nodeEl = document.createElement('div');
+            nodeEl.className = 'tree-node';
+            nodeEl.id = node.id;
+            nodeEl.dataset.nodeId = node.id;
+            
+            // Add type-specific classes
+            if (node.type === 'treatment') {
+                nodeEl.classList.add('font-bold');
+            }
+            
+            // Node content
+            const label = document.createElement('div');
+            label.textContent = node.label;
+            nodeEl.appendChild(label);
+            
+            // Type badge
+            const badge = document.createElement('div');
+            badge.className = 'node-type-badge';
+            badge.textContent = node.type.toUpperCase();
+            nodeEl.appendChild(badge);
+            
+            // Trial count badge (if available)
+            if (node.trialCount !== undefined) {
+                const countBadge = document.createElement('div');
+                countBadge.className = 'node-type-badge mt-2 bg-blue-100 text-blue-700';
+                countBadge.textContent = `${node.trialCount} trials`;
+                nodeEl.appendChild(countBadge);
+            }
+            
+            // Click handler
+            nodeEl.addEventListener('click', () => {
+                selectNode(node);
+            });
+            
+            wrapper.appendChild(nodeEl);
+            return wrapper;
+        }
+        
+        /**
+         * Handle node selection
+         */
+        function selectNode(node) {
+            // Deselect previous
+            if (state.selectedNodeId) {
+                const prevNode = document.getElementById(state.selectedNodeId);
+                if (prevNode) {
+                    prevNode.classList.remove('active', 'highlighted');
+                }
+            }
+            
+            // Select new
+            state.selectedNodeId = node.id;
+            const nodeEl = document.getElementById(node.id);
+            nodeEl.classList.add('active');
+            
+            // Highlight path to root
+            highlightPath(node);
+            
+            // Show trial modal if has search term
+            if (node.search_term && state.currentView === 'clinical') {
+                showTrialModal(node);
+            }
+        }
+        
+        /**
+         * Highlight the path from a node back to root
+         */
+        function highlightPath(node) {
+            // This would require tracking parent pointers
+            // For now, just highlight the selected node
+            const nodeEl = document.getElementById(node.id);
+            if (nodeEl) {
+                nodeEl.classList.add('highlighted');
+            }
+        }
+        
+        /**
+         * Fetch trial counts for all treatment nodes (Research View)
+         */
+        async function fetchAllTrialCounts(node, results = []) {
+            if (node.search_term && node.type === 'treatment') {
+                const count = await fetchTrialCount(node.search_term);
+                results.push({ nodeId: node.id, count });
+                
+                // Update heatmap
+                updateNodeHeatmap(node.id, count);
+            }
+            
+            if (node.children) {
+                for (const child of node.children) {
+                    await fetchAllTrialCounts(child, results);
+                }
+            }
+            
+            return results;
+        }
+        
+        /**
+         * Fetch trial count from ClinicalTrials.gov API
+         */
+        async function fetchTrialCount(searchTerm) {
+            // Check cache first
+            if (state.trialCache[searchTerm]) {
+                return state.trialCache[searchTerm];
+            }
+            
+            try {
+                const url = new URL('https://clinicaltrials.gov/api/v2/studies');
+                url.searchParams.set('query.term', searchTerm);
+                url.searchParams.set('filter.overallStatus', 'RECRUITING');
+                url.searchParams.set('pageSize', '10');
+                
+                const response = await fetch(url);
+                const data = await response.json();
+                const count = data.totalCount || 0;
+                
+                state.trialCache[searchTerm] = count;
+                return count;
+            } catch (error) {
+                console.error('Error fetching trials:', error);
+                return 0;
+            }
+        }
+        
+        /**
+         * Update node with heatmap color based on trial count
+         */
+        function updateNodeHeatmap(nodeId, count) {
+            const nodeEl = document.getElementById(nodeId);
+            if (!nodeEl) return;
+            
+            // Remove previous heatmap colors
+            nodeEl.classList.remove('heatmap-red', 'heatmap-yellow', 'heatmap-green');
+            
+            // Apply new color
+            if (count === 0) {
+                nodeEl.classList.add('heatmap-red');
+            } else if (count >= 1 && count <= 5) {
+                nodeEl.classList.add('heatmap-yellow');
+            } else if (count >= 6) {
+                nodeEl.classList.add('heatmap-green');
+            }
+        }
+        
+        /**
+         * Fetch and display trial details
+         */
+        async function showTrialModal(node) {
+            const modal = document.getElementById('trial-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            const viewAllLink = document.getElementById('view-all-link');
+            
+            title.textContent = node.label;
+            content.innerHTML = '<p class="text-gray-600">Loading trials...</p>';
+            
+            try {
+                const url = new URL('https://clinicaltrials.gov/api/v2/studies');
+                url.searchParams.set('query.term', node.search_term);
+                url.searchParams.set('filter.overallStatus', 'RECRUITING');
+                url.searchParams.set('pageSize', '10');
+                
+                const response = await fetch(url);
+                const data = await response.json();
+                const trials = data.studies || [];
+                
+                // Set view all link
+                const ctURL = new URL('https://clinicaltrials.gov/search');
+                ctURL.searchParams.set('q', node.search_term);
+                ctURL.searchParams.set('status', 'RECRUITING');
+                viewAllLink.href = ctURL.toString();
+                
+                if (trials.length === 0) {
+                    content.innerHTML = '<p class="text-gray-600">No recruiting trials found.</p>';
+                } else {
+                    const list = document.createElement('div');
+                    list.className = 'space-y-3';
+                    
+                    trials.slice(0, 10).forEach(trial => {
+                        const item = document.createElement('div');
+                        item.className = 'border border-gray-200 p-3 rounded-md';
+                        
+                        const titleEl = document.createElement('a');
+                        titleEl.href = `https://clinicaltrials.gov/study/${trial.protocolSection.identificationModule.nctId}`;
+                        titleEl.target = '_blank';
+                        titleEl.className = 'text-blue-600 hover:text-blue-800 font-medium text-sm';
+                        titleEl.textContent = trial.protocolSection.identificationModule.officialTitle || 'Untitled Study';
+                        
+                        const nctId = document.createElement('div');
+                        nctId.className = 'text-xs text-gray-500 mt-1';
+                        nctId.textContent = trial.protocolSection.identificationModule.nctId;
+                        
+                        item.appendChild(titleEl);
+                        item.appendChild(nctId);
+                        list.appendChild(item);
+                    });
+                    
+                    content.innerHTML = '';
+                    content.appendChild(list);
+                }
+            } catch (error) {
+                console.error('Error loading trials:', error);
+                content.innerHTML = '<p class="text-red-600">Error loading trials. Please try again.</p>';
+            }
+            
+            modal.classList.remove('hidden');
+        }
+        
+        /**
+         * Close trial modal
+         */
+        function closeModal() {
+            document.getElementById('trial-modal').classList.add('hidden');
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
