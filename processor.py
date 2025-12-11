@@ -14,8 +14,20 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-# Regex pattern to match unicode superscripts and citations
-UNICODE_CITATION_PATTERN = re.compile(r'[\u00b0-\u00bf\u02b0-\u02ff\u1d00-\u1dff\u1d40-\u1d9f]')
+# Regex pattern to match unicode superscripts, subscripts, and citations
+# Covers: Latin-1 supplement (¹²³), modifier letters, superscripts/subscripts block,
+# phonetic extensions, Canadian syllabics (used as superscripts), and more
+UNICODE_CITATION_PATTERN = re.compile(
+    r'[\u00b0-\u00bf'           # Latin-1 Supplement (°±²³´µ¶·¸¹º»¼½¾¿)
+    r'\u00aa\u00ba'              # ª º (ordinal indicators)
+    r'\u02b0-\u02ff'             # Spacing Modifier Letters
+    r'\u1d00-\u1dff'             # Phonetic Extensions + Supplement
+    r'\u2070-\u209f'             # Superscripts and Subscripts block (⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁱⁿ etc.)
+    r'\u1400-\u167f'             # Canadian Aboriginal Syllabics (ᑫ etc. used as citation marks)
+    r'\ua720-\ua7ff'             # Latin Extended-D (modifier letters)
+    r'\u0370-\u03ff'             # Greek (sometimes used for superscripts)
+    r']+'
+)
 
 # Common medical stop words to remove
 STOPWORDS = {
@@ -32,14 +44,24 @@ def clean_text(text: str) -> str:
     # Remove unicode superscript citations
     cleaned = UNICODE_CITATION_PATTERN.sub('', text)
     
+    # Remove common citation patterns like "See ABC-1" or "(ABC-1)"
+    cleaned = re.sub(r'\s*See\s+[A-Z]+-\d+\s*', '', cleaned)
+    
     # Remove parenthetical content (citations, conditions)
     cleaned = re.sub(r'\([^)]*\)', '', cleaned)
     
     # Remove brackets and content
     cleaned = re.sub(r'\[[^\]]*\]', '', cleaned)
     
+    # Remove dangling ± symbols with no following text
+    cleaned = re.sub(r'\s*±\s*(?=[,\s]|$)', '', cleaned)
+    
     # Remove extra punctuation (commas, brackets, etc.) at the end
     cleaned = re.sub(r'[,\[\]()]+$', '', cleaned)
+    
+    # Clean up multiple consecutive punctuation/operators
+    cleaned = re.sub(r'[+\-*/]{2,}', '+', cleaned)
+    cleaned = re.sub(r'\s*\+\s*\+\s*', ' + ', cleaned)
     
     # Remove leading/trailing whitespace
     cleaned = cleaned.strip()
@@ -48,7 +70,7 @@ def clean_text(text: str) -> str:
     cleaned = re.sub(r'\s+', ' ', cleaned)
     
     # Final cleanup: remove trailing punctuation and whitespace
-    cleaned = cleaned.rstrip(',:;')
+    cleaned = cleaned.rstrip(',:;+-')
     
     return cleaned
 

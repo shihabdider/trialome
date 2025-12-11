@@ -23,9 +23,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_0_child_0",
-                  "label": "Treatmentⁱ",
+                  "label": "Treatment",
                   "type": "treatment",
-                  "search_term": "Treatmentⁱ",
+                  "search_term": "Treatment",
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
@@ -43,7 +43,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_2",
-                      "label": "Cytarabine + + gemtuzumab ozogamicin,,ⁿⁿ",
+                      "label": "Cytarabine + gemtuzumab ozogamicin",
                       "type": "condition",
                       "search_term": "Cytarabine gemtuzumab",
                       "children": []
@@ -58,9 +58,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_1_child_0",
-                      "label": "Consider allogeneic HCT,ᑫᑫ",
+                      "label": "Consider allogeneic HCT",
                       "type": "condition",
-                      "search_term": "Consider HCT,ᑫᑫ",
+                      "search_term": "Consider HCT",
                       "children": []
                     },
                     {
@@ -89,9 +89,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_1_child_0",
-                  "label": "Treatmentⁱ",
+                  "label": "Treatment",
                   "type": "treatment",
-                  "search_term": "Treatmentⁱ",
+                  "search_term": "Treatment",
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
@@ -155,9 +155,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_2_child_0",
-                  "label": "Treatmentⁱ",
+                  "label": "Treatment",
                   "type": "treatment",
-                  "search_term": "Treatmentⁱ",
+                  "search_term": "Treatment",
                   "children": [
                     {
                       "id": "node_root_child_0_child_2_child_0_child_0",
@@ -168,7 +168,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_2_child_0_child_1",
-                      "label": "Cytarabine + + gemtuzumab ozogamicin,,ⁿⁿ",
+                      "label": "Cytarabine + gemtuzumab ozogamicin",
                       "type": "condition",
                       "search_term": "Cytarabine gemtuzumab",
                       "children": []
@@ -257,9 +257,9 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_0_child_3_child_1",
-                  "label": "Treatmentⁱ",
+                  "label": "Treatment",
                   "type": "treatment",
-                  "search_term": "Treatmentⁱ",
+                  "search_term": "Treatment",
                   "children": [
                     {
                       "id": "node_root_child_0_child_3_child_1_child_0",
@@ -284,7 +284,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_3_child_1_child_3",
-                      "label": "FLAG-IDA ⁿ",
+                      "label": "FLAG-IDA",
                       "type": "condition",
                       "search_term": "FLAG-IDA",
                       "children": []
@@ -686,7 +686,7 @@ const TREES = {
       "children": [
         {
           "id": "node_root_child_0",
-          "label": "First relapse ⁰",
+          "label": "First relapse",
           "type": "condition",
           "search_term": "First",
           "children": [
@@ -704,9 +704,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Anthracycline-based regimen as per APL-3,ᑫ",
+                      "label": "Anthracycline-based regimen as per APL-3",
                       "type": "condition",
-                      "search_term": "Anthracycline-based APL-3,ᑫ",
+                      "search_term": "Anthracycline-based APL-3",
                       "children": []
                     },
                     {
@@ -734,7 +734,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
-                      "label": "Arsenic trioxide ATRA gemtuzumab ozogamicin,ᑫ",
+                      "label": "Arsenic trioxide ATRA gemtuzumab ozogamicin",
                       "type": "condition",
                       "search_term": "Arsenic ATRA gemtuzumab",
                       "children": []
@@ -757,7 +757,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_2_child_0_child_0",
-                      "label": "Arsenic trioxide ATRA ,ᑫ",
+                      "label": "Arsenic trioxide ATRA",
                       "type": "condition",
                       "search_term": "Arsenic ATRA",
                       "children": []
@@ -969,9 +969,9 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_1_child_0_child_0_child_2_child_0",
-                          "label": "Systemic therapy,, and/or Total penectomyⁿ and/or RT,ⁿ",
+                          "label": "Systemic therapy,, and/or Total penectomy and/or RT",
                           "type": "condition",
-                          "search_term": "Systemic Total RT,ⁿ",
+                          "search_term": "Systemic Total RT",
                           "children": []
                         }
                       ]
@@ -1021,9 +1021,9 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_1_child_0_child_1_child_2_child_0",
-                          "label": "Systemic therapy,, and/or RT,ⁿ",
+                          "label": "Systemic therapy,, and/or RT",
                           "type": "condition",
-                          "search_term": "Systemic RT,ⁿ",
+                          "search_term": "Systemic RT",
                           "children": []
                         }
                       ]
@@ -1310,7 +1310,7 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "Continuing chemotherapy,ᑫ only with palliative surgery",
+                  "label": "Continuing chemotherapy, only with palliative surgery",
                   "type": "condition",
                   "search_term": "Continuing",
                   "children": []
@@ -1364,7 +1364,7 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_1_child_0",
-                  "label": "oncoplastic reconstructionⁿ",
+                  "label": "oncoplastic reconstruction",
                   "type": "condition",
                   "search_term": null,
                   "children": []
@@ -1387,9 +1387,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "See BINV-4 to determine whether adjuvant systemic therapy is indicated.",
+                  "label": "to determine whether adjuvant systemic therapy is indicated.",
                   "type": "condition",
-                  "search_term": "See BINV-4",
+                  "search_term": null,
                   "children": []
                 },
                 {
@@ -1418,7 +1418,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_2_child_0",
-              "label": "pN0 or cN0⁰,,ᑫ",
+              "label": "pN0 or cN0",
               "type": "condition",
               "search_term": null,
               "children": [
@@ -1430,7 +1430,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_2_child_0_child_0_child_0",
-                      "label": "Whole breast RT boost⁵ to tumor bed",
+                      "label": "Whole breast RT boost to tumor bed",
                       "type": "condition",
                       "search_term": "Whole RT",
                       "children": []
@@ -1580,7 +1580,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_1_child_0",
-                      "label": "oncoplastic reconstructionⁿ",
+                      "label": "oncoplastic reconstruction",
                       "type": "condition",
                       "search_term": null,
                       "children": []
@@ -1625,7 +1625,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_1",
-                      "label": "Any ypN+",
+                      "label": "Any ypN",
                       "type": "condition",
                       "search_term": "Any",
                       "children": [
@@ -1738,7 +1738,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_0_child_1",
-                      "label": "Any ypN+",
+                      "label": "Any ypN",
                       "type": "condition",
                       "search_term": "Any",
                       "children": [
@@ -2261,9 +2261,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "See BINV-4 to determine whether adjuvant systemic therapy is indicated.",
+                  "label": "to determine whether adjuvant systemic therapy is indicated.",
                   "type": "condition",
-                  "search_term": "See BINV-4",
+                  "search_term": null,
                   "children": []
                 },
                 {
@@ -2319,9 +2319,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_2_child_1_child_0_child_0",
-                      "label": "Consider PMRT⁵ to chest wall",
+                      "label": "Consider PMRT to chest wall",
                       "type": "condition",
-                      "search_term": "Consider PMRT⁵",
+                      "search_term": "Consider PMRT",
                       "children": []
                     },
                     {
@@ -2401,9 +2401,9 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_5_child_0_child_1",
-                      "label": "If not feasible, then strongly consider PMRT⁵ to chest wall comprehensive RNI",
+                      "label": "If not feasible, then strongly consider PMRT to chest wall comprehensive RNI",
                       "type": "condition",
-                      "search_term": "PMRT⁵ RNI",
+                      "search_term": "PMRT RNI",
                       "children": []
                     }
                   ]
@@ -6132,9 +6132,9 @@ const TREES = {
                         },
                         {
                           "id": "node_root_child_0_child_0_child_0_child_0_child_1",
-                          "label": "Palliative symptom management, including localized RTⁿ to symptomatic sites",
+                          "label": "Palliative symptom management, including localized RT to symptomatic sites",
                           "type": "condition",
-                          "search_term": "Palliative RTⁿ",
+                          "search_term": "Palliative RT",
                           "children": []
                         }
                       ]
@@ -6179,9 +6179,9 @@ const TREES = {
                                     },
                                     {
                                       "id": "node_root_child_0_child_0_child_0_child_1_child_0_child_1_child_0_child_1",
-                                      "label": "Palliative symptom management, including localized RTⁿ to symptomatic sites",
+                                      "label": "Palliative symptom management, including localized RT to symptomatic sites",
                                       "type": "condition",
-                                      "search_term": "Palliative RTⁿ",
+                                      "search_term": "Palliative RT",
                                       "children": []
                                     }
                                   ]
@@ -6218,9 +6218,9 @@ const TREES = {
                                 },
                                 {
                                   "id": "node_root_child_0_child_0_child_0_child_1_child_1_child_0_child_1",
-                                  "label": "Palliative symptom management, including localized RTⁿ to symptomatic sites",
+                                  "label": "Palliative symptom management, including localized RT to symptomatic sites",
                                   "type": "condition",
-                                  "search_term": "Palliative RTⁿ",
+                                  "search_term": "Palliative RT",
                                   "children": []
                                 }
                               ]
@@ -6551,7 +6551,7 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "Nodule surveillance⁹",
+                  "label": "Nodule surveillance",
                   "type": "next",
                   "search_term": "Nodule",
                   "children": []
@@ -6574,7 +6574,7 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_2_child_0_child_0",
-                  "label": "Nodule surveillance⁹",
+                  "label": "Nodule surveillance",
                   "type": "next",
                   "search_term": "Nodule",
                   "children": []
@@ -6618,7 +6618,7 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_3_child_0_child_1",
-                  "label": "Nodule surveillance⁹",
+                  "label": "Nodule surveillance",
                   "type": "next",
                   "search_term": "Nodule",
                   "children": []
@@ -6828,7 +6828,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_0_child_1",
-              "label": "Biopsy suspicious lymph nodes or contralateral lesions that meet sonographic criteria by ATA and TI-RADSⁿ",
+              "label": "Biopsy suspicious lymph nodes or contralateral lesions that meet sonographic criteria by ATA and TI-RADS",
               "type": "condition",
               "search_term": null,
               "children": []
