@@ -39,29 +39,21 @@ STOPWORDS = {
 
 def clean_text(text: str) -> str:
     """
-    Remove unicode citations, parenthetical conditions, and clean formatting.
+    Remove unicode citations while preserving clinical information.
+    Only removes actual citation markers, not meaningful parenthetical content.
     """
     # Remove unicode superscript citations
     cleaned = UNICODE_CITATION_PATTERN.sub('', text)
     
-    # Remove common citation patterns like "See ABC-1" or "(ABC-1)"
+    # Remove common citation patterns like "See ABC-1" or "(ABC-1)" - these are cross-references
     cleaned = re.sub(r'\s*See\s+[A-Z]+-\d+\s*', '', cleaned)
     
-    # Remove parenthetical content (citations, conditions)
-    cleaned = re.sub(r'\([^)]*\)', '', cleaned)
+    # Remove ONLY citation-style parentheticals (e.g., "(ABC-1)", "(AML-A)")
+    # These are cross-references to other guideline pages, not clinical info
+    cleaned = re.sub(r'\s*\([A-Z]+-[A-Z0-9]+\)', '', cleaned)
     
-    # Remove brackets and content
-    cleaned = re.sub(r'\[[^\]]*\]', '', cleaned)
-    
-    # Remove dangling ± symbols with no following text
-    cleaned = re.sub(r'\s*±\s*(?=[,\s]|$)', '', cleaned)
-    
-    # Remove extra punctuation (commas, brackets, etc.) at the end
-    cleaned = re.sub(r'[,\[\]()]+$', '', cleaned)
-    
-    # Clean up multiple consecutive punctuation/operators
-    cleaned = re.sub(r'[+\-*/]{2,}', '+', cleaned)
-    cleaned = re.sub(r'\s*\+\s*\+\s*', ' + ', cleaned)
+    # Remove brackets with guideline references (e.g., "[AML-7]")
+    cleaned = re.sub(r'\s*\[[A-Z]+-\d+\]', '', cleaned)
     
     # Remove leading/trailing whitespace
     cleaned = cleaned.strip()
@@ -70,7 +62,7 @@ def clean_text(text: str) -> str:
     cleaned = re.sub(r'\s+', ' ', cleaned)
     
     # Final cleanup: remove trailing punctuation and whitespace
-    cleaned = cleaned.rstrip(',:;+-')
+    cleaned = cleaned.rstrip(',:;')
     
     return cleaned
 
@@ -144,6 +136,7 @@ def extract_search_terms(text: str) -> Optional[str]:
 def process_node(key: str, value: Any, node_id: str = None) -> Dict[str, Any]:
     """
     Recursively process a JSON node into the target structure.
+    Preserves all information from the original JSON.
     """
     if node_id is None:
         node_id = f"node_{hash(key) % 100000:05d}"
@@ -170,8 +163,21 @@ def process_node(key: str, value: Any, node_id: str = None) -> Dict[str, Any]:
         "children": []
     }
     
-    # Process value recursively
-    if isinstance(value, dict):
+    # Process value recursively based on type
+    if isinstance(value, str):
+        # String value becomes a child node with the string as its label
+        cleaned_value = clean_text(value)
+        if cleaned_value:
+            child_node = {
+                "id": f"{node_id}_child_0",
+                "label": cleaned_value,
+                "type": "condition",
+                "search_term": extract_search_terms(cleaned_value),
+                "children": []
+            }
+            node["children"].append(child_node)
+    
+    elif isinstance(value, dict):
         child_id = 0
         for child_key, child_value in value.items():
             child_node = process_node(
@@ -183,15 +189,28 @@ def process_node(key: str, value: Any, node_id: str = None) -> Dict[str, Any]:
             child_id += 1
     
     elif isinstance(value, list):
-        # Treatment options in a list
+        # Handle all items in list (strings, dicts, etc.)
         for idx, item in enumerate(value):
             if isinstance(item, str):
-                child_node = process_node(
-                    item,
-                    {},
-                    f"{node_id}_child_{idx}"
-                )
-                node["children"].append(child_node)
+                cleaned_item = clean_text(item)
+                if cleaned_item:
+                    child_node = {
+                        "id": f"{node_id}_child_{idx}",
+                        "label": cleaned_item,
+                        "type": "condition",
+                        "search_term": extract_search_terms(cleaned_item),
+                        "children": []
+                    }
+                    node["children"].append(child_node)
+            elif isinstance(item, dict):
+                # Process each key-value pair in the dict
+                for item_key, item_value in item.items():
+                    child_node = process_node(
+                        item_key,
+                        item_value,
+                        f"{node_id}_child_{idx}_{hash(item_key) % 10000:04d}"
+                    )
+                    node["children"].append(child_node)
     
     return node
 

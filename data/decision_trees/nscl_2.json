@@ -1,49 +1,32 @@
 {
   "Incidental finding: solid nodule(s) on chest CT": {
     "Low risk": {
-      "<6 mm": {
-        "Follow-up": "No routine follow-up"
+      "<6 mm": "No routine follow-up",
+      "6-8 mm": {
+        "CT at 6-12 mo": {
+          "Stable": "Consider CT at 18-24 mo"
+        }
       },
-      "6Ð8 mm": {
-        "Follow-up": [
-          "CT at 6Ð12 mo",
-          {
-            "If stable": "Consider CT at 18Ð24 mo"
-          }
-        ]
-      },
-      ">8 mm": {
-        "Follow-up": [
-          "Consider CT at 3 mo",
-          "FDG-PET/CT",
-          "Biopsy"
-        ]
-      }
+      ">8 mm": [
+        "Consider CT at 3 mo",
+        "FDG-PET/CT, or biopsy"
+      ]
     },
     "High risk": {
       "<6 mm": {
-        "Follow-up": [
-          "CT at 12 mo (optional)",
-          {
-            "If stable": "No routine follow-up"
-          }
-        ]
+        "CT at 12 mo (optional)": {
+          "Stable": "No routine follow-up"
+        }
       },
-      "6Ð8 mm": {
-        "Follow-up": [
-          "CT at 6Ð12 mo",
-          {
-            "If stable": "Repeat CT at 18Ð24 mo"
-          }
-        ]
+      "6-8 mm": {
+        "CT at 6-12 mo": {
+          "Stable": "Repeat CT at 18-24 mo"
+        }
       },
-      ">8 mm": {
-        "Follow-up": [
-          "Consider CT at 3 mo",
-          "FDG-PET/CT",
-          "Biopsy"
-        ]
-      }
+      ">8 mm": [
+        "Consider CT at 3 mo",
+        "FDG-PET/CT, or biopsy"
+      ]
     }
   }
 }

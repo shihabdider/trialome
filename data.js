@@ -29,23 +29,23 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Cytarabine gemtuzumab ozogamicin",
+                      "label": "Cytarabine gemtuzumab ozogamicin (CD33 positive) (only if gemtuzumab ozogamicin was given during induction)",
                       "type": "condition",
-                      "search_term": "Cytarabine gemtuzumab",
+                      "search_term": "Cytarabine gemtuzumab gemtuzumab",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_1",
-                      "label": "Cytarabine",
+                      "label": "Cytarabine (5 or 7 days) [(daunorubicin or idarubicin) or (mitoxantrone for age ≥60 y)]",
                       "type": "condition",
                       "search_term": "Cytarabine",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_2",
-                      "label": "Cytarabine + gemtuzumab ozogamicin",
+                      "label": "Cytarabine + (daunorubicin or idarubicin) + gemtuzumab ozogamicin,, (CD33 positive) (only if gemtuzumab ozogamicin was given during induction)",
                       "type": "condition",
-                      "search_term": "Cytarabine gemtuzumab",
+                      "search_term": "Cytarabine gemtuzumab gemtuzumab",
                       "children": []
                     }
                   ]
@@ -66,14 +66,14 @@ const TREES = {
                     {
                       "id": "node_root_child_0_child_0_child_1_child_1",
                       "label": "Maintenance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Maintenance",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_0_child_1_child_2",
                       "label": "Surveillance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Surveillance",
                       "children": []
                     }
@@ -95,21 +95,21 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
-                      "label": "Allogeneic HCT",
+                      "label": "Allogeneic HCT (preferred for FLT3-ITD)",
                       "type": "condition",
-                      "search_term": "Allogeneic HCT",
+                      "search_term": "Allogeneic HCT FLT3-ITD)",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_1",
-                      "label": "Cytarabine + midostaurin",
+                      "label": "Cytarabine + midostaurin (FLT3-ITD or TKD)",
                       "type": "condition",
-                      "search_term": "Cytarabine midostaurin",
+                      "search_term": "Cytarabine midostaurin TKD)",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_2",
-                      "label": "Cytarabine + quizartinib",
+                      "label": "Cytarabine + quizartinib (FLT3-ITD only)",
                       "type": "condition",
                       "search_term": "Cytarabine quizartinib",
                       "children": []
@@ -124,7 +124,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_1_child_0",
-                      "label": "Allogeneic HCT",
+                      "label": "Allogeneic HCT (if not previously performed)",
                       "type": "condition",
                       "search_term": "Allogeneic HCT",
                       "children": []
@@ -132,14 +132,14 @@ const TREES = {
                     {
                       "id": "node_root_child_0_child_1_child_1_child_1",
                       "label": "Maintenance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Maintenance",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_1_child_2",
                       "label": "Surveillance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Surveillance",
                       "children": []
                     }
@@ -168,9 +168,9 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_2_child_0_child_1",
-                      "label": "Cytarabine + gemtuzumab ozogamicin",
+                      "label": "Cytarabine + (daunorubicin or idarubicin) + gemtuzumab ozogamicin,, (CD33 positive) (only if gemtuzumab ozogamicin was given during induction)",
                       "type": "condition",
-                      "search_term": "Cytarabine gemtuzumab",
+                      "search_term": "Cytarabine gemtuzumab gemtuzumab",
                       "children": []
                     },
                     {
@@ -190,7 +190,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_2_child_1_child_0",
-                      "label": "Allogeneic HCT",
+                      "label": "Allogeneic HCT (if not previously performed)",
                       "type": "condition",
                       "search_term": "Allogeneic HCT",
                       "children": []
@@ -198,14 +198,14 @@ const TREES = {
                     {
                       "id": "node_root_child_0_child_2_child_1_child_1",
                       "label": "Maintenance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Maintenance",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_2_child_1_child_2",
                       "label": "Surveillance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Surveillance",
                       "children": []
                     }
@@ -227,7 +227,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_3_child_0_child_0",
-                      "label": "With and without TP53 mutation or del abnormality",
+                      "label": "With and without TP53 mutation or del(17p) abnormality",
                       "type": "condition",
                       "search_term": null,
                       "children": []
@@ -248,9 +248,9 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_3_child_0_child_3",
-                      "label": "Cytogenetic changes consistent with MDS",
+                      "label": "Cytogenetic changes consistent with MDS (previously classified as AML-MRC)",
                       "type": "condition",
-                      "search_term": "Cytogenetic MDS",
+                      "search_term": "Cytogenetic MDS AML-MRC)",
                       "children": []
                     }
                   ]
@@ -263,9 +263,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_3_child_1_child_0",
-                      "label": "Allogeneic HCT",
+                      "label": "Allogeneic HCT, (preferred)",
                       "type": "condition",
-                      "search_term": "Allogeneic HCT",
+                      "search_term": "Allogeneic HCT,",
                       "children": []
                     },
                     {
@@ -277,23 +277,23 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_3_child_1_child_2",
-                      "label": "CPX-351/dual-drug liposomal encapsulation of cytarabine and daunorubicin",
+                      "label": "CPX-351/dual-drug liposomal encapsulation of cytarabine and daunorubicin (preferred only if given during induction)",
                       "type": "condition",
                       "search_term": "CPX-351/dual-drug cytarabine daunorubicin",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_3_child_1_child_3",
-                      "label": "FLAG-IDA",
+                      "label": "FLAG-IDA (use with caution in patients >60 y) (preferred only if given during induction)",
                       "type": "condition",
                       "search_term": "FLAG-IDA",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_3_child_1_child_4",
-                      "label": "Continuation of lower intensity regimen used for induction + venetoclax)",
+                      "label": "Continuation of lower intensity regimen used for induction (e.g., HMA, azacitidine or decitabine) + venetoclax)",
                       "type": "condition",
-                      "search_term": "Continuation venetoclax",
+                      "search_term": "Continuation HMA, azacitidine",
                       "children": []
                     }
                   ]
@@ -306,7 +306,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_3_child_2_child_0",
-                      "label": "Allogeneic HCT",
+                      "label": "Allogeneic HCT (if not previously performed)",
                       "type": "condition",
                       "search_term": "Allogeneic HCT",
                       "children": []
@@ -314,14 +314,14 @@ const TREES = {
                     {
                       "id": "node_root_child_0_child_3_child_2_child_1",
                       "label": "Maintenance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Maintenance",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_3_child_2_child_2",
                       "label": "Surveillance",
-                      "type": "next",
+                      "type": "condition",
                       "search_term": "Surveillance",
                       "children": []
                     }
@@ -370,14 +370,30 @@ const TREES = {
                           "label": "Negative",
                           "type": "condition",
                           "search_term": "Negative",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_child_0_child_0_child_0",
+                              "label": "Observe and repeat LP if symptoms persist",
+                              "type": "condition",
+                              "search_term": "Observe LP",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_0_child_0_child_0_child_0_child_1",
                           "label": "Positive by morphology or immunotype by flow cytometry",
                           "type": "condition",
                           "search_term": "Positive",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_child_0_child_1_child_0",
+                              "label": "IT chemotherapy 2x/wk until clear, then weekly x 4–6 wks",
+                              "type": "condition",
+                              "search_term": "IT chemotherapy",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -391,7 +407,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_1_child_0",
-                      "label": "Consider fine-needle aspiration or biopsy",
+                      "label": "Consider fine-needle aspiration (FNA) or biopsy",
                       "type": "condition",
                       "search_term": "Consider",
                       "children": [
@@ -442,11 +458,19 @@ const TREES = {
                   "label": "Negative",
                   "type": "condition",
                   "search_term": "Negative",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "Observe and repeat LP if symptoms present",
+                      "type": "condition",
+                      "search_term": "Observe LP",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
-                  "label": "Cerebrospinal fluid positive by morphology or immunotype by flow cytometry",
+                  "label": "Cerebrospinal fluid (CSF) positive by morphology or immunotype by flow cytometry",
                   "type": "condition",
                   "search_term": "Cerebrospinal",
                   "children": [
@@ -485,7 +509,15 @@ const TREES = {
           "label": "Cycle 1",
           "type": "condition",
           "search_term": "Cycle",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "Venetoclax + HMA or LDAC",
+              "type": "condition",
+              "search_term": "Venetoclax HMA LDAC",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -501,24 +533,32 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "CR",
+                  "label": "CR (Response criteria, see AML-I)",
                   "type": "condition",
-                  "search_term": "CR",
+                  "search_term": null,
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_0_child_0",
                       "label": "Action",
                       "type": "condition",
                       "search_term": "Action",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_0_child_0",
+                          "label": "Start cycle 2 on day 29 or later if marrow results not available on day 29",
+                          "type": "condition",
+                          "search_term": "Start",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
-                  "label": "MLFS or CRi",
+                  "label": "MLFS or CRi (Response criteria, see AML-I)",
                   "type": "condition",
-                  "search_term": "MLFS CRi",
+                  "search_term": null,
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_1_child_0",
@@ -531,21 +571,45 @@ const TREES = {
                           "label": "Duration",
                           "type": "condition",
                           "search_term": "Duration",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_0_child_0",
+                              "label": "up to 14 days",
+                              "type": "condition",
+                              "search_term": null,
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_0_child_1",
                           "label": "Purpose",
                           "type": "condition",
                           "search_term": "Purpose",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_1_child_0",
+                              "label": "allow recovery of ANC >0.5 x 10/L and platelets >50 x 10/L",
+                              "type": "condition",
+                              "search_term": "ANC",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_0_child_2",
                           "label": "Note",
                           "type": "condition",
                           "search_term": "Note",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_2_child_0",
+                              "label": "G-CSF may be added",
+                              "type": "condition",
+                              "search_term": "G-CSF",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -560,14 +624,30 @@ const TREES = {
                           "label": "Action",
                           "type": "condition",
                           "search_term": "Action",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_0_child_0",
+                              "label": "Start cycle 2",
+                              "type": "condition",
+                              "search_term": "Start",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_1_child_1",
                           "label": "Considerations",
                           "type": "condition",
                           "search_term": "Considerations",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_1_child_0",
+                              "label": "Reduction of venetoclax duration to 21 days",
+                              "type": "condition",
+                              "search_term": "Reduction venetoclax",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_1_child_2",
@@ -583,7 +663,7 @@ const TREES = {
                               "children": [
                                 {
                                   "id": "node_root_child_1_child_0_child_1_child_1_child_2_child_0_child_0",
-                                  "label": "Consider further reduction in venetoclax duration if cytopenias recur",
+                                  "label": "Consider further reduction in venetoclax duration (14 days, 7 days, or 5 days) if cytopenias recur",
                                   "type": "condition",
                                   "search_term": "Consider venetoclax",
                                   "children": []
@@ -605,16 +685,24 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_1_child_0_child_2",
-                  "label": "Lack of response",
+                  "label": "Lack of response (Response criteria, see AML-I)",
                   "type": "condition",
-                  "search_term": "Lack",
+                  "search_term": null,
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_2_child_0",
                       "label": "Action",
                       "type": "condition",
                       "search_term": "Action",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_2_child_0_child_0",
+                          "label": "Start cycle 2 without delay",
+                          "type": "condition",
+                          "search_term": "Start",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_1_child_0_child_2_child_1",
@@ -624,36 +712,52 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_1_child_0_child_2_child_1_child_0",
-                          "label": "BM aspirate and biopsy",
+                          "label": "BM aspirate and biopsy (days 21–28)",
                           "type": "condition",
                           "search_term": "BM",
                           "children": [
                             {
                               "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_0",
-                              "label": "MLFS or better response",
+                              "label": "MLFS or better response (Response criteria, see AML-I)",
                               "type": "condition",
-                              "search_term": "MLFS",
+                              "search_term": null,
                               "children": []
                             },
                             {
                               "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_1",
-                              "label": "Lack of response",
+                              "label": "Lack of response (Response criteria, see AML-I)",
                               "type": "condition",
-                              "search_term": "Lack",
+                              "search_term": null,
                               "children": [
                                 {
                                   "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_1_child_0",
                                   "label": "Action",
                                   "type": "condition",
                                   "search_term": "Action",
-                                  "children": []
+                                  "children": [
+                                    {
+                                      "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_1_child_0_child_0",
+                                      "label": "Continue therapy up to 4 cycles",
+                                      "type": "condition",
+                                      "search_term": "Continue",
+                                      "children": []
+                                    }
+                                  ]
                                 },
                                 {
                                   "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_1_child_1",
                                   "label": "If no response",
                                   "type": "condition",
                                   "search_term": null,
-                                  "children": []
+                                  "children": [
+                                    {
+                                      "id": "node_root_child_1_child_0_child_2_child_1_child_0_child_1_child_1_child_0",
+                                      "label": "See Therapy for Relapsed/Refractory Disease",
+                                      "type": "condition",
+                                      "search_term": "See Therapy Relapsed/Refractory Disease",
+                                      "children": []
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -664,7 +768,15 @@ const TREES = {
                           "label": "If disease progression",
                           "type": "condition",
                           "search_term": null,
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_2_child_1_child_1_child_0",
+                              "label": "See Therapy for Relapsed/Refractory Disease",
+                              "type": "condition",
+                              "search_term": "See Therapy Relapsed/Refractory Disease",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -686,13 +798,13 @@ const TREES = {
       "children": [
         {
           "id": "node_root_child_0",
-          "label": "First relapse",
+          "label": "First relapse (morphologic or molecular)",
           "type": "condition",
           "search_term": "First",
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "Early relapse after ATRA and arsenic trioxide",
+              "label": "Early relapse (<6 mo) after ATRA and arsenic trioxide (no anthracycline)",
               "type": "condition",
               "search_term": "Early ATRA",
               "children": [
@@ -722,7 +834,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_0_child_1",
-              "label": "No prior exposure to arsenic trioxide OR early relapse after ATRA + anthracycline-containing regimen",
+              "label": "No prior exposure to arsenic trioxide OR early relapse (<6 mo) after ATRA + anthracycline-containing regimen",
               "type": "condition",
               "search_term": "ATRA",
               "children": [
@@ -745,7 +857,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_0_child_2",
-              "label": "Late relapse after arsenic trioxide-containing regimen",
+              "label": "Late relapse (≥6 mo) after arsenic trioxide-containing regimen",
               "type": "condition",
               "search_term": "Late",
               "children": [
@@ -757,9 +869,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_2_child_0_child_0",
-                      "label": "Arsenic trioxide ATRA",
+                      "label": "Arsenic trioxide ATRA (anthracycline or gemtuzumab ozogamicin)",
                       "type": "condition",
-                      "search_term": "Arsenic ATRA",
+                      "search_term": "Arsenic ATRA gemtuzumab",
                       "children": []
                     }
                   ]
@@ -770,7 +882,7 @@ const TREES = {
         },
         {
           "id": "node_root_child_1",
-          "label": "Second remission",
+          "label": "Second remission (morphologic)",
           "type": "condition",
           "search_term": "Second",
           "children": [
@@ -785,13 +897,21 @@ const TREES = {
                   "label": "Consider CNS prophylaxis",
                   "type": "condition",
                   "search_term": "Consider CNS",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "IT chemotherapy (methotrexate or cytarabine)",
+                      "type": "condition",
+                      "search_term": "IT chemotherapy",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
-                  "label": "PCR result",
+                  "label": "PCR result (by BM)",
                   "type": "condition",
-                  "search_term": "PCR",
+                  "search_term": "PCR BM)",
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_1_child_0",
@@ -804,14 +924,30 @@ const TREES = {
                           "label": "Transplant candidate",
                           "type": "condition",
                           "search_term": "Transplant",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_0_child_0",
+                              "label": "Autologous HCT",
+                              "type": "condition",
+                              "search_term": "Autologous HCT",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_0_child_1",
                           "label": "Not transplant candidate",
                           "type": "condition",
                           "search_term": null,
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_1_child_0",
+                              "label": "Arsenic trioxide consolidation (total of 6 cycles)",
+                              "type": "condition",
+                              "search_term": "Arsenic",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -826,14 +962,30 @@ const TREES = {
                           "label": "Transplant candidate",
                           "type": "condition",
                           "search_term": "Transplant",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_0_child_0",
+                              "label": "Matched sibling or alternative donor HCT",
+                              "type": "condition",
+                              "search_term": "Matched HCT",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_1_child_1",
                           "label": "Not transplant candidate",
                           "type": "condition",
                           "search_term": null,
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_1_child_0",
+                              "label": "Clinical trial",
+                              "type": "condition",
+                              "search_term": "Clinical",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -894,7 +1046,15 @@ const TREES = {
               "label": "Additional Workup",
               "type": "condition",
               "search_term": "Additional Workup",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0",
+                  "label": "Repeat TUR followed by intraurethral chemotherapy or BCG (selected cases)",
+                  "type": "condition",
+                  "search_term": "Repeat TUR chemotherapy BCG",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -945,7 +1105,7 @@ const TREES = {
                           "children": [
                             {
                               "id": "node_root_child_1_child_0_child_0_child_1_child_0_child_0",
-                              "label": "Additional surgery or Chemoradiotherapy, or RT",
+                              "label": "Additional surgery or Chemoradiotherapy, (preferred) or RT",
                               "type": "condition",
                               "search_term": "Additional Chemoradiotherapy, RT",
                               "children": []
@@ -957,7 +1117,15 @@ const TREES = {
                           "label": "Negative margin",
                           "type": "condition",
                           "search_term": "Negative",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_0_child_1_child_1_child_0",
+                              "label": "Follow-up imaging with cystoscopy",
+                              "type": "condition",
+                              "search_term": "Follow-up",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -989,7 +1157,15 @@ const TREES = {
                       "label": "Primary Treatment",
                       "type": "treatment",
                       "search_term": "Primary Treatment",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_1_child_0_child_0",
+                          "label": "Urethrectomy cystoprostatectomy",
+                          "type": "condition",
+                          "search_term": "Urethrectomy",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_1_child_0_child_1_child_1",
@@ -1002,14 +1178,30 @@ const TREES = {
                           "label": "pT1/pT2 and pN0",
                           "type": "condition",
                           "search_term": null,
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_0_child_0",
+                              "label": "Follow-up imaging with cystoscopy",
+                              "type": "condition",
+                              "search_term": "Follow-up",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_0_child_1_child_1_child_1",
                           "label": "pT3/pT4 or pN1/pN2",
                           "type": "condition",
                           "search_term": null,
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_1_child_0",
+                              "label": "Consider chemotherapy, or Chemoradiotherapy",
+                              "type": "condition",
+                              "search_term": "Consider Chemoradiotherapy",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1060,7 +1252,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_0_child_2",
-                      "label": "or Distal urethrectomy",
+                      "label": "or Distal urethrectomy (depending on tumor location)",
                       "type": "condition",
                       "search_term": "Distal",
                       "children": []
@@ -1072,7 +1264,15 @@ const TREES = {
                   "label": "Adjuvant Treatment",
                   "type": "treatment",
                   "search_term": "Adjuvant Treatment",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_1_child_1_child_0",
+                      "label": "Follow-up imaging with cystoscopy",
+                      "type": "condition",
+                      "search_term": "Follow-up",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_1_child_2",
@@ -1089,14 +1289,14 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_2_child_1",
-                      "label": "or Chemoradiotherapy",
+                      "label": "or Chemoradiotherapy, (if no prior RT)",
                       "type": "condition",
-                      "search_term": "Chemoradiotherapy",
+                      "search_term": "Chemoradiotherapy, RT)",
                       "children": []
                     },
                     {
                       "id": "node_root_child_1_child_1_child_2_child_2",
-                      "label": "or Pelvic exenteration",
+                      "label": "or Pelvic exenteration (category 2B)",
                       "type": "condition",
                       "search_term": "Pelvic",
                       "children": []
@@ -1126,9 +1326,9 @@ const TREES = {
         },
         {
           "id": "node_root_child_1",
-          "label": "Imaging of primary site, timing, and modality, as clinically indicated for up to 10 years",
+          "label": "Imaging of primary site, timing, and modality, as clinically indicated (e.g., x-ray, MRI with and without contrast CT with contrast) for up to 10 years",
           "type": "condition",
-          "search_term": "Imaging",
+          "search_term": "Imaging MRI CT",
           "children": []
         },
         {
@@ -1159,7 +1359,97 @@ const TREES = {
               "label": "Options",
               "type": "condition",
               "search_term": "Options",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0_6103",
+                  "label": "Wide excision",
+                  "type": "condition",
+                  "search_term": "Wide",
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_0_6103_child_0",
+                      "label": "Margins",
+                      "type": "condition",
+                      "search_term": "Margins",
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0",
+                          "label": "Positive margins",
+                          "type": "condition",
+                          "search_term": "Positive",
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0_child_0",
+                              "label": "Continue chemotherapy, (category 1) followed by RT",
+                              "type": "condition",
+                              "search_term": "Continue RT",
+                              "children": []
+                            },
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0_child_1",
+                              "label": "or RT and chemotherapy, (category 1, for chemotherapy)",
+                              "type": "condition",
+                              "search_term": "RT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "node_root_child_0_child_0_child_0_6103_child_0_child_1",
+                          "label": "Negative margins",
+                          "type": "condition",
+                          "search_term": "Negative",
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_1_child_0",
+                              "label": "Chemotherapy, (category 1)",
+                              "type": "condition",
+                              "search_term": "Chemotherapy,",
+                              "children": []
+                            },
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_1_child_1",
+                              "label": "Consider RT for pelvic tumors",
+                              "type": "condition",
+                              "search_term": "Consider RT",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "node_root_child_0_child_0_child_1_6109",
+                  "label": "Definitive RT and chemotherapy",
+                  "type": "condition",
+                  "search_term": "Definitive RT chemotherapy",
+                  "children": []
+                },
+                {
+                  "id": "node_root_child_0_child_0_child_2_6630",
+                  "label": "Amputation in selected cases",
+                  "type": "condition",
+                  "search_term": "Amputation",
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_2_6630_child_0",
+                      "label": "Postoperative chemotherapy (category 1)",
+                      "type": "condition",
+                      "search_term": "Postoperative chemotherapy",
+                      "children": []
+                    },
+                    {
+                      "id": "node_root_child_0_child_0_child_2_6630_child_1",
+                      "label": "Consider RT depending on margin status",
+                      "type": "condition",
+                      "search_term": "Consider RT",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1168,7 +1458,15 @@ const TREES = {
           "label": "Adjuvant Treatment/Additional Therapy",
           "type": "treatment",
           "search_term": "Adjuvant Treatment/Additional Therapy",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_1_child_0",
+              "label": "Follows respective local control therapy approach",
+              "type": "condition",
+              "search_term": "Follows",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_2",
@@ -1192,9 +1490,9 @@ const TREES = {
             },
             {
               "id": "node_root_child_2_child_2",
-              "label": "Chest imaging every 3 months",
+              "label": "Chest imaging (x-ray or CT) every 3 months",
               "type": "condition",
-              "search_term": "Chest",
+              "search_term": "Chest CT)",
               "children": []
             },
             {
@@ -1206,21 +1504,21 @@ const TREES = {
             },
             {
               "id": "node_root_child_2_child_4",
-              "label": "Complete blood count and other laboratory studies as indicated",
+              "label": "Complete blood count (CBC) and other laboratory studies as indicated",
               "type": "condition",
               "search_term": "Complete",
               "children": []
             },
             {
               "id": "node_root_child_2_child_5",
-              "label": "Increase intervals for physical exam, imaging of primary site and chest after 24 months and annually after 5 years, as clinically indicated",
+              "label": "Increase intervals for physical exam, imaging of primary site and chest after 24 months and annually after 5 years, as clinically indicated (indefinitely) (category 2B)",
               "type": "condition",
               "search_term": "Increase",
               "children": []
             },
             {
               "id": "node_root_child_2_child_6",
-              "label": "Consider FDG-PET/CT or bone scan",
+              "label": "Consider FDG-PET/CT (head-to-toe) or bone scan",
               "type": "condition",
               "search_term": "Consider FDG-PET/CT",
               "children": []
@@ -1238,7 +1536,15 @@ const TREES = {
               "label": "Relapse",
               "type": "condition",
               "search_term": "Relapse",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_3_child_0_child_0",
+                  "label": "Chemotherapy RT surgery",
+                  "type": "condition",
+                  "search_term": "Chemotherapy RT",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -1263,7 +1569,68 @@ const TREES = {
               "label": "Approach",
               "type": "condition",
               "search_term": "Approach",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0_6103",
+                  "label": "Wide excision",
+                  "type": "condition",
+                  "search_term": "Wide",
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_0_6103_child_0",
+                      "label": "Margins",
+                      "type": "condition",
+                      "search_term": "Margins",
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0",
+                          "label": "Positive margins",
+                          "type": "condition",
+                          "search_term": "Positive",
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0_child_0",
+                              "label": "Continue chemotherapy, (category 1) followed by RT",
+                              "type": "condition",
+                              "search_term": "Continue RT",
+                              "children": []
+                            },
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_0_child_1",
+                              "label": "or RT and chemotherapy, (category 1, for chemotherapy)",
+                              "type": "condition",
+                              "search_term": "RT",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "node_root_child_0_child_0_child_0_6103_child_0_child_1",
+                          "label": "Negative margins",
+                          "type": "condition",
+                          "search_term": "Negative",
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_0_child_0_6103_child_0_child_1_child_0",
+                              "label": "Chemotherapy, (category 1)",
+                              "type": "condition",
+                              "search_term": "Chemotherapy,",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "node_root_child_0_child_0_child_1_6109",
+                  "label": "Definitive RT and chemotherapy",
+                  "type": "condition",
+                  "search_term": "Definitive RT chemotherapy",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_0_child_1",
@@ -1276,21 +1643,45 @@ const TREES = {
                   "label": "Oligometastatic disease",
                   "type": "condition",
                   "search_term": "Oligometastatic",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_0_child_0",
+                      "label": "Excision of metastases or RT",
+                      "type": "condition",
+                      "search_term": "Excision RT",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_0_child_1_child_1",
                   "label": "Lung only partial response",
                   "type": "condition",
                   "search_term": "Lung",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_1_child_0",
+                      "label": "Excision whole lung irradiation (WLI)",
+                      "type": "condition",
+                      "search_term": "Excision",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_0_child_1_child_2",
                   "label": "Lung only complete response",
                   "type": "condition",
                   "search_term": "Lung",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_2_child_0",
+                      "label": "Consider WLI",
+                      "type": "condition",
+                      "search_term": "Consider WLI",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -1339,7 +1730,7 @@ const TREES = {
   "Breast_1": {
     "root": {
       "id": "node_root",
-      "label": "Locoregional Treatment of cT1–3, cN0 or cN+, M0 Disease: Breast-Conserving Surgery + Whole Breast RT",
+      "label": "Locoregional Treatment of cT1–3, cN0 or cN+, M0 Disease: Breast-Conserving Surgery (BCS) + Whole Breast RT",
       "type": "treatment",
       "search_term": "Locoregional Treatment M0 Disease: Breast-Conserving Surgery Whole Breast RT",
       "children": [
@@ -1354,7 +1745,15 @@ const TREES = {
               "label": "Procedure",
               "type": "condition",
               "search_term": "Procedure",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0",
+                  "label": "BCS, surgical axillary staging category 1",
+                  "type": "condition",
+                  "search_term": "BCS,",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_0_child_1",
@@ -1437,21 +1836,21 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_0_child_0_child_1",
-                      "label": "Consider comprehensive RNI in patients with central/medial tumors, pT3 tumors, or pT2 tumors and one of: grade 3, extensive lymphovascular invasion , or hormone-receptor -negative",
+                      "label": "Consider comprehensive RNI in patients with central/medial tumors, pT3 tumors, or pT2 tumors and one of: grade 3, extensive lymphovascular invasion (LVI), or hormone-receptor (HR)-negative",
                       "type": "condition",
                       "search_term": "Consider RNI",
                       "children": []
                     },
                     {
                       "id": "node_root_child_2_child_0_child_0_child_2",
-                      "label": "Consider APBI/PBI in selected low-risk patients",
+                      "label": "Consider APBI/PBI in selected low-risk patients (category 1)",
                       "type": "condition",
                       "search_term": null,
                       "children": []
                     },
                     {
                       "id": "node_root_child_2_child_0_child_0_child_3",
-                      "label": "Consider omitting breast irradiation if adjuvant endocrine therapy is planned and ALL of the following ",
+                      "label": "Consider omitting breast irradiation if adjuvant endocrine therapy is planned and ALL of the following (category 1)",
                       "type": "condition",
                       "search_term": "Consider ALL",
                       "children": []
@@ -1462,7 +1861,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_2_child_1",
-              "label": "pN1a",
+              "label": "pN1a (1–3 positive axillary nodes)",
               "type": "condition",
               "search_term": null,
               "children": [
@@ -1488,7 +1887,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_1_child_0_child_2",
-                      "label": "1–2 positive sentinel lymph nodes",
+                      "label": "1–2 positive sentinel lymph nodes (SLNs)",
                       "type": "condition",
                       "search_term": null,
                       "children": []
@@ -1513,14 +1912,30 @@ const TREES = {
                       "label": "Yes to all",
                       "type": "condition",
                       "search_term": "Yes",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_1_child_1_child_0_child_0",
+                          "label": "Whole breast RT boost (use of comprehensive RNI with or without intentional inclusion of axilla at discretion of radiation oncologist) (category 1)",
+                          "type": "condition",
+                          "search_term": "Whole RT RNI radiation",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_2_child_1_child_1_child_1",
                       "label": "No",
                       "type": "condition",
                       "search_term": null,
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_1_child_1_child_1_child_0",
+                          "label": "Whole breast RT with inclusion of any portion of the undissected axilla at risk boost to tumor bed (category 1). Strongly consider comprehensive RNI.",
+                          "type": "condition",
+                          "search_term": null,
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1528,7 +1943,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_2_child_2",
-              "label": "pN2–3",
+              "label": "pN2–3 (≥4 positive axillary nodes)",
               "type": "condition",
               "search_term": null,
               "children": [
@@ -1537,7 +1952,15 @@ const TREES = {
                   "label": "RT",
                   "type": "condition",
                   "search_term": "RT",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_2_child_0_child_0",
+                      "label": "Whole breast RT boost to tumor bed (category 1) + comprehensive RNI, including any portion of the undissected axilla at risk (category 1)",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -1570,7 +1993,15 @@ const TREES = {
                   "label": "Procedure",
                   "type": "condition",
                   "search_term": "Procedure",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_0_child_0",
+                      "label": "BCS with surgical axillary staging",
+                      "type": "condition",
+                      "search_term": "BCS",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_0_child_0_child_1",
@@ -1625,7 +2056,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_1",
-                      "label": "Any ypN",
+                      "label": "Any ypN+",
                       "type": "condition",
                       "search_term": "Any",
                       "children": [
@@ -1683,7 +2114,15 @@ const TREES = {
                   "label": "Procedure",
                   "type": "condition",
                   "search_term": "Procedure",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "Mastectomy and surgical axillary staging",
+                      "type": "condition",
+                      "search_term": "Mastectomy",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
@@ -1738,7 +2177,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_0_child_1",
-                      "label": "Any ypN",
+                      "label": "Any ypN+",
                       "type": "condition",
                       "search_term": "Any",
                       "children": [
@@ -1806,7 +2245,7 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_1_child_1_child_1",
-                  "label": "Adjuvant systemic therapy , no PMRT",
+                  "label": "Adjuvant systemic therapy, no PMRT",
                   "type": "condition",
                   "search_term": "Adjuvant PMRT",
                   "children": [
@@ -1837,7 +2276,7 @@ const TREES = {
   "Breast_11": {
     "root": {
       "id": "node_root",
-      "label": "Preoperative systemic therapy",
+      "label": "Preoperative systemic therapy (BINV-L 1)",
       "type": "condition",
       "search_term": "Preoperative",
       "children": [
@@ -1861,7 +2300,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Mastectomy and surgical axillary staging + reconstruction",
+                      "label": "Mastectomy and surgical axillary staging + reconstruction (optional)",
                       "type": "condition",
                       "search_term": "Mastectomy",
                       "children": []
@@ -1886,14 +2325,30 @@ const TREES = {
                       "label": "Systemic therapy",
                       "type": "condition",
                       "search_term": "Systemic",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_0_child_1_child_0_child_0",
+                          "label": "Adjuvant systemic therapy",
+                          "type": "condition",
+                          "search_term": "Adjuvant",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_0_child_0_child_1_child_1",
                       "label": "Radiation",
                       "type": "condition",
                       "search_term": "Radiation",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_0_child_1_child_1_child_0",
+                          "label": "Adjuvant RT to the whole breast or chest wall and comprehensive RNI with inclusion of any portion of the undissected axilla at risk.",
+                          "type": "condition",
+                          "search_term": null,
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1918,7 +2373,15 @@ const TREES = {
                   "label": "Consider",
                   "type": "condition",
                   "search_term": "Consider",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "Additional systemic therapy and/or preoperative radiation",
+                      "type": "condition",
+                      "search_term": "Additional radiation",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
@@ -1937,7 +2400,15 @@ const TREES = {
                           "label": "Follow pathway",
                           "type": "condition",
                           "search_term": "Follow",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_0_child_0_child_0",
+                              "label": "Follow pathway above",
+                              "type": "condition",
+                              "search_term": "Follow",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1952,7 +2423,15 @@ const TREES = {
                           "label": "Next step",
                           "type": "condition",
                           "search_term": "Next",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_0_child_1_child_1_child_0_child_0",
+                              "label": "Individualize treatment",
+                              "type": "condition",
+                              "search_term": "Individualize",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1980,7 +2459,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "2 stage: tissue expander followed by permanent implant",
+              "label": "2 stage: tissue expander followed by permanent implant (prepectoral, partial submuscular, or total submuscular tissue expander)",
               "type": "condition",
               "search_term": null,
               "children": [
@@ -2075,7 +2554,15 @@ const TREES = {
               "label": "Step",
               "type": "condition",
               "search_term": "Step",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0",
+                  "label": "Assess soft tissue preoperatively and intraoperatively",
+                  "type": "condition",
+                  "search_term": "Assess",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_0_child_1",
@@ -2091,7 +2578,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
-                      "label": "Autologous or combination",
+                      "label": "Autologous (preferred) or combination",
                       "type": "condition",
                       "search_term": "Autologous",
                       "children": []
@@ -2128,7 +2615,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_2_child_0_child_0",
-                      "label": "Autologous or combination",
+                      "label": "Autologous (preferred) or combination",
                       "type": "condition",
                       "search_term": "Autologous",
                       "children": []
@@ -2150,7 +2637,15 @@ const TREES = {
               "label": "Step",
               "type": "condition",
               "search_term": "Step",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_0_child_0",
+                  "label": "Assess soft tissue preoperatively and intraoperatively",
+                  "type": "condition",
+                  "search_term": "Assess",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_1_child_1",
@@ -2166,7 +2661,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_1_child_0_child_0",
-                      "label": "Autologous or combination",
+                      "label": "Autologous (preferred) or combination",
                       "type": "condition",
                       "search_term": "Autologous",
                       "children": []
@@ -2196,7 +2691,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_2_child_0_child_0",
-                      "label": "Autologous or combination",
+                      "label": "Autologous (preferred) or combination",
                       "type": "condition",
                       "search_term": "Autologous",
                       "children": []
@@ -2228,7 +2723,15 @@ const TREES = {
               "label": "Procedure",
               "type": "condition",
               "search_term": "Procedure",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_0_child_0_child_0",
+                  "label": "Nipple-sparing, skin-sparing, or total mastectomy with surgical axillary staging, (category 1)",
+                  "type": "condition",
+                  "search_term": "Nipple-sparing,",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_0_child_1",
@@ -2292,7 +2795,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_2_child_0",
-              "label": "Negative axillary nodes and ≤pT2 and margins ≥1 mm",
+              "label": "Negative axillary nodes and ≤pT2 (≤5 cm) and margins ≥1 mm",
               "type": "condition",
               "search_term": "Negative",
               "children": [
@@ -2301,13 +2804,21 @@ const TREES = {
                   "label": "RT",
                   "type": "condition",
                   "search_term": "RT",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_0_child_0_child_0",
+                      "label": "No RT",
+                      "type": "condition",
+                      "search_term": "RT",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
             {
               "id": "node_root_child_2_child_1",
-              "label": "Negative axillary nodes and ≤pT2 and negative margins but <1 mm",
+              "label": "Negative axillary nodes and ≤pT2 (≤5 cm) and negative margins but <1 mm",
               "type": "condition",
               "search_term": "Negative",
               "children": [
@@ -2326,7 +2837,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_1_child_0_child_1",
-                      "label": "For patients with additional high-risk features, consider addition of comprehensive RNI",
+                      "label": "For patients with additional high-risk features, consider addition of comprehensive RNI (including any portion of the undissected axilla at risk)",
                       "type": "condition",
                       "search_term": null,
                       "children": []
@@ -2337,7 +2848,7 @@ const TREES = {
             },
             {
               "id": "node_root_child_2_child_2",
-              "label": "Negative axillary nodes and pT3",
+              "label": "Negative axillary nodes and pT3 (>5 cm)",
               "type": "condition",
               "search_term": "Negative",
               "children": [
@@ -2346,7 +2857,15 @@ const TREES = {
                   "label": "RT",
                   "type": "condition",
                   "search_term": "RT",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_2_child_0_child_0",
+                      "label": "Consider PMRT to chest wall comprehensive RNI (including any portion of the undissected axilla at risk)",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -2361,7 +2880,15 @@ const TREES = {
                   "label": "RT",
                   "type": "condition",
                   "search_term": "RT",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_3_child_0_child_0",
+                      "label": "Strongly consider PMRT to chest wall + comprehensive RNI (including any portion of the undissected axilla at risk)",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -2376,7 +2903,15 @@ const TREES = {
                   "label": "RT",
                   "type": "condition",
                   "search_term": "RT",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_4_child_0_child_0",
+                      "label": "PMRT to chest wall + comprehensive RNI (including any portion of the undissected axilla at risk) (category 1)",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -2401,9 +2936,9 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_5_child_0_child_1",
-                      "label": "If not feasible, then strongly consider PMRT to chest wall comprehensive RNI",
+                      "label": "If not feasible, then strongly consider PMRT to chest wall comprehensive RNI (including any portion of the undissected axilla at risk)",
                       "type": "condition",
-                      "search_term": "PMRT RNI",
+                      "search_term": null,
                       "children": []
                     }
                   ]
@@ -2424,7 +2959,7 @@ const TREES = {
       "children": [
         {
           "id": "node_root_child_0",
-          "label": "Immediate placement of tissue expander at the time of mastectomy",
+          "label": "Immediate placement of tissue expander at the time of mastectomy (prepectoral, partial submuscular, total submuscular tissue expander placement)",
           "type": "condition",
           "search_term": "Immediate",
           "children": [
@@ -2454,9 +2989,9 @@ const TREES = {
                           "children": [
                             {
                               "id": "node_root_child_0_child_0_child_0_child_0_child_0_child_0",
-                              "label": "Exchange tissue expander to permanent implant",
+                              "label": "Exchange tissue expander to permanent implant (prior to initiation of RT, if no delay to initiation of RT or ≥6 months after RT)",
                               "type": "condition",
-                              "search_term": "Exchange",
+                              "search_term": "Exchange RT, RT RT)",
                               "children": []
                             },
                             {
@@ -2524,16 +3059,16 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_0_child_1_child_0_child_0_child_0",
-                          "label": "RT; conversion to permanent implant or autologous tissue ≥6 months after completion of RT",
+                          "label": "RT; conversion to permanent implant or autologous tissue ≥6 months after completion of RT (category 2B)",
                           "type": "condition",
                           "search_term": "RT; RT",
                           "children": []
                         },
                         {
                           "id": "node_root_child_0_child_1_child_0_child_0_child_1",
-                          "label": "Exchange to permanent implant before RT",
+                          "label": "Exchange to permanent implant before RT (if no delay to initiation of RT)",
                           "type": "condition",
-                          "search_term": "Exchange RT",
+                          "search_term": "Exchange RT RT)",
                           "children": []
                         }
                       ]
@@ -2585,7 +3120,15 @@ const TREES = {
               "label": "Action",
               "type": "condition",
               "search_term": "Action",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_0_child_0",
+                  "label": "Consider revisional surgeries to the ipsilateral or contralateral breast after RT if needed",
+                  "type": "condition",
+                  "search_term": "Consider RT",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2600,14 +3143,30 @@ const TREES = {
               "label": "RT required",
               "type": "condition",
               "search_term": "RT",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_2_child_0_child_0",
+                  "label": "Reconstruction Based on History of RT (BINV-H 3)",
+                  "type": "condition",
+                  "search_term": "Reconstruction Based History RT",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_2_child_1",
               "label": "RT not required",
               "type": "condition",
               "search_term": "RT",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_2_child_1_child_0",
+                  "label": "Reconstruction with implant, autologous tissue, or a combination",
+                  "type": "condition",
+                  "search_term": "Reconstruction",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -2626,7 +3185,15 @@ const TREES = {
           "label": "Step",
           "type": "condition",
           "search_term": "Step",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "Further radiologic workup for metastatic disease as clinically indicated",
+              "type": "condition",
+              "search_term": "Further",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -2648,9 +3215,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_0_child_0",
-                      "label": "EBRT",
+                      "label": "EBRT (external beam radiation therapy)",
                       "type": "condition",
-                      "search_term": "EBRT",
+                      "search_term": "EBRT radiation",
                       "children": []
                     },
                     {
@@ -2669,9 +3236,9 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_0_child_0_child_3",
-                      "label": "Pembrolizumab",
+                      "label": "Pembrolizumab (category 1 for FIGO 2014 Stage IIIA, IIIB, and IVA; category 2B for select FIGO 2018 stage III–IVA)",
                       "type": "condition",
-                      "search_term": "Pembrolizumab",
+                      "search_term": "Pembrolizumab FIGO Stage IIIA, IIIB, IVA; FIGO III–IVA)",
                       "children": []
                     }
                   ]
@@ -2689,7 +3256,15 @@ const TREES = {
                   "label": "Step",
                   "type": "condition",
                   "search_term": "Step",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_1_child_0_child_0",
+                      "label": "Biopsy suspicious areas as indicated",
+                      "type": "condition",
+                      "search_term": "Biopsy",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_1_child_1",
@@ -2711,9 +3286,9 @@ const TREES = {
                           "children": [
                             {
                               "id": "node_root_child_1_child_1_child_1_child_0_child_0_child_0",
-                              "label": "EBRT",
+                              "label": "EBRT (external beam radiation therapy)",
                               "type": "condition",
-                              "search_term": "EBRT",
+                              "search_term": "EBRT radiation",
                               "children": []
                             },
                             {
@@ -2732,9 +3307,9 @@ const TREES = {
                             },
                             {
                               "id": "node_root_child_1_child_1_child_1_child_0_child_0_child_3",
-                              "label": "Pembrolizumab",
+                              "label": "Pembrolizumab (category 1 for FIGO 2014 Stage IIIA, IIIB, and IVA; category 2B for select FIGO 2018 stage III–IVA)",
                               "type": "condition",
-                              "search_term": "Pembrolizumab",
+                              "search_term": "Pembrolizumab FIGO Stage IIIA, IIIB, IVA; FIGO III–IVA)",
                               "children": []
                             }
                           ]
@@ -2856,9 +3431,9 @@ const TREES = {
                         },
                         {
                           "id": "node_root_child_1_child_0_child_0_child_0_child_1",
-                          "label": "Preferred regimens: 2G TKI or 3G TKI",
+                          "label": "Preferred regimens: 2G TKI (Bosutinib, Dasatinib, or Nilotinib) or 3G TKI (Ponatinib)",
                           "type": "condition",
-                          "search_term": "Preferred TKI TKI",
+                          "search_term": "Preferred TKI Dasatinib, Nilotinib) TKI",
                           "children": []
                         }
                       ]
@@ -2871,14 +3446,14 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_1_child_0_child_0_child_1_child_0",
-                          "label": "1G TKI if 2G or 3G TKI is contraindicated",
+                          "label": "1G TKI (Imatinib) if 2G or 3G TKI is contraindicated",
                           "type": "condition",
                           "search_term": "TKI TKI",
                           "children": []
                         },
                         {
                           "id": "node_root_child_1_child_0_child_0_child_1_child_1",
-                          "label": "Allosteric TKI",
+                          "label": "Allosteric TKI (Asciminib)",
                           "type": "condition",
                           "search_term": "Allosteric TKI",
                           "children": []
@@ -2890,7 +3465,15 @@ const TREES = {
                       "label": "If lack of response or disease progression",
                       "type": "condition",
                       "search_term": null,
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_2_child_0",
+                          "label": "Allogeneic HCT",
+                          "type": "condition",
+                          "search_term": "Allogeneic HCT",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2935,9 +3518,9 @@ const TREES = {
                                 },
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_0_child_0_child_0_child_1",
-                                  "label": "Preferred regimens: ALL-type induction chemotherapy + TKI",
+                                  "label": "Preferred regimens: ALL-type induction chemotherapy (NCCN Guidelines for ALL) + TKI",
                                   "type": "condition",
-                                  "search_term": "Preferred ALL-type chemotherapy TKI",
+                                  "search_term": "Preferred ALL-type chemotherapy Guidelines ALL) TKI",
                                   "children": []
                                 }
                               ]
@@ -2950,7 +3533,7 @@ const TREES = {
                               "children": [
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_0_child_0_child_1_child_0",
-                                  "label": "TKI + steroids",
+                                  "label": "TKI + steroids (if not a candidate for induction chemotherapy)",
                                   "type": "condition",
                                   "search_term": "TKI",
                                   "children": []
@@ -2973,7 +3556,7 @@ const TREES = {
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_0_child_0_child_2_child_1",
                                   "label": "Consolidation chemotherapy and TKI maintenance for non-candidates for allogeneic HCT",
-                                  "type": "next",
+                                  "type": "condition",
                                   "search_term": "Consolidation chemotherapy TKI HCT",
                                   "children": []
                                 }
@@ -3010,9 +3593,9 @@ const TREES = {
                                 },
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_1_child_0_child_0_child_1",
-                                  "label": "Preferred regimens: AML-type induction chemotherapy + TKI",
+                                  "label": "Preferred regimens: AML-type induction chemotherapy (NCCN Guidelines for AML) + TKI",
                                   "type": "condition",
-                                  "search_term": "Preferred AML-type chemotherapy TKI",
+                                  "search_term": "Preferred AML-type chemotherapy Guidelines AML) TKI",
                                   "children": []
                                 }
                               ]
@@ -3025,7 +3608,7 @@ const TREES = {
                               "children": [
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_1_child_0_child_1_child_0",
-                                  "label": "TKI",
+                                  "label": "TKI (if not a candidate for induction chemotherapy)",
                                   "type": "condition",
                                   "search_term": "TKI",
                                   "children": []
@@ -3048,7 +3631,7 @@ const TREES = {
                                 {
                                   "id": "node_root_child_1_child_1_child_0_child_1_child_0_child_2_child_1",
                                   "label": "Consolidation chemotherapy and TKI maintenance for non-candidates for allogeneic HCT",
-                                  "type": "next",
+                                  "type": "condition",
                                   "search_term": "Consolidation chemotherapy TKI HCT",
                                   "children": []
                                 }
@@ -3108,7 +3691,15 @@ const TREES = {
           "label": "Spine imaging",
           "type": "condition",
           "search_term": "Spine",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_1_child_0",
+              "label": "For patients with previous spine disease, perform concurrent spine imaging as clinically indicated",
+              "type": "condition",
+              "search_term": null,
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_2",
@@ -3155,14 +3746,30 @@ const TREES = {
                       "label": "Surgery",
                       "type": "condition",
                       "search_term": "Surgery",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_1_child_0_child_0_child_0",
+                          "label": "Maximum safe resection",
+                          "type": "condition",
+                          "search_term": "Maximum",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_2_child_1_child_0_child_1",
                       "label": "Post-surgical imaging",
                       "type": "condition",
                       "search_term": "Post-surgical",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_1_child_0_child_1_child_0",
+                          "label": "Brain and spine MRI",
+                          "type": "condition",
+                          "search_term": "Brain MRI",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_2_child_1_child_0_child_2",
@@ -3428,14 +4035,14 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_2",
-                      "label": "HA-WBRT + memantine",
+                      "label": "HA-WBRT + memantine (if not previously administered)",
                       "type": "condition",
                       "search_term": "HA-WBRT",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_3",
-                      "label": "WBRT without HA memantine",
+                      "label": "WBRT without HA memantine (if not previously administered)",
                       "type": "condition",
                       "search_term": "WBRT HA",
                       "children": []
@@ -3522,9 +4129,9 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_0_child_1_child_1_child_0_child_0",
-                          "label": "Reirradiation",
+                          "label": "Reirradiation (if prior positive response to RT)",
                           "type": "condition",
-                          "search_term": "Reirradiation",
+                          "search_term": "Reirradiation RT)",
                           "children": []
                         },
                         {
@@ -3564,7 +4171,15 @@ const TREES = {
           "label": "Brain MRI",
           "type": "condition",
           "search_term": "Brain MRI",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "Every 2–3 months for 1–2 years, then every 4–6 months indefinitely",
+              "type": "condition",
+              "search_term": "Every",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -3589,7 +4204,15 @@ const TREES = {
                       "label": "Treatment",
                       "type": "treatment",
                       "search_term": "Treatment",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_0_child_0",
+                          "label": "Palliative/best supportive care",
+                          "type": "condition",
+                          "search_term": "Palliative/best",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -3647,7 +4270,15 @@ const TREES = {
                       "label": "Follow-up",
                       "type": "condition",
                       "search_term": "Follow-up",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_1_child_1_child_0",
+                          "label": "Brain MRI every 2–3 months for 1–2 years, then every 4–6 months indefinitely",
+                          "type": "condition",
+                          "search_term": "Brain MRI",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3670,7 +4301,15 @@ const TREES = {
           "label": "Treatment",
           "type": "treatment",
           "search_term": "Treatment",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "Continue on current therapy (systemic or intra-CSF) and re-evaluate CSF cytology every 4–8 weeks",
+              "type": "condition",
+              "search_term": "Continue CSF",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -3690,7 +4329,15 @@ const TREES = {
               "label": "Monitor CSF cytology",
               "type": "condition",
               "search_term": "Monitor CSF",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_1_child_0",
+                  "label": "every 4–8 weeks",
+                  "type": "condition",
+                  "search_term": null,
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -3709,13 +4356,21 @@ const TREES = {
           "label": "Spine MRI/CT",
           "type": "condition",
           "search_term": "Spine MRI/CT",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "1–3 months after treatment, then every 3–4 months for 1 year, then as clinically indicated",
+              "type": "condition",
+              "search_term": null,
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
-          "label": "Presentation",
+          "label": "Presentation (Symptom- or MRI-based)",
           "type": "condition",
-          "search_term": "Presentation",
+          "search_term": "Presentation MRI-based)",
           "children": [
             {
               "id": "node_root_child_1_child_0",
@@ -3821,7 +4476,7 @@ const TREES = {
         },
         {
           "id": "node_root_child_1",
-          "label": "Prior fractionated external beam RT",
+          "label": "Prior fractionated external beam RT (EBRT)",
           "type": "condition",
           "search_term": "Prior RT",
           "children": [
@@ -3861,9 +4516,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_1_child_0",
-                      "label": "Consider clinical trial",
+                      "label": "Consider clinical trial (preferred for eligible patients)",
                       "type": "condition",
-                      "search_term": "Consider",
+                      "search_term": null,
                       "children": []
                     },
                     {
@@ -3916,7 +4571,15 @@ const TREES = {
                   "label": "Procedure",
                   "type": "condition",
                   "search_term": "Procedure",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_1_child_0_child_0",
+                      "label": "Consider biopsy",
+                      "type": "condition",
+                      "search_term": "Consider",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_1_child_1",
@@ -3926,9 +4589,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_1_child_1_child_0",
-                      "label": "Consider clinical trial",
+                      "label": "Consider clinical trial (preferred for eligible patients)",
                       "type": "condition",
-                      "search_term": "Consider",
+                      "search_term": null,
                       "children": []
                     },
                     {
@@ -4014,9 +4677,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_2_child_0_child_1_child_0",
-                      "label": "Consider clinical trial",
+                      "label": "Consider clinical trial (preferred for eligible patients)",
                       "type": "condition",
-                      "search_term": "Consider",
+                      "search_term": null,
                       "children": []
                     },
                     {
@@ -4049,7 +4712,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_0_child_1_child_5",
-                      "label": "Systemic therapy",
+                      "label": "Systemic therapy (category 2B)",
                       "type": "condition",
                       "search_term": "Systemic",
                       "children": []
@@ -4069,7 +4732,15 @@ const TREES = {
                   "label": "Procedure",
                   "type": "condition",
                   "search_term": "Procedure",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_2_child_1_child_0_child_0",
+                      "label": "Consider biopsy",
+                      "type": "condition",
+                      "search_term": "Consider",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_2_child_1_child_1",
@@ -4079,9 +4750,9 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_2_child_1_child_1_child_0",
-                      "label": "Consider clinical trial",
+                      "label": "Consider clinical trial (preferred for eligible patients)",
                       "type": "condition",
-                      "search_term": "Consider",
+                      "search_term": null,
                       "children": []
                     },
                     {
@@ -4114,7 +4785,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_1_child_1_child_5",
-                      "label": "Systemic therapy",
+                      "label": "Systemic therapy (category 2B)",
                       "type": "condition",
                       "search_term": "Systemic",
                       "children": []
@@ -4215,14 +4886,30 @@ const TREES = {
                           "label": "Negative findings",
                           "type": "condition",
                           "search_term": "Negative",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_1_child_0_child_1_child_0_child_0",
+                              "label": "End of path",
+                              "type": "condition",
+                              "search_term": "End",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_0_child_1_child_0_child_1_child_1",
                           "label": "Positive findings",
                           "type": "condition",
                           "search_term": "Positive",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_0_child_1_child_0_child_1_child_1_child_0",
+                              "label": "See treatment for documented metachronous metastases",
+                              "type": "condition",
+                              "search_term": "See",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -4233,7 +4920,15 @@ const TREES = {
                   "label": "Positive findings",
                   "type": "condition",
                   "search_term": "Positive",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_1_child_0",
+                      "label": "See treatment for documented metachronous metastases",
+                      "type": "condition",
+                      "search_term": "See",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -4269,7 +4964,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Perform microsatellite, PD-L1, HER2, and CLDN18.2 testing",
+                      "label": "Perform microsatellite, PD-L1, HER2, and CLDN18.2 testing (if not done previously)",
                       "type": "condition",
                       "search_term": "Perform PD-L1, HER2, CLDN18.2",
                       "children": []
@@ -4359,14 +5054,30 @@ const TREES = {
                   "label": "Treatment",
                   "type": "treatment",
                   "search_term": "Treatment",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_0_child_0",
+                      "label": "ER (with either endoscopic submucosal dissection [ESD] or endoscopic mucosal resection [EMR]) ablation",
+                      "type": "condition",
+                      "search_term": "ER",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_0_child_0_child_1",
                   "label": "Next step",
                   "type": "condition",
                   "search_term": "Next",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_1_child_0",
+                      "label": "Assess for curative resection",
+                      "type": "condition",
+                      "search_term": "Assess",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -4381,14 +5092,30 @@ const TREES = {
                   "label": "Treatment",
                   "type": "treatment",
                   "search_term": "Treatment",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_0_child_0",
+                      "label": "ESD ablation",
+                      "type": "condition",
+                      "search_term": "ESD",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_0_child_1_child_1",
                   "label": "Next step",
                   "type": "condition",
                   "search_term": "Next",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_1_child_1_child_0",
+                      "label": "Assess for curative resection",
+                      "type": "condition",
+                      "search_term": "Assess",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -4396,7 +5123,7 @@ const TREES = {
         },
         {
           "id": "node_root_child_1",
-          "label": "Endoscopic or pathologic high-risk features",
+          "label": "Endoscopic (ulcerated) or pathologic (poorly differentiated or LVI) high-risk features",
           "type": "condition",
           "search_term": null,
           "children": [
@@ -4408,7 +5135,7 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "Esophagectomy for patients who are medically fit",
+                  "label": "Esophagectomy for patients who are medically fit (preferred)",
                   "type": "condition",
                   "search_term": "Esophagectomy",
                   "children": []
@@ -4436,7 +5163,7 @@ const TREES = {
       "children": [
         {
           "id": "node_root_child_0",
-          "label": "Flat neoplasia",
+          "label": "Flat neoplasia (no nodule or mass)",
           "type": "condition",
           "search_term": "Flat",
           "children": [
@@ -4470,9 +5197,9 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_1_child_0",
-                  "label": "ER ablation",
+                  "label": "ER (with either ESD or EMR) ablation",
                   "type": "condition",
-                  "search_term": "ER",
+                  "search_term": "ER ESD EMR)",
                   "children": []
                 },
                 {
@@ -4525,14 +5252,30 @@ const TREES = {
                   "label": "Treatment",
                   "type": "treatment",
                   "search_term": "Treatment",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_1_child_0_child_0",
+                      "label": "ER (with either ESD or EMR) ablation",
+                      "type": "condition",
+                      "search_term": "ER ESD EMR)",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_1_child_1",
                   "label": "Next step",
                   "type": "condition",
                   "search_term": "Next",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_1_child_1_child_0",
+                      "label": "Assess for curative resection",
+                      "type": "condition",
+                      "search_term": "Assess",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -4569,7 +5312,7 @@ const TREES = {
                             },
                             {
                               "id": "node_root_child_1_child_2_child_0_child_0_child_0_child_1",
-                              "label": "Esophagectomy",
+                              "label": "Esophagectomy (for patients who are medically fit)",
                               "type": "condition",
                               "search_term": "Esophagectomy",
                               "children": []
@@ -4581,13 +5324,21 @@ const TREES = {
                           "label": "Next step",
                           "type": "condition",
                           "search_term": "Next",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_2_child_0_child_0_child_1_child_0",
+                              "label": "Assess for curative resection",
+                              "type": "condition",
+                              "search_term": "Assess",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
                     {
                       "id": "node_root_child_1_child_2_child_0_child_1",
-                      "label": "Presence of high-risk biopsy features",
+                      "label": "Presence of high-risk biopsy features (poor differentiation or LVI)",
                       "type": "condition",
                       "search_term": null,
                       "children": [
@@ -4596,14 +5347,30 @@ const TREES = {
                           "label": "Treatment",
                           "type": "treatment",
                           "search_term": "Treatment",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_2_child_0_child_1_child_0_child_0",
+                              "label": "Consider ER if technically feasible to accurately stage",
+                              "type": "condition",
+                              "search_term": "Consider ER",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_2_child_0_child_1_child_1",
                           "label": "Next step",
                           "type": "condition",
                           "search_term": "Next",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_2_child_0_child_1_child_1_child_0",
+                              "label": "Assess for curative resection",
+                              "type": "condition",
+                              "search_term": "Assess",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -4628,13 +5395,13 @@ const TREES = {
   "Gastric_9": {
     "root": {
       "id": "node_root",
-      "label": "Peritoneal only metastatic disease",
+      "label": "Peritoneal only metastatic disease (including positive cytology)",
       "type": "condition",
       "search_term": "Peritoneal",
       "children": [
         {
           "id": "node_root_child_0",
-          "label": "Workup",
+          "label": "Workup (if not done previously)",
           "type": "condition",
           "search_term": "Workup",
           "children": [
@@ -4692,14 +5459,30 @@ const TREES = {
                   "label": "Regimen",
                   "type": "condition",
                   "search_term": "Regimen",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "GAST-F 4 of 20",
+                      "type": "condition",
+                      "search_term": "GAST-F",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_0_child_1",
                   "label": "Duration",
                   "type": "condition",
                   "search_term": "Duration",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_1_child_0",
+                      "label": "Minimum of 3 months",
+                      "type": "condition",
+                      "search_term": "Minimum",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -4724,7 +5507,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_0_child_1",
-                      "label": "Diagnostic laparoscopy with washings with documented peritoneal cancer index biopsy",
+                      "label": "Diagnostic laparoscopy with washings with documented peritoneal cancer index (PCI) biopsy",
                       "type": "condition",
                       "search_term": "Diagnostic",
                       "children": []
@@ -4753,7 +5536,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_1_child_1_child_0",
-                      "label": "Low PCI , stable or improved disease, no metastatic progression, no extraperitoneal disease",
+                      "label": "Low PCI (≤10), stable or improved disease, no metastatic progression, no extraperitoneal disease",
                       "type": "condition",
                       "search_term": "Low PCI",
                       "children": [
@@ -4790,7 +5573,7 @@ const TREES = {
                                         },
                                         {
                                           "id": "node_root_child_1_child_1_child_1_child_0_child_0_child_0_child_0_child_0_child_1",
-                                          "label": "Gastrectomy with cytoreductive surgery, and intraperitoneal chemotherapy /hyperthermic intraperitoneal chemotherapy",
+                                          "label": "Gastrectomy with cytoreductive surgery, and intraperitoneal chemotherapy (IC)/hyperthermic intraperitoneal chemotherapy (HIPEC)",
                                           "type": "condition",
                                           "search_term": "Gastrectomy chemotherapy chemotherapy",
                                           "children": []
@@ -4844,7 +5627,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_1_child_1_child_1_child_1",
-                      "label": "High PCI , progression of disease, extraperitoneal metastases",
+                      "label": "High PCI (>10), progression of disease, extraperitoneal metastases",
                       "type": "condition",
                       "search_term": "High PCI",
                       "children": [
@@ -4903,7 +5686,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "Child-Turcotte-Pugh A or B cirrhosis, any etiology",
+              "label": "Child-Turcotte-Pugh (CTP) A or B cirrhosis, any etiology",
               "type": "condition",
               "search_term": "Child-Turcotte-Pugh B",
               "children": [
@@ -4976,13 +5759,13 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_2_child_0",
-              "label": "Ultrasound + Alpha fetoprotein",
+              "label": "Ultrasound (US) + Alpha fetoprotein (AFP)",
               "type": "condition",
               "search_term": "Ultrasound Alpha",
               "children": [
                 {
                   "id": "node_root_child_2_child_0_child_0",
-                  "label": "AFP positive or US nodule ≥10 mm",
+                  "label": "AFP positive or US nodule(s) ≥10 mm",
                   "type": "condition",
                   "search_term": "AFP US",
                   "children": [
@@ -4991,13 +5774,21 @@ const TREES = {
                       "label": "Next step",
                       "type": "condition",
                       "search_term": "Next",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_0_child_0_child_0_child_0",
+                          "label": "Additional workup",
+                          "type": "condition",
+                          "search_term": "Additional",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "id": "node_root_child_2_child_0_child_1",
-                  "label": "US nodule <10 mm",
+                  "label": "US nodule(s) <10 mm",
                   "type": "condition",
                   "search_term": "US",
                   "children": [
@@ -5006,7 +5797,15 @@ const TREES = {
                       "label": "Next step",
                       "type": "condition",
                       "search_term": "Next",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_0_child_1_child_0_child_0",
+                          "label": "Repeat US + AFP in 3–6 months",
+                          "type": "condition",
+                          "search_term": "Repeat US AFP",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -5021,7 +5820,15 @@ const TREES = {
                       "label": "Next step",
                       "type": "condition",
                       "search_term": "Next",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_2_child_0_child_2_child_0_child_0",
+                          "label": "Repeat US + AFP in 6 months",
+                          "type": "condition",
+                          "search_term": "Repeat US AFP",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5035,7 +5842,7 @@ const TREES = {
   "NSCLC_2": {
     "root": {
       "id": "node_root",
-      "label": "Incidental finding: solid nodule on chest CT",
+      "label": "Incidental finding: solid nodule(s) on chest CT",
       "type": "condition",
       "search_term": "Incidental CT",
       "children": [
@@ -5053,31 +5860,39 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_0_child_0",
-                  "label": "Follow-up",
+                  "label": "No routine follow-up",
                   "type": "condition",
-                  "search_term": "Follow-up",
+                  "search_term": null,
                   "children": []
                 }
               ]
             },
             {
               "id": "node_root_child_0_child_1",
-              "label": "6Ð8 mm",
+              "label": "6-8 mm",
               "type": "condition",
               "search_term": null,
               "children": [
                 {
                   "id": "node_root_child_0_child_1_child_0",
-                  "label": "Follow-up",
+                  "label": "CT at 6-12 mo",
                   "type": "condition",
-                  "search_term": "Follow-up",
+                  "search_term": "CT",
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
-                      "label": "CT at 6Ð12 mo",
+                      "label": "Stable",
                       "type": "condition",
-                      "search_term": "CT",
-                      "children": []
+                      "search_term": "Stable",
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_1_child_0_child_0_child_0",
+                          "label": "Consider CT at 18-24 mo",
+                          "type": "condition",
+                          "search_term": "Consider CT",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5091,32 +5906,17 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_0_child_2_child_0",
-                  "label": "Follow-up",
+                  "label": "Consider CT at 3 mo",
                   "type": "condition",
-                  "search_term": "Follow-up",
-                  "children": [
-                    {
-                      "id": "node_root_child_0_child_2_child_0_child_0",
-                      "label": "Consider CT at 3 mo",
-                      "type": "condition",
-                      "search_term": "Consider CT",
-                      "children": []
-                    },
-                    {
-                      "id": "node_root_child_0_child_2_child_0_child_1",
-                      "label": "FDG-PET/CT",
-                      "type": "condition",
-                      "search_term": "FDG-PET/CT",
-                      "children": []
-                    },
-                    {
-                      "id": "node_root_child_0_child_2_child_0_child_2",
-                      "label": "Biopsy",
-                      "type": "condition",
-                      "search_term": "Biopsy",
-                      "children": []
-                    }
-                  ]
+                  "search_term": "Consider CT",
+                  "children": []
+                },
+                {
+                  "id": "node_root_child_0_child_2_child_1",
+                  "label": "FDG-PET/CT, or biopsy",
+                  "type": "condition",
+                  "search_term": "FDG-PET/CT,",
+                  "children": []
                 }
               ]
             }
@@ -5136,16 +5936,24 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_0_child_0",
-                  "label": "Follow-up",
+                  "label": "CT at 12 mo (optional)",
                   "type": "condition",
-                  "search_term": "Follow-up",
+                  "search_term": "CT",
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_0_child_0",
-                      "label": "CT at 12 mo",
+                      "label": "Stable",
                       "type": "condition",
-                      "search_term": "CT",
-                      "children": []
+                      "search_term": "Stable",
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_0_child_0",
+                          "label": "No routine follow-up",
+                          "type": "condition",
+                          "search_term": null,
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5153,22 +5961,30 @@ const TREES = {
             },
             {
               "id": "node_root_child_1_child_1",
-              "label": "6Ð8 mm",
+              "label": "6-8 mm",
               "type": "condition",
               "search_term": null,
               "children": [
                 {
                   "id": "node_root_child_1_child_1_child_0",
-                  "label": "Follow-up",
+                  "label": "CT at 6-12 mo",
                   "type": "condition",
-                  "search_term": "Follow-up",
+                  "search_term": "CT",
                   "children": [
                     {
                       "id": "node_root_child_1_child_1_child_0_child_0",
-                      "label": "CT at 6Ð12 mo",
+                      "label": "Stable",
                       "type": "condition",
-                      "search_term": "CT",
-                      "children": []
+                      "search_term": "Stable",
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_1_child_0_child_0_child_0",
+                          "label": "Repeat CT at 18-24 mo",
+                          "type": "condition",
+                          "search_term": "Repeat CT",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5182,32 +5998,17 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_1_child_2_child_0",
-                  "label": "Follow-up",
+                  "label": "Consider CT at 3 mo",
                   "type": "condition",
-                  "search_term": "Follow-up",
-                  "children": [
-                    {
-                      "id": "node_root_child_1_child_2_child_0_child_0",
-                      "label": "Consider CT at 3 mo",
-                      "type": "condition",
-                      "search_term": "Consider CT",
-                      "children": []
-                    },
-                    {
-                      "id": "node_root_child_1_child_2_child_0_child_1",
-                      "label": "FDG-PET/CT",
-                      "type": "condition",
-                      "search_term": "FDG-PET/CT",
-                      "children": []
-                    },
-                    {
-                      "id": "node_root_child_1_child_2_child_0_child_2",
-                      "label": "Biopsy",
-                      "type": "condition",
-                      "search_term": "Biopsy",
-                      "children": []
-                    }
-                  ]
+                  "search_term": "Consider CT",
+                  "children": []
+                },
+                {
+                  "id": "node_root_child_1_child_2_child_1",
+                  "label": "FDG-PET/CT, or biopsy",
+                  "type": "condition",
+                  "search_term": "FDG-PET/CT,",
+                  "children": []
                 }
               ]
             }
@@ -5219,7 +6020,7 @@ const TREES = {
   "NSCLC_3": {
     "root": {
       "id": "node_root",
-      "label": "Incidental finding: subsolid nodule on chest CT",
+      "label": "Incidental finding: subsolid nodule(s) on chest CT",
       "type": "condition",
       "search_term": "Incidental CT",
       "children": [
@@ -5240,7 +6041,15 @@ const TREES = {
                   "label": "Follow-up",
                   "type": "condition",
                   "search_term": "Follow-up",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_0_child_0_child_0_child_0",
+                      "label": "No routine follow-up",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -5293,7 +6102,15 @@ const TREES = {
                   "label": "Follow-up",
                   "type": "condition",
                   "search_term": "Follow-up",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_0_child_0_child_0",
+                      "label": "No routine follow-up",
+                      "type": "condition",
+                      "search_term": null,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -5393,7 +6210,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_2_child_1_child_0_child_1",
-                      "label": "Subsequent management based on most suspicious nodule",
+                      "label": "Subsequent management based on most suspicious nodule(s)",
                       "type": "condition",
                       "search_term": "Subsequent",
                       "children": []
@@ -5419,7 +6236,15 @@ const TREES = {
           "label": "Initial Step",
           "type": "condition",
           "search_term": "Initial Step",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "Consider re-biopsy if adequate tissue is not available for molecular profiling",
+              "type": "condition",
+              "search_term": "Consider",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -5441,7 +6266,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_0_child_0_child_0",
-                      "label": "Clinical trial",
+                      "label": "Clinical trial (preferred)",
                       "type": "condition",
                       "search_term": "Clinical",
                       "children": []
@@ -5562,7 +6387,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Clinical trial",
+                      "label": "Clinical trial (preferred)",
                       "type": "condition",
                       "search_term": "Clinical",
                       "children": []
@@ -5576,7 +6401,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_2",
-                      "label": "Alternate systemic therapy †",
+                      "label": "Alternate systemic therapy (not previously used)†",
                       "type": "condition",
                       "search_term": "Alternate",
                       "children": []
@@ -5606,28 +6431,28 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_1_child_0_child_0",
-                      "label": "Clinical trial",
+                      "label": "Clinical trial (preferred)",
                       "type": "condition",
                       "search_term": "Clinical",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_1",
-                      "label": "Switch to gemcitabine-based systemic chemotherapy†",
+                      "label": "Switch to gemcitabine-based systemic chemotherapy† (if fluoropyrimidine-based therapy previously used)",
                       "type": "condition",
                       "search_term": "Switch",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_2",
-                      "label": "Switch to fluoropyrimidine-based systemic chemotherapy†",
+                      "label": "Switch to fluoropyrimidine-based systemic chemotherapy† (if gemcitabine-based therapy previously used)",
                       "type": "condition",
                       "search_term": "Switch",
                       "children": []
                     },
                     {
                       "id": "node_root_child_0_child_1_child_0_child_3",
-                      "label": "Alternate systemic therapy †",
+                      "label": "Alternate systemic therapy (not previously used)†",
                       "type": "condition",
                       "search_term": "Alternate",
                       "children": []
@@ -5663,7 +6488,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "Good or intermediate performance status",
+              "label": "Good or intermediate performance status (PS)",
               "type": "condition",
               "search_term": "Good",
               "children": [
@@ -5675,7 +6500,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_0_child_0_child_0_child_0",
-                      "label": "Clinical trial",
+                      "label": "Clinical trial (preferred)",
                       "type": "condition",
                       "search_term": "Clinical",
                       "children": []
@@ -5689,7 +6514,7 @@ const TREES = {
                     },
                     {
                       "id": "node_root_child_0_child_0_child_0_child_2",
-                      "label": "Induction chemotherapy† followed by chemoradiation†,,, or stereotactic body RT in selected patients",
+                      "label": "Induction chemotherapy† (preferably 4–6 mo) followed by chemoradiation†,,, or stereotactic body RT (SBRT) in selected patients (locally advanced without systemic metastases)",
                       "type": "condition",
                       "search_term": "Induction RT",
                       "children": []
@@ -5796,14 +6621,30 @@ const TREES = {
                       "label": "If resection performed",
                       "type": "condition",
                       "search_term": null,
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_1_child_0",
+                          "label": "Adjuvant therapy, if clinically indicated†",
+                          "type": "condition",
+                          "search_term": "Adjuvant",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "node_root_child_1_child_0_child_0_child_2",
                       "label": "If observed",
                       "type": "condition",
                       "search_term": null,
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_0_child_0_child_2_child_0",
+                          "label": "Continued surveillance",
+                          "type": "condition",
+                          "search_term": "Continued",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -5829,7 +6670,7 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_1_child_1_child_0_child_0_child_0",
-                          "label": "Clinical trial",
+                          "label": "Clinical trial (preferred)",
                           "type": "condition",
                           "search_term": "Clinical",
                           "children": []
@@ -5863,7 +6704,15 @@ const TREES = {
                       "label": "Therapy",
                       "type": "condition",
                       "search_term": "Therapy",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_1_child_1_child_1_child_0_child_0",
+                          "label": "Palliative and best supportive care",
+                          "type": "condition",
+                          "search_term": "Palliative",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -5914,7 +6763,7 @@ const TREES = {
   "Prostate_14": {
     "root": {
       "id": "node_root",
-      "label": "Workup and Treatment of M0 Castration-Resistant Prostate Cancer",
+      "label": "Workup and Treatment of M0 Castration-Resistant Prostate Cancer (CRPC)",
       "type": "treatment",
       "search_term": "Workup Treatment M0 Castration-Resistant Prostate Cancer",
       "children": [
@@ -5923,7 +6772,15 @@ const TREES = {
           "label": "Initial Condition",
           "type": "condition",
           "search_term": "Initial Condition",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "CRPC, imaging studies negative for distant metastases",
+              "type": "condition",
+              "search_term": "CRPC,",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -5936,7 +6793,15 @@ const TREES = {
               "label": "Continue ADT",
               "type": "condition",
               "search_term": "Continue ADT",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_0_child_0",
+                  "label": "Maintain castrate serum levels of testosterone (<50 ng/dL)",
+                  "type": "condition",
+                  "search_term": "Maintain",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_1_child_1",
@@ -5952,7 +6817,7 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_1_child_0_child_0",
-                      "label": "Monitoring",
+                      "label": "Monitoring (preferred)",
                       "type": "condition",
                       "search_term": "Monitoring",
                       "children": []
@@ -5982,21 +6847,21 @@ const TREES = {
                   "children": [
                     {
                       "id": "node_root_child_1_child_2_child_0_child_0",
-                      "label": "Apalutamide",
+                      "label": "Apalutamide (category 1)",
                       "type": "condition",
                       "search_term": "Apalutamide",
                       "children": []
                     },
                     {
                       "id": "node_root_child_1_child_2_child_0_child_1",
-                      "label": "Darolutamide",
+                      "label": "Darolutamide (category 1)",
                       "type": "condition",
                       "search_term": "Darolutamide",
                       "children": []
                     },
                     {
                       "id": "node_root_child_1_child_2_child_0_child_2",
-                      "label": "Enzalutamide",
+                      "label": "Enzalutamide (category 1)",
                       "type": "condition",
                       "search_term": "Enzalutamide",
                       "children": []
@@ -6023,7 +6888,15 @@ const TREES = {
                   "label": "Follow-up",
                   "type": "condition",
                   "search_term": "Follow-up",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "node_root_child_1_child_2_child_2_child_0",
+                      "label": "Consider periodic disease assessment (PSA and imaging)",
+                      "type": "condition",
+                      "search_term": "Consider",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "node_root_child_1_child_2_child_3",
@@ -6042,7 +6915,15 @@ const TREES = {
                           "label": "Action",
                           "type": "condition",
                           "search_term": "Action",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_2_child_3_child_0_child_0_child_0",
+                              "label": "Maintain current treatment and consider periodic disease assessment (PSA and imaging)",
+                              "type": "condition",
+                              "search_term": "Maintain",
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     },
@@ -6057,7 +6938,15 @@ const TREES = {
                           "label": "Action",
                           "type": "condition",
                           "search_term": "Action",
-                          "children": []
+                          "children": [
+                            {
+                              "id": "node_root_child_1_child_2_child_3_child_1_child_0_child_0",
+                              "label": "Imaging",
+                              "type": "condition",
+                              "search_term": "Imaging",
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "id": "node_root_child_1_child_2_child_3_child_1_child_1",
@@ -6067,17 +6956,33 @@ const TREES = {
                           "children": [
                             {
                               "id": "node_root_child_1_child_2_child_3_child_1_child_1_child_0",
-                              "label": "No metastases",
+                              "label": "No metastases (M0)",
                               "type": "condition",
                               "search_term": null,
-                              "children": []
+                              "children": [
+                                {
+                                  "id": "node_root_child_1_child_2_child_3_child_1_child_1_child_0_child_0",
+                                  "label": "Change or maintain current treatment and continue periodic disease assessment",
+                                  "type": "condition",
+                                  "search_term": "Change",
+                                  "children": []
+                                }
+                              ]
                             },
                             {
                               "id": "node_root_child_1_child_2_child_3_child_1_child_1_child_1",
-                              "label": "Metastases",
+                              "label": "Metastases (M1)",
                               "type": "condition",
                               "search_term": "Metastases",
-                              "children": []
+                              "children": [
+                                {
+                                  "id": "node_root_child_1_child_2_child_3_child_1_child_1_child_1_child_0",
+                                  "label": "See Workup and Treatment of M1 CRPC",
+                                  "type": "condition",
+                                  "search_term": "See Workup Treatment M1 CRPC",
+                                  "children": []
+                                }
+                              ]
                             }
                           ]
                         }
@@ -6107,7 +7012,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "Performance Status",
+              "label": "Performance Status (PS)",
               "type": "condition",
               "search_term": "Performance Status",
               "children": [
@@ -6156,7 +7061,15 @@ const TREES = {
                               "label": "Action",
                               "type": "condition",
                               "search_term": "Action",
-                              "children": []
+                              "children": [
+                                {
+                                  "id": "node_root_child_0_child_0_child_0_child_1_child_0_child_0_child_0",
+                                  "label": "Continue until progression or development of unacceptable toxicity",
+                                  "type": "condition",
+                                  "search_term": "Continue",
+                                  "children": []
+                                }
+                              ]
                             },
                             {
                               "id": "node_root_child_0_child_0_child_0_child_1_child_0_child_1",
@@ -6191,7 +7104,15 @@ const TREES = {
                                   "label": "PS 3–4",
                                   "type": "condition",
                                   "search_term": "PS",
-                                  "children": []
+                                  "children": [
+                                    {
+                                      "id": "node_root_child_0_child_0_child_0_child_1_child_0_child_1_child_1_child_0",
+                                      "label": "Palliative symptom management, including localized RT to symptomatic sites",
+                                      "type": "condition",
+                                      "search_term": "Palliative RT",
+                                      "children": []
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -6230,7 +7151,15 @@ const TREES = {
                               "label": "PS 3–4",
                               "type": "condition",
                               "search_term": "PS",
-                              "children": []
+                              "children": [
+                                {
+                                  "id": "node_root_child_0_child_0_child_0_child_1_child_1_child_1_child_0",
+                                  "label": "Palliative symptom management, including localized RT to symptomatic sites",
+                                  "type": "condition",
+                                  "search_term": "Palliative RT",
+                                  "children": []
+                                }
+                              ]
                             }
                           ]
                         }
@@ -6249,7 +7178,15 @@ const TREES = {
                       "label": "Therapy",
                       "type": "condition",
                       "search_term": "Therapy",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_0_child_1_child_0_child_0",
+                          "label": "Palliative symptom management, including localized RT to symptomatic sites",
+                          "type": "condition",
+                          "search_term": "Palliative RT",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -6329,7 +7266,7 @@ const TREES = {
                       "children": [
                         {
                           "id": "node_root_child_0_child_1_child_0_child_0_child_0",
-                          "label": "Consider additional imaging , PET, or RAI imaging",
+                          "label": "Consider additional imaging (CT neck/chest), PET, or RAI imaging",
                           "type": "condition",
                           "search_term": "Consider PET, RAI",
                           "children": []
@@ -6341,7 +7278,15 @@ const TREES = {
                       "label": "Next Step",
                       "type": "condition",
                       "search_term": "Next Step",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_1_child_0_child_1_child_0",
+                          "label": "Recurrent Disease",
+                          "type": "condition",
+                          "search_term": "Recurrent Disease",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -6366,9 +7311,9 @@ const TREES = {
                         },
                         {
                           "id": "node_root_child_0_child_1_child_1_child_0_child_1",
-                          "label": "Follow-up imaging of known iodine-avid disease with cross-sectional imaging",
+                          "label": "Follow-up imaging of known iodine-avid disease with cross-sectional imaging (CT or MRI)",
                           "type": "condition",
-                          "search_term": "Follow-up",
+                          "search_term": "Follow-up MRI)",
                           "children": []
                         }
                       ]
@@ -6378,7 +7323,15 @@ const TREES = {
                       "label": "Next Step",
                       "type": "condition",
                       "search_term": "Next Step",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "node_root_child_0_child_1_child_1_child_1_child_0",
+                          "label": "Recurrent Disease",
+                          "type": "condition",
+                          "search_term": "Recurrent Disease",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -6509,14 +7462,30 @@ const TREES = {
               "label": "Action",
               "type": "condition",
               "search_term": "Action",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_0_child_0",
+                  "label": "Suppress TSH with levothyroxine",
+                  "type": "condition",
+                  "search_term": "Suppress TSH",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_1_child_1",
               "label": "Follow-up",
               "type": "condition",
               "search_term": "Follow-up",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_1_child_0",
+                  "label": "Continue surveillance with unstimulated Tg, ultrasound, and other imaging as clinically indicated",
+                  "type": "condition",
+                  "search_term": "Continue Tg,",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -6535,7 +7504,15 @@ const TREES = {
           "label": "Initial Cytology",
           "type": "condition",
           "search_term": "Initial Cytology",
-          "children": []
+          "children": [
+            {
+              "id": "node_root_child_0_child_0",
+              "label": "AUS (Bethesda III) or Follicular neoplasm (Bethesda IV)",
+              "type": "condition",
+              "search_term": "AUS III) Follicular IV)",
+              "children": []
+            }
+          ]
         },
         {
           "id": "node_root_child_1",
@@ -6552,7 +7529,7 @@ const TREES = {
                 {
                   "id": "node_root_child_1_child_0_child_0",
                   "label": "Nodule surveillance",
-                  "type": "next",
+                  "type": "condition",
                   "search_term": "Nodule",
                   "children": []
                 }
@@ -6575,14 +7552,14 @@ const TREES = {
                 {
                   "id": "node_root_child_2_child_0_child_0",
                   "label": "Nodule surveillance",
-                  "type": "next",
+                  "type": "condition",
                   "search_term": "Nodule",
                   "children": []
                 },
                 {
                   "id": "node_root_child_2_child_0_child_1",
                   "label": "Consider lobectomy in select situations for definitive diagnosis/treatment",
-                  "type": "treatment",
+                  "type": "condition",
                   "search_term": "Consider",
                   "children": []
                 },
@@ -6611,15 +7588,15 @@ const TREES = {
               "children": [
                 {
                   "id": "node_root_child_3_child_0_child_0",
-                  "label": "Consider lobectomy or total thyroidectomy for definitive diagnosis/treatment",
-                  "type": "treatment",
+                  "label": "Consider lobectomy or total thyroidectomy (depending on molecular results) for definitive diagnosis/treatment",
+                  "type": "condition",
                   "search_term": "Consider",
                   "children": []
                 },
                 {
                   "id": "node_root_child_3_child_0_child_1",
                   "label": "Nodule surveillance",
-                  "type": "next",
+                  "type": "condition",
                   "search_term": "Nodule",
                   "children": []
                 }
@@ -6702,10 +7679,18 @@ const TREES = {
             },
             {
               "id": "node_root_child_0_child_1",
-              "label": "Brain imaging",
+              "label": "Brain imaging (CT or MRI with contrast)",
               "type": "condition",
-              "search_term": "Brain",
-              "children": []
+              "search_term": "Brain MRI",
+              "children": [
+                {
+                  "id": "node_root_child_0_child_1_child_0",
+                  "label": "For CNS symptoms or prior to starting systemic therapy",
+                  "type": "condition",
+                  "search_term": "CNS",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -6720,14 +7705,30 @@ const TREES = {
               "label": "Unresectable locoregional recurrent/persistent disease",
               "type": "condition",
               "search_term": "Unresectable",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_0_child_0",
+                  "label": "See treatment path below",
+                  "type": "condition",
+                  "search_term": "See",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_1_child_1",
-              "label": "Soft tissue metastases excluding CNS metastases",
+              "label": "Soft tissue metastases (e.g., lung, liver, muscle) excluding CNS metastases",
               "type": "condition",
               "search_term": "Soft CNS",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_1_child_0",
+                  "label": "See treatment path below",
+                  "type": "condition",
+                  "search_term": "See",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_1_child_2",
@@ -6747,7 +7748,7 @@ const TREES = {
         },
         {
           "id": "node_root_child_2",
-          "label": "Treatment",
+          "label": "Treatment (for unresectable locoregional disease and soft tissue metastases)",
           "type": "treatment",
           "search_term": "Treatment",
           "children": [
@@ -6766,9 +7767,9 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_2_child_0_child_1",
-                  "label": "Consider systemic therapy for progressive and/or symptomatic disease",
+                  "label": "Consider systemic therapy for progressive and/or symptomatic disease (Principles of Systemic Therapy [THYR-B])",
                   "type": "condition",
-                  "search_term": "Consider",
+                  "search_term": "Consider Systemic Therapy",
                   "children": []
                 },
                 {
@@ -6780,9 +7781,9 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_2_child_0_child_3",
-                  "label": "Consider resection of distant metastases and/or EBRT or other local therapies when available to metastatic lesions if progressive and/or symptomatic",
+                  "label": "Consider resection of distant metastases and/or EBRT or other local therapies when available to metastatic lesions if progressive and/or symptomatic (Treatment of Locoregional Recurrence)",
                   "type": "condition",
-                  "search_term": "Consider EBRT",
+                  "search_term": "Consider EBRT Locoregional Recurrence)",
                   "children": []
                 },
                 {
@@ -6794,9 +7795,9 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_2_child_0_child_5",
-                  "label": "Best supportive care",
+                  "label": "Best supportive care (see NCCN Guidelines for Palliative Care)",
                   "type": "condition",
-                  "search_term": "Best",
+                  "search_term": "Best NCCN Guidelines Palliative Care)",
                   "children": []
                 }
               ]
@@ -6821,7 +7822,7 @@ const TREES = {
           "children": [
             {
               "id": "node_root_child_0_child_0",
-              "label": "Thyroid and neck ultrasound , if not previously done",
+              "label": "Thyroid and neck ultrasound (including central and lateral cervical nodal compartments), if not previously done",
               "type": "condition",
               "search_term": "Thyroid",
               "children": []
@@ -6911,7 +7912,15 @@ const TREES = {
               "label": "Next Step",
               "type": "condition",
               "search_term": "Next Step",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_1_child_2_child_0",
+                  "label": "Postsurgical Evaluation",
+                  "type": "condition",
+                  "search_term": "Postsurgical Evaluation",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -6943,7 +7952,7 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_2_child_0_child_2",
-                  "label": "Macroscopic multifocal disease",
+                  "label": "Macroscopic multifocal disease (>1 cm)",
                   "type": "condition",
                   "search_term": "Macroscopic",
                   "children": []
@@ -6972,7 +7981,7 @@ const TREES = {
                 },
                 {
                   "id": "node_root_child_2_child_1_child_1",
-                  "label": "or Disease monitoring",
+                  "label": "or Disease monitoring (category 2B)",
                   "type": "condition",
                   "search_term": "Disease",
                   "children": []
@@ -6984,7 +7993,15 @@ const TREES = {
               "label": "Additional Management",
               "type": "condition",
               "search_term": "Additional Management",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_2_child_2_child_0",
+                  "label": "Consider levothyroxine therapy to keep thyroid stimulating hormone (TSH) low or normalk",
+                  "type": "condition",
+                  "search_term": "Consider",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -7028,7 +8045,15 @@ const TREES = {
               "label": "or",
               "type": "condition",
               "search_term": null,
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_3_child_1_child_0",
+                  "label": "NIFTP",
+                  "type": "condition",
+                  "search_term": "NIFTP",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_3_child_2",
@@ -7050,14 +8075,30 @@ const TREES = {
               "label": "Additional Management",
               "type": "condition",
               "search_term": "Additional Management",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_3_child_3_child_0",
+                  "label": "Consider levothyroxine therapy to keep TSH normalk",
+                  "type": "condition",
+                  "search_term": "Consider TSH",
+                  "children": []
+                }
+              ]
             },
             {
               "id": "node_root_child_3_child_4",
               "label": "Next Step",
               "type": "condition",
               "search_term": "Next Step",
-              "children": []
+              "children": [
+                {
+                  "id": "node_root_child_3_child_4_child_0",
+                  "label": "Disease Monitoring and Maintenance",
+                  "type": "condition",
+                  "search_term": "Disease Monitoring Maintenance",
+                  "children": []
+                }
+              ]
             }
           ]
         }

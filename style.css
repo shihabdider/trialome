@@ -1,0 +1,214 @@
+/* NCCN-style horizontal tree visualization */
+
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 1.5rem 2rem;
+    min-height: 100%;
+}
+
+/* Column headers row */
+.tree-headers {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.tree-header {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111827;
+    letter-spacing: 0.025em;
+    min-width: 180px;
+    flex-shrink: 0;
+}
+
+/* Tree body - horizontal flow */
+.tree-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+/* A single step: node + connector + children */
+.tree-step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Node styling - minimal NCCN style */
+.tree-node {
+    min-width: 160px;
+    max-width: 240px;
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 1px solid #374151;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: left;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+    position: relative;
+    line-height: 1.4;
+}
+
+.tree-node:hover {
+    background-color: #f3f4f6;
+}
+
+.tree-node.active {
+    border-color: #2563eb;
+    border-width: 2px;
+    background-color: #eff6ff;
+}
+
+.tree-node.highlighted {
+    background-color: #dbeafe;
+}
+
+/* Heatmap colors (Research View) */
+.tree-node.heatmap-red {
+    background-color: #fee2e2;
+}
+
+.tree-node.heatmap-yellow {
+    background-color: #fef3c7;
+}
+
+.tree-node.heatmap-green {
+    background-color: #dcfce7;
+}
+
+/* Treatment nodes - slightly emphasized */
+.tree-node.treatment-node {
+    border-width: 2px;
+    border-color: #1f2937;
+}
+
+/* Leaf nodes with bullet points */
+.tree-node .bullet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.375rem;
+    margin-bottom: 0.25rem;
+}
+
+.tree-node .bullet-item:last-child {
+    margin-bottom: 0;
+}
+
+.tree-node .bullet {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+/* Simple status labels (like PS 0-2) */
+.status-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #374151;
+    padding: 0.25rem 0;
+    white-space: nowrap;
+}
+
+/* Horizontal connector with arrow */
+.tree-connector {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.tree-connector-line {
+    width: 32px;
+    height: 1px;
+    background-color: #374151;
+}
+
+.tree-connector-arrow {
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid #374151;
+    flex-shrink: 0;
+}
+
+/* Children container: stacks siblings vertically */
+.tree-children {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 0;
+    gap: 1.5rem;
+}
+
+/* Vertical line connecting siblings */
+.tree-children.multi-child::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #374151;
+}
+
+/* Each child wrapper */
+.tree-child-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+/* Horizontal line from vertical bar to child */
+.tree-child-connector {
+    width: 16px;
+    height: 1px;
+    background-color: #374151;
+    flex-shrink: 0;
+}
+
+/* Hide vertical line above first child and below last */
+.tree-children.multi-child > .tree-child-wrapper:first-child::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    height: 50%;
+    width: 3px;
+    background-color: #f9fafb;
+}
+
+.tree-children.multi-child > .tree-child-wrapper:last-child::after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    height: 50%;
+    width: 3px;
+    background-color: #f9fafb;
+}
+
+/* Single child - no vertical line */
+.tree-children.single-child::before {
+    display: none;
+}
+
+/* Trial count badge */
+.trial-badge {
+    display: inline-block;
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+    margin-top: 0.375rem;
+    border-radius: 0.25rem;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 600;
+}
