@@ -1,0 +1,15 @@
+{
+    "Clinical Stage IA and IB": {
+        "Pretreatment Evaluation": {
+            "PFTs": {
+                "Bronchoscopy": {
+                    "Medically operable": "Surgical resection (See NSCL-3)",
+                    "Medically inoperable": "SABR (See NSCL-4)"
+                }
+            }
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Surgical Therapy (NSCL-C)."
+    }
+}

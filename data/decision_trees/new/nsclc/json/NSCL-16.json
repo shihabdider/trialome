@@ -1,0 +1,17 @@
+{
+    "Recurrence": {
+        "Locoregional Recurrence": {
+            "Prior RT": {
+                "Yes": "Systemic Therapy (See NSCL-12)",
+                "No": "Chemoradiation (See NSCL-11)"
+            }
+        },
+        "Distant Metastasis": {
+            "Oligometastatic": "Local Therapy + Systemic Therapy (See NSCL-12)",
+            "Disseminated": "Systemic Therapy (See NSCL-12)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

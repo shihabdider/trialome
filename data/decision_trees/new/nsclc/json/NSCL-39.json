@@ -1,0 +1,12 @@
+{
+    "Staging": {
+        "TNM Staging System (8th Edition)": {
+            "T Stage": "See Table 1",
+            "N Stage": "See Table 2",
+            "M Stage": "See Table 3"
+        }
+    },
+    "footnotes": {
+        "1": "See Staging (ST-1)."
+    }
+}

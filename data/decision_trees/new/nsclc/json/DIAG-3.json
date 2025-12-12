@@ -1,0 +1,13 @@
+{
+    "Pathologic Diagnosis": {
+        "NSCLC": {
+            "Adenocarcinoma": "Molecular testing (See NSCL-17)",
+            "Squamous cell carcinoma": "Consider molecular testing",
+            "Large cell carcinoma": "Molecular testing"
+        },
+        "SCLC": "See NCCN Guidelines for Small Cell Lung Cancer"
+    },
+    "footnotes": {
+        "1": "See Principles of Pathologic Review (NSCL-A)."
+    }
+}

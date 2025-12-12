@@ -1,0 +1,15 @@
+{
+    "NTRK Gene Fusion Positive": {
+        "First-line Therapy": {
+            "Larotrectinib": "Progression (See NSCL-25)",
+            "Entrectinib": "Progression (See NSCL-25)"
+        },
+        "Progression": {
+            "Chemotherapy": "Progression (See NSCL-25)",
+            "Clinical Trial": "Progression (See NSCL-25)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

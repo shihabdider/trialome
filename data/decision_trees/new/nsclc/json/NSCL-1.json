@@ -1,0 +1,28 @@
+{
+    "Initial Evaluation": {
+        "Pathologic diagnosis of NSCLC": {
+            "History and Physical": {
+                "Smoking cessation counseling": {
+                    "Laboratory and Imaging": {
+                        "CBC, chemistry profile": {
+                            "CT chest": {
+                                "PET/CT": {
+                                    "Clinical Stage IA": "See NSCL-2",
+                                    "Clinical Stage IB": "See NSCL-2",
+                                    "Clinical Stage II": "See NSCL-6",
+                                    "Clinical Stage IIIA": "See NSCL-8",
+                                    "Clinical Stage IIIB": "See NSCL-11",
+                                    "Clinical Stage IV": "See NSCL-12"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Pathologic Review (NSCL-A).",
+        "2": "See Principles of Imaging (NSCL-B)."
+    }
+}

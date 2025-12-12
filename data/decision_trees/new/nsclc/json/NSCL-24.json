@@ -1,0 +1,16 @@
+{
+    "BRAF V600E Mutation Positive": {
+        "First-line Therapy": {
+            "Dabrafenib + Trametinib": "Progression (See NSCL-24)",
+            "Vemurafenib": "Progression (See NSCL-24)",
+            "Chemotherapy": "Progression (See NSCL-24)"
+        },
+        "Progression": {
+            "Chemotherapy + Immunotherapy": "Progression (See NSCL-24)",
+            "Immunotherapy": "Progression (See NSCL-24)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

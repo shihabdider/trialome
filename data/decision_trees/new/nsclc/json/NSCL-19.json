@@ -1,0 +1,16 @@
+{
+    "Maintenance Therapy": {
+        "Continuation Maintenance": {
+            "Pembrolizumab": "Progression (See NSCL-20)",
+            "Atezolizumab": "Progression (See NSCL-20)",
+            "Bevacizumab": "Progression (See NSCL-20)",
+            "Pemetrexed": "Progression (See NSCL-20)"
+        },
+        "Switch Maintenance": {
+            "Pemetrexed": "Progression (See NSCL-20)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "MET Exon 14 Skipping Mutation Positive": {
+        "First-line Therapy": {
+            "Capmatinib": "Progression (See NSCL-26)",
+            "Tepotinib": "Progression (See NSCL-26)",
+            "Crizotinib": "Progression (See NSCL-26)"
+        },
+        "Progression": {
+            "Immunotherapy +/- Chemotherapy": "Progression (See NSCL-26)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

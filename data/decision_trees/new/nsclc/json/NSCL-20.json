@@ -1,0 +1,19 @@
+{
+    "Subsequent Therapy": {
+        "Progression on First-line Therapy": {
+            "Systemic Therapy": {
+                "Docetaxel": "Progression (See NSCL-21)",
+                "Pemetrexed": "Progression (See NSCL-21)",
+                "Gemcitabine": "Progression (See NSCL-21)"
+            },
+            "Immunotherapy (if not previously given)": {
+                "Nivolumab": "Progression (See NSCL-21)",
+                "Pembrolizumab": "Progression (See NSCL-21)",
+                "Atezolizumab": "Progression (See NSCL-21)"
+            }
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

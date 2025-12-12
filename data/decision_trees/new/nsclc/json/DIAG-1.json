@@ -1,0 +1,46 @@
+{
+    "DIAG-1": {
+        "Title": "CLINICAL PRESENTATION / RISK ASSESSMENT",
+        "Flows": [
+            {
+                "Start": "Incidental finding of nodule suspicious for lung cancer",
+                "Steps": [
+                    "Multidisciplinary evaluation (See footnote a)",
+                    "Smoking cessation counseling",
+                    {
+                        "Risk Assessment": {
+                            "Patient factors": [
+                                "Age",
+                                "Smoking history",
+                                "Previous cancer history",
+                                "Family history",
+                                "Occupational exposures",
+                                "Other lung disease (COPD, pulmonary fibrosis)",
+                                "Exposure to infectious agents (eg, endemic areas of fungal infections, tuberculosis) or risk factors or history suggestive of infection (eg, immune suppression, aspiration, infectious respiratory symptoms)"
+                            ],
+                            "Radiologic factors (See footnote c,d)": [
+                                "Size, shape, and density of the pulmonary nodule",
+                                "Associated parenchymal abnormalities (eg, scarring or suspicion of inflammatory changes)",
+                                "Fluorodeoxyglucose (FDG) avidity on FDG-PET/CT imaging"
+                            ]
+                        }
+                    }
+                ],
+                "Branches": {
+                    "Solid nodules": "Follow-up (See DIAG-2)",
+                    "Subsolid nodules": "Follow-up (See DIAG-3)"
+                }
+            },
+            {
+                "Start": "Lung nodules in asymptomatic patients at high-risk detected during lung cancer screening with LDCT",
+                "Action": "See NCCN Guidelines for Lung Cancer Screening"
+            }
+        ],
+        "footnotes": {
+            "a": "Multidisciplinary evaluation including thoracic surgeons, thoracic radiologists, and pulmonologists to determine the likelihood of a cancer diagnosis and the optimal diagnostic or follow-up strategy.",
+            "b": "Risk calculators can be used to quantify individual patient and radiologic factors but do not replace evaluation by a multidisciplinary diagnostic team with substantial experience in the diagnosis of lung cancer.",
+            "c": "See Principles of Diagnostic Evaluation (DIAG-A 1 of 3).",
+            "d": "The most important radiologic factor is change or stability compared with a previous imaging study."
+        }
+    }
+}

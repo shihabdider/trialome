@@ -1,0 +1,11 @@
+{
+    "Post-Induction Treatment": {
+        "Surgery": {
+            "R0 Resection": "Adjuvant Chemotherapy (See NSCL-5)",
+            "R1/R2 Resection": "Postoperative RT (See NSCL-5)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Radiation Therapy (NSCL-D)."
+    }
+}

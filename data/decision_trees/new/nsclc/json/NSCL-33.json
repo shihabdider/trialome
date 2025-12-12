@@ -1,0 +1,11 @@
+{
+    "Metastatic Disease": {
+        "Bone Metastases": {
+            "Bisphosphonates or Denosumab": "See NCCN Guidelines for Bone Health",
+            "Palliative RT": "See NCCN Guidelines for Palliative Care"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Palliative Care (NSCL-I)."
+    }
+}

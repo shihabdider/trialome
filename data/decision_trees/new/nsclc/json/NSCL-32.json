@@ -1,0 +1,13 @@
+{
+    "Histologic Transformation": {
+        "SCLC Transformation": {
+            "Chemotherapy (EP/EC)": "Progression (See NCCN Guidelines for SCLC)"
+        },
+        "Squamous Cell Transformation": {
+            "Chemotherapy": "Progression (See NSCL-20)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Pathologic Review (NSCL-A)."
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Signs and Symptoms of Recurrence": {
+        "Evaluation": {
+            "History and Physical": {
+                "Chest CT": {
+                    "PET/CT": {
+                        "Biopsy": "See NSCL-16"
+                    }
+                }
+            }
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Surveillance (NSCL-H)."
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "ALK Rearrangement Positive (Progression)": {
+        "Asymptomatic": {
+            "Continue Alectinib/Brigatinib/Lorlatinib": "Progression (See NSCL-22)"
+        },
+        "Symptomatic Brain Metastases": {
+            "Local Therapy (SRS/WBRT)": "Continue ALK Inhibitor (See NSCL-22)"
+        },
+        "Symptomatic Systemic Progression": {
+            "Lorlatinib (if not previously given)": "Progression (See NSCL-22)",
+            "Chemotherapy": "Progression (See NSCL-22)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Systemic Therapy (NSCL-F)."
+    }
+}

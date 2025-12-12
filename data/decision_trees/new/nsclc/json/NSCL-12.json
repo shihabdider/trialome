@@ -1,0 +1,11 @@
+{
+    "Clinical Stage IV": {
+        "First-line Systemic Therapy": {
+            "Driver Mutation Positive": "Targeted Therapy (See NSCL-17)",
+            "Driver Mutation Negative": "Immunotherapy +/- Chemotherapy (See NSCL-18)"
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Molecular and Biomarker Analysis (NSCL-G)."
+    }
+}

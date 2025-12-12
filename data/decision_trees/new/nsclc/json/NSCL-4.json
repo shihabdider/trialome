@@ -1,0 +1,13 @@
+{
+    "Primary Treatment (Medically Inoperable Stage IA/IB)": {
+        "SABR": {
+            "Surveillance": "See NSCL-15"
+        },
+        "Definitive RT": {
+            "Surveillance": "See NSCL-15"
+        }
+    },
+    "footnotes": {
+        "1": "Stereotactic Ablative Radiotherapy (SABR) is also known as SBRT."
+    }
+}

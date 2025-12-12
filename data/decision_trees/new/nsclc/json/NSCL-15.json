@@ -1,0 +1,24 @@
+{
+    "Surveillance": {
+        "Stage I-II (Treated with Surgery)": {
+            "H&P and Chest CT every 6 mo for 2-3 y": {
+                "Then H&P and Low-dose CT annually": "Recurrence (See NSCL-16)"
+            }
+        },
+        "Stage I-II (Treated with SABR)": {
+            "H&P and Chest CT every 6 mo for 2-3 y": {
+                "Then H&P and Low-dose CT annually": "Recurrence (See NSCL-16)"
+            }
+        },
+        "Stage III (Treated with Chemoradiation)": {
+            "H&P and Chest CT every 3-6 mo for 3 y": {
+                "Then H&P and Low-dose CT every 6 mo for 2 y": {
+                    "Then H&P and Low-dose CT annually": "Recurrence (See NSCL-16)"
+                }
+            }
+        }
+    },
+    "footnotes": {
+        "1": "See Principles of Survivorship (NSCL-H)."
+    }
+}
