@@ -1,0 +1,180 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Incidental finding: subsolid nodule(s) on chest CT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_004",
+        "node_006"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_002",
+      "content": "Solitary pure ground-glass nodules",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_008"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_003",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_004",
+      "content": "Solitary part-solid nodules",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_010"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_005",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_006",
+      "content": "Multiple subsolid nodules",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_013"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_007",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_008",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_009",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_010",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_011",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_012",
+      "content": "\u2022 CT at 3\u20136 mo to confirm no growth or change in solid component, then annual CT for 5 y\n\u2022 If solid component \u22656 mm, consider FDG-PET/CTi or biopsyj",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_013",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_014",
+      "content": "\u2022 CT at 3\u20136 mo\n\u2022 If stable, consider CT at 2 and 4 y",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_015",
+      "content": "CT at 6\u201312 mo to confirm no growth or development of a solid component, then CT every 2 y until 5 y",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_016",
+      "content": "\u2022 CT at 3\u20136 mo\n\u2022 Subsequent management based on most suspicious nodule(s)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "DIAG-3",
+      "to_tree": "DIAG-A",
+      "description": "Footnote c refers to Principles of Diagnostic Evaluation (DIAG-A 1 of 3)."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+}

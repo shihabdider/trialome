@@ -1,0 +1,225 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "CLINICAL ASSESSMENT\nStage IB (peripheral T2a, N0)\nStage I (central T1abc\u2013T2a, N0)\nStage II (T1abc\u2013T2ab, N1; T2b, N0)\nStage IIB (T3, N0)f\nStage IIIA (T3, N1)f",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_002",
+      "content": "PRETREATMENT EVALUATIONg\n\u2022 Molecular testing for EGFR, ALK; PD-L1 testing\n\u2022 Evaluate for perioperative therapyq\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluationh\n\u2022 FDG-PET/CT scank (if not previously done)\n\u2022 Brain MRI with contrastr (stage II, IIIA)\n(stage IB [optional])",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_014"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "N0 or N1",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_007"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_004",
+      "content": "Operable",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_005",
+      "content": "Surgical exploration and resectionm + mediastinal lymph node dissection or systematic lymph node sampling after preoperative systemic therapy, if plannedp",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [
+        "NSCL-B"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon,m and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_012"
+      ],
+      "tree_ids": [
+        "NSCL-B"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "N0",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_009",
+      "content": "Definitive RT, preferably SABRh,p",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [
+        "NSCL-C"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Consider adjuvant chemotherapyn for high-risk stage II (especially T2b\u20133)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [
+        "NSCL-C"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "N1",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_013",
+      "content": "NSCL-10",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-10"
+      ]
+    },
+    {
+      "id": "node_014",
+      "content": "N2 or N3",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_015",
+      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-13"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-E",
+      "description": "Footnote 'q' on 'Evaluate for perioperative therapy' refers to Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-B",
+      "description": "Footnote 'm' on 'Surgical exploration and resection' and 'thoracic surgeon' refers to Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-4",
+      "description": "Directs to guidelines for 'Findings at Surgery'."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-C",
+      "description": "Footnote 'p' on 'SABR' and footnote 'n' on 'adjuvant chemotherapy' refer to Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-17",
+      "description": "Directs to 'Surveillance' guidelines."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-10",
+      "description": "Directs to guidelines for medically inoperable N1 patients."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-8",
+      "description": "Directs to guidelines for Stage IIIA/IIIB disease."
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-13",
+      "description": "Directs to guidelines for Stage IIIB/IIIC disease."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+}

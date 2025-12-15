@@ -1,0 +1,150 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IA (peripheral T1abc, N0)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Pulmonary function tests (PFTs) (if not previously done)\n\u2022 Bronchoscopy (intraoperative preferred)\n\u2022 Consider pathologic mediastinal lymph node evaluationh,i,j\n\u2022 FDG-PET/CT scank (if not previously done)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_003",
+      "content": "Negative mediastinal nodes",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_004",
+      "content": "Positive mediastinal nodes",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_005",
+      "content": "Operablel",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_006",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon,m and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_007",
+      "content": "Surgical exploration and resectionm + mediastinal lymph node dissection or systematic lymph node sampling",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_008",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Definitive radiation therapy (RT), preferably stereotactic ablative radiotherapy (SABR)n,o,p",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_010",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-13"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-4",
+      "description": "Proceed to 'Findings at Surgery' guidelines."
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-17",
+      "description": "Proceed to 'Surveillance' guidelines."
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-8",
+      "description": "Proceed to 'Stage IIIA/IIIB' guidelines."
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-13",
+      "description": "Proceed to 'Stage IIIB/IIIC' guidelines."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+}

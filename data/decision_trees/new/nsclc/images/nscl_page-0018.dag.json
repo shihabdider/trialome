@@ -1,0 +1,235 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Incidental finding: solid nodule(s) on chest CT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_002",
+      "content": "Low risk\u1d49",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_003",
+      "content": "High risk\u1da0",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_012",
+        "node_013",
+        "node_014"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_004",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_005",
+      "content": "6-8 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_006",
+      "content": ">8 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_007",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_008",
+      "content": "CT at 6-12 mo",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_009",
+      "content": "Consider CT at 3 mo, FDG-PET/CT,\u2071 or biopsy\u02b2",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_010",
+      "content": "Stable",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_011",
+      "content": "Consider CT at 18-24 mo",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_012",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_013",
+      "content": "6-8 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_014",
+      "content": ">8 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_015",
+      "content": "CT at 12 mo (optional)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_016",
+      "content": "CT at 6-12 mo",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_019"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_017",
+      "content": "Consider CT at 3 mo, FDG-PET/CT,\u2071 or biopsy\u02b2",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_018",
+      "content": "Stable",
+      "parent_ids": [
+        "node_015"
+      ],
+      "children_ids": [
+        "node_020"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_019",
+      "content": "Stable",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_020",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_018"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    },
+    {
+      "id": "node_021",
+      "content": "Repeat CT at 18-24 mo",
+      "parent_ids": [
+        "node_019"
+      ],
+      "children_ids": [],
+      "tree_ids": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "DIAG-2",
+      "to_tree": "DIAG-A",
+      "description": "Footnote 'c' under the 'FOLLOW-UP' section heading refers to 'Principles of Diagnostic Evaluation (DIAG-A 1 of 3)'."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+}

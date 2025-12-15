@@ -1,0 +1,335 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "PATHOLOGIC DIAGNOSIS OF NSCLC",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_002",
+      "content": "NSCLC",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_003",
+      "content": "INITIAL EVALUATION\n\u2022 Pathology reviewa\n\u2022 H&P (include performance status + weight loss)b\n\u2022 CT chest and upper abdomen with contrast, including adrenals\n\u2022 CBC, platelets\n\u2022 Chemistry profile\n\u2022 Smoking cessation advice, counseling, and pharmacotherapy\n  \u25b8 Use the 5 A's Framework: Ask, Advise, Assess, Assist, Arrange\n\u2022 Integrate palliative carec\n  NCCN Guidelines for Palliative Care\n\u2022 For tools to aid in the optimal assessment and management of NSCLC in older adults, see the NCCN Guidelines for Older Adult Oncology",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006",
+        "node_007",
+        "node_008",
+        "node_009",
+        "node_010",
+        "node_011",
+        "node_012",
+        "node_013",
+        "node_014"
+      ],
+      "tree_ids": [
+        "NSCL-A",
+        "Palliative Care",
+        "Older Adult Oncology"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Stage IA, peripherale (T1abc, N0)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_005",
+      "content": "Stage IB, peripherale (T2a, N0);\nStage I, centrale (T1abc\u2013T2a, N0);\nStage II (T1abc\u2013T2ab, N1; T2b, N0);\nStage IIB (T3, N0)f; stage IIIA (T3, N1)f",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_006",
+      "content": "Stage IIB (T3 invasion, N0);\nStage IIIA (T4 invasion, N0\u20131; T3, N1; T4, N0\u20131)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_007",
+      "content": "Stage IIIA (T1\u20132, N2); stage IIIB (T3, N2)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_008",
+      "content": "Separate pulmonary nodule(s) (stage IIB, IIIA, IV)\nStage IIIA ipsilateral non-primary lobe (T4, N0\u20131);\nStage IV (contralateral lung)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_009",
+      "content": "Multiple lung cancers",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_019"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_010",
+      "content": "Stage IIIB (T1\u20132, N3); stage IIIC (T3, N3)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_020"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_011",
+      "content": "Stage IIIB (T4, N2); stage IIIC (T4, N3)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_012",
+      "content": "Stage IVA (M1a)c (pleural or pericardial effusion)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_013",
+      "content": "Stage IVA, M1bc and stage IVB, M1cc",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_022"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_014",
+      "content": "Pleural metastasesc or disseminated metastasesc",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": []
+    },
+    {
+      "id": "node_015",
+      "content": "Pretreatment Evaluation (NSCL-2)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-2"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Pretreatment Evaluation (NSCL-3)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-3"
+      ]
+    },
+    {
+      "id": "node_017",
+      "content": "Pretreatment Evaluation (NSCL-5)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-5"
+      ]
+    },
+    {
+      "id": "node_018",
+      "content": "Pretreatment Evaluation (NSCL-8)",
+      "parent_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8"
+      ]
+    },
+    {
+      "id": "node_019",
+      "content": "Treatment (NSCL-11)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-11"
+      ]
+    },
+    {
+      "id": "node_020",
+      "content": "Pretreatment Evaluation (NSCL-13)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-13"
+      ]
+    },
+    {
+      "id": "node_021",
+      "content": "Pretreatment Evaluation (NSCL-14)",
+      "parent_ids": [
+        "node_011",
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-14"
+      ]
+    },
+    {
+      "id": "node_022",
+      "content": "Pretreatment Evaluation (NSCL-15)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15"
+      ]
+    },
+    {
+      "id": "node_023",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-A",
+      "description": "Footnote 'a' refers to 'Principles of Pathologic Review (NSCL-A)'"
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "Palliative Care",
+      "description": "Recommendation in Initial Evaluation to integrate palliative care, see 'NCCN Guidelines for Palliative Care'"
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "Older Adult Oncology",
+      "description": "Recommendation in Initial Evaluation for tools to manage NSCLC in older adults, see 'NCCN Guidelines for Older Adult Oncology'"
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-2",
+      "description": "Directs to Pretreatment Evaluation for Stage IA, peripheral (T1abc, N0) NSCLC."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-3",
+      "description": "Directs to Pretreatment Evaluation for Stage IB/I/II/IIB/IIIA NSCLC as specified."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-5",
+      "description": "Directs to Pretreatment Evaluation for Stage IIB/IIIA NSCLC as specified."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-8",
+      "description": "Directs to Pretreatment Evaluation for Stage IIIA/IIIB, separate nodules, or specific Stage IV disease."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-11",
+      "description": "Directs to Treatment for multiple lung cancers."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-13",
+      "description": "Directs to Pretreatment Evaluation for Stage IIIB/IIIC NSCLC as specified."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-14",
+      "description": "Directs to Pretreatment Evaluation for Stage IIIB/IIIC/IVA NSCLC as specified."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-15",
+      "description": "Directs to Pretreatment Evaluation for Stage IVA/IVB NSCLC."
+    },
+    {
+      "from_tree": "NSCL-1",
+      "to_tree": "NSCL-19",
+      "description": "Directs to guidelines for Advanced/metastatic disease for patients with pleural or disseminated metastases."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+}

@@ -168,3 +168,13 @@ const TREES = {
 
 - Implement logic to batch-fetch trial counts for visible nodes
 - Apply conditional CSS classes based on count results
+
+
+# Notes
+
+Prompt for converting images to trees:
+
+1. Ignore any titles/headers
+2. Represent as a graph instead of tree (allowing cross-links)
+3. Each node should have atrributes: id, parent_ids[], children_ids[], tree_ids[], content (text)
+4. Use JSON format for output
