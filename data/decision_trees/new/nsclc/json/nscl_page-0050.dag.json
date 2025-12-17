@@ -1,0 +1,278 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "ALK rearrangement",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "ALK rearrangement discovered prior to first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "ALK rearrangement discovered during first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Preferred\nAlectinib (category 1)\nor\nBrigatinib (category 1)\nor\nEnsartinib (category 1)\nor\nLorlatinib (category 1)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss",
+        "rr"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Useful in Certain Circumstances\nCeritinib (category 1)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss",
+        "rr"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Useful in Certain Circumstances\nor\nCrizotinib (category 1)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss",
+        "rr"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Interrupt current therapy and start\nAlectinib (preferred) or\nBrigatinib (preferred) or\nEnsartinib (preferred) or\nLorlatinib (preferred) or\nCeritinib",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "xx"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "or\nCrizotinib",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Progression",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Progression",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Progression",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Progression",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Subsequent Therapy (NSCL-28)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-28"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Subsequent Therapy (NSCL-28)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-28"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_016",
+      "content": "Subsequent Therapy (NSCL-29)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-29"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_017",
+      "content": "Subsequent Therapy (NSCL-28)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-28"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_018",
+      "content": "Subsequent Therapy (NSCL-29)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-29"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-27",
+      "to_tree": "NSCL-28",
+      "description": "Subsequent Therapy for progression on Alectinib, Brigatinib, Ensartinib, Lorlatinib, or Ceritinib"
+    },
+    {
+      "from_tree": "NSCL-27",
+      "to_tree": "NSCL-29",
+      "description": "Subsequent Therapy for progression on Crizotinib"
+    },
+    {
+      "from_tree": "NSCL-27",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-27",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "ss",
+      "content": "For PS 0\u20134."
+    },
+    {
+      "label": "xx",
+      "content": "If there is a good response to current therapy, it is reasonable to continue therapy."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "ALK REARRANGEMENT",
+  "tree_id": "NSCL-27"
+}

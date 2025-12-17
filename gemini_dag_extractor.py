@@ -37,6 +37,13 @@ class NodeData(BaseModel):
     parent_ids: List[str] = Field(description="IDs of parent nodes this node connects from")
     children_ids: List[str] = Field(description="IDs of child nodes this node connects to")
     tree_ids: List[str] = Field(description="Cross-references to other trees (e.g., NSCL-16, NSCL-19)")
+    footnote_labels: List[str] = Field(description="Footnote labels associated with this node (e.g., ['a', 'b', '1'])")
+
+
+class Footnote(BaseModel):
+    """Represents a footnote in the image."""
+    label: str = Field(description="Footnote label (e.g., 'a', 'b', '1', 'I')")
+    content: str = Field(description="Full text content of the footnote, verbatim from image")
 
 
 class TreeReference(BaseModel):
@@ -50,11 +57,15 @@ class DAGOutput(BaseModel):
     """Complete DAG extraction output for a single clinical guideline image."""
     nodes: List[NodeData] = Field(description="All nodes extracted from the image")
     tree_references: List[TreeReference] = Field(description="Cross-tree references found")
+    footnotes: List[Footnote] = Field(description="All footnotes found in the image")
     extraction_confidence: float = Field(
         description="Confidence score 0.0-1.0 for extraction accuracy"
     )
     image_title: Optional[str] = Field(
         description="Title/header of the guideline (e.g., 'NCCN Guidelines Version 3.2025')"
+    )
+    tree_id: Optional[str] = Field(
+        description="Tree identifier that appears in lower right of image (e.g., 'DIAG-1', 'NSCLC-10')"
     )
 
 
@@ -191,7 +202,12 @@ EXTRACTION GUIDELINES:
 2. **Parent-Child Relationships**: Trace edges (arrows, lines) to determine hierarchy
 3. **Node IDs**: Assign sequential IDs (node_001, node_002, etc.) in top-to-bottom, left-to-right order
 4. **Cross-Tree References**: Look for mentions of other guidelines (e.g., "See NSCL-16", "Refer to AML-7")
-5. **Confidence**: Rate your extraction confidence 0.0-1.0 based on image clarity and complexity
+5. **Footnotes**: Extract all footnotes from the image (bottom of page, superscript references, etc.)
+   - Identify footnote labels (letters like 'a', 'b', 'c' or numbers like '1', '2', 'I', 'II', etc.)
+   - Map each footnote label to its full content
+   - For each node, list any footnote labels that appear as superscripts or references within that node
+6. **Tree ID**: Look for the tree identifier in the lower right corner of the image (e.g., "DIAG-1", "NSCLC-10")
+7. **Confidence**: Rate your extraction confidence 0.0-1.0 based on image clarity and complexity
 
 Return ONLY valid JSON matching this exact schema:
 {
@@ -201,7 +217,8 @@ Return ONLY valid JSON matching this exact schema:
       "content": "Exact text from image",
       "parent_ids": [],
       "children_ids": ["node_002"],
-      "tree_ids": ["NSCL-16"] if cross-references exist
+      "tree_ids": ["NSCL-16"] if cross-references exist,
+      "footnote_labels": ["a", "b"] if footnotes are referenced
     }
   ],
   "tree_references": [
@@ -211,8 +228,15 @@ Return ONLY valid JSON matching this exact schema:
       "description": "What the reference means"
     }
   ],
+  "footnotes": [
+    {
+      "label": "a",
+      "content": "Full text of footnote from image"
+    }
+  ],
   "extraction_confidence": 0.95,
-  "image_title": "Title if visible at top of image"
+  "image_title": "Title if visible at top of image",
+  "tree_id": "NSCLC-10"
 }"""
     
     # Create request with structured JSON output
@@ -248,8 +272,12 @@ Return ONLY valid JSON matching this exact schema:
         # Ensure required fields have defaults
         if "tree_references" not in output_dict:
             output_dict["tree_references"] = []
+        if "footnotes" not in output_dict:
+            output_dict["footnotes"] = []
         if "image_title" not in output_dict:
             output_dict["image_title"] = None
+        if "tree_id" not in output_dict:
+            output_dict["tree_id"] = None
         
         # Ensure each node has required fields
         for node in output_dict.get("nodes", []):
@@ -259,6 +287,8 @@ Return ONLY valid JSON matching this exact schema:
                 node["children_ids"] = []
             if "tree_ids" not in node:
                 node["tree_ids"] = []
+            if "footnote_labels" not in node:
+                node["footnote_labels"] = []
         
         dag_output = DAGOutput(**output_dict)
         print(f"  [SUCCESS] Extracted {len(dag_output.nodes)} nodes with confidence {dag_output.extraction_confidence}")
@@ -326,7 +356,7 @@ def save_extraction_index(index: Dict[str, Any]):
         json.dump(index, f, indent=2)
 
 
-def extract_all_images(force_reprocess: bool = False):
+def extract_all_images(force_reprocess: bool = False, output_dir: Optional[Path] = None):
     """
     Extract DAG from all images in the NSCLC directory with idempotent processing.
     
@@ -338,6 +368,12 @@ def extract_all_images(force_reprocess: bool = False):
     
     image_dir = Path(__file__).parent / "data" / "decision_trees" / "new" / "nsclc" / "images"
     
+    if output_dir is None:
+        output_dir = Path(__file__).parent / "data" / "decision_trees" / "new" / "nsclc" / "json"
+    
+    # Create output directory if it doesn't exist
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
     if not image_dir.exists():
         raise FileNotFoundError(f"Image directory not found: {image_dir}")
     
@@ -345,14 +381,15 @@ def extract_all_images(force_reprocess: bool = False):
     index = get_extraction_index()
     index["statistics"]["total"] = len(image_files)
     
-    print(f"\n{'='*70}")
-    print(f"Batch DAG Extraction (Idempotent Mode)")
-    print(f"{'='*70}")
-    print(f"Model: {GEMINI_MODEL}")
-    print(f"Total images: {len(image_files)}")
-    print(f"Already processed: {index['statistics'].get('processed', 0)}")
-    print(f"Previously failed: {index['statistics'].get('failed', 0)}")
-    print()
+    print(f"\n{'='*70}", flush=True)
+    print(f"Batch DAG Extraction (Idempotent Mode)", flush=True)
+    print(f"{'='*70}", flush=True)
+    print(f"Model: {GEMINI_MODEL}", flush=True)
+    print(f"Total images: {len(image_files)}", flush=True)
+    print(f"Already processed: {index['statistics'].get('processed', 0)}", flush=True)
+    print(f"Previously failed: {index['statistics'].get('failed', 0)}", flush=True)
+    print(f"Output directory: {output_dir}", flush=True)
+    print(flush=True)
     
     processed_count = 0
     failed_count = 0
@@ -366,14 +403,14 @@ def extract_all_images(force_reprocess: bool = False):
             entry = index["images"][image_file.name]
             if entry.get("status") == "success":
                 skipped_count += 1
-                print(f"[{idx}/{len(image_files)}] ⊘ SKIP {image_file.name} (already processed)")
+                print(f"[{idx}/{len(image_files)}] ⊘ SKIP {image_file.name} (already processed)", flush=True)
                 continue
         
-        print(f"[{idx}/{len(image_files)}] ⇢ {image_file.name}")
+        print(f"[{idx}/{len(image_files)}] ⇢ {image_file.name}", flush=True)
         
         try:
             dag_output = extract_dag_from_image(image_file)
-            save_dag_output(image_file, dag_output)
+            save_dag_output(image_file, dag_output, output_dir)
             
             # Update index
             index["images"][image_file.name] = {

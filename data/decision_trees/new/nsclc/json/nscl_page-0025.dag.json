@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IB (peripheral T2a, N0)\nStage I (central T1abc\u2013T2a, N0)\nStage II (T1abc\u2013T2ab, N1; T2b, N0)\nStage IIB (T3, N0)f\nStage IIIA (T3, N1)f",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "f"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Pretreatment Evaluation\n\u2022 Molecular testing for EGFR, ALK; PD-L1 testing\n\u2022 Evaluate for perioperative therapyq\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluationh\n\u2022 FDG-PET/CT scank (if not previously done)\n\u2022 Brain MRI with contrastr (stage II, IIIA) (stage IB [optional])",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "g",
+        "q",
+        "h",
+        "k",
+        "r"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "N0 or N1",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "N2 or N3",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Operable",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon,m and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_009",
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Surgical exploration and resectionm + mediastinal lymph node dissection or systematic lymph node sampling after preoperative systemic therapy, if plannedp",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "p"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "N0",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "N1",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Definitive RT, preferably SABRn,p",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "p"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Consider adjuvant chemotherapyn for high-risk stage II (especially T2b\u20133)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "NSCL-10",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-10"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-13"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-4",
+      "description": "Next step for surgical cases: Findings at Surgery"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-10",
+      "description": "Next step for medically inoperable N1 cases"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-8",
+      "description": "Next step for Stage IIIA/IIIB (N2 or N3)"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-13",
+      "description": "Next step for Stage IIIB/IIIC (N2 or N3)"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance after treatment"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy (referenced in footnote m)"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy (referenced in footnote n)"
+    },
+    {
+      "from_tree": "NSCL-3",
+      "to_tree": "NSCL-E",
+      "description": "Perioperative Systemic Therapy (referenced in footnote q)"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "f",
+      "content": "T3, N0 related to size or satellite nodules."
+    },
+    {
+      "label": "g",
+      "content": "Testing is not listed in order of priority and is dependent on clinical circumstances, institutional processes, and judicious use of resources."
+    },
+    {
+      "label": "h",
+      "content": "Methods for evaluation include mediastinoscopy, mediastinotomy, EBUS, EUS, and CT-guided biopsy. An EBUS-TBNA negative for malignancy in a clinically (FDG-PET/CT and/or CT) positive mediastinum should undergo subsequent mediastinoscopy prior to surgical resection."
+    },
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "p",
+      "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "CLINICAL ASSESSMENT - PRETREATMENT EVALUATION - INITIAL TREATMENT",
+  "tree_id": "NSCL-3"
+}

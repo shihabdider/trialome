@@ -1,0 +1,454 @@
+An error occurred: module 'importlib.metadata' has no attribute 'packages_distributions'
+/Users/user1/Library/Python/3.9/lib/python/site-packages/google/api_core/_python_version_support.py:252: FutureWarning: You are using a Python version (3.9.6) past its end of life. Google will update google.api_core with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/user1/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled witAn error occurred: module 'importlib.metadata' has no attribute 'packages_distributions'
+
+======================================================================
+Batch DAG Extraction (Idempotent Mode)
+======================================================================
+Model: gemini-2.5-pro
+Total images: 42
+Already processed: 0
+Previously failed: 0
+
+[1/42] ⇢ nscl_page-0017.jpg
+
+Extracting DAG from: nscl_page-0017.jpg
+  [SUCCESS] Extracted 7 nodes with confidence 0.98
+  [SAVED] nscl_page-0017.dag.json
+[2/42] ⇢ nscl_page-0018.jpg
+
+Extracting DAG from: nscl_page-0018.jpg
+  [SUCCESS] Extracted 23 nodes with confidence 1.0
+  [SAVED] nscl_page-0018.dag.json
+[3/42] ⇢ nscl_page-0019.jpg
+
+Extracting DAG from: nscl_page-0019.jpg
+  [SUCCESS] Extracted 16 nodes with confidence 1.0
+  [SAVED] nscl_page-0019.dag.json
+[4/42] ⇢ nscl_page-0023.jpg
+
+Extracting DAG from: nscl_page-0023.jpg
+  [SUCCESS] Extracted 22 nodes with confidence 0.98
+  [SAVED] nscl_page-0023.dag.json
+[5/42] ⇢ nscl_page-0024.jpg
+
+Extracting DAG from: nscl_page-0024.jpg
+  [SUCCESS] Extracted 11 nodes with confidence 0.98
+  [SAVED] nscl_page-0024.dag.json
+[6/42] ⇢ nscl_page-0025.jpg
+
+Extracting DAG from: nscl_page-0025.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 0.98
+  [SAVED] nscl_page-0025.dag.json
+[7/42] ⇢ nscl_page-0026.jpg
+
+Extracting DAG from: nscl_page-0026.jpg
+  [SUCCESS] Extracted 33 nodes with confidence 0.98
+  [SAVED] nscl_page-0026.dag.json
+[8/42] ⇢ nscl_page-0027.jpg
+
+Extracting DAG from: nscl_page-0027.jpg
+  [SUCCESS] Extracted 0 nodes with confidence 1.0
+  [SAVED] nscl_page-0027.dag.json
+[9/42] ⇢ nscl_page-0028.jpg
+
+Extracting DAG from: nscl_page-0028.jpg
+  [SUCCESS] Extracted 14 nodes with confidence 1.0
+  [SAVED] nscl_page-0028.dag.json
+[10/42] ⇢ nscl_page-0029.jpg
+
+Extracting DAG from: nscl_page-0029.jpg
+  [SUCCESS] Extracted 18 nodes with confidence 0.98
+  [SAVED] nscl_page-0029.dag.json
+[11/42] ⇢ nscl_page-0030.jpg
+
+Extracting DAG from: nscl_page-0030.jpg
+  [SUCCESS] Extracted 27 nodes with confidence 0.98
+  [SAVED] nscl_page-0030.dag.json
+[12/42] ⇢ nscl_page-0031.jpg
+
+Extracting DAG from: nscl_page-0031.jpg
+  [SUCCESS] Extracted 18 nodes with confidence 0.98
+  [SAVED] nscl_page-0031.dag.json
+[13/42] ⇢ nscl_page-0032.jpg
+
+Extracting DAG from: nscl_page-0032.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 1.0
+  [SAVED] nscl_page-0032.dag.json
+[14/42] ⇢ nscl_page-0033.jpg
+
+Extracting DAG from: nscl_page-0033.jpg
+  [SUCCESS] Extracted 22 nodes with confidence 0.99
+  [SAVED] nscl_page-0033.dag.json
+[15/42] ⇢ nscl_page-0034.jpg
+
+Extracting DAG from: nscl_page-0034.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 1.0
+  [SAVED] nscl_page-0034.dag.json
+[16/42] ⇢ nscl_page-0035.jpg
+
+Extracting DAG from: nscl_page-0035.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 1.0
+  [SAVED] nscl_page-0035.dag.json
+[17/42] ⇢ nscl_page-0036.jpg
+
+Extracting DAG from: nscl_page-0036.jpg
+  [SUCCESS] Extracted 10 nodes with confidence 1.0
+  [SAVED] nscl_page-0036.dag.json
+[18/42] ⇢ nscl_page-0037.jpg
+
+Extracting DAG from: nscl_page-0037.jpg
+  [SUCCESS] Extracted 18 nodes with confidence 0.98
+  [SAVED] nscl_page-0037.dag.json
+[19/42] ⇢ nscl_page-0038.jpg
+
+Extracting DAG from: nscl_page-0038.jpg
+  [ERROR] Failed to parse DAG output: 18 validation errors for DAGOutput
+nodes.0.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.0.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.2.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.2.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.4.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.6.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.6.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.7.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.7.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.8.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.9.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.10.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.11.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.12.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+  ✗ Error: 18 validation errors for DAGOutput
+nodes.0.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.0.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.2.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.2.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.4.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.6.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.6.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.7.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.7.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.8.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.9.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.10.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.11.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.12.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+[20/42] ⇢ nscl_page-0039.jpg
+
+Extracting DAG from: nscl_page-0039.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 1.0
+  [SAVED] nscl_page-0039.dag.json
+[21/42] ⇢ nscl_page-0040.jpg
+
+Extracting DAG from: nscl_page-0040.jpg
+  [SUCCESS] Extracted 8 nodes with confidence 1.0
+  [SAVED] nscl_page-0040.dag.json
+[22/42] ⇢ nscl_page-0041.jpg
+
+Extracting DAG from: nscl_page-0041.jpg
+  [SUCCESS] Extracted 32 nodes with confidence 0.98
+  [SAVED] nscl_page-0041.dag.json
+[23/42] ⇢ nscl_page-0042.jpg
+
+Extracting DAG from: nscl_page-0042.jpg
+  [SUCCESS] Extracted 7 nodes with confidence 1.0
+  [SAVED] nscl_page-0042.dag.json
+[24/42] ⇢ nscl_page-0044.jpg
+
+Extracting DAG from: nscl_page-0044.jpg
+  [SUCCESS] Extracted 22 nodes with confidence 0.98
+  [SAVED] nscl_page-0044.dag.json
+[25/42] ⇢ nscl_page-0045.jpg
+
+Extracting DAG from: nscl_page-0045.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 0.95
+  [SAVED] nscl_page-0045.dag.json
+[26/42] ⇢ nscl_page-0046.jpg
+
+Extracting DAG from: nscl_page-0046.jpg
+  [SUCCESS] Extracted 20 nodes with confidence 0.98
+  [SAVED] nscl_page-0046.dag.json
+[27/42] ⇢ nscl_page-0047.jpg
+
+Extracting DAG from: nscl_page-0047.jpg
+  [SUCCESS] Extracted 18 nodes with confidence 1.0
+  [SAVED] nscl_page-0047.dag.json
+[28/42] ⇢ nscl_page-0048.jpg
+
+Extracting DAG from: nscl_page-0048.jpg
+  [SUCCESS] Extracted 17 nodes with confidence 0.98
+  [SAVED] nscl_page-0048.dag.json
+[29/42] ⇢ nscl_page-0049.jpg
+
+Extracting DAG from: nscl_page-0049.jpg
+  [SUCCESS] Extracted 14 nodes with confidence 0.98
+  [SAVED] nscl_page-0049.dag.json
+[30/42] ⇢ nscl_page-0050.jpg
+
+Extracting DAG from: nscl_page-0050.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 0.98
+  [SAVED] nscl_page-0050.dag.json
+[31/42] ⇢ nscl_page-0051.jpg
+
+Extracting DAG from: nscl_page-0051.jpg
+  [SUCCESS] Extracted 13 nodes with confidence 0.98
+  [SAVED] nscl_page-0051.dag.json
+[32/42] ⇢ nscl_page-0052.jpg
+
+Extracting DAG from: nscl_page-0052.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 0.98
+  [SAVED] nscl_page-0052.dag.json
+[33/42] ⇢ nscl_page-0053.jpg
+
+Extracting DAG from: nscl_page-0053.jpg
+  [ERROR] Failed to parse DAG output: 13 validation errors for DAGOutput
+nodes.0.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.1.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.2.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.3.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.4.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=Non  [SUCCESS] Extracted 13 nodes with confidence 1.0
+  [SAVED] nscl_page-0050.dag.json
+[31/42] ⇢ nscl_page-0051.jpg
+
+Extracting DAG from: nscl_page-0051.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 0.98
+  [SAVED] nscl_page-0051.dag.json
+[32/42] ⇢ nscl_page-0052.jpg
+
+Extracting DAG from: nscl_page-0052.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 0.98
+  [SAVED] nscl_page-0052.dag.json
+[33/42] ⇢ nscl_page-0053.jpg
+
+Extracting DAG from: nscl_page-0053.jpg
+  [SUCCESS] Extracted 7 nodes with confidence 0.98
+  [SAVED] nscl_page-0053.dag.json
+[34/42] ⇢ nscl_page-0054.jpg
+
+Extracting DAG from: nscl_page-0054.jpg
+  [SUCCESS] Extracted 13 nodes with confidence 1.0
+  [SAVED] nscl_page-0054.dag.json
+[35/42] ⇢ nscl_page-0055.jpg
+
+Extracting DAG from: nscl_page-0055.jpg
+  [SUCCESS] Extracted 11 nodes with confidence 0.98
+  [SAVED] nscl_page-0055.dag.json
+[36/42] ⇢ nscl_page-0056.jpg
+
+Extracting DAG from: nscl_page-0056.jpg
+  [SUCCESS] Extracted 20 nodes with confidence 0.98
+  [SAVED] nscl_page-0056.dag.json
+[37/42] ⇢ nscl_page-0057.jpg
+
+Extracting DAG from: nscl_page-0057.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 0.98
+  [SAVED] nscl_page-0057.dag.json
+[38/42] ⇢ nscl_page-0058.jpg
+
+Extracting DAG from: nscl_page-0058.jpg
+  [SUCCESS] Extracted 16 nodes with confidence 1.0
+  [SAVED] nscl_page-0058.dag.json
+[39/42] ⇢ nscl_page-0059.jpg
+
+Extracting  ✗ Error: 13 validation errors for DAGOutput
+nodes.0.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit h  [SUCCESS] Extracted 14 nodes with confidence 0.98
+  [SAVED] nscl_page-0060.dag.json
+[41/42] ⇢ nscl_page-0061.jpg
+
+Extracting DAG from: nscl_page-0061.jpg
+  [SUCCESS] Extracted 8 nodes with confidence 0.98
+  [SAVED] nscl_page-0061.dag.json
+[42/42] ⇢ nscl_page-0062.jpg
+
+Extracting DAG from: nscl_page-0062.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 0.98
+  [SAVED] nscl_page-0062.dag.json
+
+======================================================================
+Results Summary
+======================================================================
+Newly processed: 41
+Previously processed (skipped): 0
+Failed: 1
+Total: 41
+
+Index saved to: /Users/user1/projects/trialome/data/decision_trees/new/nsclc/extraction_index.json
+
+To retry failed images: python gemini_dag_extractor.py extract-all --retry-failed
+To reprocess all: python gemini_dag_extractor.py extract-all --force
+
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.4.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.5.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.6.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.7.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.8.tree_ids
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+nodes.9.footnote_labels
+  Input should be a valid list [type=list_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.12/v/list_type
+[34/42] ⇢ nscl_page-0054.jpg
+
+Extracting DAG from: nscl_page-0054.jpg
+  [SUCCESS] Extracted 13 nodes with confidence 0.98
+  [SAVED] nscl_page-0054.dag.json
+[35/42] ⇢ nscl_page-0055.jpg
+
+Extracting DAG from: nscl_page-0055.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 1.0
+  [SAVED] nscl_page-0055.dag.json
+[36/42] ⇢ nscl_page-0056.jpg
+
+Extracting DAG from: nscl_page-0056.jpg
+  [SUCCESS] Extracted 12 nodes with confidence 0.98
+  [SAVED] nscl_page-0056.dag.json
+[37/42] ⇢ nscl_page-0057.jpg
+
+Extracting DAG from: nscl_page-0057.jpg
+  [SUCCESS] Extracted 14 nodes with confidence 0.98
+  [SAVED] nscl_page-0057.dag.json
+[38/42] ⇢ nscl_page-0058.jpg
+
+Extracting DAG from: nscl_page-0058.jpg
+  [SUCCESS] Extracted 13 nodes with confidence 1.0
+  [SAVED] nscl_page-0058.dag.json
+[39/42] ⇢ nscl_page-0059.jpg
+
+Extracting DAG from: nscl_page-0059.jpg
+  [SUCCESS] Extracted 15 nodes with confidence 0.95
+  [SAVED] nscl_page-0059.dag.json
+[40/42] ⇢ nscl_page-0060.jpg
+
+Extracting DAG from: nscl_page-0060.jpg
+  [SUCCESS] Extracted 14 nodes with confidence 1.0
+  [SAVED] nscl_page-0060.dag.json
+[41/42] ⇢ nscl_page-0061.jpg
+
+Extracting DAG from: nscl_page-0061.jpg
+  [SUCCESS] Extracted 6 nodes with confidence 0.98
+  [SAVED] nscl_page-0061.dag.json
+[42/42] ⇢ nscl_page-0062.jpg
+
+Extracting DAG from: nscl_page-0062.jpg
+  [SUCCESS] Extracted 11 nodes with confidence 1.0
+  [SAVED] nscl_page-0062.dag.json
+
+======================================================================
+Results Summary
+======================================================================
+Newly processed: 40
+Previously processed (skipped): 0
+Failed: 2
+Total: 40
+
+Index saved to: /Users/user1/projects/trialome/data/decision_trees/new/nsclc/extraction_index.json
+
+To retry failed images: python gemini_dag_extractor.py extract-all --retry-failed
+To reprocess all: python gemini_dag_extractor.py extract-all --force

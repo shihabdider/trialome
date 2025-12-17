@@ -9,23 +9,18 @@
         "node_003"
       ],
       "tree_ids": [],
-      "footnote_labels": [
-        "c",
-        "d",
-        "g",
-        "h"
-      ]
+      "footnote_labels": []
     },
     {
       "id": "node_002",
-      "content": "Low riske",
+      "content": "Low risk",
       "parent_ids": [
         "node_001"
       ],
       "children_ids": [
         "node_004",
-        "node_006",
-        "node_008"
+        "node_005",
+        "node_006"
       ],
       "tree_ids": [],
       "footnote_labels": [
@@ -34,14 +29,14 @@
     },
     {
       "id": "node_003",
-      "content": "High riskf",
+      "content": "High risk",
       "parent_ids": [
         "node_001"
       ],
       "children_ids": [
-        "node_012",
-        "node_014",
-        "node_016"
+        "node_007",
+        "node_008",
+        "node_009"
       ],
       "tree_ids": [],
       "footnote_labels": [
@@ -50,18 +45,78 @@
     },
     {
       "id": "node_004",
-      "content": "<6 mm",
+      "content": "< 6 mm",
       "parent_ids": [
         "node_002"
       ],
       "children_ids": [
-        "node_005"
+        "node_010"
       ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
       "id": "node_005",
+      "content": "6\u20138 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "> 8 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "< 6 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "6\u20138 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "> 8 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
       "content": "No routine follow-up",
       "parent_ids": [
         "node_004"
@@ -71,46 +126,22 @@
       "footnote_labels": []
     },
     {
-      "id": "node_006",
-      "content": "6-8 mm",
+      "id": "node_011",
+      "content": "CT at 6\u201312 mo",
       "parent_ids": [
-        "node_002"
+        "node_005"
       ],
       "children_ids": [
-        "node_007"
+        "node_016"
       ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
-      "id": "node_007",
-      "content": "CT at 6-12 mo",
+      "id": "node_012",
+      "content": "Consider CT at 3 mo, FDG-PET/CT, or biopsy",
       "parent_ids": [
         "node_006"
-      ],
-      "children_ids": [
-        "node_010"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_008",
-      "content": ">8 mm",
-      "parent_ids": [
-        "node_002"
-      ],
-      "children_ids": [
-        "node_009"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_009",
-      "content": "Consider CT at 3 mo, FDG-PET/CT,i or biopsyj",
-      "parent_ids": [
-        "node_008"
       ],
       "children_ids": [],
       "tree_ids": [],
@@ -120,80 +151,10 @@
       ]
     },
     {
-      "id": "node_010",
-      "content": "Stable",
-      "parent_ids": [
-        "node_007"
-      ],
-      "children_ids": [
-        "node_011"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_011",
-      "content": "Consider CT at 18-24 mo",
-      "parent_ids": [
-        "node_010"
-      ],
-      "children_ids": [],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_012",
-      "content": "<6 mm",
-      "parent_ids": [
-        "node_003"
-      ],
-      "children_ids": [
-        "node_013"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
       "id": "node_013",
       "content": "CT at 12 mo (optional)",
       "parent_ids": [
-        "node_012"
-      ],
-      "children_ids": [
-        "node_018"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_014",
-      "content": "6-8 mm",
-      "parent_ids": [
-        "node_003"
-      ],
-      "children_ids": [
-        "node_015"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_015",
-      "content": "CT at 6-12 mo",
-      "parent_ids": [
-        "node_014"
-      ],
-      "children_ids": [
-        "node_020"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_016",
-      "content": ">8 mm",
-      "parent_ids": [
-        "node_003"
+        "node_007"
       ],
       "children_ids": [
         "node_017"
@@ -202,10 +163,22 @@
       "footnote_labels": []
     },
     {
-      "id": "node_017",
-      "content": "Consider CT at 3 mo, FDG-PET/CT,i or biopsyj",
+      "id": "node_014",
+      "content": "CT at 6\u201312 mo",
       "parent_ids": [
-        "node_016"
+        "node_008"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Consider CT at 3 mo, FDG-PET/CT, or biopsy",
+      "parent_ids": [
+        "node_009"
       ],
       "children_ids": [],
       "tree_ids": [],
@@ -215,10 +188,10 @@
       ]
     },
     {
-      "id": "node_018",
+      "id": "node_016",
       "content": "Stable",
       "parent_ids": [
-        "node_013"
+        "node_011"
       ],
       "children_ids": [
         "node_019"
@@ -227,20 +200,22 @@
       "footnote_labels": []
     },
     {
-      "id": "node_019",
-      "content": "No routine follow-up",
+      "id": "node_017",
+      "content": "Stable",
       "parent_ids": [
-        "node_018"
+        "node_013"
       ],
-      "children_ids": [],
+      "children_ids": [
+        "node_020"
+      ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
-      "id": "node_020",
+      "id": "node_018",
       "content": "Stable",
       "parent_ids": [
-        "node_015"
+        "node_014"
       ],
       "children_ids": [
         "node_021"
@@ -249,10 +224,30 @@
       "footnote_labels": []
     },
     {
-      "id": "node_021",
-      "content": "Repeat CT at 18-24 mo",
+      "id": "node_019",
+      "content": "Consider CT at 18\u201324 mo",
       "parent_ids": [
-        "node_020"
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_021",
+      "content": "Repeat CT at 18\u201324 mo",
+      "parent_ids": [
+        "node_018"
       ],
       "children_ids": [],
       "tree_ids": [],
@@ -263,7 +258,7 @@
     {
       "from_tree": "DIAG-2",
       "to_tree": "DIAG-A",
-      "description": "See Principles of Diagnostic Evaluation (DIAG-A 1 of 3)."
+      "description": "Principles of Diagnostic Evaluation"
     }
   ],
   "footnotes": [
@@ -289,7 +284,7 @@
     },
     {
       "label": "h",
-      "content": "Adapted from Fleischer Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischer Society 2017. Radiology 2017;284:228-243. \u00a9Radiological Society of North America. Fleischer Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
+      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. \u00a9Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
     },
     {
       "label": "i",
@@ -298,12 +293,9 @@
     {
       "label": "j",
       "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
-    },
-    {
-      "label": "Note",
-      "content": "All recommendations are category 2A unless otherwise indicated."
     }
   ],
-  "extraction_confidence": 1.0,
-  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "DIAG-2"
 }

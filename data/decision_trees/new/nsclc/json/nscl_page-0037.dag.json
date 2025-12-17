@@ -1,0 +1,294 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IIIB (T4, N2) \nStage IIIC (T4, N3)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Molecular testing for EGFR\n\u2022 FDG-PET/CT scan^k (if not previously done)\n\u2022 Brain MRI with contrast^r\n\u2022 Pathologic confirmation of N2\u20133 disease by either:\n\u2023 Mediastinoscopy\n\u2023 Supraclavicular lymph node biopsy\n\u2023 Thoracoscopy\n\u2023 Needle biopsy\n\u2023 Mediastinotomy\n\u2023 EUS biopsy\n\u2023 EBUS biopsy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "k",
+        "r"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Contralateral mediastinal node negative",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006",
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Contralateral mediastinal node positive (T4, N3)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Metastatic disease",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Ipsilateral mediastinal node negative (T4, N0\u20131)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Ipsilateral mediastinal node positive (T4, N2)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Treatment for Stage IIIA (NSCL-7)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-7"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Definitive concurrent chemoradiation^n,t (category 1)",
+      "parent_ids": [
+        "node_004",
+        "node_007"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Durvalumab^t,v (if no EGFR exon 19 deletion or L858R) (category 1)\nor\nOsimertinib^t,v (if EGFR exon 19 deletion or L858R) (category 1)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "See Treatment for Metastasis limited sites (NSCL-15) or distant disease (NSCL-18)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15",
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Stage IVA, M1a: pleural or pericardial effusion",
+      "parent_ids": [],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "\u2022 FDG-PET/CT scan^k (if not previously done)\n\u2022 Brain MRI with contrast^r\n\u2022 Biomarker testing (NSCL-19)\n\u2022 Thoracentesis or pericardiocentesis \u00b1 thoracoscopy if thoracentesis indeterminate",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015",
+        "node_016"
+      ],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": [
+        "k",
+        "r"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Negative^ff",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ff"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Positive^ff",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ff"
+      ]
+    },
+    {
+      "id": "node_017",
+      "content": "Treatment according to TNM stage",
+      "parent_ids": [
+        "node_015"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_018",
+      "content": "Local therapy if necessary (eg, pleurodesis, ambulatory small catheter drainage, pericardial window) + treatment for stage IV disease solitary site or distant disease (NSCL-19)",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-14",
+      "to_tree": "NSCL-7",
+      "description": "Treatment for Stage IIIA"
+    },
+    {
+      "from_tree": "NSCL-14",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-14",
+      "to_tree": "NSCL-15",
+      "description": "Treatment for Metastasis limited sites"
+    },
+    {
+      "from_tree": "NSCL-14",
+      "to_tree": "NSCL-18",
+      "description": "Treatment for Metastasis distant disease"
+    },
+    {
+      "from_tree": "NSCL-14",
+      "to_tree": "NSCL-19",
+      "description": "Biomarker testing or treatment for stage IV disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "v",
+      "content": "For patients who have received sequential chemoradiation, durvalumab can be considered as consolidation immunotherapy or, if EGFR exon 19 deletion or L858R, osimertinib is recommended."
+    },
+    {
+      "label": "ff",
+      "content": "Most pleural (pericardial) effusions with lung cancer are a result of the tumor. In a few patients, however, multiple microscopic examinations of pleural (pericardial) fluid are negative for tumor, and fluid is non-bloody and not an exudate. If these elements and clinical judgment dictate that the effusion is not related to the tumor, the effusion should be excluded as a staging descriptor."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-14"
+}

@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "ROS1 REARRANGEMENT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Progression on entrectinib, crizotinib, or repotrectinib",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy",
+        "fff"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Asymptomatic",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Consider definitive local therapy (eg, SABR or surgery) for limited lesions\nContinue crizotinib, entrectinib, or repotrectinib\nor\nRepotrectinib (if not previously given) or Lorlatinib",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "zz",
+        "ppp"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Symptomatic",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Brain",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Consider definitive local therapy (eg, SRS)\nRepotrectinib or Lorlatinib (preferred) or Entrectinib (useful in certain circumstances, if previously treated with crizotinib) or clinical trial\nNCCN Guidelines for CNS Cancers",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "bbb",
+        "ppp"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Systemic",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_009",
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Limited progression",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "zz"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Consider definitive local therapy (eg, SABR or surgery)\nContinue entrectinib, crizotinib, or repotrectinib\nor\nTherapy for multiple lesions, below",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_013",
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Multiple lesions",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Repotrectinib (if not previously given) or Lorlatinib\nor\nSystemic therapy options\nAdenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_011",
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": [
+        "ppp"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Progression, Systemic Therapy Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_004",
+        "node_007",
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-31",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic therapy options for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-31",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic therapy options for Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-31",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    },
+    {
+      "from_tree": "NSCL-31",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-31",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue TKI. If disease flare occurs, restart TKI."
+    },
+    {
+      "label": "zz",
+      "content": "Clinical trials have included up to 3 to 5 progressing sites."
+    },
+    {
+      "label": "bbb",
+      "content": "Definitive local therapy of CNS disease can include asymptomatic lesions at risk for symptomatic progression based on factors including site, location, and edema."
+    },
+    {
+      "label": "fff",
+      "content": "Plasma or tissue-based testing via broad molecular profiling should be considered at progression for genomic resistance mechanisms. If plasma-based testing is negative, tissue-based testing with rebiopsy material is strongly recommended. Practitioners may want to consider scheduling the biopsy concurrently with plasma testing referral."
+    },
+    {
+      "label": "ppp",
+      "content": "Repotrectinib is an option for resistant mutations, such as ROS1 G2032R."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "ROS1 REARRANGEMENT",
+  "tree_id": "NSCL-31"
+}

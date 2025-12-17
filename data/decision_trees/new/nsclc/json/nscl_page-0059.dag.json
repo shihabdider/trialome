@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "ERBB2 (HER2) mutation",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "sss"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Systemic therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Progression",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "4-6 cycles (total)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "jjj"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Progression",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Maintenance therapy (NSCL-K 3 of 5)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [
+        "NSCL-K 3 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Preferred: Fam-trastuzumab deruxtecan-nxki or Other Recommended: Ado-trastuzumab emtansine",
+      "parent_ids": [
+        "node_004",
+        "node_008",
+        "node_011"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Progression",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": [
+        "kkk"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic therapy for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic therapy for Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-K 3 of 5",
+      "description": "Maintenance therapy options"
+    },
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-K 4 of 5",
+      "description": "Subsequent systemic therapy options and HER2 protein overexpression treatment options"
+    },
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-36",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "iii",
+      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2\u20134 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "jjj",
+      "content": "In general, 4 cycles of initial systemic therapy (ie, with carboplatin or cisplatin) are administered prior to maintenance therapy. However, if patient is tolerating therapy well, consideration can be given to continue to 6 cycles."
+    },
+    {
+      "label": "kkk",
+      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6\u201312 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "rrr",
+      "content": "For HER2 protein overexpression (IHC3+) treatment options, see NSCL-K 4 of 5."
+    },
+    {
+      "label": "sss",
+      "content": "For oncogenic or likely oncogenic HER2 mutations, refer to definitions at oncokb.org."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "ERBB2 (HER2) MUTATION nn,rrr",
+  "tree_id": "NSCL-36"
+}

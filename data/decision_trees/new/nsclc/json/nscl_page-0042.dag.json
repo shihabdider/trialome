@@ -1,0 +1,165 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Advanced or metastatic disease",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Establish histologic subtype\u1d43 with adequate tissue for molecular testing (consider rebiopsy\u1d50\u1d50 or plasma testing if appropriate)\n\u2022 Smoking cessation counseling\n\u2022 Integrate palliative care\u1d9c (NCCN Guidelines for Palliative Care)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": [
+        "NCCN Guidelines for Palliative Care"
+      ],
+      "footnote_labels": [
+        "a",
+        "mm",
+        "c"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "\u2022 Adenocarcinoma\n\u2022 Large cell\n\u2022 NSCLC not otherwise specified (NOS)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "a"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Squamous cell carcinoma",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "\u2022 Molecular testing, including:\n\u2023 EGFR mutation (category 1), ALK (category 1), KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET (category 1), ERBB2 (HER2), NRG1, HER2 (immunohistochemistry [IHC])\u1d52\u1d52\n\u2023 Testing should be conducted as part of broad molecular profiling\u1d56\u1d56\n\u2022 PD-L1 testing (category 1)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn",
+        "oo",
+        "pp"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "\u2022 Consider molecular testing, including:\u1d60\u1d60\n\u2023 EGFR mutation, ALK, KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET, ERBB2 (HER2), NRG1, HER2 (IHC)\u1d52\u1d52\n\u2023 Testing should be conducted as part of broad molecular profiling\u1d56\u1d56\n\u2022 PD-L1 testing (category 1)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn",
+        "qq",
+        "oo",
+        "pp"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Testing Results (NSCL-20)",
+      "parent_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-20"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-19",
+      "to_tree": "NCCN Guidelines for Palliative Care",
+      "description": "Referenced for palliative care integration"
+    },
+    {
+      "from_tree": "NSCL-19",
+      "to_tree": "NSCL-20",
+      "description": "Next step for testing results"
+    },
+    {
+      "from_tree": "NSCL-19",
+      "to_tree": "NSCL-A",
+      "description": "Principles of Pathologic Review"
+    },
+    {
+      "from_tree": "NSCL-19",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-19",
+      "to_tree": "NSCL-I",
+      "description": "Emerging Biomarkers to Identify Patients for Therapies"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "a",
+      "content": "Principles of Pathologic Review (NSCL-A)."
+    },
+    {
+      "label": "c",
+      "content": "Temel JS, et al. N Engl J Med 2010;363:733-742."
+    },
+    {
+      "label": "mm",
+      "content": "Complete genotyping for EGFR, KRAS, ALK, ROS1, BRAF, NTRK1/2/3, MET, RET, ERBB2 (HER2), and NRG1 via biopsy and/or plasma testing. Combinations of tissue and plasma testing, either concurrently or in sequence are acceptable. Concurrent testing can improve time to test results and should be considered in the appropriate clinical situation. Negative results (meaning absence of definitive driver mutation) by one method suggests the use of a complementary method. Treatment is guided by available results and, if unknown, these patients are treated as though they do not have driver oncogenes."
+    },
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "oo",
+      "content": "Testing for HER2 IHC is recommended at some point during progression. Timing should be balanced with tissue conservation."
+    },
+    {
+      "label": "pp",
+      "content": "The NCCN NSCLC Guidelines Panel strongly advises broader molecular profiling with the goal of identifying rare driver mutations for which effective drugs may already be available, or to appropriately counsel patients regarding the availability of clinical trials. Broad molecular profiling is defined as molecular testing that identifies all biomarkers identified in NSCL-20 in either a single assay or a combination of a limited number of assays, and optimally also identifies emerging biomarkers (NSCL-I). Tiered approaches based on low prevalence of co-occurring biomarkers are acceptable. Broad molecular profiling is a key component of the improvement of care of patients with NSCLC. See Emerging Biomarkers to Identify Patients for Therapies (NSCL-I)."
+    },
+    {
+      "label": "qq",
+      "content": "Lam VK, et al. Clin Lung Cancer 2019;20:30-36.e3; Sands JM, et al. Lung Cancer 2020;140:35-41."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-19"
+}

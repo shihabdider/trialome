@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "KRAS G12C mutation",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Systemic therapy\n\u2022 PD-L1 \u22651% (NSCL-38)\n\u2022 PD-L1 <1% (NSCL-39)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [
+        "NSCL-38",
+        "NSCL-39"
+      ],
+      "footnote_labels": [
+        "iii"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Progression",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Adagrasib or Sotorasib",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "lll"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Progression",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_006",
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": [
+        "kkk"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "4\u20136 cycles (total)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "jjj"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011",
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Adagrasib or Sotorasib",
+      "parent_ids": [
+        "node_011",
+        "node_015"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "lll"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Maintenance Therapy (NSCL-K 3 of 5)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [
+        "NSCL-K 3 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Progression",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    },
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-38",
+      "description": "Systemic therapy for PD-L1 \u22651%"
+    },
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-39",
+      "description": "Systemic therapy for PD-L1 <1%"
+    },
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-K 4 of 5",
+      "description": "Subsequent Systemic Therapy"
+    },
+    {
+      "from_tree": "NSCL-26",
+      "to_tree": "NSCL-K 3 of 5",
+      "description": "Maintenance Therapy"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "iii",
+      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2\u20134 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "jjj",
+      "content": "In general, 4 cycles of initial systemic therapy (ie, with carboplatin or cisplatin) are administered prior to maintenance therapy. However, if patient is tolerating therapy well, consideration can be given to continue to 6 cycles."
+    },
+    {
+      "label": "kkk",
+      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6\u201312 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "lll",
+      "content": "Sotorasib or adagrasib may be used after at least one line of therapy (or second-line and beyond), if no previous KRAS G12C-targeted therapy."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "KRAS G12C MUTATION",
+  "tree_id": "NSCL-26"
+}

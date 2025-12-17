@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Superior sulcus tumor (T3 invasion, N0\u20131)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Preoperative concurrent chemoradiation",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Surgery + Adjuvant systemic therapy (NSCL-E)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Superior sulcus tumor (T4 invasion, N0\u20131)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_006",
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Possibly resectable",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Unresectable",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Preoperative concurrent chemoradiation",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Surgical reevaluation including chest CT with or without contrast \u00b1 FDG-PET/CT",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010",
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "w"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Resectable",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Unresectable",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Surgery + Adjuvant systemic therapy (NSCL-E)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Complete definitive chemoradiation",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_015",
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_016",
+      "content": "Definitive concurrent chemoradiation",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_017",
+      "content": "Durvalumab (if no EGFR exon 19 deletion or L858R) (category 1) or Osimertinib (category 1) (if EGFR exon 19 deletion or L858R)",
+      "parent_ids": [
+        "node_014",
+        "node_016"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "id": "node_018",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-6",
+      "to_tree": "NSCL-E",
+      "description": "Adjuvant systemic therapy"
+    },
+    {
+      "from_tree": "NSCL-6",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-6",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy"
+    },
+    {
+      "from_tree": "NSCL-6",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy"
+    },
+    {
+      "from_tree": "NSCL-6",
+      "to_tree": "NSCL-F",
+      "description": "Concurrent Chemoradiation Regimens"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "v",
+      "content": "For patients who have received sequential chemoradiation, durvalumab can be considered as consolidation immunotherapy or, if EGFR exon 19 deletion or L858R, osimertinib is recommended."
+    },
+    {
+      "label": "w",
+      "content": "MRI with contrast of spine + thoracic inlet for superior sulcus lesions abutting the spine, subclavian vessels, or brachial plexus."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-6"
+}

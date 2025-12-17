@@ -1,10 +1,305 @@
 {
   "version": "1.0",
   "created": "2025-12-15T13:45:12.426930",
-  "images": {},
+  "images": {
+    "nscl_page-0017.jpg": {
+      "status": "success",
+      "nodes": 7,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T16:46:42.945141",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0017.dag.json"
+    },
+    "nscl_page-0018.jpg": {
+      "status": "success",
+      "nodes": 21,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T16:47:25.137492",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0018.dag.json"
+    },
+    "nscl_page-0019.jpg": {
+      "status": "success",
+      "nodes": 16,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:48:19.876688",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0019.dag.json"
+    },
+    "nscl_page-0023.jpg": {
+      "status": "success",
+      "nodes": 28,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:49:19.095622",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0023.dag.json"
+    },
+    "nscl_page-0024.jpg": {
+      "status": "success",
+      "nodes": 11,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:49:54.131430",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0024.dag.json"
+    },
+    "nscl_page-0025.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:50:39.757140",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0025.dag.json"
+    },
+    "nscl_page-0026.jpg": {
+      "status": "success",
+      "nodes": 32,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:51:42.590270",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0026.dag.json"
+    },
+    "nscl_page-0027.jpg": {
+      "status": "success",
+      "nodes": 0,
+      "confidence": 1.0,
+      "processed_at": "2025-12-15T16:52:17.770738",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0027.dag.json"
+    },
+    "nscl_page-0028.jpg": {
+      "status": "success",
+      "nodes": 14,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T16:52:51.609380",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0028.dag.json"
+    },
+    "nscl_page-0029.jpg": {
+      "status": "success",
+      "nodes": 18,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:53:44.562375",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0029.dag.json"
+    },
+    "nscl_page-0030.jpg": {
+      "status": "success",
+      "nodes": 24,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:54:27.653144",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0030.dag.json"
+    },
+    "nscl_page-0031.jpg": {
+      "status": "success",
+      "nodes": 18,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:55:04.583826",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0031.dag.json"
+    },
+    "nscl_page-0032.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:55:43.018647",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0032.dag.json"
+    },
+    "nscl_page-0033.jpg": {
+      "status": "success",
+      "nodes": 23,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:56:40.526679",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0033.dag.json"
+    },
+    "nscl_page-0034.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:57:19.573666",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0034.dag.json"
+    },
+    "nscl_page-0035.jpg": {
+      "status": "success",
+      "nodes": 12,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T16:57:56.484164",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0035.dag.json"
+    },
+    "nscl_page-0036.jpg": {
+      "status": "success",
+      "nodes": 10,
+      "confidence": 1.0,
+      "processed_at": "2025-12-15T16:58:32.746858",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0036.dag.json"
+    },
+    "nscl_page-0037.jpg": {
+      "status": "success",
+      "nodes": 18,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T16:59:23.550729",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0037.dag.json"
+    },
+    "nscl_page-0038.jpg": {
+      "status": "success",
+      "nodes": 13,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T16:59:57.983613",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0038.dag.json"
+    },
+    "nscl_page-0039.jpg": {
+      "status": "success",
+      "nodes": 12,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:01:41.866826",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0039.dag.json"
+    },
+    "nscl_page-0040.jpg": {
+      "status": "success",
+      "nodes": 7,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:02:12.763614",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0040.dag.json"
+    },
+    "nscl_page-0041.jpg": {
+      "status": "success",
+      "nodes": 31,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T17:03:08.486771",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0041.dag.json"
+    },
+    "nscl_page-0042.jpg": {
+      "status": "success",
+      "nodes": 7,
+      "confidence": 1.0,
+      "processed_at": "2025-12-15T17:03:50.649910",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0042.dag.json"
+    },
+    "nscl_page-0044.jpg": {
+      "status": "success",
+      "nodes": 24,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:04:45.467876",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0044.dag.json"
+    },
+    "nscl_page-0045.jpg": {
+      "status": "success",
+      "nodes": 14,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:05:33.700246",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0045.dag.json"
+    },
+    "nscl_page-0046.jpg": {
+      "status": "success",
+      "nodes": 24,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:06:56.852409",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0046.dag.json"
+    },
+    "nscl_page-0047.jpg": {
+      "status": "success",
+      "nodes": 22,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:07:42.434032",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0047.dag.json"
+    },
+    "nscl_page-0048.jpg": {
+      "status": "success",
+      "nodes": 16,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:08:45.799721",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0048.dag.json"
+    },
+    "nscl_page-0049.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 1.0,
+      "processed_at": "2025-12-15T17:09:36.385564",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0049.dag.json"
+    },
+    "nscl_page-0050.jpg": {
+      "status": "success",
+      "nodes": 18,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:10:24.850023",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0050.dag.json"
+    },
+    "nscl_page-0051.jpg": {
+      "status": "success",
+      "nodes": 14,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:11:20.191648",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0051.dag.json"
+    },
+    "nscl_page-0052.jpg": {
+      "status": "success",
+      "nodes": 12,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:12:09.887417",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0052.dag.json"
+    },
+    "nscl_page-0053.jpg": {
+      "status": "success",
+      "nodes": 9,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:12:47.665851",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0053.dag.json"
+    },
+    "nscl_page-0054.jpg": {
+      "status": "success",
+      "nodes": 13,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:13:35.690547",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0054.dag.json"
+    },
+    "nscl_page-0055.jpg": {
+      "status": "success",
+      "nodes": 16,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:14:27.287018",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0055.dag.json"
+    },
+    "nscl_page-0056.jpg": {
+      "status": "success",
+      "nodes": 20,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:15:39.166530",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0056.dag.json"
+    },
+    "nscl_page-0057.jpg": {
+      "status": "success",
+      "nodes": 16,
+      "confidence": 0.98,
+      "processed_at": "2025-12-15T17:16:27.826929",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0057.dag.json"
+    },
+    "nscl_page-0058.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:17:05.747792",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0058.dag.json"
+    },
+    "nscl_page-0059.jpg": {
+      "status": "success",
+      "nodes": 14,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:17:47.177633",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0059.dag.json"
+    },
+    "nscl_page-0060.jpg": {
+      "status": "success",
+      "nodes": 15,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:18:40.592281",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0060.dag.json"
+    },
+    "nscl_page-0061.jpg": {
+      "status": "success",
+      "nodes": 6,
+      "confidence": 0.95,
+      "processed_at": "2025-12-15T17:19:26.515611",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0061.dag.json"
+    },
+    "nscl_page-0062.jpg": {
+      "status": "success",
+      "nodes": 16,
+      "confidence": 1.0,
+      "processed_at": "2025-12-15T17:20:39.114296",
+      "output_file": "/Users/user1/projects/trialome/data/decision_trees/new/nsclc/images/nscl_page-0062.dag.json"
+    }
+  },
   "statistics": {
-    "total": 0,
-    "processed": 0,
-    "failed": 0
+    "total": 42,
+    "processed": 42,
+    "failed": 42
   }
 }

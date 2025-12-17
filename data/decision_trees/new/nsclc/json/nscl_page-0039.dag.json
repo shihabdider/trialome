@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Definitive therapy for thoracic disease feasible",
+      "parent_ids": [],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Definitive therapy for thoracic disease not feasible",
+      "parent_ids": [],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Consider systemic therapy as per advanced/metastatic disease (NSCL-19) and restaging to confirm non-progression or Proceed to definitive therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": [
+        "z"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "T1\u20133, N0",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "T1\u20133, N1",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "T1\u20133, N2; T4, N0\u20132",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Pathologic mediastinal nodal evaluation and Surgical resection or SABR",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "h",
+        "m",
+        "n",
+        "o"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Pathologic mediastinal nodal evaluation and Chemoradiation (preferred) or Surgical resection or Definitive RT",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "h",
+        "t",
+        "m",
+        "n"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Definitive chemoradiation",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Definitive local therapy for metastatic site, if not already given",
+      "parent_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "ii"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Consider systemic therapy, if not already given as per advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-16",
+      "to_tree": "NSCL-19",
+      "description": "Systemic therapy guidelines for advanced/metastatic disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "h",
+      "content": "Methods for evaluation include mediastinoscopy, mediastinotomy, EBUS, EUS, and CT-guided biopsy. An EBUS-TBNA negative for malignancy in a clinically (FDG-PET/CT and/or CT) positive mediastinum should undergo subsequent mediastinoscopy prior to surgical resection."
+    },
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "z",
+      "content": "Chest CT with contrast and/or FDG-PET/CT to evaluate progression."
+    },
+    {
+      "label": "ii",
+      "content": "Typically, RT (including SABR) or surgical resection."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "TREATMENT OF THORACIC DISEASE",
+  "tree_id": "NSCL-16"
+}

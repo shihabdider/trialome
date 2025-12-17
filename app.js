@@ -13,7 +13,14 @@ const HEADER_LABELS = ['Criteria', 'Management', 'Findings', 'Initial Presentati
 /**
  * Initialize the application
  */
-function initApp() {
+async function initApp() {
+    // Wait for DAGs to be loaded
+    if (Object.keys(TREES).length === 0) {
+        console.log('Waiting for DAGs to load...');
+        // Give dag_loader time to fetch and process
+        await new Promise(resolve => setTimeout(resolve, 500));
+    }
+    
     populateDiseaseSelector();
     setupEventListeners();
 }
@@ -28,7 +35,8 @@ function populateDiseaseSelector() {
     diseases.forEach(disease => {
         const option = document.createElement('option');
         option.value = disease;
-        option.textContent = disease.replace(/_/g, ' ');
+        // Use tree_id directly for labels (e.g., DIAG-1, NSCL-10)
+        option.textContent = disease;
         select.appendChild(option);
     });
 }
@@ -348,8 +356,11 @@ async function showTrialModal(node) {
         ctURL.searchParams.set('status', 'RECRUITING');
         viewAllLink.href = ctURL.toString();
         
+        // Build content container
+        const contentContainer = document.createElement('div');
+        
         if (trials.length === 0) {
-            content.innerHTML = '<p class="text-gray-600">No recruiting trials found.</p>';
+            contentContainer.innerHTML = '<p class="text-gray-600">No recruiting trials found.</p>';
         } else {
             const list = document.createElement('div');
             list.className = 'space-y-3';
@@ -373,9 +384,33 @@ async function showTrialModal(node) {
                 list.appendChild(item);
             });
             
-            content.innerHTML = '';
-            content.appendChild(list);
+            contentContainer.appendChild(list);
         }
+        
+        // Add footnotes if present
+        if (node.footnote_labels && node.footnote_labels.length > 0 && state.currentDisease) {
+            const treeData = TREES[state.currentDisease];
+            if (treeData && treeData.footnotes && treeData.footnotes.length > 0) {
+                const footnotesDiv = document.createElement('div');
+                footnotesDiv.className = 'mt-4 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2';
+                
+                node.footnote_labels.forEach(label => {
+                    const footnote = treeData.footnotes.find(f => f.label === label);
+                    if (footnote) {
+                        const footnoteEl = document.createElement('div');
+                        footnoteEl.innerHTML = `<strong>${footnote.label}.</strong> ${footnote.content}`;
+                        footnotesDiv.appendChild(footnoteEl);
+                    }
+                });
+                
+                if (footnotesDiv.children.length > 0) {
+                    contentContainer.appendChild(footnotesDiv);
+                }
+            }
+        }
+        
+        content.innerHTML = '';
+        content.appendChild(contentContainer);
     } catch (error) {
         console.error('Error loading trials:', error);
         content.innerHTML = '<p class="text-red-600">Error loading trials. Please try again.</p>';
@@ -392,4 +427,6 @@ function closeModal() {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', initApp);
+document.addEventListener('DOMContentLoaded', () => {
+    initApp().catch(error => console.error('Failed to initialize app:', error));
+});

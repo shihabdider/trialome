@@ -1,0 +1,206 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IVA, M1b and Stage IVB, M1c",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Biomarker testing (NSCL-19)\nIf not previously done\n\u2022 Brain MRI with contrast\n\u2022 FDG-PET/CT scan\n\u2022 Pathologic confirmation of metastatic lesion, if possible",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": [
+        "r",
+        "k"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "PS 0\u20132",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "PS 3\u20134",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Solitary or limited metastases confirmed",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "gg"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Multiple lesions",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Brain",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Other site",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Stereotactic radiosurgery (SRS) alone\nor\nSurgical resection, if symptomatic or warranted for diagnosis, followed by SRS or whole brain RT (WBRT)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Treatment of Thoracic Disease (NSCL-16)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-16"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Treatment of Thoracic Disease (NSCL-16)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-16"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-15",
+      "to_tree": "NSCL-19",
+      "description": "Biomarker testing guidelines"
+    },
+    {
+      "from_tree": "NSCL-15",
+      "to_tree": "NSCL-19",
+      "description": "Management of advanced/metastatic disease"
+    },
+    {
+      "from_tree": "NSCL-15",
+      "to_tree": "NSCL-16",
+      "description": "Treatment of Thoracic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "gg",
+      "content": "Including selected patients with stage M1c and limited number and volume of metastatic lesions amenable to definitive local therapy. Clinical trials have included up to 3 to 5 metastatic sites."
+    },
+    {
+      "label": "hh",
+      "content": "NCCN Guidelines for Central Nervous System Cancers."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-15"
+}

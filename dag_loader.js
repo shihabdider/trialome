@@ -1,0 +1,264 @@
+/**
+ * DAG Loader - Loads NCCN decision trees from JSON DAG files
+ * Converts flat DAG structure to hierarchical tree structure
+ */
+
+let TREES = {};
+
+/**
+ * Initialize TREES from DAG JSON files
+ */
+async function loadDAGsFromServer() {
+    try {
+        // Try to get list from API endpoint first
+        const response = await fetch('./api/list-dags');
+        if (response.ok) {
+            const files = await response.json();
+            for (const file of files) {
+                await loadDAGFile(file);
+            }
+            return;
+        }
+    } catch (error) {
+        console.log('API endpoint not available, using hardcoded DAG list');
+    }
+    
+    // Fallback: Try loading from hardcoded list
+    await loadDAGsFromHardcodedList();
+}
+
+/**
+ * Fallback: Load DAGs by discovering files dynamically
+ * Uses manifest file if available, otherwise falls back to hardcoded list
+ */
+async function loadDAGsFromHardcodedList() {
+    try {
+        // Try to load manifest file that lists all available DAGs
+        const manifestResponse = await fetch('./data/decision_trees/new/nsclc/json/manifest.json');
+        if (manifestResponse.ok) {
+            const manifest = await manifestResponse.json();
+            const dagFiles = manifest.files || [];
+            
+            for (const file of dagFiles) {
+                await loadDAGFile(file);
+            }
+            return;
+        }
+    } catch (error) {
+        console.log('Manifest file not available');
+    }
+    
+    // Hardcoded comprehensive list of all available NSCLC DAG pages
+    // Updated to include all 42 files from data/decision_trees/new/nsclc/json/
+    const dagFiles = [
+        'nscl_page-0017.dag.json',
+        'nscl_page-0018.dag.json',
+        'nscl_page-0019.dag.json',
+        'nscl_page-0023.dag.json',
+        'nscl_page-0024.dag.json',
+        'nscl_page-0025.dag.json',
+        'nscl_page-0026.dag.json',
+        'nscl_page-0027.dag.json',
+        'nscl_page-0028.dag.json',
+        'nscl_page-0029.dag.json',
+        'nscl_page-0030.dag.json',
+        'nscl_page-0031.dag.json',
+        'nscl_page-0032.dag.json',
+        'nscl_page-0033.dag.json',
+        'nscl_page-0034.dag.json',
+        'nscl_page-0035.dag.json',
+        'nscl_page-0036.dag.json',
+        'nscl_page-0037.dag.json',
+        'nscl_page-0038.dag.json',
+        'nscl_page-0039.dag.json',
+        'nscl_page-0040.dag.json',
+        'nscl_page-0041.dag.json',
+        'nscl_page-0042.dag.json',
+        'nscl_page-0044.dag.json',
+        'nscl_page-0045.dag.json',
+        'nscl_page-0046.dag.json',
+        'nscl_page-0047.dag.json',
+        'nscl_page-0048.dag.json',
+        'nscl_page-0049.dag.json',
+        'nscl_page-0050.dag.json',
+        'nscl_page-0051.dag.json',
+        'nscl_page-0052.dag.json',
+        'nscl_page-0053.dag.json',
+        'nscl_page-0054.dag.json',
+        'nscl_page-0055.dag.json',
+        'nscl_page-0056.dag.json',
+        'nscl_page-0057.dag.json',
+        'nscl_page-0058.dag.json',
+        'nscl_page-0059.dag.json',
+        'nscl_page-0060.dag.json',
+        'nscl_page-0061.dag.json',
+        'nscl_page-0062.dag.json',
+    ];
+    
+    for (const file of dagFiles) {
+        await loadDAGFile(file);
+    }
+}
+
+/**
+ * Load a single DAG file and convert to tree
+ */
+async function loadDAGFile(filename) {
+    try {
+        const response = await fetch(`./data/decision_trees/new/nsclc/json/${filename}`);
+        const dagData = await response.json();
+        
+        // Use tree_id from DAG JSON if available, otherwise extract from filename
+        const treeId = dagData.tree_id || extractTreeIdFromFilename(filename);
+        const treeData = dagToTree(dagData);
+        
+        TREES[treeId] = {
+            root: treeData,
+            raw: dagData,
+            footnotes: dagData.footnotes || []
+        };
+        
+        console.log(`Loaded DAG: ${treeId}`);
+    } catch (error) {
+        console.error(`Error loading DAG file ${filename}:`, error);
+    }
+}
+
+/**
+ * Extract tree ID from filename
+ * E.g., "nscl_page-0023.dag.json" -> "NSCLC_0023"
+ */
+function extractTreeIdFromFilename(filename) {
+    const match = filename.match(/nscl_page-(\d+)/);
+    if (match) {
+        return `NSCLC_${match[1]}`;
+    }
+    return filename.replace('.dag.json', '');
+}
+
+/**
+ * Convert flat DAG structure to hierarchical tree
+ */
+function dagToTree(dagData) {
+    if (!dagData.nodes || dagData.nodes.length === 0) {
+        return null;
+    }
+    
+    // Find root node (no parents)
+    const rootNode = dagData.nodes.find(n => n.parent_ids.length === 0);
+    if (!rootNode) {
+        return null;
+    }
+    
+    // Create node lookup map
+    const nodeMap = new Map();
+    dagData.nodes.forEach(node => {
+        nodeMap.set(node.id, { ...node });
+    });
+    
+    // Build hierarchical structure
+    function buildTree(nodeId, visited = new Set()) {
+        if (visited.has(nodeId)) {
+            return null; // Avoid cycles
+        }
+        
+        const node = nodeMap.get(nodeId);
+        if (!node) return null;
+        
+        visited.add(nodeId);
+        
+        const treeNode = {
+            id: node.id,
+            label: node.content,
+            type: classifyNodeType(node.content),
+            search_term: extractSearchTerm(node.content),
+            footnote_labels: node.footnote_labels || [],
+            children: []
+        };
+        
+        // Add children
+        if (node.children_ids && node.children_ids.length > 0) {
+            for (const childId of node.children_ids) {
+                const childTree = buildTree(childId, new Set(visited));
+                if (childTree) {
+                    treeNode.children.push(childTree);
+                }
+            }
+        }
+        
+        return treeNode;
+    }
+    
+    return buildTree(rootNode.id);
+}
+
+/**
+ * Classify node type based on content
+ */
+function classifyNodeType(content) {
+    const lowerContent = content.toLowerCase();
+    
+    if (lowerContent.includes('treatment') || 
+        lowerContent.includes('therapy') || 
+        lowerContent.includes('chemotherapy') ||
+        lowerContent.includes('radiation') ||
+        lowerContent.includes('surgery')) {
+        return 'treatment';
+    }
+    
+    if (lowerContent.includes('evaluation') || 
+        lowerContent.includes('assessment') ||
+        lowerContent.includes('workup') ||
+        lowerContent.includes('staging')) {
+        return 'evaluation';
+    }
+    
+    return 'condition';
+}
+
+/**
+ * Extract search term from node content
+ * For now, use the first line or main keywords
+ */
+function extractSearchTerm(content) {
+    if (!content) return null;
+    
+    // Remove special characters, line breaks, and abbreviations
+    let cleaned = content
+        .split('\n')[0] // First line
+        .replace(/[•\s]+/g, ' ')
+        .trim();
+    
+    // Skip generic labels
+    if (cleaned === 'Treatment' || 
+        cleaned === 'Evaluation' || 
+        cleaned === 'Options' ||
+        cleaned === 'Initial Presentation' ||
+        cleaned.length < 3) {
+        return null;
+    }
+    
+    return cleaned;
+}
+
+/**
+ * Load all DAGs when page loads
+ */
+async function initializeDAGs() {
+    if (typeof document !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadDAGsFromServer();
+        });
+    }
+}
+
+// Auto-initialize if running in browser
+if (typeof window !== 'undefined') {
+    // Load DAGs as soon as this script loads
+    console.log('dag_loader.js loaded, starting DAG loading...');
+    loadDAGsFromServer().then(() => {
+        console.log(`Successfully loaded ${Object.keys(TREES).length} DAGs`);
+    }).catch(error => {
+        console.error('Error in DAG loading:', error);
+    });
+}

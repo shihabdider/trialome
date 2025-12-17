@@ -6,8 +6,8 @@
       "parent_ids": [],
       "children_ids": [
         "node_002",
-        "node_007",
-        "node_012"
+        "node_003",
+        "node_004"
       ],
       "tree_ids": [],
       "footnote_labels": []
@@ -19,96 +19,43 @@
         "node_001"
       ],
       "children_ids": [
-        "node_003",
-        "node_005"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_003",
-      "content": "<6 mm",
-      "parent_ids": [
-        "node_002"
-      ],
-      "children_ids": [
-        "node_004"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_004",
-      "content": "No routine follow-up",
-      "parent_ids": [
-        "node_003"
-      ],
-      "children_ids": [],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_005",
-      "content": "\u22656 mm",
-      "parent_ids": [
-        "node_002"
-      ],
-      "children_ids": [
+        "node_005",
         "node_006"
       ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
-      "id": "node_006",
-      "content": "CT at 6\u201312 mo to confirm no growth or development of a solid component, then CT every 2 y until 5 y",
-      "parent_ids": [
-        "node_005"
-      ],
-      "children_ids": [],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_007",
+      "id": "node_003",
       "content": "Solitary part-solid nodules",
       "parent_ids": [
         "node_001"
       ],
       "children_ids": [
-        "node_008",
+        "node_007",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Multiple subsolid nodules",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_009",
         "node_010"
       ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
-      "id": "node_008",
+      "id": "node_005",
       "content": "<6 mm",
       "parent_ids": [
-        "node_007"
-      ],
-      "children_ids": [
-        "node_009"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_009",
-      "content": "No routine follow-up",
-      "parent_ids": [
-        "node_008"
-      ],
-      "children_ids": [],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_010",
-      "content": "\u22656 mm",
-      "parent_ids": [
-        "node_007"
+        "node_002"
       ],
       "children_ids": [
         "node_011"
@@ -117,10 +64,100 @@
       "footnote_labels": []
     },
     {
+      "id": "node_006",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "<6 mm",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "\u22656 mm",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
       "id": "node_011",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "CT at 6\u201312 mo to confirm no growth or development of a solid component, then CT every 2 y until 5 y",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
       "content": "\u2022 CT at 3\u20136 mo to confirm no growth or change in solid component, then annual CT for 5 y\n\u2022 If solid component \u22656 mm, consider FDG-PET/CT or biopsy",
       "parent_ids": [
-        "node_010"
+        "node_008"
       ],
       "children_ids": [],
       "tree_ids": [],
@@ -130,49 +167,12 @@
       ]
     },
     {
-      "id": "node_012",
-      "content": "Multiple subsolid nodules",
+      "id": "node_015",
+      "content": "CT at 3\u20136 mo\n\u25b8 If stable, consider CT at 2 and 4 y",
       "parent_ids": [
-        "node_001"
-      ],
-      "children_ids": [
-        "node_013",
-        "node_015"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_013",
-      "content": "<6 mm",
-      "parent_ids": [
-        "node_012"
-      ],
-      "children_ids": [
-        "node_014"
-      ],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_014",
-      "content": "\u2022 CT at 3\u20136 mo\n\u2022 If stable, consider CT at 2 and 4 y",
-      "parent_ids": [
-        "node_013"
+        "node_009"
       ],
       "children_ids": [],
-      "tree_ids": [],
-      "footnote_labels": []
-    },
-    {
-      "id": "node_015",
-      "content": "\u22656 mm",
-      "parent_ids": [
-        "node_012"
-      ],
-      "children_ids": [
-        "node_016"
-      ],
       "tree_ids": [],
       "footnote_labels": []
     },
@@ -180,7 +180,7 @@
       "id": "node_016",
       "content": "\u2022 CT at 3\u20136 mo\n\u2022 Subsequent management based on most suspicious nodule(s)",
       "parent_ids": [
-        "node_015"
+        "node_010"
       ],
       "children_ids": [],
       "tree_ids": [],
@@ -191,7 +191,7 @@
     {
       "from_tree": "DIAG-3",
       "to_tree": "DIAG-A",
-      "description": "Referenced in footnote 'c' for Principles of Diagnostic Evaluation (DIAG-A 1 of 3)."
+      "description": "Principles of Diagnostic Evaluation"
     }
   ],
   "footnotes": [
@@ -220,6 +220,7 @@
       "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
     }
   ],
-  "extraction_confidence": 0.98,
-  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - FINDINGS / FOLLOW-UP",
+  "tree_id": "DIAG-3"
 }

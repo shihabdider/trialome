@@ -1,0 +1,228 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Multiple lung cancers (suspected or confirmed) (N0\u20131)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Multidisciplinary evaluation\nNCCN Lung Cancer Screening Guidelines (LCS-11)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": [
+        "LCS-11"
+      ],
+      "footnote_labels": [
+        "cc"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Stable or very slow-growing disease",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "dd"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Dominant nodule with evidence of growth",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "dd"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Observation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Definitive local therapy possible",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Definitive local therapy not possible",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Parenchymal sparing resection (preferred)\nor Radiation\nor Image-guided thermal ablation (IGTA)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "ee",
+        "n",
+        "o"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Palliative chemotherapy \u00b1 local palliative therapy\nor Observe",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Therapy for Recurrence and Metastasis (NSCL-18)\nor Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-18",
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "LCS-11",
+      "description": "NCCN Lung Cancer Screening Guidelines"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-18",
+      "description": "Therapy for Recurrence and Metastasis"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-19",
+      "description": "Advanced/metastatic disease"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy"
+    },
+    {
+      "from_tree": "NSCL-12",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "cc",
+      "content": "Multidisciplinary evaluation including thoracic radiology, pulmonary medicine, thoracic surgery, medical oncology, and radiation oncology."
+    },
+    {
+      "label": "dd",
+      "content": "Lesions at low risk of becoming symptomatic can be observed (eg, small subsolid nodules with slow growth). However, if the lesion(s) show accelerating growth or increasing solid component or increasing FDG uptake, even while small, treatment should be considered."
+    },
+    {
+      "label": "ee",
+      "content": "Lung-sparing resection is preferred, but tumor distribution and institutional expertise should guide individual treatment planning. Patients should be evaluated in a multidisciplinary setting; ie, surgery, radiation oncology, medical oncology (interventional pulmonology and/or interventional radiology as needed)."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "CLINICAL PRESENTATION - INITIAL TREATMENT - Multiple lung cancers",
+  "tree_id": "NSCL-12"
+}

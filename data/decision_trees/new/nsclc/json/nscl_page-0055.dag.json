@@ -1,0 +1,262 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "BRAF V600E mutation",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "BRAF V600E mutation discovered prior to first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Preferred\nDabrafenib + trametinib\nor\nEncorafenib + binimetinib",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Useful in Certain Circumstances\nDabrafenib or Vemurafenib",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss",
+        "qqq"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Other Recommended\nSystemic Therapy, Adenocarcinoma (NSCL-K 1 of 5)\nor Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Progression",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Progression",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_006",
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Progression",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Dabrafenib + trametinib\nor\nEncorafenib + binimetinib",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "qqq"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "BRAF V600E mutation discovered during first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Complete planned systemic therapy, including maintenance therapy, or\nInterrupt current therapy and start Dabrafenib + trametinib (preferred) or Encorafenib + binimetinib (preferred)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "qqq"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Progression",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_016",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_015"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-32",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic Therapy, Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-32",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic Therapy, Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-32",
+      "to_tree": "NSCL-K 4 of 5",
+      "description": "Systemic Therapy, Subsequent"
+    },
+    {
+      "from_tree": "NSCL-32",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-32",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "ss",
+      "content": "For PS 0\u20134."
+    },
+    {
+      "label": "qqq",
+      "content": "Single-agent vemurafenib or dabrafenib are treatment options if the combination of dabrafenib + trametinib is not tolerated."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "BRAF V600E MUTATION",
+  "tree_id": "NSCL-32"
+}

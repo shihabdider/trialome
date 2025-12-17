@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Pulmonary function tests (PFTs) (if not previously done)\n\u2022 Bronchoscopy (intraoperative preferred)\n\u2022 Consider pathologic mediastinal lymph node evaluationh,i,j\n\u2022 FDG-PET/CT scank (if not previously done)",
+      "content": "\u2022 Pulmonary function tests (PFTs) (if not previously done)\n\u2022 Bronchoscopy (intraoperative preferred)\n\u2022 Consider pathologic mediastinal lymph node evaluation\n\u2022 FDG-PET/CT scan (if not previously done)",
       "parent_ids": [
         "node_001"
       ],
@@ -49,14 +49,14 @@
         "node_002"
       ],
       "children_ids": [
-        "node_011"
+        "node_009"
       ],
       "tree_ids": [],
       "footnote_labels": []
     },
     {
       "id": "node_005",
-      "content": "Operablel",
+      "content": "Operable",
       "parent_ids": [
         "node_003"
       ],
@@ -70,7 +70,7 @@
     },
     {
       "id": "node_006",
-      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon,m and those who decline surgery after thoracic surgical consultation",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon, and those who decline surgery after thoracic surgical consultation",
       "parent_ids": [
         "node_003"
       ],
@@ -84,12 +84,12 @@
     },
     {
       "id": "node_007",
-      "content": "Surgical exploration and resectionm + mediastinal lymph node dissection or systematic lymph node sampling",
+      "content": "Surgical exploration and resection + mediastinal lymph node dissection or systematic lymph node sampling",
       "parent_ids": [
         "node_005"
       ],
       "children_ids": [
-        "node_009"
+        "node_010"
       ],
       "tree_ids": [],
       "footnote_labels": [
@@ -98,12 +98,12 @@
     },
     {
       "id": "node_008",
-      "content": "Definitive radiation therapy (RT), preferably stereotactic ablative radiotherapy (SABR)n,o,p",
+      "content": "Definitive radiation therapy (RT), preferably stereotactic ablative radiotherapy (SABR)",
       "parent_ids": [
         "node_006"
       ],
       "children_ids": [
-        "node_010"
+        "node_011"
       ],
       "tree_ids": [],
       "footnote_labels": [
@@ -114,6 +114,19 @@
     },
     {
       "id": "node_009",
+      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-13"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
       "content": "Findings at Surgery (NSCL-4)",
       "parent_ids": [
         "node_007"
@@ -125,7 +138,7 @@
       "footnote_labels": []
     },
     {
-      "id": "node_010",
+      "id": "node_011",
       "content": "Surveillance (NSCL-17)",
       "parent_ids": [
         "node_008"
@@ -135,56 +148,43 @@
         "NSCL-17"
       ],
       "footnote_labels": []
-    },
-    {
-      "id": "node_011",
-      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
-      "parent_ids": [
-        "node_004"
-      ],
-      "children_ids": [],
-      "tree_ids": [
-        "NSCL-8",
-        "NSCL-13"
-      ],
-      "footnote_labels": []
     }
   ],
   "tree_references": [
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-4",
-      "description": "See 'Findings at Surgery' decision tree."
-    },
-    {
-      "from_tree": "NSCL-2",
-      "to_tree": "NSCL-17",
-      "description": "See 'Surveillance' decision tree."
+      "description": "Findings at Surgery"
     },
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-8",
-      "description": "See decision tree for Stage IIIA/IIIB."
+      "description": "Stage IIIA/IIIB management"
     },
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-13",
-      "description": "See decision tree for Stage IIIB/IIIC."
+      "description": "Stage IIIB/IIIC management"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
     },
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-B",
-      "description": "Reference to Principles of Surgical Therapy."
+      "description": "Principles of Surgical Therapy"
     },
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-C",
-      "description": "Reference to Principles of Radiation Therapy."
+      "description": "Principles of Radiation Therapy"
     },
     {
       "from_tree": "NSCL-2",
       "to_tree": "NSCL-D",
-      "description": "Reference to Principles of Image-Guided Thermal Ablation Therapy."
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
     }
   ],
   "footnotes": [
@@ -206,7 +206,7 @@
     },
     {
       "label": "k",
-      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT is positive in the mediastinum, lymph node status needs pathologic confirmation."
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
     },
     {
       "label": "l",
@@ -222,17 +222,14 @@
     },
     {
       "label": "o",
-      "content": "Image-guided thermal ablation (IGTA) (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+      "content": "Image-guided thermal ablation (IGTA) therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
     },
     {
       "label": "p",
       "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
-    },
-    {
-      "label": "Note",
-      "content": "All recommendations are category 2A unless otherwise indicated."
     }
   ],
-  "extraction_confidence": 0.98,
-  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer"
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - Clinical Assessment, Pretreatment Evaluation, Initial Treatment",
+  "tree_id": "NSCL-2"
 }
