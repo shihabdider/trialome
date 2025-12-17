@@ -238,7 +238,47 @@ function createNodeElement(node) {
     
     // Node content
     const label = document.createElement('div');
-    label.textContent = node.label;
+    
+    // Check if label contains bullet points or newlines
+    // Split by newlines first, then by bullet characters within each line
+    const lineGroups = node.label.split('\n');
+    let allItems = [];
+    
+    lineGroups.forEach(line => {
+        // Split by bullet and dagger symbols
+        const items = line.split(/[•‣]/);
+        items.forEach(item => {
+            const trimmed = item.trim();
+            if (trimmed) {
+                allItems.push(trimmed);
+            }
+        });
+    });
+    
+    if (allItems.length > 1) {
+        // Render as bullet list
+        allItems.forEach(itemText => {
+            const bulletItem = document.createElement('div');
+            bulletItem.className = 'bullet-item';
+            
+            const bullet = document.createElement('span');
+            bullet.className = 'bullet';
+            bullet.textContent = '•';
+            
+            const text = document.createElement('span');
+            // Remove any remaining leading symbols
+            let cleanedText = itemText.replace(/^[•\-\*▶◀▼▲►◄]\s*/, '').trim();
+            text.textContent = cleanedText;
+            
+            bulletItem.appendChild(bullet);
+            bulletItem.appendChild(text);
+            label.appendChild(bulletItem);
+        });
+    } else {
+        // Single item - render as text
+        label.textContent = node.label;
+    }
+    
     nodeEl.appendChild(label);
     
     // Clinical trials indicator (Clinical View only, for queryable nodes)
@@ -340,6 +380,7 @@ async function fetchAllTrialCounts(node, results = []) {
 /**
  * Sanitize search term for ClinicalTrials.gov API
  * The API has limits on query complexity - simplify long/complex terms
+ * Keep only the most important 3-4 words to avoid "Too complicated query" errors
  */
 function sanitizeSearchTerm(term) {
     // Remove phrases in parentheses like "(if planned)" or "(optional)"
@@ -354,12 +395,25 @@ function sanitizeSearchTerm(term) {
     // Collapse multiple spaces
     sanitized = sanitized.replace(/\s+/g, ' ').trim();
     
-    // Truncate to first 100 chars if still too long (keep word boundaries)
-    if (sanitized.length > 100) {
-        sanitized = sanitized.substring(0, 100).replace(/\s+\S*$/, '');
-    }
+    // Split into words and keep only meaningful ones
+    const words = sanitized.split(' ').filter(w => w.length > 2);
     
-    return sanitized;
+    // Prioritize medical/treatment terms - keep max 4 words to avoid API complexity limits
+    const priorityTerms = ['therapy', 'chemotherapy', 'radiation', 'surgery', 'resection', 
+        'pembrolizumab', 'carboplatin', 'cisplatin', 'docetaxel', 'nivolumab', 'atezolizumab',
+        'osimertinib', 'erlotinib', 'pemetrexed', 'stage', 'egfr', 'alk', 'mutation'];
+    
+    const prioritized = words.filter(w => 
+        priorityTerms.some(t => w.toLowerCase().includes(t))
+    );
+    const others = words.filter(w => 
+        !priorityTerms.some(t => w.toLowerCase().includes(t))
+    );
+    
+    // Take up to 4 words total, prioritizing medical terms
+    const selected = [...prioritized, ...others].slice(0, 4);
+    
+    return selected.join(' ');
 }
 
 /**
@@ -380,6 +434,7 @@ async function fetchTrialCount(searchTerm, diseaseContext = null) {
         const url = new URL('https://clinicaltrials.gov/api/v2/studies');
         url.searchParams.set('query.term', enrichedTerm);
         url.searchParams.set('filter.overallStatus', 'RECRUITING');
+        url.searchParams.set('countTotal', 'true');
         url.searchParams.set('pageSize', '10');
         
         const response = await fetch(url);
@@ -414,10 +469,11 @@ async function fetchTrialPhaseBreakdown(searchTerm, diseaseContext = null) {
     try {
         const requests = phases.map(async (phase) => {
             const url = new URL('https://clinicaltrials.gov/api/v2/studies');
-            // Use simple AND for phase query without AREA syntax
-            const phaseQuery = `${baseTerm} ${phase}`;
+            // Use AREA[Phase] syntax to properly filter by phase
+            const phaseQuery = `${baseTerm} AREA[Phase]${phase}`;
             url.searchParams.set('query.term', phaseQuery);
             url.searchParams.set('filter.overallStatus', 'RECRUITING');
+            url.searchParams.set('countTotal', 'true');
             url.searchParams.set('pageSize', '1');
             
             const response = await fetch(url);
@@ -531,11 +587,12 @@ async function showTrialModal(node) {
         recruitingUrl.searchParams.set('filter.overallStatus', 'RECRUITING');
         recruitingUrl.searchParams.set('pageSize', '10');
         
-        // Fetch completed trials with results
+        // Fetch completed trials with results (include resultsSection for outcome data)
         const completedUrl = new URL('https://clinicaltrials.gov/api/v2/studies');
         completedUrl.searchParams.set('query.term', enrichedTerm);
         completedUrl.searchParams.set('filter.overallStatus', 'COMPLETED');
         completedUrl.searchParams.set('pageSize', '5');
+        completedUrl.searchParams.set('fields', 'protocolSection,hasResults,resultsSection.outcomeMeasuresModule');
         
         const [recruitingRes, completedRes] = await Promise.all([
             fetch(recruitingUrl),
@@ -614,6 +671,93 @@ async function showTrialModal(node) {
 }
 
 /**
+ * Extract key outcome measures from trial results (PFS, OS, ORR, HR, etc.)
+ */
+function extractOutcomeMeasures(trial) {
+    const results = [];
+    const outcomeMeasures = trial.resultsSection?.outcomeMeasuresModule?.outcomeMeasures || [];
+    
+    // Priority keywords for clinically relevant outcomes
+    const priorityPatterns = [
+        { pattern: /overall\s*survival|^os$/i, label: 'OS' },
+        { pattern: /progression.?free\s*survival|^pfs$/i, label: 'PFS' },
+        { pattern: /overall\s*response\s*rate|objective\s*response|^orr$/i, label: 'ORR' },
+        { pattern: /disease.?free\s*survival|^dfs$/i, label: 'DFS' },
+        { pattern: /duration\s*of\s*response|^dor$/i, label: 'DoR' },
+    ];
+    
+    for (const measure of outcomeMeasures) {
+        const title = measure.title || '';
+        const type = measure.type || '';
+        
+        // Check if this is a priority outcome
+        let label = null;
+        for (const { pattern, label: l } of priorityPatterns) {
+            if (pattern.test(title)) {
+                label = l;
+                break;
+            }
+        }
+        
+        // Skip non-priority measures if we already have 3 results
+        if (!label && results.length >= 3) continue;
+        
+        // Extract values from classes/categories/measurements
+        const classes = measure.classes || [];
+        for (const cls of classes) {
+            const categories = cls.categories || [];
+            for (const cat of categories) {
+                const measurements = cat.measurements || [];
+                for (const m of measurements) {
+                    if (m.value) {
+                        const result = {
+                            label: label || title.slice(0, 30),
+                            value: m.value,
+                            unit: measure.unitOfMeasure || '',
+                            type: type === 'PRIMARY' ? 'primary' : 'secondary'
+                        };
+                        
+                        // Add spread/CI if available
+                        if (m.lowerLimit && m.upperLimit) {
+                            result.ci = `${m.lowerLimit}-${m.upperLimit}`;
+                        }
+                        
+                        results.push(result);
+                        break; // One value per measure
+                    }
+                }
+                if (results.length >= 5) break;
+            }
+            if (results.length >= 5) break;
+        }
+        
+        // Also check for analyses (HR, p-values)
+        const analyses = measure.analyses || [];
+        for (const analysis of analyses) {
+            if (analysis.paramType && analysis.paramValue) {
+                const result = {
+                    label: analysis.paramType.replace(/\s+/g, ' ').slice(0, 20),
+                    value: analysis.paramValue,
+                    type: 'analysis'
+                };
+                if (analysis.pValue) {
+                    result.pValue = analysis.pValue;
+                }
+                if (analysis.ciLowerLimit && analysis.ciUpperLimit) {
+                    result.ci = `${analysis.ciLowerLimit}-${analysis.ciUpperLimit}`;
+                }
+                results.push(result);
+            }
+            if (results.length >= 5) break;
+        }
+        
+        if (results.length >= 5) break;
+    }
+    
+    return results;
+}
+
+/**
  * Render a single trial item
  */
 function renderTrialItem(trial, isCompleted) {
@@ -636,11 +780,65 @@ function renderTrialItem(trial, isCompleted) {
     metaEl.innerHTML = `
         <span class="font-mono">${trial.protocolSection.identificationModule.nctId}</span>
         <span class="px-1.5 py-0.5 bg-gray-100 rounded">${phase}</span>
-        ${isCompleted ? '<span class="px-1.5 py-0.5 bg-green-100 text-green-700 rounded">Has Results</span>' : ''}
+        ${isCompleted && trial.hasResults ? '<span class="px-1.5 py-0.5 bg-green-100 text-green-700 rounded">Has Results</span>' : ''}
     `;
     
     item.appendChild(titleEl);
     item.appendChild(metaEl);
+    
+    // Display outcome measures for completed trials with results
+    if (isCompleted && trial.resultsSection) {
+        const outcomes = extractOutcomeMeasures(trial);
+        if (outcomes.length > 0) {
+            const accordionId = `results-${Math.random().toString(36).substr(2, 9)}`;
+            
+            const resultsEl = document.createElement('div');
+            resultsEl.className = 'mt-2 pt-2 border-t border-green-200';
+            
+            // Accordion header
+            const header = document.createElement('button');
+            header.className = 'w-full text-left flex items-center gap-2 py-1 text-xs font-medium text-gray-700 hover:text-gray-900';
+            header.innerHTML = '<span class="text-gray-500">▶</span> Outcome Measures';
+            header.setAttribute('data-accordion-target', accordionId);
+            
+            // Accordion content (hidden by default)
+            const content = document.createElement('div');
+            content.id = accordionId;
+            content.className = 'hidden mt-2 space-y-1 text-xs';
+            
+            outcomes.forEach(outcome => {
+                const row = document.createElement('div');
+                row.className = 'flex flex-col gap-0.5 py-1 px-2 bg-gray-50 rounded border border-gray-100';
+                
+                const labelSpan = document.createElement('span');
+                labelSpan.className = 'text-gray-600 font-medium';
+                labelSpan.textContent = outcome.label;
+                
+                const valueSpan = document.createElement('span');
+                valueSpan.className = 'text-gray-900 font-mono';
+                let valueText = outcome.value;
+                if (outcome.unit) valueText += ` ${outcome.unit}`;
+                if (outcome.ci) valueText += ` (CI: ${outcome.ci})`;
+                if (outcome.pValue) valueText += ` p=${outcome.pValue}`;
+                valueSpan.textContent = valueText;
+                
+                row.appendChild(labelSpan);
+                row.appendChild(valueSpan);
+                content.appendChild(row);
+            });
+            
+            // Toggle functionality
+            header.addEventListener('click', () => {
+                content.classList.toggle('hidden');
+                const arrow = header.querySelector('span');
+                arrow.textContent = content.classList.contains('hidden') ? '▶' : '▼';
+            });
+            
+            resultsEl.appendChild(header);
+            resultsEl.appendChild(content);
+            item.appendChild(resultsEl);
+        }
+    }
     
     return item;
 }
