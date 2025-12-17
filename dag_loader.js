@@ -115,7 +115,9 @@ async function loadDAGFile(filename) {
         TREES[treeId] = {
             root: treeData,
             raw: dagData,
-            footnotes: dagData.footnotes || []
+            footnotes: dagData.footnotes || [],
+            disease: 'NSCLC',
+            diseaseFullName: 'Non-Small Cell Lung Cancer'
         };
         
         console.log(`Loaded DAG: ${treeId}`);
@@ -167,12 +169,15 @@ function dagToTree(dagData) {
         
         visited.add(nodeId);
         
+        const classification = classifyNode(node.content);
         const treeNode = {
             id: node.id,
             label: node.content,
-            type: classifyNodeType(node.content),
-            search_term: extractSearchTerm(node.content),
+            type: classification.type,
+            queryable: classification.queryable,
+            search_term: classification.queryable ? extractSearchTerm(node.content) : null,
             footnote_labels: node.footnote_labels || [],
+            tree_ids: node.tree_ids || [],
             children: []
         };
         
@@ -193,27 +198,72 @@ function dagToTree(dagData) {
 }
 
 /**
- * Classify node type based on content
+ * Node classification for trial query filtering
+ * Returns: { type: string, queryable: boolean }
+ */
+function classifyNode(content) {
+    const lower = content.toLowerCase();
+    const trimmed = content.trim();
+    
+    // Skip: Administrative/structural nodes (exact matches or patterns)
+    const skipPatterns = [
+        /^(see|refer to)/i,
+        /^evaluation$/i,
+        /^options?$/i,
+        /^treatment$/i,
+        /^criteria$/i,
+        /^management$/i,
+        /^findings?$/i,
+        /^initial (presentation|evaluation)$/i,
+        /^disease location$/i,
+        /^subsequent therapy$/i,
+        /^recurrence therapy$/i,
+        /^treatment options$/i,
+        /^workup$/i,
+        /^staging$/i,
+        /^assessment$/i
+    ];
+    
+    for (const pattern of skipPatterns) {
+        if (pattern.test(trimmed)) {
+            return { type: 'header', queryable: false };
+        }
+    }
+    
+    // Query: Treatment nodes (drugs, regimens, procedures)
+    const treatmentIndicators = [
+        'therapy', 'chemotherapy', 'radiation', 'surgery', 
+        'resection', 'ablation', 'immunotherapy', 'targeted',
+        'pembrolizumab', 'carboplatin', 'cisplatin', 'docetaxel',
+        'nivolumab', 'atezolizumab', 'osimertinib', 'erlotinib',
+        'pemetrexed', 'bevacizumab', 'durvalumab', 'cemiplimab',
+        'paclitaxel', 'gemcitabine', 'vinorelbine', 'etoposide'
+    ];
+    
+    if (treatmentIndicators.some(term => lower.includes(term))) {
+        return { type: 'treatment', queryable: true };
+    }
+    
+    // Query: Stage/mutation conditions (valuable context)
+    const conditionIndicators = [
+        'stage', 'egfr', 'alk', 'ros1', 'kras', 'braf', 'met',
+        'pd-l1', 'mutation', 'positive', 'negative', 'her2',
+        'ret', 'ntrk', 'exon'
+    ];
+    
+    if (conditionIndicators.some(term => lower.includes(term))) {
+        return { type: 'condition', queryable: true };
+    }
+    
+    // Default: Don't query generic text
+    return { type: 'generic', queryable: false };
+}
+
+/**
+ * Legacy function for backward compatibility
  */
 function classifyNodeType(content) {
-    const lowerContent = content.toLowerCase();
-    
-    if (lowerContent.includes('treatment') || 
-        lowerContent.includes('therapy') || 
-        lowerContent.includes('chemotherapy') ||
-        lowerContent.includes('radiation') ||
-        lowerContent.includes('surgery')) {
-        return 'treatment';
-    }
-    
-    if (lowerContent.includes('evaluation') || 
-        lowerContent.includes('assessment') ||
-        lowerContent.includes('workup') ||
-        lowerContent.includes('staging')) {
-        return 'evaluation';
-    }
-    
-    return 'condition';
+    return classifyNode(content).type;
 }
 
 /**

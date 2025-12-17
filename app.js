@@ -3,7 +3,9 @@ const state = {
     currentDisease: null,
     currentView: 'clinical',
     selectedNodeId: null,
-    trialCache: {}
+    trialCache: {},
+    navigationHistory: [],
+    historyIndex: -1
 };
 
 // Category node types that become headers
@@ -49,6 +51,7 @@ function setupEventListeners() {
     document.getElementById('disease-select').addEventListener('change', (e) => {
         state.currentDisease = e.target.value;
         if (state.currentDisease) {
+            addToNavigationHistory(state.currentDisease);
             renderTree(TREES[state.currentDisease].root);
         }
     });
@@ -60,6 +63,10 @@ function setupEventListeners() {
             setView(view);
         });
     });
+    
+    // Navigation buttons
+    document.getElementById('nav-back-btn').addEventListener('click', navigateBack);
+    document.getElementById('nav-forward-btn').addEventListener('click', navigateForward);
     
     // Modal close
     document.getElementById('modal-close-btn').addEventListener('click', closeModal);
@@ -219,10 +226,50 @@ function createNodeElement(node) {
         nodeEl.classList.add('treatment-node');
     }
     
+    // Nodes with tree references get special styling
+    if (node.tree_ids && node.tree_ids.length > 0) {
+        nodeEl.classList.add('tree-link-node');
+    }
+    
+    // Queryable nodes get indicator styling
+    if (node.queryable && node.search_term) {
+        nodeEl.classList.add('has-trials');
+    }
+    
     // Node content
     const label = document.createElement('div');
     label.textContent = node.label;
     nodeEl.appendChild(label);
+    
+    // Clinical trials indicator (Clinical View only, for queryable nodes)
+    if (node.queryable && node.search_term && state.currentView === 'clinical') {
+        const indicator = document.createElement('div');
+        indicator.className = 'trials-indicator';
+        indicator.textContent = '⚗ View trials';
+        indicator.title = 'Click to view clinical trials';
+        nodeEl.appendChild(indicator);
+    }
+    
+    // Tree reference badge (if available)
+    if (node.tree_ids && node.tree_ids.length > 0) {
+        const badge = document.createElement('div');
+        badge.className = 'tree-link-badge';
+        badge.textContent = `→ ${node.tree_ids[0]}`;
+        
+        // Badge click handler - navigate to tree
+        badge.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const targetTreeId = node.tree_ids[0];
+            if (TREES[targetTreeId]) {
+                navigateToTree(targetTreeId);
+            }
+        });
+        
+        // Make badge clickable
+        badge.style.cursor = 'pointer';
+        
+        nodeEl.appendChild(badge);
+    }
     
     // Trial count badge (if available and in research view)
     if (node.trialCount !== undefined && state.currentView === 'research') {
@@ -232,7 +279,7 @@ function createNodeElement(node) {
         nodeEl.appendChild(badge);
     }
     
-    // Click handler
+    // Click handler for the node (opens modal if has search term)
     nodeEl.addEventListener('click', (e) => {
         e.stopPropagation();
         selectNode(node);
@@ -268,12 +315,17 @@ function selectNode(node) {
 
 /**
  * Fetch trial counts for all nodes (Research View)
+ * Only queries nodes marked as queryable to reduce API calls
+ * Uses phase breakdown to show P1|P2|P3 badges
  */
 async function fetchAllTrialCounts(node, results = []) {
-    if (node.search_term) {
-        const count = await fetchTrialCount(node.search_term);
-        results.push({ nodeId: node.id, count });
-        updateNodeHeatmap(node.id, count);
+    const treeData = state.currentDisease ? TREES[state.currentDisease] : null;
+    const diseaseContext = treeData?.disease || null;
+    
+    if (node.queryable && node.search_term) {
+        const breakdown = await fetchTrialPhaseBreakdown(node.search_term, diseaseContext);
+        results.push({ nodeId: node.id, breakdown });
+        updateNodeHeatmap(node.id, breakdown);
     }
     
     if (node.children) {
@@ -286,16 +338,47 @@ async function fetchAllTrialCounts(node, results = []) {
 }
 
 /**
+ * Sanitize search term for ClinicalTrials.gov API
+ * The API has limits on query complexity - simplify long/complex terms
+ */
+function sanitizeSearchTerm(term) {
+    // Remove phrases in parentheses like "(if planned)" or "(optional)"
+    let sanitized = term.replace(/\([^)]*\)/g, '');
+    
+    // Replace complex connectors with spaces
+    sanitized = sanitized.replace(/\s+(or|and|if|after|before|with|without)\s+/gi, ' ');
+    
+    // Remove special characters that cause API issues
+    sanitized = sanitized.replace(/[,;:+]/g, ' ');
+    
+    // Collapse multiple spaces
+    sanitized = sanitized.replace(/\s+/g, ' ').trim();
+    
+    // Truncate to first 100 chars if still too long (keep word boundaries)
+    if (sanitized.length > 100) {
+        sanitized = sanitized.substring(0, 100).replace(/\s+\S*$/, '');
+    }
+    
+    return sanitized;
+}
+
+/**
  * Fetch trial count from ClinicalTrials.gov API
  */
-async function fetchTrialCount(searchTerm) {
-    if (state.trialCache[searchTerm]) {
-        return state.trialCache[searchTerm];
+async function fetchTrialCount(searchTerm, diseaseContext = null) {
+    const sanitizedTerm = sanitizeSearchTerm(searchTerm);
+    const enrichedTerm = diseaseContext 
+        ? `${sanitizedTerm} ${diseaseContext}` 
+        : sanitizedTerm;
+    
+    const cacheKey = enrichedTerm;
+    if (state.trialCache[cacheKey]) {
+        return state.trialCache[cacheKey];
     }
     
     try {
         const url = new URL('https://clinicaltrials.gov/api/v2/studies');
-        url.searchParams.set('query.term', searchTerm);
+        url.searchParams.set('query.term', enrichedTerm);
         url.searchParams.set('filter.overallStatus', 'RECRUITING');
         url.searchParams.set('pageSize', '10');
         
@@ -303,7 +386,7 @@ async function fetchTrialCount(searchTerm) {
         const data = await response.json();
         const count = data.totalCount || 0;
         
-        state.trialCache[searchTerm] = count;
+        state.trialCache[cacheKey] = count;
         return count;
     } catch (error) {
         console.error('Error fetching trials:', error);
@@ -312,25 +395,118 @@ async function fetchTrialCount(searchTerm) {
 }
 
 /**
- * Update node with heatmap color based on trial count
+ * Fetch trial counts broken down by phase (P1, P2, P3)
+ * Makes 3 parallel API calls, one per phase using AREA[Phase] in query.term
  */
-function updateNodeHeatmap(nodeId, count) {
-    const nodeEl = document.getElementById(nodeId);
-    if (!nodeEl) return;
+async function fetchTrialPhaseBreakdown(searchTerm, diseaseContext = null) {
+    const sanitizedTerm = sanitizeSearchTerm(searchTerm);
+    const baseTerm = diseaseContext 
+        ? `${sanitizedTerm} ${diseaseContext}` 
+        : sanitizedTerm;
     
-    nodeEl.classList.remove('heatmap-red', 'heatmap-yellow', 'heatmap-green');
+    const cacheKey = `phases:${baseTerm}`;
+    if (state.trialCache[cacheKey]) {
+        return state.trialCache[cacheKey];
+    }
     
-    if (count === 0) {
-        nodeEl.classList.add('heatmap-red');
-    } else if (count >= 1 && count <= 5) {
-        nodeEl.classList.add('heatmap-yellow');
-    } else if (count >= 6) {
-        nodeEl.classList.add('heatmap-green');
+    const phases = ['PHASE1', 'PHASE2', 'PHASE3'];
+    
+    try {
+        const requests = phases.map(async (phase) => {
+            const url = new URL('https://clinicaltrials.gov/api/v2/studies');
+            // Use simple AND for phase query without AREA syntax
+            const phaseQuery = `${baseTerm} ${phase}`;
+            url.searchParams.set('query.term', phaseQuery);
+            url.searchParams.set('filter.overallStatus', 'RECRUITING');
+            url.searchParams.set('pageSize', '1');
+            
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.totalCount || 0;
+        });
+        
+        const [p1, p2, p3] = await Promise.all(requests);
+        
+        const breakdown = {
+            p1,
+            p2,
+            p3,
+            total: p1 + p2 + p3
+        };
+        
+        state.trialCache[cacheKey] = breakdown;
+        return breakdown;
+    } catch (error) {
+        console.error('Error fetching phase breakdown:', error);
+        return { p1: 0, p2: 0, p3: 0, total: 0 };
     }
 }
 
 /**
- * Fetch and display trial details
+ * Update node with heatmap color and phase breakdown badges
+ * @param {string} nodeId - Node DOM ID
+ * @param {object} breakdown - { p1, p2, p3, total }
+ */
+function updateNodeHeatmap(nodeId, breakdown) {
+    const nodeEl = document.getElementById(nodeId);
+    if (!nodeEl) return;
+    
+    const total = breakdown.total;
+    
+    nodeEl.classList.remove('heatmap-red', 'heatmap-yellow', 'heatmap-green');
+    
+    if (total === 0) {
+        nodeEl.classList.add('heatmap-red');
+    } else if (total >= 1 && total <= 5) {
+        nodeEl.classList.add('heatmap-yellow');
+    } else if (total >= 6) {
+        nodeEl.classList.add('heatmap-green');
+    }
+    
+    // Remove old badges
+    const oldBadge = nodeEl.querySelector('.trial-badge');
+    if (oldBadge) oldBadge.remove();
+    const oldPhaseBadges = nodeEl.querySelector('.phase-badges');
+    if (oldPhaseBadges) oldPhaseBadges.remove();
+    
+    // Add phase breakdown badges
+    const badgeContainer = document.createElement('div');
+    badgeContainer.className = 'phase-badges';
+    
+    if (breakdown.p1 > 0) {
+        const p1Badge = document.createElement('span');
+        p1Badge.className = 'phase-badge phase-p1';
+        p1Badge.textContent = `P1: ${breakdown.p1}`;
+        badgeContainer.appendChild(p1Badge);
+    }
+    
+    if (breakdown.p2 > 0) {
+        const p2Badge = document.createElement('span');
+        p2Badge.className = 'phase-badge phase-p2';
+        p2Badge.textContent = `P2: ${breakdown.p2}`;
+        badgeContainer.appendChild(p2Badge);
+    }
+    
+    if (breakdown.p3 > 0) {
+        const p3Badge = document.createElement('span');
+        p3Badge.className = 'phase-badge phase-p3';
+        p3Badge.textContent = `P3: ${breakdown.p3}`;
+        badgeContainer.appendChild(p3Badge);
+    }
+    
+    // If no phases have trials, show total (which is 0)
+    if (breakdown.p1 === 0 && breakdown.p2 === 0 && breakdown.p3 === 0) {
+        const noBadge = document.createElement('span');
+        noBadge.className = 'phase-badge phase-none';
+        noBadge.textContent = '0 trials';
+        badgeContainer.appendChild(noBadge);
+    }
+    
+    nodeEl.appendChild(badgeContainer);
+}
+
+/**
+ * Fetch and display trial details with completed trials section
  */
 async function showTrialModal(node) {
     const modal = document.getElementById('trial-modal');
@@ -341,76 +517,94 @@ async function showTrialModal(node) {
     title.textContent = node.label;
     content.innerHTML = '<p class="text-gray-600">Loading trials...</p>';
     
+    const treeData = state.currentDisease ? TREES[state.currentDisease] : null;
+    const diseaseContext = treeData?.disease || null;
+    const sanitizedTerm = sanitizeSearchTerm(node.search_term);
+    const enrichedTerm = diseaseContext 
+        ? `${sanitizedTerm} ${diseaseContext}` 
+        : sanitizedTerm;
+    
     try {
-        const url = new URL('https://clinicaltrials.gov/api/v2/studies');
-        url.searchParams.set('query.term', node.search_term);
-        url.searchParams.set('filter.overallStatus', 'RECRUITING');
-        url.searchParams.set('pageSize', '10');
+        // Fetch recruiting trials
+        const recruitingUrl = new URL('https://clinicaltrials.gov/api/v2/studies');
+        recruitingUrl.searchParams.set('query.term', enrichedTerm);
+        recruitingUrl.searchParams.set('filter.overallStatus', 'RECRUITING');
+        recruitingUrl.searchParams.set('pageSize', '10');
         
-        const response = await fetch(url);
-        const data = await response.json();
-        const trials = data.studies || [];
+        // Fetch completed trials with results
+        const completedUrl = new URL('https://clinicaltrials.gov/api/v2/studies');
+        completedUrl.searchParams.set('query.term', enrichedTerm);
+        completedUrl.searchParams.set('filter.overallStatus', 'COMPLETED');
+        completedUrl.searchParams.set('pageSize', '5');
         
+        const [recruitingRes, completedRes] = await Promise.all([
+            fetch(recruitingUrl),
+            fetch(completedUrl)
+        ]);
+        
+        const recruitingData = await recruitingRes.json();
+        const completedData = await completedRes.json();
+        
+        const recruitingTrials = recruitingData.studies || [];
+        const completedTrials = completedData.studies || [];
+        
+        // View all link
         const ctURL = new URL('https://clinicaltrials.gov/search');
-        ctURL.searchParams.set('q', node.search_term);
-        ctURL.searchParams.set('status', 'RECRUITING');
+        ctURL.searchParams.set('q', enrichedTerm);
         viewAllLink.href = ctURL.toString();
         
-        // Build content container
-        const contentContainer = document.createElement('div');
+        // Build content
+        content.innerHTML = '';
         
-        if (trials.length === 0) {
-            contentContainer.innerHTML = '<p class="text-gray-600">No recruiting trials found.</p>';
-        } else {
-            const list = document.createElement('div');
-            list.className = 'space-y-3';
+        // Completed trials section (if any)
+        if (completedTrials.length > 0) {
+            const completedSection = document.createElement('div');
+            completedSection.className = 'mb-4';
+            completedSection.innerHTML = `
+                <h3 class="text-sm font-semibold text-green-700 mb-2">
+                    ✓ Completed Trials with Results (${completedTrials.length})
+                </h3>
+            `;
             
-            trials.slice(0, 10).forEach(trial => {
-                const item = document.createElement('div');
-                item.className = 'border border-gray-200 p-3 rounded-md';
-                
-                const titleEl = document.createElement('a');
-                titleEl.href = `https://clinicaltrials.gov/study/${trial.protocolSection.identificationModule.nctId}`;
-                titleEl.target = '_blank';
-                titleEl.className = 'text-blue-600 hover:text-blue-800 font-medium text-sm';
-                titleEl.textContent = trial.protocolSection.identificationModule.officialTitle || 'Untitled Study';
-                
-                const nctId = document.createElement('div');
-                nctId.className = 'text-xs text-gray-500 mt-1';
-                nctId.textContent = trial.protocolSection.identificationModule.nctId;
-                
-                item.appendChild(titleEl);
-                item.appendChild(nctId);
-                list.appendChild(item);
+            const completedList = document.createElement('div');
+            completedList.className = 'space-y-2';
+            
+            completedTrials.forEach(trial => {
+                const item = renderTrialItem(trial, true);
+                completedList.appendChild(item);
             });
             
-            contentContainer.appendChild(list);
+            completedSection.appendChild(completedList);
+            content.appendChild(completedSection);
         }
         
-        // Add footnotes if present
-        if (node.footnote_labels && node.footnote_labels.length > 0 && state.currentDisease) {
-            const treeData = TREES[state.currentDisease];
-            if (treeData && treeData.footnotes && treeData.footnotes.length > 0) {
-                const footnotesDiv = document.createElement('div');
-                footnotesDiv.className = 'mt-4 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2';
-                
-                node.footnote_labels.forEach(label => {
-                    const footnote = treeData.footnotes.find(f => f.label === label);
-                    if (footnote) {
-                        const footnoteEl = document.createElement('div');
-                        footnoteEl.innerHTML = `<strong>${footnote.label}.</strong> ${footnote.content}`;
-                        footnotesDiv.appendChild(footnoteEl);
-                    }
-                });
-                
-                if (footnotesDiv.children.length > 0) {
-                    contentContainer.appendChild(footnotesDiv);
-                }
-            }
+        // Recruiting trials section
+        const recruitingSection = document.createElement('div');
+        recruitingSection.innerHTML = `
+            <h3 class="text-sm font-semibold text-blue-700 mb-2">
+                Actively Recruiting (${recruitingTrials.length})
+            </h3>
+        `;
+        
+        if (recruitingTrials.length === 0) {
+            recruitingSection.innerHTML += '<p class="text-gray-600 text-sm">No recruiting trials found.</p>';
+        } else {
+            const recruitingList = document.createElement('div');
+            recruitingList.className = 'space-y-2';
+            
+            recruitingTrials.forEach(trial => {
+                const item = renderTrialItem(trial, false);
+                recruitingList.appendChild(item);
+            });
+            
+            recruitingSection.appendChild(recruitingList);
         }
         
-        content.innerHTML = '';
-        content.appendChild(contentContainer);
+        content.appendChild(recruitingSection);
+        
+        // Footnotes
+        appendFootnotes(content, node);
+        
     } catch (error) {
         console.error('Error loading trials:', error);
         content.innerHTML = '<p class="text-red-600">Error loading trials. Please try again.</p>';
@@ -420,10 +614,152 @@ async function showTrialModal(node) {
 }
 
 /**
+ * Render a single trial item
+ */
+function renderTrialItem(trial, isCompleted) {
+    const item = document.createElement('div');
+    item.className = `border ${isCompleted ? 'border-green-200 bg-green-50' : 'border-gray-200'} p-3 rounded-md`;
+    
+    const phases = trial.protocolSection?.designModule?.phases || [];
+    const phase = phases.length > 0 ? phases[0].replace('PHASE', 'Phase ') : 'Phase N/A';
+    
+    const titleEl = document.createElement('a');
+    titleEl.href = `https://clinicaltrials.gov/study/${trial.protocolSection.identificationModule.nctId}`;
+    titleEl.target = '_blank';
+    titleEl.className = 'text-blue-600 hover:text-blue-800 font-medium text-sm';
+    titleEl.textContent = trial.protocolSection.identificationModule.officialTitle || 
+                          trial.protocolSection.identificationModule.briefTitle || 
+                          'Untitled Study';
+    
+    const metaEl = document.createElement('div');
+    metaEl.className = 'flex flex-wrap gap-2 items-center text-xs text-gray-500 mt-1';
+    metaEl.innerHTML = `
+        <span class="font-mono">${trial.protocolSection.identificationModule.nctId}</span>
+        <span class="px-1.5 py-0.5 bg-gray-100 rounded">${phase}</span>
+        ${isCompleted ? '<span class="px-1.5 py-0.5 bg-green-100 text-green-700 rounded">Has Results</span>' : ''}
+    `;
+    
+    item.appendChild(titleEl);
+    item.appendChild(metaEl);
+    
+    return item;
+}
+
+/**
+ * Append footnotes to modal content
+ */
+function appendFootnotes(content, node) {
+    if (node.footnote_labels && node.footnote_labels.length > 0 && state.currentDisease) {
+        const treeData = TREES[state.currentDisease];
+        if (treeData && treeData.footnotes && treeData.footnotes.length > 0) {
+            const footnotesDiv = document.createElement('div');
+            footnotesDiv.className = 'mt-4 pt-4 border-t border-gray-200 text-xs text-gray-600 space-y-2';
+            
+            node.footnote_labels.forEach(label => {
+                const footnote = treeData.footnotes.find(f => f.label === label);
+                if (footnote) {
+                    const footnoteEl = document.createElement('div');
+                    footnoteEl.innerHTML = `<strong>${footnote.label}.</strong> ${footnote.content}`;
+                    footnotesDiv.appendChild(footnoteEl);
+                }
+            });
+            
+            if (footnotesDiv.children.length > 0) {
+                content.appendChild(footnotesDiv);
+            }
+        }
+    }
+}
+
+/**
  * Close trial modal
  */
 function closeModal() {
     document.getElementById('trial-modal').classList.add('hidden');
+}
+
+/**
+ * Add tree to navigation history
+ */
+function addToNavigationHistory(treeId) {
+    // Remove any forward history if we're adding a new entry
+    if (state.historyIndex < state.navigationHistory.length - 1) {
+        state.navigationHistory = state.navigationHistory.slice(0, state.historyIndex + 1);
+    }
+    
+    // Add new entry
+    state.navigationHistory.push(treeId);
+    state.historyIndex = state.navigationHistory.length - 1;
+    
+    updateNavigationButtons();
+}
+
+/**
+ * Navigate to a specific tree
+ */
+function navigateToTree(treeId) {
+    if (!TREES[treeId]) {
+        console.error(`Tree ${treeId} not found`);
+        return;
+    }
+    
+    state.currentDisease = treeId;
+    addToNavigationHistory(treeId);
+    document.getElementById('disease-select').value = treeId;
+    renderTree(TREES[treeId].root);
+    
+    if (state.currentView === 'research') {
+        fetchAllTrialCounts(TREES[treeId].root);
+    }
+}
+
+/**
+ * Navigate back in history
+ */
+function navigateBack() {
+    if (state.historyIndex > 0) {
+        state.historyIndex--;
+        const treeId = state.navigationHistory[state.historyIndex];
+        state.currentDisease = treeId;
+        document.getElementById('disease-select').value = treeId;
+        renderTree(TREES[treeId].root);
+        
+        if (state.currentView === 'research') {
+            fetchAllTrialCounts(TREES[treeId].root);
+        }
+        
+        updateNavigationButtons();
+    }
+}
+
+/**
+ * Navigate forward in history
+ */
+function navigateForward() {
+    if (state.historyIndex < state.navigationHistory.length - 1) {
+        state.historyIndex++;
+        const treeId = state.navigationHistory[state.historyIndex];
+        state.currentDisease = treeId;
+        document.getElementById('disease-select').value = treeId;
+        renderTree(TREES[treeId].root);
+        
+        if (state.currentView === 'research') {
+            fetchAllTrialCounts(TREES[treeId].root);
+        }
+        
+        updateNavigationButtons();
+    }
+}
+
+/**
+ * Update navigation button states
+ */
+function updateNavigationButtons() {
+    const backBtn = document.getElementById('nav-back-btn');
+    const forwardBtn = document.getElementById('nav-forward-btn');
+    
+    backBtn.disabled = state.historyIndex <= 0;
+    forwardBtn.disabled = state.historyIndex >= state.navigationHistory.length - 1;
 }
 
 // Initialize on page load
