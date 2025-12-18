@@ -54,19 +54,30 @@ async function loadTrialsData() {
  */
 function renderTrialsTable() {
     const canvas = document.getElementById('tree-canvas');
-    canvas.innerHTML = '';
     
-    const container = document.createElement('div');
-    container.className = 'p-6 bg-white';
+    // Only clear and rebuild if filters don't exist
+    if (!document.getElementById('filter-status')) {
+        canvas.innerHTML = '';
+    }
     
-    // Header
-    const header = document.createElement('div');
-    header.className = 'mb-4';
+    const container = canvas.querySelector('div') || document.createElement('div');
+    if (!canvas.querySelector('div')) {
+        container.className = 'p-6 bg-white';
+        canvas.appendChild(container);
+    }
+    
+    // Update header
+    let header = container.querySelector('[data-header="trials"]');
+    if (!header) {
+        header = document.createElement('div');
+        header.setAttribute('data-header', 'trials');
+        header.className = 'mb-4';
+        container.insertBefore(header, container.firstChild);
+    }
     header.innerHTML = `
-        <h2 class="text-2xl font-bold text-gray-900 mb-2">Clinical Trials Database</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Trials Database</h2>
         <p class="text-sm text-gray-600">${state.filteredTrials.length} trials</p>
     `;
-    container.appendChild(header);
     
     // Essential columns for display
     const displayColumns = [
@@ -79,26 +90,31 @@ function renderTrialsTable() {
         'Primary_Outcomes'
     ];
     
-    // Create filter controls
-    const filterContainer = document.createElement('div');
-    filterContainer.className = 'mb-4 p-3 bg-gray-50 rounded border border-gray-200';
+    // Create or update filter controls
+    let filterContainer = document.getElementById('filter-container');
+    if (!filterContainer) {
+        filterContainer = document.createElement('div');
+        filterContainer.id = 'filter-container';
+        filterContainer.className = 'mb-4 p-3 bg-gray-50 rounded border border-gray-200';
+        container.insertBefore(filterContainer, container.querySelector('[data-role="table"]'));
+    }
+    
+    // Build unique values from data for dropdowns
+    const statuses = ['', ...new Set(state.trialsData.map(t => t.Overall_Status).filter(Boolean))].sort();
+    const phases = ['', ...new Set(state.trialsData.map(t => t.Study_Phase).filter(Boolean))].sort();
+    
     filterContainer.innerHTML = `
         <div class="grid grid-cols-4 gap-3">
             <div>
                 <label class="text-xs font-semibold text-gray-700">Status</label>
                 <select id="filter-status" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="">All</option>
-                    <option value="COMPLETED">Completed</option>
-                    <option value="RECRUITING">Recruiting</option>
+                    ${statuses.map(status => `<option value="${status}">${status || 'All'}</option>`).join('')}
                 </select>
             </div>
             <div>
                 <label class="text-xs font-semibold text-gray-700">Phase</label>
                 <select id="filter-phase" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="">All</option>
-                    <option value="PHASE1">Phase 1</option>
-                    <option value="PHASE2">Phase 2</option>
-                    <option value="PHASE3">Phase 3</option>
+                    ${phases.map(phase => `<option value="${phase}">${phase || 'All'}</option>`).join('')}
                 </select>
             </div>
             <div>
@@ -115,37 +131,58 @@ function renderTrialsTable() {
             </div>
         </div>
     `;
-    container.appendChild(filterContainer);
     
-    // Table wrapper
-    const tableWrapper = document.createElement('div');
-    tableWrapper.className = 'overflow-x-auto border border-gray-200 rounded-lg';
+    // Table wrapper - reuse or create
+    let tableWrapper = container.querySelector('[data-role="table-wrapper"]');
+    if (!tableWrapper) {
+        tableWrapper = document.createElement('div');
+        tableWrapper.setAttribute('data-role', 'table-wrapper');
+        tableWrapper.className = 'overflow-x-auto border border-gray-200 rounded-lg';
+        container.appendChild(tableWrapper);
+    }
     
-    // Table
-    const table = document.createElement('table');
-    table.className = 'w-full text-sm';
-    
-    // Table header
-    const thead = document.createElement('thead');
-    thead.className = 'bg-gray-100 border-b border-gray-200 sticky top-0';
-    const headerRow = document.createElement('tr');
-    
-    displayColumns.forEach(col => {
-        const th = document.createElement('th');
-        th.className = 'px-4 py-2 text-left text-xs font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition whitespace-nowrap';
-        th.dataset.column = col;
+    // Table - create if doesn't exist
+    let table = tableWrapper.querySelector('table');
+    if (!table) {
+        table = document.createElement('table');
+        table.className = 'w-full text-sm';
+        tableWrapper.appendChild(table);
         
-        const sortIndicator = state.sortColumn === col ? (state.sortDirection === 'asc' ? ' ▲' : ' ▼') : '';
-        th.innerHTML = `${col.replace(/_/g, ' ')}${sortIndicator}`;
+        // Table header - only create once
+        const thead = document.createElement('thead');
+        thead.className = 'bg-gray-100 border-b border-gray-200 sticky top-0';
+        const headerRow = document.createElement('tr');
         
-        th.addEventListener('click', () => sortTrialsTable(col));
-        headerRow.appendChild(th);
-    });
-    thead.appendChild(headerRow);
-    table.appendChild(thead);
+        displayColumns.forEach(col => {
+            const th = document.createElement('th');
+            th.className = 'px-4 py-2 text-left text-xs font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition whitespace-nowrap';
+            th.dataset.column = col;
+            
+            const sortIndicator = state.sortColumn === col ? (state.sortDirection === 'asc' ? ' ▲' : ' ▼') : '';
+            th.innerHTML = `${col.replace(/_/g, ' ')}${sortIndicator}`;
+            
+            th.addEventListener('click', () => sortTrialsTable(col));
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+    } else {
+        // Update sort indicators
+        table.querySelectorAll('thead th').forEach(th => {
+            const col = th.dataset.column;
+            const sortIndicator = state.sortColumn === col ? (state.sortDirection === 'asc' ? ' ▲' : ' ▼') : '';
+            th.innerHTML = `${col.replace(/_/g, ' ')}${sortIndicator}`;
+        });
+    }
     
-    // Table body
-    const tbody = document.createElement('tbody');
+    // Update table body
+    let tbody = table.querySelector('tbody');
+    if (!tbody) {
+        tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+    }
+    tbody.innerHTML = '';
+    
     state.filteredTrials.forEach((trial, index) => {
         const row = document.createElement('tr');
         row.className = index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50';
@@ -170,32 +207,31 @@ function renderTrialsTable() {
         tbody.appendChild(row);
     });
     
-    table.appendChild(tbody);
-    tableWrapper.appendChild(table);
-    container.appendChild(tableWrapper);
-    
-    // Add table to canvas
-    canvas.innerHTML = '';
-    canvas.appendChild(container);
-    
-    // Setup filter listeners
-    const filters = {
-        status: document.getElementById('filter-status'),
-        phase: document.getElementById('filter-phase'),
-        outcomes: document.getElementById('filter-outcomes'),
-        search: document.getElementById('filter-search')
-    };
-    
-    Object.values(filters).forEach(filter => {
-        filter.addEventListener('change', () => applyTrialsFilters(filters));
-        filter.addEventListener('input', () => applyTrialsFilters(filters));
-    });
+    // Setup filter listeners (only once)
+    if (!document.getElementById('filter-status').dataset.listenersAttached) {
+        const filters = {
+            status: document.getElementById('filter-status'),
+            phase: document.getElementById('filter-phase'),
+            outcomes: document.getElementById('filter-outcomes'),
+            search: document.getElementById('filter-search')
+        };
+        
+        // All filters trigger table update
+        Object.values(filters).forEach(filter => {
+            filter.addEventListener('change', () => updateTrialsTableBody(filters));
+            filter.addEventListener('input', () => updateTrialsTableBody(filters));
+        });
+        
+        document.getElementById('filter-status').dataset.listenersAttached = 'true';
+    }
 }
 
 /**
- * Apply filters to trials table
+ * Update only the trials table body (filters + sort) without touching filter controls
+ * This prevents the search input from losing focus
  */
-function applyTrialsFilters(filters) {
+function updateTrialsTableBody(filters) {
+    // Apply filters
     state.filteredTrials = state.trialsData.filter(trial => {
         // Status filter
         if (filters.status.value && trial.Overall_Status !== filters.status.value) {
@@ -203,7 +239,7 @@ function applyTrialsFilters(filters) {
         }
         
         // Phase filter
-        if (filters.phase.value && !trial.Study_Phase?.includes(filters.phase.value)) {
+        if (filters.phase.value && trial.Study_Phase !== filters.phase.value) {
             return false;
         }
         
@@ -218,40 +254,19 @@ function applyTrialsFilters(filters) {
         // Search filter
         if (filters.search.value) {
             const searchTerm = filters.search.value.toLowerCase();
-            return trial.Trial_ID?.toLowerCase().includes(searchTerm) ||
-                   trial.Title?.toLowerCase().includes(searchTerm);
+            const matches = (trial.Trial_ID?.toLowerCase().includes(searchTerm)) ||
+                   (trial.Title?.toLowerCase().includes(searchTerm));
+            if (!matches) return false;
         }
         
         return true;
     });
     
-    // Re-sort and render
-    sortAndRenderTrials();
-}
-
-/**
- * Sort trials table
- */
-function sortTrialsTable(column) {
-    if (state.sortColumn === column) {
-        state.sortDirection = state.sortDirection === 'asc' ? 'desc' : 'asc';
-    } else {
-        state.sortColumn = column;
-        state.sortDirection = 'asc';
-    }
-    
-    sortAndRenderTrials();
-}
-
-/**
- * Sort and re-render the trials table
- */
-function sortAndRenderTrials() {
+    // Sort filtered results
     state.filteredTrials.sort((a, b) => {
         let aVal = a[state.sortColumn] || '';
         let bVal = b[state.sortColumn] || '';
         
-        // Handle numeric values
         if (!isNaN(aVal) && !isNaN(bVal) && aVal !== '' && bVal !== '') {
             aVal = parseFloat(aVal);
             bVal = parseFloat(bVal);
@@ -262,7 +277,102 @@ function sortAndRenderTrials() {
         return 0;
     });
     
-    renderTrialsTable();
+    // Update only the table body and count
+    updateTableBodyOnly();
+}
+
+/**
+ * Update only the table body and header count (no filter controls touched)
+ */
+function updateTableBodyOnly() {
+    const displayColumns = [
+        'Trial_ID',
+        'Title',
+        'Overall_Status',
+        'Study_Phase',
+        'Primary_Condition',
+        'Lead_Sponsor',
+        'Primary_Outcomes'
+    ];
+    
+    // Update count in header
+    const header = document.querySelector('[data-header="trials"]');
+    if (header) {
+        header.innerHTML = `
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Trials Database</h2>
+            <p class="text-sm text-gray-600">${state.filteredTrials.length} trials</p>
+        `;
+    }
+    
+    // Get or create tbody
+    const table = document.querySelector('table');
+    if (!table) return;
+    
+    let tbody = table.querySelector('tbody');
+    if (!tbody) {
+        tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+    }
+    
+    // Clear and rebuild tbody only
+    tbody.innerHTML = '';
+    state.filteredTrials.forEach((trial, index) => {
+        const row = document.createElement('tr');
+        row.className = index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50';
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', () => showTrialDetailModal(trial));
+        
+        displayColumns.forEach(col => {
+            const td = document.createElement('td');
+            td.className = 'px-4 py-2 text-xs text-gray-900 max-w-xs';
+            
+            let value = trial[col] || '';
+            if (typeof value === 'string' && value.length > 60) {
+                value = value.substring(0, 60) + '...';
+            }
+            
+            td.textContent = value;
+            row.appendChild(td);
+        });
+        
+        tbody.appendChild(row);
+    });
+}
+
+/**
+ * Sort trials table (called from column header clicks)
+ */
+function sortTrialsTable(column) {
+    if (state.sortColumn === column) {
+        state.sortDirection = state.sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+        state.sortColumn = column;
+        state.sortDirection = 'asc';
+    }
+    
+    // Update sort indicators
+    document.querySelectorAll('thead th').forEach(th => {
+        const col = th.dataset.column;
+        const sortIndicator = state.sortColumn === col ? (state.sortDirection === 'asc' ? ' ▲' : ' ▼') : '';
+        th.innerHTML = `${col.replace(/_/g, ' ')}${sortIndicator}`;
+    });
+    
+    // Re-sort and update only the body
+    state.filteredTrials.sort((a, b) => {
+        let aVal = a[state.sortColumn] || '';
+        let bVal = b[state.sortColumn] || '';
+        
+        if (!isNaN(aVal) && !isNaN(bVal) && aVal !== '' && bVal !== '') {
+            aVal = parseFloat(aVal);
+            bVal = parseFloat(bVal);
+        }
+        
+        if (aVal < bVal) return state.sortDirection === 'asc' ? -1 : 1;
+        if (aVal > bVal) return state.sortDirection === 'asc' ? 1 : -1;
+        return 0;
+    });
+    
+    updateTableBodyOnly();
 }
 
 /**

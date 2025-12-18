@@ -71,7 +71,9 @@ app.get('/api/trials', (req, res) => {
         const fileContent = fs.readFileSync(csvPath, 'utf8');
         let records = csv.parse(fileContent, {
             columns: true,
-            skip_empty_lines: true
+            skip_empty_lines: true,
+            relax_quotes: false,
+            quote: '"'
         });
         
         // Parse boolean fields
