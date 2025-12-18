@@ -35,15 +35,14 @@ async function initApp() {
 }
 
 /**
- * Load trials data from CSV endpoint
+ * Load trials data from static JS file (TRIALS_DATA global)
  */
 async function loadTrialsData() {
-    try {
-        const response = await fetch('/api/trials');
-        state.trialsData = await response.json();
+    if (typeof TRIALS_DATA !== 'undefined' && Array.isArray(TRIALS_DATA)) {
+        state.trialsData = TRIALS_DATA;
         state.filteredTrials = [...state.trialsData];
-    } catch (error) {
-        console.error('Error loading trials data:', error);
+    } else {
+        console.error('TRIALS_DATA not found - make sure trials_data.js is loaded');
         state.trialsData = [];
         state.filteredTrials = [];
     }

@@ -390,6 +390,14 @@ if __name__ == "__main__":
         print(f"\n{'='*60}")
         print(f"✓ Successfully processed {total_success}/{len(metadata_map)} trials")
         print(f"✓ CSV output written to {output_csv}")
+        
+        # Generate static JS file for browser
+        print("\nGenerating trials_data.js for static serving...")
+        with open(output_csv, 'r', encoding='utf-8') as f:
+            trials = list(csv.DictReader(f))
+        with open('trials_data.js', 'w', encoding='utf-8') as f:
+            f.write(f'// Auto-generated from {output_csv}\nconst TRIALS_DATA = {json.dumps(trials, indent=2)};')
+        print(f"✓ Generated trials_data.js with {len(trials)} trials")
     
     except Exception as e:
         print(f"Error: {e}")
