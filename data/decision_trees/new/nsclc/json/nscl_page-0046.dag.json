@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Progression on erlotinib (\u00b1 ramucirumab or bevacizumab), afatinib, gefitinib, dacomitinib",
+      "content": "Progression on erlotinib (± ramucirumab or bevacizumab), afatinib, gefitinib, dacomitinib",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -69,7 +69,7 @@
     },
     {
       "id": "node_006",
-      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (± bevacizumab or ramucirumab) (if T790M-)",
       "parent_ids": [
         "node_003"
       ],
@@ -139,7 +139,7 @@
     },
     {
       "id": "node_011",
-      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (± bevacizumab or ramucirumab) (if T790M-)",
       "parent_ids": [
         "node_008"
       ],
@@ -208,7 +208,7 @@
     },
     {
       "id": "node_016",
-      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (± bevacizumab or ramucirumab) (if T790M-)",
       "parent_ids": [
         "node_014"
       ],
@@ -382,7 +382,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "uu",
@@ -427,5 +427,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "EGFR EXON 19 DELETION OR EXON 21 L858R MUTATIONS - SUBSEQUENT THERAPY",
-  "tree_id": "NSCL-23"
+  "tree_id": "NSCL-23",
+  "keywords": [
+    "ROS1",
+    "entrectinib",
+    "crizotinib"
+  ]
 }

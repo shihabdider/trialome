@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "INITIAL EVALUATION\n\u2022 Pathology review\n\u2022 H&P (include performance status + weight loss)\n\u2022 CT chest and upper abdomen with contrast, including adrenals\n\u2022 CBC, platelets\n\u2022 Chemistry profile\n\u2022 Smoking cessation advice, counseling, and pharmacotherapy\n\u2022 Use the 5 A\u2019s Framework: Ask, Advise, Assess, Assist, Arrange\n\u2022 Integrate palliative care\n\u2022 For tools to aid in the optimal assessment and management of NSCLC in older adults, see the NCCN Guidelines for Older Adult Oncology",
+      "content": "INITIAL EVALUATION\n• Pathology review\n• H&P (include performance status + weight loss)\n• CT chest and upper abdomen with contrast, including adrenals\n• CBC, platelets\n• Chemistry profile\n• Smoking cessation advice, counseling, and pharmacotherapy\n• Use the 5 A’s Framework: Ask, Advise, Assess, Assist, Arrange\n• Integrate palliative care\n• For tools to aid in the optimal assessment and management of NSCLC in older adults, see the NCCN Guidelines for Older Adult Oncology",
       "parent_ids": [
         "node_001"
       ],
@@ -78,7 +78,7 @@
     },
     {
       "id": "node_005",
-      "content": "Stage I, central (T1abc\u2013T2a, N0)",
+      "content": "Stage I, central (T1abc–T2a, N0)",
       "parent_ids": [
         "node_002"
       ],
@@ -93,7 +93,7 @@
     },
     {
       "id": "node_006",
-      "content": "Stage II (T1abc\u2013T2ab, N1; T2b, N0)",
+      "content": "Stage II (T1abc–T2ab, N1; T2b, N0)",
       "parent_ids": [
         "node_002"
       ],
@@ -136,7 +136,7 @@
     },
     {
       "id": "node_009",
-      "content": "Stage IIIA (T4 invasion, N0\u20131; T3, N1; T4, N0\u20131)",
+      "content": "Stage IIIA (T4 invasion, N0–1; T3, N1; T4, N0–1)",
       "parent_ids": [
         "node_002"
       ],
@@ -150,7 +150,7 @@
     },
     {
       "id": "node_010",
-      "content": "Stage IIIA (T1\u20132, N2); stage IIIB (T3, N2)",
+      "content": "Stage IIIA (T1–2, N2); stage IIIB (T3, N2)",
       "parent_ids": [
         "node_002"
       ],
@@ -178,7 +178,7 @@
     },
     {
       "id": "node_012",
-      "content": "Stage IIIA ipsilateral non-primary lobe (T4, N0\u20131)",
+      "content": "Stage IIIA ipsilateral non-primary lobe (T4, N0–1)",
       "parent_ids": [
         "node_002"
       ],
@@ -220,7 +220,7 @@
     },
     {
       "id": "node_015",
-      "content": "Stage IIIB (T1\u20132, N3); stage IIIC (T3, N3)",
+      "content": "Stage IIIB (T1–2, N3); stage IIIC (T3, N3)",
       "parent_ids": [
         "node_002"
       ],
@@ -498,5 +498,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-1"
+  "tree_id": "NSCL-1",
+  "keywords": [
+    "EGFR",
+    "ALK",
+    "PD-L1"
+  ]
 }

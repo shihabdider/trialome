@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Superior sulcus tumor (T3 invasion, N0\u20131)",
+      "content": "Superior sulcus tumor (T3 invasion, N0–1)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -55,7 +55,7 @@
     },
     {
       "id": "node_005",
-      "content": "Superior sulcus tumor (T4 invasion, N0\u20131)",
+      "content": "Superior sulcus tumor (T4 invasion, N0–1)",
       "parent_ids": [],
       "children_ids": [
         "node_006",
@@ -109,7 +109,7 @@
     },
     {
       "id": "node_009",
-      "content": "Surgical reevaluation including chest CT with or without contrast \u00b1 FDG-PET/CT",
+      "content": "Surgical reevaluation including chest CT with or without contrast ± FDG-PET/CT",
       "parent_ids": [
         "node_008"
       ],
@@ -297,5 +297,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-6"
+  "tree_id": "NSCL-6",
+  "keywords": [
+    "osimertinib",
+    "durvalumab",
+    "EGFR"
+  ]
 }

@@ -258,7 +258,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "xx",
@@ -271,5 +271,8 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "METex14 SKIPPING MUTATION",
-  "tree_id": "NSCL-34"
+  "tree_id": "NSCL-34",
+  "keywords": [
+    "bevacizumab"
+  ]
 }

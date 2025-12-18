@@ -1,0 +1,191 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IIIB (T1\u20132, N3)\nStage IIIC (T3, N3)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Molecular testing for EGFR\n\u2022 PFTs (if not previously done)\n\u2022 FDG-PET/CT scan (if not previously done)\n\u2022 Brain MRI with contrast\n\u2022 Pathologic confirmation of N3 disease by:\n\u2023 Mediastinoscopy\n\u2023 Supraclavicular lymph node biopsy\n\u2023 Thoracoscopy\n\u2023 Needle biopsy\n\u2023 Mediastinotomy\n\u2023 EUS biopsy\n\u2023 EBUS biopsy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "k",
+        "r"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "N3 negative",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "N3 positive",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Metastatic disease",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Initial treatment for stage I\u2013IIIA (NSCL-8)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Definitive concurrent chemoradiation (category 1)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Treatment for Metastasis limited sites (NSCL-15) or distant disease (NSCL-18)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15",
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Durvalumab (if no EGFR exon 19 deletion or L858R) (category 1)\nor\nOsimertinib (if EGFR exon 19 deletion or L858R) (category 1)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-8",
+      "description": "Initial treatment for stage I\u2013IIIA"
+    },
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-15",
+      "description": "Treatment for Metastasis limited sites"
+    },
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-18",
+      "description": "Treatment for Metastasis distant disease"
+    },
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy (referenced in footnote n)"
+    },
+    {
+      "from_tree": "NSCL-13",
+      "to_tree": "NSCL-F",
+      "description": "Concurrent Chemoradiation Regimens (referenced in footnote t)"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "v",
+      "content": "For patients who have received sequential chemoradiation, durvalumab can be considered as consolidation immunotherapy or, if EGFR exon 19 deletion or L858R, osimertinib is recommended."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-13"
+}

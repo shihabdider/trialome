@@ -1,0 +1,261 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Separate pulmonary nodule(s), same lobe (T3, N0\u20131), or ipsilateral non-primary lobe (T4, N0\u20131)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Surgery after preoperative systemic therapy, if planned",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "q"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Findings at Surgery",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Stage IVA (N0, M1a): Contralateral lung (solitary nodule)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Treat as two primary lung tumors if both curable; see Initial Evaluation",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-1"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Suspected multiple lung cancers (based on the presence of biopsy-proven synchronous lesions or history of lung cancer)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "aa",
+        "bb"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "\u2022 Chest CT with contrast\n\u2022 FDG-PET/CT scan (if not previously done)\n\u2022 Brain MRI with contrast",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "k",
+        "r"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Disease outside of chest",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Advanced/metastatic disease",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "No disease outside of chest",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Pathologic mediastinal lymph node evaluation",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_012",
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "h"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "N0\u20131",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Initial Treatment",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-12"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "N2\u20133",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Advanced/metastatic disease",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-4",
+      "description": "Findings at Surgery"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-1",
+      "description": "Initial Evaluation for two primary lung tumors"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-19",
+      "description": "Management for Advanced/metastatic disease"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-12",
+      "description": "Initial Treatment for N0\u20131 multiple lung cancers"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "NSCL-E",
+      "description": "Perioperative Systemic Therapy"
+    },
+    {
+      "from_tree": "NSCL-11",
+      "to_tree": "DIAG-1",
+      "description": "Diagnostic evaluation of a nodule suspicious for lung cancer"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "h",
+      "content": "Methods for evaluation include mediastinoscopy, mediastinotomy, EBUS, EUS, and CT-guided biopsy. An EBUS-TBNA negative for malignancy in a clinically (FDG-PET/CT and/or CT) positive mediastinum should undergo subsequent pathologic confirmation."
+    },
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "label": "aa",
+      "content": "Lesions with different cell types (eg, squamous cell carcinoma, adenocarcinoma) are usually different primary tumors. This analysis may be limited by small biopsy samples. However, lesions of the same cell type are not necessarily metastases. Single contralateral lung nodules with clinical, radiologic, or pathologic features suggestive of a synchronous primary lung cancer (eg, long disease-free survival, ground glass components, different histologic characteristics) that are amenable to local therapy should be considered as probable separate primary cancers and eligible for local therapy (NSCL-12). Multiple studies suggest that next-generation sequencing (NGS) testing with broad gene coverage may allow for unambiguous determination of clonal relatedness among separate lung nodules."
+    },
+    {
+      "label": "bb",
+      "content": "For guidance regarding the evaluation, workup, and management of subsolid pulmonary nodules, please see the diagnostic evaluation of a nodule suspicious for lung cancer (DIAG-1)."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "CLINICAL PRESENTATION - ADJUVANT TREATMENT",
+  "tree_id": "NSCL-11"
+}

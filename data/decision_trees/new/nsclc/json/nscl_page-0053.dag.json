@@ -154,7 +154,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "xx",
@@ -171,5 +171,13 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "ROS1 REARRANGEMENT",
-  "tree_id": "NSCL-30"
+  "tree_id": "NSCL-30",
+  "keywords": [
+    "PD-L1",
+    "pembrolizumab",
+    "nivolumab",
+    "atezolizumab",
+    "durvalumab",
+    "avelumab"
+  ]
 }

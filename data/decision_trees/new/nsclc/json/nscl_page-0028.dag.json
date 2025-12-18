@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Stage IIB (T3 invasion, N0)\nStage IIIA (T4 invasion, N0\u20131; T3, N1; T4, N0\u20131)",
+      "content": "Stage IIB (T3 invasion, N0)\nStage IIIA (T4 invasion, N0–1; T3, N1; T4, N0–1)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Molecular testing for EGFR, ALK; programmed death ligand 1 (PD-L1) testing\n\u2022 Evaluate for perioperative therapy\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluation\n\u2022 Brain MRI with contrast\n\u2022 MRI with contrast of spine + thoracic inlet for superior sulcus lesions abutting the spine, subclavian vessels, or brachial plexus\n\u2022 FDG-PET/CT scan (if not previously done)",
+      "content": "• Molecular testing for EGFR, ALK; programmed death ligand 1 (PD-L1) testing\n• Evaluate for perioperative therapy\n• PFTs (if not previously done)\n• Bronchoscopy\n• Pathologic mediastinal lymph node evaluation\n• Brain MRI with contrast\n• MRI with contrast of spine + thoracic inlet for superior sulcus lesions abutting the spine, subclavian vessels, or brachial plexus\n• FDG-PET/CT scan (if not previously done)",
       "parent_ids": [
         "node_001"
       ],
@@ -82,7 +82,7 @@
     },
     {
       "id": "node_007",
-      "content": "Stage IIIA (T4, N0\u20131)",
+      "content": "Stage IIIA (T4, N0–1)",
       "parent_ids": [
         "node_002"
       ],
@@ -118,7 +118,7 @@
     },
     {
       "id": "node_010",
-      "content": "Stage IIIA (T1\u20132, N2) /\nStage IIIB (T3, N2) (NSCL-8)\nStage IIIB (T4, N2) (NSCL-14)",
+      "content": "Stage IIIA (T1–2, N2) /\nStage IIIB (T3, N2) (NSCL-8)\nStage IIIB (T4, N2) (NSCL-14)",
       "parent_ids": [
         "node_009"
       ],
@@ -252,5 +252,10 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - Clinical Assessment",
-  "tree_id": "NSCL-5"
+  "tree_id": "NSCL-5",
+  "keywords": [
+    "EGFR",
+    "ALK",
+    "PD-L1"
+  ]
 }

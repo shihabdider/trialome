@@ -1,0 +1,371 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "T1\u20133, N1 nodes positive, M0",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Operable",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon,m and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Surgical resectionm + mediastinal lymph node dissection or systematic lymph node sampling after preoperative systemic therapy, if plannedq",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "q"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Definitive concurrent chemoradiationn,t (category 1)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Durvalumabt,v (if no EGFR exon 19 deletion or L858R) (category 1 stage III; category 2A stage II) or Osimertinibt,v (if EGFR exon 19 deletion or L858R) (category 1 stage III; category 2A stage II)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "T1\u20133, N2 nodes positive, M0",
+      "parent_ids": [],
+      "children_ids": [
+        "node_010",
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Definitive concurrent chemoradiationn,t (category 1)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "or Systemic therapyq,y \u00b1 RTn",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_013",
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "q",
+        "y",
+        "n"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Durvalumabt,v (if no EGFR exon 19 deletion or L858R) (category 1) or Osimertinibt,v (if EGFR exon 19 deletion or L858R) (category 1)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "t",
+        "v"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "No apparent progressionz",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_016",
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "z"
+      ]
+    },
+    {
+      "id": "node_014",
+      "content": "Progressionz",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_018",
+        "node_019"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "z"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_016",
+      "content": "Surgerym",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_020"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_017",
+      "content": "Consider RTn",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_018",
+      "content": "Local",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_022"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_019",
+      "content": "Systemic",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_021",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_022",
+      "content": "RTn (if feasible) \u00b1 chemotherapyq",
+      "parent_ids": [
+        "node_018"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "q"
+      ]
+    },
+    {
+      "id": "node_023",
+      "content": "Treatment for Metastasis limited sites (NSCL-15) or distant disease (NSCL-18)",
+      "parent_ids": [
+        "node_019"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15",
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-10",
+      "to_tree": "NSCL-4",
+      "description": "Next steps based on Findings at Surgery"
+    },
+    {
+      "from_tree": "NSCL-10",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance protocol"
+    },
+    {
+      "from_tree": "NSCL-10",
+      "to_tree": "NSCL-15",
+      "description": "Treatment for Metastasis limited sites"
+    },
+    {
+      "from_tree": "NSCL-10",
+      "to_tree": "NSCL-18",
+      "description": "Treatment for Metastasis distant disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "v",
+      "content": "For patients who have received sequential chemoradiation, durvalumab can be considered as consolidation immunotherapy or, if EGFR exon 19 deletion or L858R, osimertinib is recommended."
+    },
+    {
+      "label": "y",
+      "content": "Selected patients with N2 disease (fit, single-station, non-bulky N2, requiring only lobectomy) may be considered for systemic therapy followed by surgery."
+    },
+    {
+      "label": "z",
+      "content": "Chest CT with contrast and/or FDG-PET/CT to evaluate progression."
+    },
+    {
+      "label": "Note",
+      "content": "All recommendations are category 2A unless otherwise indicated."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-10"
+}

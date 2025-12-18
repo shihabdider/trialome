@@ -65,7 +65,7 @@
     },
     {
       "id": "node_006",
-      "content": "\u22656 mm",
+      "content": "≥6 mm",
       "parent_ids": [
         "node_002"
       ],
@@ -89,7 +89,7 @@
     },
     {
       "id": "node_008",
-      "content": "\u22656 mm",
+      "content": "≥6 mm",
       "parent_ids": [
         "node_003"
       ],
@@ -113,7 +113,7 @@
     },
     {
       "id": "node_010",
-      "content": "\u22656 mm",
+      "content": "≥6 mm",
       "parent_ids": [
         "node_004"
       ],
@@ -135,7 +135,7 @@
     },
     {
       "id": "node_012",
-      "content": "CT at 6\u201312 mo to confirm no growth or development of a solid component, then CT every 2 y until 5 y",
+      "content": "CT at 6–12 mo to confirm no growth or development of a solid component, then CT every 2 y until 5 y",
       "parent_ids": [
         "node_006"
       ],
@@ -155,7 +155,7 @@
     },
     {
       "id": "node_014",
-      "content": "\u2022 CT at 3\u20136 mo to confirm no growth or change in solid component, then annual CT for 5 y\n\u2022 If solid component \u22656 mm, consider FDG-PET/CT or biopsy",
+      "content": "• CT at 3–6 mo to confirm no growth or change in solid component, then annual CT for 5 y\n• If solid component ≥6 mm, consider FDG-PET/CT or biopsy",
       "parent_ids": [
         "node_008"
       ],
@@ -168,7 +168,7 @@
     },
     {
       "id": "node_015",
-      "content": "CT at 3\u20136 mo\n\u25b8 If stable, consider CT at 2 and 4 y",
+      "content": "CT at 3–6 mo\n▸ If stable, consider CT at 2 and 4 y",
       "parent_ids": [
         "node_009"
       ],
@@ -178,7 +178,7 @@
     },
     {
       "id": "node_016",
-      "content": "\u2022 CT at 3\u20136 mo\n\u2022 Subsequent management based on most suspicious nodule(s)",
+      "content": "• CT at 3–6 mo\n• Subsequent management based on most suspicious nodule(s)",
       "parent_ids": [
         "node_010"
       ],
@@ -209,7 +209,7 @@
     },
     {
       "label": "h",
-      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. \u00a9Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
+      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. ©Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
     },
     {
       "label": "i",
@@ -222,5 +222,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - FINDINGS / FOLLOW-UP",
-  "tree_id": "DIAG-3"
+  "tree_id": "DIAG-3",
+  "keywords": []
 }

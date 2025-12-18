@@ -107,7 +107,7 @@
     },
     {
       "id": "node_009",
-      "content": "4\u20136 cycles (total)",
+      "content": "4–6 cycles (total)",
       "parent_ids": [
         "node_008"
       ],
@@ -254,7 +254,7 @@
     },
     {
       "label": "iii",
-      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2\u20134 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
+      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2–4 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
     },
     {
       "label": "jjj",
@@ -262,10 +262,15 @@
     },
     {
       "label": "kkk",
-      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6\u201312 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
+      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6–12 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
     }
   ],
   "extraction_confidence": 0.95,
   "image_title": "EGFR EXON 20 INSERTION MUTATION",
-  "tree_id": "NSCL-25"
+  "tree_id": "NSCL-25",
+  "keywords": [
+    "KRAS",
+    "sotorasib",
+    "adagrasib"
+  ]
 }

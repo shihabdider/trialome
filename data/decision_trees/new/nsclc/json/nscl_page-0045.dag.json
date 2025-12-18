@@ -41,7 +41,7 @@
     },
     {
       "id": "node_004",
-      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery) for limited lesions\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib",
+      "content": "• Consider definitive local therapy (eg, SABR or surgery) for limited lesions\n• Continue osimertinib or amivantamab-vmjw + lazertinib",
       "parent_ids": [
         "node_002"
       ],
@@ -82,7 +82,7 @@
     },
     {
       "id": "node_007",
-      "content": "\u2022 Consider definitive local therapy (eg, SRS)\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib\n\u2022 NCCN Guidelines for CNS Cancers",
+      "content": "• Consider definitive local therapy (eg, SRS)\n• Continue osimertinib or amivantamab-vmjw + lazertinib\n• NCCN Guidelines for CNS Cancers",
       "parent_ids": [
         "node_005"
       ],
@@ -127,7 +127,7 @@
     },
     {
       "id": "node_010",
-      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery)\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib\nor\n\u2022 Therapy for multiple lesions, below",
+      "content": "• Consider definitive local therapy (eg, SABR or surgery)\n• Continue osimertinib or amivantamab-vmjw + lazertinib\nor\n• Therapy for multiple lesions, below",
       "parent_ids": [
         "node_008"
       ],
@@ -283,5 +283,13 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "EGFR EXON 19 DELETION OR EXON 21 L858R MUTATIONS - SUBSEQUENT THERAPY",
-  "tree_id": "NSCL-22"
+  "tree_id": "NSCL-22",
+  "keywords": [
+    "ALK",
+    "crizotinib",
+    "ceritinib",
+    "alectinib",
+    "brigatinib",
+    "ensartinib"
+  ]
 }

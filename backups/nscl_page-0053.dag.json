@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "ROS1 rearrangement",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "ROS1 rearrangement discovered prior to first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Preferred Crizotinib or Entrectinib or Repotrectinib",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss",
+        "ooo",
+        "rr"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Progression",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Subsequent Therapy",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-31"
+      ],
+      "footnote_labels": [
+        "rr"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "ROS1 rearrangement discovered during first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Interrupt current therapy and start Crizotinib (preferred) or Entrectinib (preferred) or Repotrectinib (preferred)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "xx",
+        "ooo",
+        "rr"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Progression",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Subsequent Therapy",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-31"
+      ],
+      "footnote_labels": [
+        "rr"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-30",
+      "to_tree": "NSCL-31",
+      "description": "Subsequent Therapy for progression"
+    },
+    {
+      "from_tree": "NSCL-30",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-30",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "ss",
+      "content": "For PS 0\u20134."
+    },
+    {
+      "label": "xx",
+      "content": "If there is a good response to current therapy, it is reasonable to continue therapy."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue TKI. If disease flare occurs, restart TKI."
+    },
+    {
+      "label": "ooo",
+      "content": "Entrectinib or repotrectinib may be better for patients with brain metastases."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "ROS1 REARRANGEMENT",
+  "tree_id": "NSCL-30"
+}

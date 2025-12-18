@@ -1,0 +1,270 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "ALK REARRANGEMENT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "SUBSEQUENT THERAPY",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "rr"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Progression on alectinib or brigatinib or ceritinib or ensartinib or lorlatinib",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy",
+        "fff"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Asymptomatic",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Symptomatic",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Consider definitive local therapy (eg, SABR or surgery) for limited lesions\nContinue alectinib or brigatinib or ceritinib or ensartinib or lorlatinib\nLorlatinib",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "zz",
+        "mmm"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Brain",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Systemic",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_010",
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Consider definitive local therapy (eg, SRS)\nContinue alectinib or brigatinib or ceritinib or ensartinib or lorlatinib\nLorlatinib\nNCCN Guidelines for CNS Cancers",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "bbb",
+        "mmm"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Progression, see therapy for multiple lesions, below",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "fff"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Limited progression",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "zz"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Multiple lesions",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Consider definitive local therapy (eg, SABR or surgery)\nContinue alectinib or brigatinib or ceritinib or ensartinib or lorlatinib\nLorlatinib\nor\nTherapy for multiple lesions, below",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "mmm"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Lorlatinib (if not previously given)\nor\nSystemic therapy\nAdenocarcinoma (NSCL-K 1 of 5) or\nSquamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_012",
+        "node_014",
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": [
+        "eee"
+      ]
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NCCN Guidelines for CNS Cancers",
+      "description": "Refer to CNS guidelines for brain metastasis management"
+    },
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic therapy for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic therapy for Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    },
+    {
+      "from_tree": "NSCL-28",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue TKI. If disease flare occurs, restart TKI."
+    },
+    {
+      "label": "zz",
+      "content": "Clinical trials have included up to 3 to 5 progressing sites."
+    },
+    {
+      "label": "bbb",
+      "content": "Definitive local therapy of CNS disease can include asymptomatic lesions at risk for symptomatic progression based on factors including site, location, and edema."
+    },
+    {
+      "label": "eee",
+      "content": "The data in the second-line setting suggest that PD-1/PD-L1 inhibitor monotherapy is less effective, irrespective of PD-L1 expression, in EGFR exon 19 deletion or exon 21 L858R, ALK+ NSCLC."
+    },
+    {
+      "label": "fff",
+      "content": "Plasma or tissue-based testing via broad molecular profiling should be considered at progression for genomic resistance mechanisms. If plasma-based testing is negative, tissue-based testing with rebiopsy material is strongly recommended. Practitioners may want to consider scheduling the biopsy concurrently with plasma testing referral."
+    },
+    {
+      "label": "mmm",
+      "content": "Lorlatinib is an option for resistant mutations, such as ALK G1202R and L1196M (except compound L1196M/G1202R)."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "ALK REARRANGEMENT - SUBSEQUENT THERAPY",
+  "tree_id": "NSCL-28"
+}

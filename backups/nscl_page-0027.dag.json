@@ -1,0 +1,59 @@
+{
+  "nodes": [],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-4A",
+      "to_tree": "NSCL-4",
+      "description": "These are the footnotes specifically corresponding to the algorithm in NSCL-4"
+    },
+    {
+      "from_tree": "NSCL-4A",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy"
+    },
+    {
+      "from_tree": "NSCL-4A",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy"
+    },
+    {
+      "from_tree": "NSCL-4A",
+      "to_tree": "NSCL-E",
+      "description": "Perioperative Systemic Therapy"
+    },
+    {
+      "from_tree": "NSCL-4A",
+      "to_tree": "NSCL-F",
+      "description": "Concurrent Chemoradiation Regimens"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "label": "s",
+      "content": "R0 = complete resection with negative margins, R1 = microscopic positive margins, R2 = gross unresected tumor remaining."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "u",
+      "content": "Increasing size is an important variable when evaluating the need for adjuvant chemotherapy."
+    }
+  ],
+  "extraction_confidence": 1.0,
+  "image_title": "FOOTNOTES FOR NSCL-4",
+  "tree_id": "NSCL-4A"
+}

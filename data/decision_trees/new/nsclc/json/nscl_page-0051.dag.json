@@ -266,5 +266,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "ALK REARRANGEMENT - SUBSEQUENT THERAPY",
-  "tree_id": "NSCL-28"
+  "tree_id": "NSCL-28",
+  "keywords": [
+    "NTRK",
+    "larotrectinib",
+    "entrectinib"
+  ]
 }

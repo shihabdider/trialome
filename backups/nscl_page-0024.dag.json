@@ -1,0 +1,235 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IA (peripheral T1abc, N0)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Pulmonary function tests (PFTs) (if not previously done)\n\u2022 Bronchoscopy (intraoperative preferred)\n\u2022 Consider pathologic mediastinal lymph node evaluation\n\u2022 FDG-PET/CT scan (if not previously done)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "g",
+        "h",
+        "i",
+        "j",
+        "k"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Negative mediastinal nodes",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Positive mediastinal nodes",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Operable",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "l"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon, and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Surgical exploration and resection + mediastinal lymph node dissection or systematic lymph node sampling",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Definitive radiation therapy (RT), preferably stereotactic ablative radiotherapy (SABR)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "o",
+        "p"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Stage IIIA/IIIB (NSCL-8) or Stage IIIB/IIIC (NSCL-13)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-13"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-4",
+      "description": "Findings at Surgery"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-8",
+      "description": "Stage IIIA/IIIB management"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-13",
+      "description": "Stage IIIB/IIIC management"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-B",
+      "description": "Principles of Surgical Therapy"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-C",
+      "description": "Principles of Radiation Therapy"
+    },
+    {
+      "from_tree": "NSCL-2",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "g",
+      "content": "Testing is not listed in order of priority and is dependent on clinical circumstances, institutional processes, and judicious use of resources."
+    },
+    {
+      "label": "h",
+      "content": "Methods for evaluation include mediastinoscopy, mediastinotomy, EBUS, EUS, and CT-guided biopsy. An EBUS-TBNA negative for malignancy in a clinically (FDG-PET/CT and/or CT) positive mediastinum should undergo subsequent mediastinoscopy prior to surgical resection."
+    },
+    {
+      "label": "i",
+      "content": "There is low likelihood of positive mediastinal lymph nodes when these nodes are CT and FDG-PET/CT negative in peripheral tumors (outer third of lung) \u22643 cm. Thus, pretreatment pathologic mediastinal evaluation is optional in these settings. Invasive mediastinal staging is recommended for central tumors."
+    },
+    {
+      "label": "j",
+      "content": "In patients who are medically inoperable, while mediastinal biopsy is generally preferred, the risks in selected patients may outweigh the benefits."
+    },
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "l",
+      "content": "Surgical resection is considered the first option for operable patients with stage IA lung cancer, but patients may also be informed about SABR as an alternative option through shared decision-making."
+    },
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "o",
+      "content": "Image-guided thermal ablation (IGTA) therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "p",
+      "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - Clinical Assessment, Pretreatment Evaluation, Initial Treatment",
+  "tree_id": "NSCL-2"
+}

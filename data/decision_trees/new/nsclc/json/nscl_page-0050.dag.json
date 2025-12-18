@@ -265,7 +265,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "xx",
@@ -274,5 +274,9 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "ALK REARRANGEMENT",
-  "tree_id": "NSCL-27"
+  "tree_id": "NSCL-27",
+  "keywords": [
+    "RET",
+    "selpercatinib"
+  ]
 }

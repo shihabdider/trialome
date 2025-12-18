@@ -1,0 +1,431 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Progression on erlotinib (\u00b1 ramucirumab or bevacizumab), afatinib, gefitinib, dacomitinib",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy",
+        "fff"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "T790M testing (category 1)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Asymptomatic",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Consider definitive local therapy (eg, SABR or surgery) for limited lesions",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "zz"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Osimertinib (if T790M+) (category 1)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_024"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "uu"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Symptomatic",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Brain",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_009",
+        "node_010",
+        "node_011",
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ggg"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Consider definitive local therapy (eg, SRS)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "bbb"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Osimertinib (if T790M+) (category 1)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_024"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "hhh",
+        "uu"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "NCCN Guidelines for CNS Cancers",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NCCN Guidelines for CNS Cancers"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Systemic",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_014",
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Limited progression",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015",
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "zz"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Consider definitive local therapy (eg, SABR or surgery)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_024"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Continue afatinib or dacomitinib or gefitinib or erlotinib (\u00b1 bevacizumab or ramucirumab) (if T790M-)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_024"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "uu"
+      ]
+    },
+    {
+      "id": "node_017",
+      "content": "Multiple lesions",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "aaa",
+        "ggg"
+      ]
+    },
+    {
+      "id": "node_018",
+      "content": "Therapy for multiple lesions, below",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [
+        "node_019",
+        "node_021"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_019",
+      "content": "T790M+",
+      "parent_ids": [
+        "node_018"
+      ],
+      "children_ids": [
+        "node_020"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "Osimertinib (category 1) (if not previously given)",
+      "parent_ids": [
+        "node_019"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss"
+      ]
+    },
+    {
+      "id": "node_021",
+      "content": "T790M-",
+      "parent_ids": [
+        "node_018"
+      ],
+      "children_ids": [
+        "node_022"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_022",
+      "content": "Systemic therapy Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_021"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": [
+        "ddd",
+        "eee"
+      ]
+    },
+    {
+      "id": "node_023",
+      "content": "Progression",
+      "parent_ids": [
+        "node_005",
+        "node_010",
+        "node_020"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-22"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_024",
+      "content": "Progression, see therapy for multiple lesions, below",
+      "parent_ids": [
+        "node_006",
+        "node_011",
+        "node_015",
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-22",
+      "description": "Next step upon progression after Osimertinib"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NCCN Guidelines for CNS Cancers",
+      "description": "Guideline reference for CNS cancer treatment"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic therapy options for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic therapy options for Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-23",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "ss",
+      "content": "For PS 0\u20134."
+    },
+    {
+      "label": "uu",
+      "content": "Criteria for treatment with bevacizumab: nonsquamous NSCLC, and no recent history of hemoptysis."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue TKI. If disease flare occurs, restart TKI."
+    },
+    {
+      "label": "zz",
+      "content": "Clinical trials have included up to 3 to 5 progressing sites."
+    },
+    {
+      "label": "aaa",
+      "content": "Consider a biopsy at time of progression to rule out SCLC transformation (approximately 6%) and biopsy or plasma testing to evaluate mechanisms of resistance. See Principles of Molecular and Biomarker Analysis (NSCL-H) and NCCN Guidelines for Small Cell Lung Cancer."
+    },
+    {
+      "label": "bbb",
+      "content": "Definitive local therapy of CNS disease can include asymptomatic lesions at risk for symptomatic progression based on factors including site, location, and edema."
+    },
+    {
+      "label": "ddd",
+      "content": "Afatinib + cetuximab may be considered in patients with disease progression on EGFR TKI therapy."
+    },
+    {
+      "label": "eee",
+      "content": "The data in the second-line setting suggest that PD-1/PD-L1 inhibitor monotherapy is less effective, irrespective of PD-L1 expression, in EGFR exon 19 deletion or exon 21 L858R, ALK+ NSCLC."
+    },
+    {
+      "label": "fff",
+      "content": "Plasma or tissue-based testing via broad molecular profiling should be considered at progression, for the T790M mutation and other genomic resistance mechanisms. If plasma-based testing is negative, tissue-based testing with rebiopsy material is strongly recommended. Practitioners may want to consider scheduling the biopsy concurrently with plasma testing referral."
+    },
+    {
+      "label": "ggg",
+      "content": "Consider osimertinib (regardless of T790M status) for progressive CNS disease or leptomeningeal disease. In the BLOOM study, osimertinib was used at 160 mg once daily for patients with leptomeningeal disease."
+    },
+    {
+      "label": "hhh",
+      "content": "In the randomized phase III trial of dacomitinib, patients with brain metastases were not eligible for enrollment. In the setting of brain metastases, consider other options."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "EGFR EXON 19 DELETION OR EXON 21 L858R MUTATIONS - SUBSEQUENT THERAPY",
+  "tree_id": "NSCL-23"
+}

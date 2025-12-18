@@ -1,0 +1,271 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "EGFR exon 20 insertion mutation",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Amivantamab-vmjw + carboplatin/pemetrexed (nonsquamous) (category 1) (preferred)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "rr"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Progression",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": [
+        "kkk"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Progression",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "4\u20136 cycles (total)",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "jjj"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Tumor response evaluation",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011",
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Response or stable disease",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Maintenance Therapy (NSCL-K 3 of 5)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [
+        "NSCL-K 3 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Amivantamab-vmjw",
+      "parent_ids": [
+        "node_007",
+        "node_011",
+        "node_016"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": [
+        "kkk"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Progression",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic Therapy, Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic Therapy, Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-K 4 of 5",
+      "description": "Systemic Therapy, Subsequent"
+    },
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-K 3 of 5",
+      "description": "Maintenance Therapy"
+    },
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis (Footnote nn)"
+    },
+    {
+      "from_tree": "NSCL-25",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (Footnote rr)"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "iii",
+      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2\u20134 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "jjj",
+      "content": "In general, 4 cycles of initial systemic therapy (ie, with carboplatin or cisplatin) are administered prior to maintenance therapy. However, if patient is tolerating therapy well, consideration can be given to continue to 6 cycles."
+    },
+    {
+      "label": "kkk",
+      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6\u201312 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "EGFR EXON 20 INSERTION MUTATION",
+  "tree_id": "NSCL-25"
+}

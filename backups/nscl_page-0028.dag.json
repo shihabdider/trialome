@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IIB (T3 invasion, N0)\nStage IIIA (T4 invasion, N0\u20131; T3, N1; T4, N0\u20131)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Molecular testing for EGFR, ALK; programmed death ligand 1 (PD-L1) testing\n\u2022 Evaluate for perioperative therapy\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluation\n\u2022 Brain MRI with contrast\n\u2022 MRI with contrast of spine + thoracic inlet for superior sulcus lesions abutting the spine, subclavian vessels, or brachial plexus\n\u2022 FDG-PET/CT scan (if not previously done)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003",
+        "node_005",
+        "node_007",
+        "node_009",
+        "node_011",
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "h",
+        "k",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Superior sulcus tumor",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Treatment (NSCL-6)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-6"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Chest wall, trachea/carina, mediastinum, or diaphragm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Treatment (NSCL-7)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-7"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Stage IIIA (T4, N0\u20131)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Treatment (NSCL-7)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-7"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Positive mediastinal nodes (N2)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Stage IIIA (T1\u20132, N2) /\nStage IIIB (T3, N2) (NSCL-8)\nStage IIIB (T4, N2) (NSCL-14)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-8",
+        "NSCL-14"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "Positive mediastinal nodes (N3)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Stage IIIC (T3, N3) (NSCL-13)\nStage IIIC (T4, N3) (NSCL-14)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-13",
+        "NSCL-14"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Metastatic disease",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Treatment for Metastasis limited sites (NSCL-15) or distant disease (NSCL-18)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15",
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-6",
+      "description": "Treatment for Superior sulcus tumor"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-7",
+      "description": "Treatment for Chest wall, trachea/carina, mediastinum, or diaphragm involvement"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-7",
+      "description": "Treatment for Stage IIIA (T4, N0-1)"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-8",
+      "description": "Guideline for Stage IIIA (T1-2, N2) / Stage IIIB (T3, N2)"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-14",
+      "description": "Guideline for Stage IIIB (T4, N2)"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-13",
+      "description": "Guideline for Stage IIIC (T3, N3)"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-14",
+      "description": "Guideline for Stage IIIC (T4, N3)"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-15",
+      "description": "Treatment for Metastasis limited sites"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-18",
+      "description": "Treatment for Metastasis distant disease"
+    },
+    {
+      "from_tree": "NSCL-5",
+      "to_tree": "NSCL-E",
+      "description": "Referenced in footnote q for Perioperative Systemic Therapy"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "h",
+      "content": "Methods for evaluation include mediastinoscopy, mediastinotomy, EBUS, EUS, and CT-guided biopsy. An EBUS-TBNA negative for malignancy in a clinically (FDG-PET/CT and/or CT) positive mediastinum should undergo subsequent mediastinoscopy prior to surgical resection."
+    },
+    {
+      "label": "k",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. Positive FDG-PET/CT scan findings for distant disease need pathologic or other radiologic confirmation. If FDG-PET/CT scan is positive in the mediastinum, lymph node status needs pathologic confirmation."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - Clinical Assessment",
+  "tree_id": "NSCL-5"
+}

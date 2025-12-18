@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "Systemic Therapy\n\u2022 Adenocarcinoma, Large Cell, NSCLC NOS (NSCL-K 1 of 5)\n\u2022 Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "content": "Systemic Therapy\n• Adenocarcinoma, Large Cell, NSCLC NOS (NSCL-K 1 of 5)\n• Squamous Cell Carcinoma (NSCL-K 2 of 5)",
       "parent_ids": [
         "node_001"
       ],
@@ -96,7 +96,7 @@
     },
     {
       "id": "node_008",
-      "content": "4\u20136 cycles (total)",
+      "content": "4–6 cycles (total)",
       "parent_ids": [
         "node_007"
       ],
@@ -227,7 +227,7 @@
   "footnotes": [
     {
       "label": "iii",
-      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2\u20134 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
+      "content": "Monitoring During Initial Therapy: Response assessment after 2 cycles, then every 2–4 cycles with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast or when clinically indicated. Timing of CT scans within Guidelines parameters is a clinical decision."
     },
     {
       "label": "jjj",
@@ -235,10 +235,11 @@
     },
     {
       "label": "kkk",
-      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6\u201312 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
+      "content": "Monitoring During Subsequent Therapy or Maintenance Therapy: Response assessment with CT of known or high-risk sites of disease (eg, chest, abdomen, pelvis) with or without contrast every 6–12 weeks. Timing of CT scans within Guidelines parameters is a clinical decision."
     }
   ],
   "extraction_confidence": 1.0,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-39"
+  "tree_id": "NSCL-39",
+  "keywords": []
 }

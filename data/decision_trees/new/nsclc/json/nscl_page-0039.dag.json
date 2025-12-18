@@ -40,7 +40,7 @@
     },
     {
       "id": "node_004",
-      "content": "T1\u20133, N0",
+      "content": "T1–3, N0",
       "parent_ids": [
         "node_003"
       ],
@@ -52,7 +52,7 @@
     },
     {
       "id": "node_005",
-      "content": "T1\u20133, N1",
+      "content": "T1–3, N1",
       "parent_ids": [
         "node_003"
       ],
@@ -64,7 +64,7 @@
     },
     {
       "id": "node_006",
-      "content": "T1\u20133, N2; T4, N0\u20132",
+      "content": "T1–3, N2; T4, N0–2",
       "parent_ids": [
         "node_003"
       ],
@@ -200,5 +200,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "TREATMENT OF THORACIC DISEASE",
-  "tree_id": "NSCL-16"
+  "tree_id": "NSCL-16",
+  "keywords": []
 }

@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Stage IB (peripheral T2a, N0)\nStage I (central T1abc\u2013T2a, N0)\nStage II (T1abc\u2013T2ab, N1; T2b, N0)\nStage IIB (T3, N0)f\nStage IIIA (T3, N1)f",
+      "content": "Stage IB (peripheral T2a, N0)\nStage I (central T1abc–T2a, N0)\nStage II (T1abc–T2ab, N1; T2b, N0)\nStage IIB (T3, N0)f\nStage IIIA (T3, N1)f",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -14,7 +14,7 @@
     },
     {
       "id": "node_002",
-      "content": "Pretreatment Evaluation\n\u2022 Molecular testing for EGFR, ALK; PD-L1 testing\n\u2022 Evaluate for perioperative therapyq\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluationh\n\u2022 FDG-PET/CT scank (if not previously done)\n\u2022 Brain MRI with contrastr (stage II, IIIA) (stage IB [optional])",
+      "content": "Pretreatment Evaluation\n• Molecular testing for EGFR, ALK; PD-L1 testing\n• Evaluate for perioperative therapyq\n• PFTs (if not previously done)\n• Bronchoscopy\n• Pathologic mediastinal lymph node evaluationh\n• FDG-PET/CT scank (if not previously done)\n• Brain MRI with contrastr (stage II, IIIA) (stage IB [optional])",
       "parent_ids": [
         "node_001"
       ],
@@ -151,7 +151,7 @@
     },
     {
       "id": "node_012",
-      "content": "Consider adjuvant chemotherapyn for high-risk stage II (especially T2b\u20133)",
+      "content": "Consider adjuvant chemotherapyn for high-risk stage II (especially T2b–3)",
       "parent_ids": [
         "node_011"
       ],
@@ -283,5 +283,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "CLINICAL ASSESSMENT - PRETREATMENT EVALUATION - INITIAL TREATMENT",
-  "tree_id": "NSCL-3"
+  "tree_id": "NSCL-3",
+  "keywords": [
+    "EGFR",
+    "ALK",
+    "PD-L1"
+  ]
 }

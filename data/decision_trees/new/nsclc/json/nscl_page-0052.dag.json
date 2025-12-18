@@ -42,7 +42,7 @@
     },
     {
       "id": "node_004",
-      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery) for limited lesions\n\u2022 Continue crizotinib\nor\n\u2022 Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib",
+      "content": "• Consider definitive local therapy (eg, SABR or surgery) for limited lesions\n• Continue crizotinib\nor\n• Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib",
       "parent_ids": [
         "node_002"
       ],
@@ -83,7 +83,7 @@
     },
     {
       "id": "node_007",
-      "content": "\u2022 Consider definitive local therapy (eg, SRS)\n\u2022 Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib\n\u2022 NCCN Guidelines for CNS Cancers",
+      "content": "• Consider definitive local therapy (eg, SRS)\n• Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib\n• NCCN Guidelines for CNS Cancers",
       "parent_ids": [
         "node_005"
       ],
@@ -126,7 +126,7 @@
     },
     {
       "id": "node_010",
-      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery)\n\u2022 Continue crizotinib\nor\n\u2022 Therapy for multiple lesions, below",
+      "content": "• Consider definitive local therapy (eg, SABR or surgery)\n• Continue crizotinib\nor\n• Therapy for multiple lesions, below",
       "parent_ids": [
         "node_008"
       ],
@@ -156,7 +156,7 @@
     },
     {
       "id": "node_012",
-      "content": "\u2022 Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib\nor\n\u2022 Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "content": "• Alectinib or Brigatinib or Ceritinib or Ensartinib or Lorlatinib\nor\n• Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
       "parent_ids": [
         "node_009",
         "node_010"
@@ -219,7 +219,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "yy",
@@ -248,5 +248,11 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "ALK REARRANGEMENT",
-  "tree_id": "NSCL-29"
+  "tree_id": "NSCL-29",
+  "keywords": [
+    "ERBB2",
+    "HER2",
+    "pyrotinib",
+    "trastuzumab"
+  ]
 }

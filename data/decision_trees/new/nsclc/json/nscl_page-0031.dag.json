@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Stage IIIA (T1\u20132, N2)\nStage IIIB (T3, N2)",
+      "content": "Stage IIIA (T1–2, N2)\nStage IIIB (T3, N2)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Molecular testing for EGFR, ALK; PD-L1 testing\n\u2022 Evaluate for perioperative therapy\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluation\n\u2022 FDG-PET/CT scan (if not previously done)\n\u2022 Brain MRI with contrast",
+      "content": "• Molecular testing for EGFR, ALK; PD-L1 testing\n• Evaluate for perioperative therapy\n• PFTs (if not previously done)\n• Bronchoscopy\n• Pathologic mediastinal lymph node evaluation\n• FDG-PET/CT scan (if not previously done)\n• Brain MRI with contrast",
       "parent_ids": [
         "node_001"
       ],
@@ -129,7 +129,7 @@
     },
     {
       "id": "node_011",
-      "content": "Separate pulmonary nodule(s) (stage IIB, IIIA, IV)\nStage IIIA ipsilateral non-primary lobe (T4, N0\u20131),\nStage IV (contralateral lung)",
+      "content": "Separate pulmonary nodule(s) (stage IIB, IIIA, IV)\nStage IIIA ipsilateral non-primary lobe (T4, N0–1),\nStage IV (contralateral lung)",
       "parent_ids": [],
       "children_ids": [
         "node_012"
@@ -139,7 +139,7 @@
     },
     {
       "id": "node_012",
-      "content": "\u2022 Molecular testing for EGFR, ALK; PD-L1 testing\n\u2022 Evaluate for perioperative therapy\n\u2022 PFTs (if not previously done)\n\u2022 Bronchoscopy\n\u2022 Pathologic mediastinal lymph node evaluation\n\u2022 Brain MRI with contrast\n\u2022 FDG-PET/CT scan (if not previously done)",
+      "content": "• Molecular testing for EGFR, ALK; PD-L1 testing\n• Evaluate for perioperative therapy\n• PFTs (if not previously done)\n• Bronchoscopy\n• Pathologic mediastinal lymph node evaluation\n• Brain MRI with contrast\n• FDG-PET/CT scan (if not previously done)",
       "parent_ids": [
         "node_011"
       ],
@@ -158,7 +158,7 @@
     },
     {
       "id": "node_013",
-      "content": "Separate pulmonary nodule(s), same lobe (T3, N0\u20131) or ipsilateral non-primary lobe (T4, N0\u20131)",
+      "content": "Separate pulmonary nodule(s), same lobe (T3, N0–1) or ipsilateral non-primary lobe (T4, N0–1)",
       "parent_ids": [
         "node_012"
       ],
@@ -287,5 +287,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-8"
+  "tree_id": "NSCL-8",
+  "keywords": [
+    "EGFR",
+    "ALK",
+    "PD-L1"
+  ]
 }

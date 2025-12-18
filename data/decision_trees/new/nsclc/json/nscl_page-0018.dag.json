@@ -57,7 +57,7 @@
     },
     {
       "id": "node_005",
-      "content": "6\u20138 mm",
+      "content": "6–8 mm",
       "parent_ids": [
         "node_002"
       ],
@@ -93,7 +93,7 @@
     },
     {
       "id": "node_008",
-      "content": "6\u20138 mm",
+      "content": "6–8 mm",
       "parent_ids": [
         "node_003"
       ],
@@ -127,7 +127,7 @@
     },
     {
       "id": "node_011",
-      "content": "CT at 6\u201312 mo",
+      "content": "CT at 6–12 mo",
       "parent_ids": [
         "node_005"
       ],
@@ -164,7 +164,7 @@
     },
     {
       "id": "node_014",
-      "content": "CT at 6\u201312 mo",
+      "content": "CT at 6–12 mo",
       "parent_ids": [
         "node_008"
       ],
@@ -225,7 +225,7 @@
     },
     {
       "id": "node_019",
-      "content": "Consider CT at 18\u201324 mo",
+      "content": "Consider CT at 18–24 mo",
       "parent_ids": [
         "node_016"
       ],
@@ -245,7 +245,7 @@
     },
     {
       "id": "node_021",
-      "content": "Repeat CT at 18\u201324 mo",
+      "content": "Repeat CT at 18–24 mo",
       "parent_ids": [
         "node_018"
       ],
@@ -284,7 +284,7 @@
     },
     {
       "label": "h",
-      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. \u00a9Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
+      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. ©Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
     },
     {
       "label": "i",
@@ -297,5 +297,6 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "DIAG-2"
+  "tree_id": "DIAG-2",
+  "keywords": []
 }

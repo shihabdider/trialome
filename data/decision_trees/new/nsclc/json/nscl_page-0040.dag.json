@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "No evidence of clinical/radiographic disease\n\u2022 Stage I\u2013II (primary treatment included surgery \u00b1 chemotherapy)\n\u2023 H&P and chest CTjj \u00b1 contrast every 6 mo for 2\u20133 y, then H&P and a low-dose non\u2013contrast-enhanced chest CT annually\n\u2022 Stage I\u2013II (primary treatment included RT) or stage III or stage IV (oligometastatic with all sites treated with definitive intent)\n\u2023 H&P and chest CTjj \u00b1 contrast every 3\u20136 mo for 3 y, then H&P and chest CT \u00b1 contrast every 6 mo for 2 y, then H&P and a low-dose non\u2013contrast-enhanced chest CT annually\n\u25ca Residual or new radiographic abnormalities may require more frequent imaging\n\u2022 Smoking cessation advice, counseling, and pharmacotherapy\n\u2022 FDG-PET/CTkk is not routinely indicated\n\u2022 Brain MRI as clinically indicated based on risk assessment\n\u2022 Cancer Survivorship Care (NSCL-G)",
+      "content": "No evidence of clinical/radiographic disease\n• Stage I–II (primary treatment included surgery ± chemotherapy)\n‣ H&P and chest CTjj ± contrast every 6 mo for 2–3 y, then H&P and a low-dose non–contrast-enhanced chest CT annually\n• Stage I–II (primary treatment included RT) or stage III or stage IV (oligometastatic with all sites treated with definitive intent)\n‣ H&P and chest CTjj ± contrast every 3–6 mo for 3 y, then H&P and chest CT ± contrast every 6 mo for 2 y, then H&P and a low-dose non–contrast-enhanced chest CT annually\n◊ Residual or new radiographic abnormalities may require more frequent imaging\n• Smoking cessation advice, counseling, and pharmacotherapy\n• FDG-PET/CTkk is not routinely indicated\n• Brain MRI as clinically indicated based on risk assessment\n• Cancer Survivorship Care (NSCL-G)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -29,7 +29,7 @@
     },
     {
       "id": "node_003",
-      "content": "\u2022 FDG-PET/CT\n\u2022 Brain MRI with contrastr",
+      "content": "• FDG-PET/CT\n• Brain MRI with contrastr",
       "parent_ids": [
         "node_002"
       ],
@@ -119,5 +119,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "SURVEILLANCE AFTER COMPLETION OF DEFINITIVE THERAPY",
-  "tree_id": "NSCL-17"
+  "tree_id": "NSCL-17",
+  "keywords": []
 }

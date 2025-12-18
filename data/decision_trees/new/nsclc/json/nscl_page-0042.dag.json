@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Establish histologic subtype\u1d43 with adequate tissue for molecular testing (consider rebiopsy\u1d50\u1d50 or plasma testing if appropriate)\n\u2022 Smoking cessation counseling\n\u2022 Integrate palliative care\u1d9c (NCCN Guidelines for Palliative Care)",
+      "content": "• Establish histologic subtypeᵃ with adequate tissue for molecular testing (consider rebiopsyᵐᵐ or plasma testing if appropriate)\n• Smoking cessation counseling\n• Integrate palliative careᶜ (NCCN Guidelines for Palliative Care)",
       "parent_ids": [
         "node_001"
       ],
@@ -31,7 +31,7 @@
     },
     {
       "id": "node_003",
-      "content": "\u2022 Adenocarcinoma\n\u2022 Large cell\n\u2022 NSCLC not otherwise specified (NOS)",
+      "content": "• Adenocarcinoma\n• Large cell\n• NSCLC not otherwise specified (NOS)",
       "parent_ids": [
         "node_002"
       ],
@@ -57,7 +57,7 @@
     },
     {
       "id": "node_005",
-      "content": "\u2022 Molecular testing, including:\n\u2023 EGFR mutation (category 1), ALK (category 1), KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET (category 1), ERBB2 (HER2), NRG1, HER2 (immunohistochemistry [IHC])\u1d52\u1d52\n\u2023 Testing should be conducted as part of broad molecular profiling\u1d56\u1d56\n\u2022 PD-L1 testing (category 1)",
+      "content": "• Molecular testing, including:\n‣ EGFR mutation (category 1), ALK (category 1), KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET (category 1), ERBB2 (HER2), NRG1, HER2 (immunohistochemistry [IHC])ᵒᵒ\n‣ Testing should be conducted as part of broad molecular profilingᵖᵖ\n• PD-L1 testing (category 1)",
       "parent_ids": [
         "node_003"
       ],
@@ -73,7 +73,7 @@
     },
     {
       "id": "node_006",
-      "content": "\u2022 Consider molecular testing, including:\u1d60\u1d60\n\u2023 EGFR mutation, ALK, KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET, ERBB2 (HER2), NRG1, HER2 (IHC)\u1d52\u1d52\n\u2023 Testing should be conducted as part of broad molecular profiling\u1d56\u1d56\n\u2022 PD-L1 testing (category 1)",
+      "content": "• Consider molecular testing, including:ᵠᵠ\n‣ EGFR mutation, ALK, KRAS, ROS1, BRAF, NTRK1/2/3, METex14 skipping, RET, ERBB2 (HER2), NRG1, HER2 (IHC)ᵒᵒ\n‣ Testing should be conducted as part of broad molecular profilingᵖᵖ\n• PD-L1 testing (category 1)",
       "parent_ids": [
         "node_004"
       ],
@@ -161,5 +161,19 @@
   ],
   "extraction_confidence": 1.0,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-19"
+  "tree_id": "NSCL-19",
+  "keywords": [
+    "EGFR",
+    "ALK",
+    "KRAS",
+    "ROS1",
+    "BRAF",
+    "NTRK",
+    "MET",
+    "RET",
+    "ERBB2",
+    "HER2",
+    "NRG1",
+    "PD-L1"
+  ]
 }

@@ -1,0 +1,128 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Incidental finding of nodule suspicious for lung cancer",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "\u2022 Multidisciplinary evaluation\n\u2022 Smoking cessation counseling",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "a"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Patient factors\n\u2022 Age\n\u2022 Smoking history\n\u2022 Previous cancer history\n\u2022 Family history\n\u2022 Occupational exposures\n\u2022 Other lung disease (chronic obstructive pulmonary disease [COPD], pulmonary fibrosis)\n\u2022 Exposure to infectious agents (eg, endemic areas of fungal infections, tuberculosis) or risk factors or history suggestive of infection (eg, immune suppression, aspiration, infectious respiratory symptoms)\n\nRadiologic factors\n\u2022 Size, shape, and density of the pulmonary nodule\n\u2022 Associated parenchymal abnormalities (eg, scarring or suspicion of inflammatory changes)\n\u2022 Fluorodeoxyglucose (FDG) avidity on FDG-PET/CT imaging",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Solid nodules\nFollow-up (DIAG-2)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "DIAG-2"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Subsolid nodules\nFollow-up (DIAG-3)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "DIAG-3"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Lung nodules in asymptomatic patients at high-risk detected during lung cancer screening with LDCT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "NCCN Guidelines for Lung Cancer Screening",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NCCN Guidelines for Lung Cancer Screening"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "DIAG-1",
+      "to_tree": "DIAG-2",
+      "description": "Follow-up for Solid nodules"
+    },
+    {
+      "from_tree": "DIAG-1",
+      "to_tree": "DIAG-3",
+      "description": "Follow-up for Subsolid nodules"
+    },
+    {
+      "from_tree": "DIAG-1",
+      "to_tree": "NCCN Guidelines for Lung Cancer Screening",
+      "description": "Protocol for asymptomatic patients at high-risk detected during LDCT screening"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "a",
+      "content": "Multidisciplinary evaluation including thoracic surgeons, thoracic radiologists, and pulmonologists to determine the likelihood of a cancer diagnosis and the optimal diagnostic or follow-up strategy."
+    },
+    {
+      "label": "b",
+      "content": "Risk calculators can be used to quantify individual patient and radiologic factors but do not replace evaluation by a multidisciplinary diagnostic team with substantial experience in the diagnosis of lung cancer."
+    },
+    {
+      "label": "c",
+      "content": "Principles of Diagnostic Evaluation (DIAG-A 1 of 3)."
+    },
+    {
+      "label": "d",
+      "content": "The most important radiologic factor is change or stability compared with a previous imaging study."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "CLINICAL PRESENTATION / RISK ASSESSMENT",
+  "tree_id": "DIAG-1"
+}

@@ -239,5 +239,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-9"
+  "tree_id": "NSCL-9",
+  "keywords": []
 }

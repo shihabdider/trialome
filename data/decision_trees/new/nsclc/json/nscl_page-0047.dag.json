@@ -312,7 +312,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "ww",
@@ -325,5 +325,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "EGFR S768I, L861Q, and/or G719X MUTATIONS",
-  "tree_id": "NSCL-24"
+  "tree_id": "NSCL-24",
+  "keywords": [
+    "BRAF",
+    "dabrafenib",
+    "trametinib"
+  ]
 }

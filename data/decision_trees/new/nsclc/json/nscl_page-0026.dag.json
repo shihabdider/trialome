@@ -120,7 +120,7 @@
     },
     {
       "id": "node_010",
-      "content": "Reresection (preferred) \u00b1 systemic therapy for T2a tumors = 4 cm\nor\nRT",
+      "content": "Reresection (preferred) ± systemic therapy for T2a tumors = 4 cm\nor\nRT",
       "parent_ids": [
         "node_009"
       ],
@@ -189,7 +189,7 @@
     },
     {
       "id": "node_015",
-      "content": "Reresection (preferred) \u00b1 systemic therapy\nor\nRT \u00b1 chemotherapy",
+      "content": "Reresection (preferred) ± systemic therapy\nor\nRT ± chemotherapy",
       "parent_ids": [
         "node_014"
       ],
@@ -204,7 +204,7 @@
     },
     {
       "id": "node_016",
-      "content": "Stage IIB (T1abc\u2013T2a, N1)\nStage IIB (T3, N0; T2b, N1)",
+      "content": "Stage IIB (T1abc–T2a, N1)\nStage IIB (T3, N0; T2b, N1)",
       "parent_ids": [],
       "children_ids": [
         "node_017",
@@ -316,7 +316,7 @@
     },
     {
       "id": "node_024",
-      "content": "Stage IIIA (T1\u20132, N2; T3, N1; T4, N0\u20131)\nStage IIIB (T3\u20134, N2)",
+      "content": "Stage IIIA (T1–2, N2; T3, N1; T4, N0–1)\nStage IIIB (T3–4, N2)",
       "parent_ids": [],
       "children_ids": [
         "node_025",
@@ -477,5 +477,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "FINDINGS AT SURGERY - ADJUVANT TREATMENT",
-  "tree_id": "NSCL-4"
+  "tree_id": "NSCL-4",
+  "keywords": []
 }

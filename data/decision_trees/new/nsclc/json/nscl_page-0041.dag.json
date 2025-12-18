@@ -77,7 +77,7 @@
     },
     {
       "id": "node_007",
-      "content": "Any combination of the following:\n\u2022 Laser/stent/other surgery\n\u2022 External-beam RT or brachytherapy\n\u2022 Photodynamic therapy",
+      "content": "Any combination of the following:\n• Laser/stent/other surgery\n• External-beam RT or brachytherapy\n• Photodynamic therapy",
       "parent_ids": [
         "node_002"
       ],
@@ -92,7 +92,7 @@
     },
     {
       "id": "node_008",
-      "content": "\u2022 Resection (preferred)\n\u2022 External-beam RT or SABR",
+      "content": "• Resection (preferred)\n• External-beam RT or SABR",
       "parent_ids": [
         "node_003"
       ],
@@ -132,7 +132,7 @@
     },
     {
       "id": "node_011",
-      "content": "\u2022 Concurrent chemoradiation (if not previously given) \u00b1 SVC stent\n\u2022 External-beam RT \u00b1 SVC stent\n\u2022 SVC stent",
+      "content": "• Concurrent chemoradiation (if not previously given) ± SVC stent\n• External-beam RT ± SVC stent\n• SVC stent",
       "parent_ids": [
         "node_005"
       ],
@@ -147,7 +147,7 @@
     },
     {
       "id": "node_012",
-      "content": "Any combination of the following:\n\u2022 External-beam RT or brachytherapy\n\u2022 Laser or photodynamic therapy or embolization\n\u2022 Surgery",
+      "content": "Any combination of the following:\n• External-beam RT or brachytherapy\n• Laser or photodynamic therapy or embolization\n• Surgery",
       "parent_ids": [
         "node_006"
       ],
@@ -161,7 +161,7 @@
     },
     {
       "id": "node_013",
-      "content": "\u2022 Chest CT with contrast\n\u2022 Brain MRI with contrast\n\u2022 FDG-PET/CT",
+      "content": "• Chest CT with contrast\n• Brain MRI with contrast\n• FDG-PET/CT",
       "parent_ids": [
         "node_007",
         "node_008",
@@ -454,5 +454,6 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "THERAPY FOR RECURRENCE AND METASTASIS",
-  "tree_id": "NSCL-18"
+  "tree_id": "NSCL-18",
+  "keywords": []
 }

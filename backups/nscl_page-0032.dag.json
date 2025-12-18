@@ -1,0 +1,243 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "T1, N0",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Operable",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "l"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Surgical exploration and resection + mediastinal lymph node dissection or systematic lymph node sampling",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon, and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Definitive RT, preferably SABR",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "o",
+        "p"
+      ]
+    },
+    {
+      "id": "node_007",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "T2a-3, N0",
+      "parent_ids": [],
+      "children_ids": [
+        "node_009",
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Operable",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Surgical exploration and resection + mediastinal lymph node dissection or systematic lymph node sampling after preoperative systemic therapy, if planned",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "q"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Findings at Surgery (NSCL-4)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-4"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Medically inoperable, high surgical risk as determined by thoracic surgeon, and those who decline surgery after thoracic surgical consultation",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Definitive RT, preferably SABR for T2a (consider for selected larger tumors)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "p"
+      ]
+    },
+    {
+      "id": "node_014",
+      "content": "Consider adjuvant chemotherapy for high-risk stage II (especially T2b-3)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-9",
+      "to_tree": "NSCL-4",
+      "description": "Findings at Surgery"
+    },
+    {
+      "from_tree": "NSCL-9",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "l",
+      "content": "Surgical resection is considered the first option for operable patients with stage IA lung cancer, but patients may also be informed about SABR as an alternative option through shared decision-making."
+    },
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "p",
+      "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
+    },
+    {
+      "label": "q",
+      "content": "Perioperative Systemic Therapy (NSCL-E)."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "NSCL-9"
+}

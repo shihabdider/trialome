@@ -249,7 +249,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "qqq",
@@ -258,5 +258,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "BRAF V600E MUTATION",
-  "tree_id": "NSCL-32"
+  "tree_id": "NSCL-32",
+  "keywords": [
+    "MSI-H",
+    "dMMR",
+    "TMB"
+  ]
 }

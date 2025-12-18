@@ -357,7 +357,7 @@
     },
     {
       "label": "ss",
-      "content": "For performance status (PS) 0\u20134."
+      "content": "For performance status (PS) 0–4."
     },
     {
       "label": "tt",
@@ -382,5 +382,17 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "EGFR EXON 19 DELETION OR EXON 21 L858R MUTATIONS",
-  "tree_id": "NSCL-21"
+  "tree_id": "NSCL-21",
+  "keywords": [
+    "EGFR",
+    "osimertinib",
+    "amivantamab",
+    "lazertinib",
+    "erlotinib",
+    "afatinib",
+    "dacomitinib",
+    "gefitinib",
+    "bevacizumab",
+    "ramucirumab"
+  ]
 }

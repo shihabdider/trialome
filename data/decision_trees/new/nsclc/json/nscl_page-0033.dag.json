@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "T1\u20133, N1 nodes positive, M0",
+      "content": "T1–3, N1 nodes positive, M0",
       "parent_ids": [],
       "children_ids": [
         "node_002",
@@ -108,7 +108,7 @@
     },
     {
       "id": "node_009",
-      "content": "T1\u20133, N2 nodes positive, M0",
+      "content": "T1–3, N2 nodes positive, M0",
       "parent_ids": [],
       "children_ids": [
         "node_010",
@@ -134,7 +134,7 @@
     },
     {
       "id": "node_011",
-      "content": "or Systemic therapyq,y \u00b1 RTn",
+      "content": "or Systemic therapyq,y ± RTn",
       "parent_ids": [
         "node_009"
       ],
@@ -284,7 +284,7 @@
     },
     {
       "id": "node_022",
-      "content": "RTn (if feasible) \u00b1 chemotherapyq",
+      "content": "RTn (if feasible) ± chemotherapyq",
       "parent_ids": [
         "node_018"
       ],
@@ -367,5 +367,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-10"
+  "tree_id": "NSCL-10",
+  "keywords": [
+    "osimertinib",
+    "durvalumab",
+    "EGFR"
+  ]
 }

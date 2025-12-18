@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Biomarker testing (NSCL-19)\nIf not previously done\n\u2022 Brain MRI with contrast\n\u2022 FDG-PET/CT scan\n\u2022 Pathologic confirmation of metastatic lesion, if possible",
+      "content": "• Biomarker testing (NSCL-19)\nIf not previously done\n• Brain MRI with contrast\n• FDG-PET/CT scan\n• Pathologic confirmation of metastatic lesion, if possible",
       "parent_ids": [
         "node_001"
       ],
@@ -30,7 +30,7 @@
     },
     {
       "id": "node_003",
-      "content": "PS 0\u20132",
+      "content": "PS 0–2",
       "parent_ids": [
         "node_002"
       ],
@@ -43,7 +43,7 @@
     },
     {
       "id": "node_004",
-      "content": "PS 3\u20134",
+      "content": "PS 3–4",
       "parent_ids": [
         "node_002"
       ],
@@ -202,5 +202,6 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-15"
+  "tree_id": "NSCL-15",
+  "keywords": []
 }

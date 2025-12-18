@@ -1,0 +1,458 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Locoregional recurrence or symptomatic local disease",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003",
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Endobronchial obstruction",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Resectable recurrence",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Mediastinal lymph node recurrence",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_009",
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Superior vena cava (SVC) obstruction",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Severe hemoptysis",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Any combination of the following:\n\u2022 Laser/stent/other surgery\n\u2022 External-beam RT or brachytherapy\n\u2022 Photodynamic therapy",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "n"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "\u2022 Resection (preferred)\n\u2022 External-beam RT or SABR",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "m",
+        "n",
+        "o"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "No prior RT",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Prior RT",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "\u2022 Concurrent chemoradiation (if not previously given) \u00b1 SVC stent\n\u2022 External-beam RT \u00b1 SVC stent\n\u2022 SVC stent",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Any combination of the following:\n\u2022 External-beam RT or brachytherapy\n\u2022 Laser or photodynamic therapy or embolization\n\u2022 Surgery",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "\u2022 Chest CT with contrast\n\u2022 Brain MRI with contrast\n\u2022 FDG-PET/CT",
+      "parent_ids": [
+        "node_007",
+        "node_008",
+        "node_011",
+        "node_012",
+        "node_014"
+      ],
+      "children_ids": [
+        "node_016",
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "r"
+      ]
+    },
+    {
+      "id": "node_014",
+      "content": "Concurrent chemoradiation",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_016",
+      "content": "No evidence of disseminated disease",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_017",
+      "content": "Evidence of disseminated disease",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_019"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_018",
+      "content": "Observation or Advanced/metastatic disease (NSCL-19) (category 2B)",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_019",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "Distant metastases",
+      "parent_ids": [],
+      "children_ids": [
+        "node_021",
+        "node_022",
+        "node_023",
+        "node_024",
+        "node_025"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_021",
+      "content": "Localized symptoms",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_026"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_022",
+      "content": "Diffuse brain metastases",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_027"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_023",
+      "content": "Bone metastasis",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_028"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_024",
+      "content": "Limited metastasis",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_029"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_025",
+      "content": "Pleural metastases or disseminated metastases",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_030"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_026",
+      "content": "Palliative external-beam RT",
+      "parent_ids": [
+        "node_021"
+      ],
+      "children_ids": [
+        "node_031"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_027",
+      "content": "Palliative external-beam RT",
+      "parent_ids": [
+        "node_022"
+      ],
+      "children_ids": [
+        "node_031"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "hh"
+      ]
+    },
+    {
+      "id": "node_028",
+      "content": "If risk of fracture, orthopedic stabilization + palliative external-beam RT\nConsider bisphosphonate therapy or denosumab",
+      "parent_ids": [
+        "node_023"
+      ],
+      "children_ids": [
+        "node_031"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "ll"
+      ]
+    },
+    {
+      "id": "node_029",
+      "content": "Stage IVA, M1b and stage IVB, M1c (NSCL-15)",
+      "parent_ids": [
+        "node_024"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-15"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_030",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_025"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_031",
+      "content": "Advanced/metastatic disease (NSCL-19)",
+      "parent_ids": [
+        "node_026",
+        "node_027",
+        "node_028"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-19"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-18",
+      "to_tree": "NSCL-19",
+      "description": "Treatment path for advanced or metastatic disease"
+    },
+    {
+      "from_tree": "NSCL-18",
+      "to_tree": "NSCL-15",
+      "description": "Referral for Stage IVA M1b and IVB M1c limited metastasis"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "m",
+      "content": "Principles of Surgical Therapy (NSCL-B)."
+    },
+    {
+      "label": "n",
+      "content": "Principles of Radiation Therapy (NSCL-C)."
+    },
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "t",
+      "content": "Concurrent Chemoradiation Regimens (NSCL-F)."
+    },
+    {
+      "label": "hh",
+      "content": "NCCN Guidelines for Central Nervous System Cancers."
+    },
+    {
+      "label": "ll",
+      "content": "An FDA-approved biosimilar is an appropriate substitute."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "THERAPY FOR RECURRENCE AND METASTASIS",
+  "tree_id": "NSCL-18"
+}

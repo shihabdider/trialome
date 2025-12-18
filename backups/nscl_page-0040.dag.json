@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "No evidence of clinical/radiographic disease\n\u2022 Stage I\u2013II (primary treatment included surgery \u00b1 chemotherapy)\n\u2023 H&P and chest CTjj \u00b1 contrast every 6 mo for 2\u20133 y, then H&P and a low-dose non\u2013contrast-enhanced chest CT annually\n\u2022 Stage I\u2013II (primary treatment included RT) or stage III or stage IV (oligometastatic with all sites treated with definitive intent)\n\u2023 H&P and chest CTjj \u00b1 contrast every 3\u20136 mo for 3 y, then H&P and chest CT \u00b1 contrast every 6 mo for 2 y, then H&P and a low-dose non\u2013contrast-enhanced chest CT annually\n\u25ca Residual or new radiographic abnormalities may require more frequent imaging\n\u2022 Smoking cessation advice, counseling, and pharmacotherapy\n\u2022 FDG-PET/CTkk is not routinely indicated\n\u2022 Brain MRI as clinically indicated based on risk assessment\n\u2022 Cancer Survivorship Care (NSCL-G)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002"
+      ],
+      "tree_ids": [
+        "NSCL-G"
+      ],
+      "footnote_labels": [
+        "jj",
+        "kk"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Recurrence",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "\u2022 FDG-PET/CT\n\u2022 Brain MRI with contrastr",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "r"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Locoregional recurrence",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "Distant metastases",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Therapy for Recurrence and Metastasis (NSCL-18)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Therapy for Recurrence and Metastasis (NSCL-18)",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-18"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-17",
+      "to_tree": "NSCL-G",
+      "description": "Cancer Survivorship Care guidelines"
+    },
+    {
+      "from_tree": "NSCL-17",
+      "to_tree": "NSCL-18",
+      "description": "Therapy for Recurrence and Metastasis"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "r",
+      "content": "If MRI is not possible, CT of head with contrast."
+    },
+    {
+      "label": "jj",
+      "content": "Timing of CT scans within Guidelines parameters is a clinical decision."
+    },
+    {
+      "label": "kk",
+      "content": "FDG-PET/CT is currently not warranted in the routine surveillance and follow-up of patients with NSCLC. However, many benign conditions (such as atelectasis, consolidation, and radiation fibrosis) are difficult to differentiate from neoplasm on standard CT imaging, and FDG-PET/CT can be used to differentiate true malignancy in these settings. However, if FDG-PET/CT is to be used as a problem-solving tool in patients after RT, histopathologic confirmation of recurrent disease is needed because areas previously treated with RT can remain FDG avid for up to 2 years."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "SURVEILLANCE AFTER COMPLETION OF DEFINITIVE THERAPY",
+  "tree_id": "NSCL-17"
+}

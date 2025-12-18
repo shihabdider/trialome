@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "PD-L1 \u22651%",
+      "content": "PD-L1 ≥1%",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -126,6 +126,7 @@
     }
   ],
   "extraction_confidence": 0.95,
-  "image_title": "PD-L1 POSITIVE (\u22651%)",
-  "tree_id": "NSCL-38"
+  "image_title": "PD-L1 POSITIVE (≥1%)",
+  "tree_id": "NSCL-38",
+  "keywords": []
 }

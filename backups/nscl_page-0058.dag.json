@@ -1,0 +1,246 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "RET rearrangement",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "nn"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "RET rearrangement discovered prior to first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Preferred Pralsetinib or Selpercatinib (category 1)",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "ss"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "Progression",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Cabozantinib",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Progression",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "RET rearrangement discovered during first-line systemic therapy",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "Interrupt current therapy and start Pralsetinib (preferred) or Selpercatinib (preferred)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "xx"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Progression",
+      "parent_ids": [
+        "node_010"
+      ],
+      "children_ids": [
+        "node_012",
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Systemic Therapy Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Cabozantinib",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Progression",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Systemic Therapy, Adenocarcinoma (NSCL-K 1 of 5) or Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-35",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-35",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease"
+    },
+    {
+      "from_tree": "NSCL-35",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic Therapy for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-35",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic Therapy for Squamous Cell Carcinoma"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "ss",
+      "content": "For PS 0\u20134."
+    },
+    {
+      "label": "xx",
+      "content": "If there is a good response to current therapy, it is reasonable to continue therapy."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue TKI. If disease flare occurs, restart TKI."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "RET REARRANGEMENT",
+  "tree_id": "NSCL-35"
+}

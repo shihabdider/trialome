@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Pulmonary function tests (PFTs) (if not previously done)\n\u2022 Bronchoscopy (intraoperative preferred)\n\u2022 Consider pathologic mediastinal lymph node evaluation\n\u2022 FDG-PET/CT scan (if not previously done)",
+      "content": "• Pulmonary function tests (PFTs) (if not previously done)\n• Bronchoscopy (intraoperative preferred)\n• Consider pathologic mediastinal lymph node evaluation\n• FDG-PET/CT scan (if not previously done)",
       "parent_ids": [
         "node_001"
       ],
@@ -198,7 +198,7 @@
     },
     {
       "label": "i",
-      "content": "There is low likelihood of positive mediastinal lymph nodes when these nodes are CT and FDG-PET/CT negative in peripheral tumors (outer third of lung) \u22643 cm. Thus, pretreatment pathologic mediastinal evaluation is optional in these settings. Invasive mediastinal staging is recommended for central tumors."
+      "content": "There is low likelihood of positive mediastinal lymph nodes when these nodes are CT and FDG-PET/CT negative in peripheral tumors (outer third of lung) ≤3 cm. Thus, pretreatment pathologic mediastinal evaluation is optional in these settings. Invasive mediastinal staging is recommended for central tumors."
     },
     {
       "label": "j",
@@ -231,5 +231,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer - Clinical Assessment, Pretreatment Evaluation, Initial Treatment",
-  "tree_id": "NSCL-2"
+  "tree_id": "NSCL-2",
+  "keywords": []
 }

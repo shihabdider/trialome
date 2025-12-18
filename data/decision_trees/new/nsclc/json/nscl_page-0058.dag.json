@@ -229,7 +229,7 @@
     },
     {
       "label": "ss",
-      "content": "For PS 0\u20134."
+      "content": "For PS 0–4."
     },
     {
       "label": "xx",
@@ -242,5 +242,11 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "RET REARRANGEMENT",
-  "tree_id": "NSCL-35"
+  "tree_id": "NSCL-35",
+  "keywords": [
+    "pemetrexed",
+    "gemcitabine",
+    "docetaxel",
+    "paclitaxel"
+  ]
 }

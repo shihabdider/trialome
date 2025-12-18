@@ -12,7 +12,7 @@
     },
     {
       "id": "node_002",
-      "content": "\u2022 Molecular testing for EGFR\n\u2022 FDG-PET/CT scan^k (if not previously done)\n\u2022 Brain MRI with contrast^r\n\u2022 Pathologic confirmation of N2\u20133 disease by either:\n\u2023 Mediastinoscopy\n\u2023 Supraclavicular lymph node biopsy\n\u2023 Thoracoscopy\n\u2023 Needle biopsy\n\u2023 Mediastinotomy\n\u2023 EUS biopsy\n\u2023 EBUS biopsy",
+      "content": "• Molecular testing for EGFR\n• FDG-PET/CT scan^k (if not previously done)\n• Brain MRI with contrast^r\n• Pathologic confirmation of N2–3 disease by either:\n‣ Mediastinoscopy\n‣ Supraclavicular lymph node biopsy\n‣ Thoracoscopy\n‣ Needle biopsy\n‣ Mediastinotomy\n‣ EUS biopsy\n‣ EBUS biopsy",
       "parent_ids": [
         "node_001"
       ],
@@ -66,7 +66,7 @@
     },
     {
       "id": "node_006",
-      "content": "Ipsilateral mediastinal node negative (T4, N0\u20131)",
+      "content": "Ipsilateral mediastinal node negative (T4, N0–1)",
       "parent_ids": [
         "node_003"
       ],
@@ -168,7 +168,7 @@
     },
     {
       "id": "node_014",
-      "content": "\u2022 FDG-PET/CT scan^k (if not previously done)\n\u2022 Brain MRI with contrast^r\n\u2022 Biomarker testing (NSCL-19)\n\u2022 Thoracentesis or pericardiocentesis \u00b1 thoracoscopy if thoracentesis indeterminate",
+      "content": "• FDG-PET/CT scan^k (if not previously done)\n• Brain MRI with contrast^r\n• Biomarker testing (NSCL-19)\n• Thoracentesis or pericardiocentesis ± thoracoscopy if thoracentesis indeterminate",
       "parent_ids": [
         "node_013"
       ],
@@ -290,5 +290,10 @@
   ],
   "extraction_confidence": 0.98,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-14"
+  "tree_id": "NSCL-14",
+  "keywords": [
+    "EGFR",
+    "osimertinib",
+    "durvalumab"
+  ]
 }

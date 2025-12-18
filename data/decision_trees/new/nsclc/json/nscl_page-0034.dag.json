@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Separate pulmonary nodule(s), same lobe (T3, N0\u20131), or ipsilateral non-primary lobe (T4, N0\u20131)",
+      "content": "Separate pulmonary nodule(s), same lobe (T3, N0–1), or ipsilateral non-primary lobe (T4, N0–1)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -74,7 +74,7 @@
     },
     {
       "id": "node_007",
-      "content": "\u2022 Chest CT with contrast\n\u2022 FDG-PET/CT scan (if not previously done)\n\u2022 Brain MRI with contrast",
+      "content": "• Chest CT with contrast\n• FDG-PET/CT scan (if not previously done)\n• Brain MRI with contrast",
       "parent_ids": [
         "node_006"
       ],
@@ -141,7 +141,7 @@
     },
     {
       "id": "node_012",
-      "content": "N0\u20131",
+      "content": "N0–1",
       "parent_ids": [
         "node_011"
       ],
@@ -165,7 +165,7 @@
     },
     {
       "id": "node_014",
-      "content": "N2\u20133",
+      "content": "N2–3",
       "parent_ids": [
         "node_011"
       ],
@@ -207,7 +207,7 @@
     {
       "from_tree": "NSCL-11",
       "to_tree": "NSCL-12",
-      "description": "Initial Treatment for N0\u20131 multiple lung cancers"
+      "description": "Initial Treatment for N0–1 multiple lung cancers"
     },
     {
       "from_tree": "NSCL-11",
@@ -257,5 +257,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "CLINICAL PRESENTATION - ADJUVANT TREATMENT",
-  "tree_id": "NSCL-11"
+  "tree_id": "NSCL-11",
+  "keywords": []
 }

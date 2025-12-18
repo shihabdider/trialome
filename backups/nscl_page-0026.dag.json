@@ -1,0 +1,481 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Stage IA (T1abc, N0)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Margins negative (R0)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "Observe",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "Margins positive (R1, R2)",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_005"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Reresection (preferred)\nor\nRT (category 2B)",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n"
+      ]
+    },
+    {
+      "id": "node_006",
+      "content": "Stage IB (T2a, N0)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_007",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "Margins negative (R0)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_008"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Observe\nor\nAdjuvant systemic therapy (NSCL-E) for T2a tumors = 4 cm",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "Margins positive (R1, R2)",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "Reresection (preferred) \u00b1 systemic therapy for T2a tumors = 4 cm\nor\nRT",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "q",
+        "u",
+        "n"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Stage IIA (T2b, N0)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_012",
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Margins negative (R0)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "Observe\nor\nAdjuvant systemic therapy (NSCL-E)",
+      "parent_ids": [
+        "node_012"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Margins positive (R1, R2)",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_015",
+      "content": "Reresection (preferred) \u00b1 systemic therapy\nor\nRT \u00b1 chemotherapy",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "q",
+        "n"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Stage IIB (T1abc\u2013T2a, N1)\nStage IIB (T3, N0; T2b, N1)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_017",
+        "node_019"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_017",
+      "content": "Margins negative (R0)",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_018",
+      "content": "Adjuvant systemic therapy (NSCL-E)",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_019",
+      "content": "Margins positive",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [
+        "node_020",
+        "node_022"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "R1",
+      "parent_ids": [
+        "node_019"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_021",
+      "content": "Reresection + systemic therapy\nor\nChemoradiation (sequential or concurrent)",
+      "parent_ids": [
+        "node_020"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "q",
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_022",
+      "content": "R2",
+      "parent_ids": [
+        "node_019"
+      ],
+      "children_ids": [
+        "node_023"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_023",
+      "content": "Reresection + systemic therapy\nor\nConcurrent chemoradiation",
+      "parent_ids": [
+        "node_022"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "q",
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_024",
+      "content": "Stage IIIA (T1\u20132, N2; T3, N1; T4, N0\u20131)\nStage IIIB (T3\u20134, N2)",
+      "parent_ids": [],
+      "children_ids": [
+        "node_025",
+        "node_027"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_025",
+      "content": "Margins negative (R0)",
+      "parent_ids": [
+        "node_024"
+      ],
+      "children_ids": [
+        "node_026"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_026",
+      "content": "Adjuvant systemic therapy (NSCL-E)\nor\nSequential chemotherapy and consider RT",
+      "parent_ids": [
+        "node_025"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [
+        "NSCL-E"
+      ],
+      "footnote_labels": [
+        "q",
+        "n"
+      ]
+    },
+    {
+      "id": "node_027",
+      "content": "Margins positive",
+      "parent_ids": [
+        "node_024"
+      ],
+      "children_ids": [
+        "node_028",
+        "node_030"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_028",
+      "content": "R1",
+      "parent_ids": [
+        "node_027"
+      ],
+      "children_ids": [
+        "node_029"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_029",
+      "content": "Chemoradiation (sequential or concurrent)",
+      "parent_ids": [
+        "node_028"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "q",
+        "t"
+      ]
+    },
+    {
+      "id": "node_030",
+      "content": "R2",
+      "parent_ids": [
+        "node_027"
+      ],
+      "children_ids": [
+        "node_031"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "s"
+      ]
+    },
+    {
+      "id": "node_031",
+      "content": "Concurrent chemoradiation",
+      "parent_ids": [
+        "node_030"
+      ],
+      "children_ids": [
+        "node_032"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "n",
+        "t"
+      ]
+    },
+    {
+      "id": "node_032",
+      "content": "Surveillance (NSCL-17)",
+      "parent_ids": [
+        "node_003",
+        "node_005",
+        "node_008",
+        "node_010",
+        "node_013",
+        "node_015",
+        "node_018",
+        "node_021",
+        "node_023",
+        "node_026",
+        "node_029",
+        "node_031"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-17"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-4",
+      "to_tree": "NSCL-E",
+      "description": "Adjuvant systemic therapy"
+    },
+    {
+      "from_tree": "NSCL-4",
+      "to_tree": "NSCL-17",
+      "description": "Surveillance"
+    },
+    {
+      "from_tree": "NSCL-4",
+      "to_tree": "NSCL-4A",
+      "description": "Footnotes location"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "Note",
+      "content": "All recommendations are category 2A unless otherwise indicated."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "FINDINGS AT SURGERY - ADJUVANT TREATMENT",
+  "tree_id": "NSCL-4"
+}

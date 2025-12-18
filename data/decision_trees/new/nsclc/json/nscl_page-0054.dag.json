@@ -245,5 +245,8 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "ROS1 REARRANGEMENT",
-  "tree_id": "NSCL-31"
+  "tree_id": "NSCL-31",
+  "keywords": [
+    "PD-L1"
+  ]
 }

@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Progression on osimertinib or amivantamab-vmjw + lazertinib",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "yy",
+        "tt"
+      ]
+    },
+    {
+      "id": "node_002",
+      "content": "Asymptomatic",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_003",
+      "content": "Symptomatic",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_004",
+      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery) for limited lesions\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "zz",
+        "tt"
+      ]
+    },
+    {
+      "id": "node_005",
+      "content": "Brain",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_007"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "Systemic",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_008",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "\u2022 Consider definitive local therapy (eg, SRS)\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib\n\u2022 NCCN Guidelines for CNS Cancers",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [
+        "NCCN Guidelines for CNS Cancers"
+      ],
+      "footnote_labels": [
+        "bbb",
+        "tt"
+      ]
+    },
+    {
+      "id": "node_008",
+      "content": "Limited progression",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "zz"
+      ]
+    },
+    {
+      "id": "node_009",
+      "content": "Multiple lesions",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "aaa"
+      ]
+    },
+    {
+      "id": "node_010",
+      "content": "\u2022 Consider definitive local therapy (eg, SABR or surgery)\n\u2022 Continue osimertinib or amivantamab-vmjw + lazertinib\nor\n\u2022 Therapy for multiple lesions, below",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "o",
+        "tt"
+      ]
+    },
+    {
+      "id": "node_011",
+      "content": "Amivantamab-vmjw (if not previously given) + carboplatin + pemetrexed (nonsquamous) (category 1) (preferred)\nor\nSystemic therapy\nAdenocarcinoma (NSCL-K 1 of 5)\nor Squamous Cell Carcinoma (NSCL-K 2 of 5)",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [
+        "NSCL-K 1 of 5",
+        "NSCL-K 2 of 5"
+      ],
+      "footnote_labels": [
+        "ccc",
+        "ddd",
+        "eee"
+      ]
+    },
+    {
+      "id": "node_012",
+      "content": "Progression, see therapy for multiple lesions below",
+      "parent_ids": [
+        "node_004",
+        "node_007"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_013",
+      "content": "Progression",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "Systemic Therapy, Subsequent (NSCL-K 4 of 5)",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [],
+      "tree_ids": [
+        "NSCL-K 4 of 5"
+      ],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NCCN Guidelines for CNS Cancers",
+      "description": "Referenced for CNS disease management"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-K 1 of 5",
+      "description": "Systemic therapy for Adenocarcinoma"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-K 2 of 5",
+      "description": "Systemic therapy for Squamous Cell Carcinoma"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-K 4 of 5",
+      "description": "Subsequent systemic therapy after progression"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-D",
+      "description": "Principles of Image-Guided Thermal Ablation Therapy"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-H",
+      "description": "Principles of Molecular and Biomarker Analysis"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NSCL-J",
+      "description": "Molecular or Biomarker-Directed Therapy"
+    },
+    {
+      "from_tree": "NSCL-22",
+      "to_tree": "NCCN Guidelines for Small Cell Lung Cancer",
+      "description": "Referenced in footnote aaa regarding SCLC transformation"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "o",
+      "content": "IGTA therapy (eg, cryotherapy, microwave, radiofrequency) may be an option for select patients. See Principles of Image-Guided Thermal Ablation Therapy (NSCL-D)."
+    },
+    {
+      "label": "nn",
+      "content": "Principles of Molecular and Biomarker Analysis (NSCL-H)."
+    },
+    {
+      "label": "rr",
+      "content": "Molecular or Biomarker-Directed Therapy for Advanced or Metastatic Disease (NSCL-J)."
+    },
+    {
+      "label": "tt",
+      "content": "Prophylactic anticoagulation is recommended at the time of initiation to prevent venous thromboembolic events."
+    },
+    {
+      "label": "yy",
+      "content": "Beware of flare phenomenon in subset of patients who discontinue tyrosine kinase inhibitor (TKI). If disease flare occurs, restart TKI."
+    },
+    {
+      "label": "zz",
+      "content": "Clinical trials have included up to 3 to 5 progressing sites."
+    },
+    {
+      "label": "aaa",
+      "content": "Consider a biopsy at time of progression to rule out small cell lung cancer (SCLC) transformation (approximately 6%) and biopsy or plasma testing to evaluate mechanisms of resistance. See Principles of Molecular and Biomarker Analysis (NSCL-H) and NCCN Guidelines for Small Cell Lung Cancer."
+    },
+    {
+      "label": "bbb",
+      "content": "Definitive local therapy of CNS disease can include asymptomatic lesions at risk for symptomatic progression based on factors including site, location, and edema."
+    },
+    {
+      "label": "ccc",
+      "content": "Not an option for EGFR S768I, L861Q, and/or G719X mutations."
+    },
+    {
+      "label": "ddd",
+      "content": "Afatinib + cetuximab may be considered in patients with disease progression on EGFR TKI therapy."
+    },
+    {
+      "label": "eee",
+      "content": "The data in the second-line setting suggest that programmed cell death protein 1 (PD-1)/PD-L1 inhibitor monotherapy is less effective, irrespective of PD-L1 expression, in EGFR exon 19 deletion or exon 21 L858R, ALK+ NSCLC."
+    }
+  ],
+  "extraction_confidence": 0.95,
+  "image_title": "EGFR EXON 19 DELETION OR EXON 21 L858R MUTATIONS - SUBSEQUENT THERAPY",
+  "tree_id": "NSCL-22"
+}

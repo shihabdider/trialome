@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Chest wall, trachea/carina, mediastinum, or diaphragm; T3 invasion, N0\u20131; resectable T4 invasion, N0\u20131\nStage IIIA (T4 [size], N0\u20131) resectable",
+      "content": "Chest wall, trachea/carina, mediastinum, or diaphragm; T3 invasion, N0–1; resectable T4 invasion, N0–1\nStage IIIA (T4 [size], N0–1) resectable",
       "parent_ids": [],
       "children_ids": [
         "node_002",
@@ -172,7 +172,7 @@
     },
     {
       "id": "node_013",
-      "content": "Surgical reevaluation including chest CT \u00b1 PET/CT",
+      "content": "Surgical reevaluation including chest CT ± PET/CT",
       "parent_ids": [
         "node_003"
       ],
@@ -267,7 +267,7 @@
     },
     {
       "id": "node_020",
-      "content": "Stage IIIA (T4, N0\u20131) unresectable",
+      "content": "Stage IIIA (T4, N0–1) unresectable",
       "parent_ids": [],
       "children_ids": [
         "node_021"
@@ -390,5 +390,10 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
-  "tree_id": "NSCL-7"
+  "tree_id": "NSCL-7",
+  "keywords": [
+    "osimertinib",
+    "durvalumab",
+    "EGFR"
+  ]
 }

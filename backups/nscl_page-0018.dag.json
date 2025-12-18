@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "node_001",
+      "content": "Incidental finding: solid nodule(s) on chest CT",
+      "parent_ids": [],
+      "children_ids": [
+        "node_002",
+        "node_003"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_002",
+      "content": "Low risk",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_004",
+        "node_005",
+        "node_006"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "e"
+      ]
+    },
+    {
+      "id": "node_003",
+      "content": "High risk",
+      "parent_ids": [
+        "node_001"
+      ],
+      "children_ids": [
+        "node_007",
+        "node_008",
+        "node_009"
+      ],
+      "tree_ids": [],
+      "footnote_labels": [
+        "f"
+      ]
+    },
+    {
+      "id": "node_004",
+      "content": "< 6 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_010"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_005",
+      "content": "6\u20138 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_011"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_006",
+      "content": "> 8 mm",
+      "parent_ids": [
+        "node_002"
+      ],
+      "children_ids": [
+        "node_012"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_007",
+      "content": "< 6 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_013"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_008",
+      "content": "6\u20138 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_014"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_009",
+      "content": "> 8 mm",
+      "parent_ids": [
+        "node_003"
+      ],
+      "children_ids": [
+        "node_015"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_010",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_004"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_011",
+      "content": "CT at 6\u201312 mo",
+      "parent_ids": [
+        "node_005"
+      ],
+      "children_ids": [
+        "node_016"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_012",
+      "content": "Consider CT at 3 mo, FDG-PET/CT, or biopsy",
+      "parent_ids": [
+        "node_006"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "i",
+        "j"
+      ]
+    },
+    {
+      "id": "node_013",
+      "content": "CT at 12 mo (optional)",
+      "parent_ids": [
+        "node_007"
+      ],
+      "children_ids": [
+        "node_017"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_014",
+      "content": "CT at 6\u201312 mo",
+      "parent_ids": [
+        "node_008"
+      ],
+      "children_ids": [
+        "node_018"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_015",
+      "content": "Consider CT at 3 mo, FDG-PET/CT, or biopsy",
+      "parent_ids": [
+        "node_009"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": [
+        "i",
+        "j"
+      ]
+    },
+    {
+      "id": "node_016",
+      "content": "Stable",
+      "parent_ids": [
+        "node_011"
+      ],
+      "children_ids": [
+        "node_019"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_017",
+      "content": "Stable",
+      "parent_ids": [
+        "node_013"
+      ],
+      "children_ids": [
+        "node_020"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_018",
+      "content": "Stable",
+      "parent_ids": [
+        "node_014"
+      ],
+      "children_ids": [
+        "node_021"
+      ],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_019",
+      "content": "Consider CT at 18\u201324 mo",
+      "parent_ids": [
+        "node_016"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_020",
+      "content": "No routine follow-up",
+      "parent_ids": [
+        "node_017"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    },
+    {
+      "id": "node_021",
+      "content": "Repeat CT at 18\u201324 mo",
+      "parent_ids": [
+        "node_018"
+      ],
+      "children_ids": [],
+      "tree_ids": [],
+      "footnote_labels": []
+    }
+  ],
+  "tree_references": [
+    {
+      "from_tree": "DIAG-2",
+      "to_tree": "DIAG-A",
+      "description": "Principles of Diagnostic Evaluation"
+    }
+  ],
+  "footnotes": [
+    {
+      "label": "c",
+      "content": "Principles of Diagnostic Evaluation (DIAG-A 1 of 3)."
+    },
+    {
+      "label": "d",
+      "content": "The most important radiologic factor is change or stability compared with a previous imaging study."
+    },
+    {
+      "label": "e",
+      "content": "Low risk = minimal or absent history of smoking or other known risk factors."
+    },
+    {
+      "label": "f",
+      "content": "High risk = history of smoking or other known risk factors. Known risk factors include history of lung cancer in a first-degree relative or exposure to asbestos, radon, or uranium."
+    },
+    {
+      "label": "g",
+      "content": "Non-solid (ground-glass) nodules may require longer follow-up to exclude indolent adenocarcinoma."
+    },
+    {
+      "label": "h",
+      "content": "Adapted from Fleischner Society Guidelines: MacMahon H, Naidich DP, Goo JM, et al. Guidelines for management of incidental pulmonary nodules detected on CT images: From the Fleischner Society 2017. Radiology 2017;284:228-243. \u00a9Radiological Society of North America. Fleischner Society Guidelines do not direct whether or not contrast is necessary or if an LDCT is appropriate. LDCT is preferred unless there is a reason for contrast enhancement for better diagnostic resolution."
+    },
+    {
+      "label": "i",
+      "content": "FDG-PET/CT performed skull base to mid-thigh. A positive FDG-PET/CT result is defined as a standardized uptake value (SUV) in the lung nodule greater than the baseline mediastinal blood pool. A false-positive FDG-PET/CT scan finding can be caused by infection or inflammation, including absence of lung cancer with localized infection, presence of lung cancer with associated (eg, postobstructive) infection, and presence of lung cancer with related inflammation (eg, nodal, parenchymal, pleural). A false-negative FDG-PET/CT scan can be caused by a small nodule, low cellular density (nonsolid nodule or ground-glass opacity [GGO]), or low tumor avidity for FDG (eg, adenocarcinoma in situ [AIS; previously known as bronchoalveolar carcinoma], carcinoid tumor). If a false-negative FDG-PET/CT is due to low tumor avidity and/or low cellularity is suspected, follow-up CT or biopsy are reasonable options."
+    },
+    {
+      "label": "j",
+      "content": "Prior to treatment, multidisciplinary evaluation that includes treating physicians and specialists in obtaining tissue diagnosis (thoracic surgery, interventional pulmonology, and interventional radiology) is required to determine the safest and most efficient approach for biopsy, or to provide consensus that a biopsy is too risky or difficult, that a clinical diagnosis of lung cancer is appropriate, and that treatment is warranted."
+    }
+  ],
+  "extraction_confidence": 0.98,
+  "image_title": "NCCN Guidelines Version 3.2025 Non-Small Cell Lung Cancer",
+  "tree_id": "DIAG-2"
+}

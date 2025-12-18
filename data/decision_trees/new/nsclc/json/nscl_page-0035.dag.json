@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "node_001",
-      "content": "Multiple lung cancers (suspected or confirmed) (N0\u20131)",
+      "content": "Multiple lung cancers (suspected or confirmed) (N0–1)",
       "parent_ids": [],
       "children_ids": [
         "node_002"
@@ -135,7 +135,7 @@
     },
     {
       "id": "node_011",
-      "content": "Palliative chemotherapy \u00b1 local palliative therapy\nor Observe",
+      "content": "Palliative chemotherapy ± local palliative therapy\nor Observe",
       "parent_ids": [
         "node_008"
       ],
@@ -224,5 +224,6 @@
   ],
   "extraction_confidence": 0.95,
   "image_title": "CLINICAL PRESENTATION - INITIAL TREATMENT - Multiple lung cancers",
-  "tree_id": "NSCL-12"
+  "tree_id": "NSCL-12",
+  "keywords": []
 }
