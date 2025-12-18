@@ -6,24 +6,9 @@
 let TREES = {};
 
 /**
- * Initialize TREES from DAG JSON files
+ * Initialize TREES from DAG JSON files (static loading, no API needed)
  */
 async function loadDAGsFromServer() {
-    try {
-        // Try to get list from API endpoint first
-        const response = await fetch('./api/list-dags');
-        if (response.ok) {
-            const files = await response.json();
-            for (const file of files) {
-                await loadDAGFile(file);
-            }
-            return;
-        }
-    } catch (error) {
-        console.log('API endpoint not available, using hardcoded DAG list');
-    }
-    
-    // Fallback: Try loading from hardcoded list
     await loadDAGsFromHardcodedList();
 }
 
