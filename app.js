@@ -8,7 +8,7 @@ const state = {
     historyIndex: -1,
     trialsData: [], // All trials from CSV
     filteredTrials: [], // Currently filtered trials
-    sortColumn: 'Trial_ID',
+    sortColumn: 'nct_id',
     sortDirection: 'asc'
 };
 
@@ -79,15 +79,14 @@ function renderTrialsTable() {
         <p class="text-sm text-gray-600">${state.filteredTrials.length} trials</p>
     `;
     
-    // Essential columns for display
+    // Essential columns for display (from trial_extractions.csv)
     const displayColumns = [
-        'Trial_ID',
-        'Title',
-        'Overall_Status',
-        'Study_Phase',
-        'Primary_Condition',
-        'Lead_Sponsor',
-        'Primary_Outcomes'
+        'nct_id',
+        'official_title',
+        'experimental_drugs',
+        'biomarkers',
+        'efficacy_status',
+        'primary_outcomes'
     ];
     
     // Create or update filter controls
@@ -100,26 +99,26 @@ function renderTrialsTable() {
     }
     
     // Build unique values from data for dropdowns
-    const statuses = ['', ...new Set(state.trialsData.map(t => t.Overall_Status).filter(Boolean))].sort();
-    const phases = ['', ...new Set(state.trialsData.map(t => t.Study_Phase).filter(Boolean))].sort();
+    const efficacyStatuses = ['', ...new Set(state.trialsData.map(t => t.efficacy_status).filter(Boolean))].sort();
+    const biomarkers = ['', ...new Set(state.trialsData.map(t => t.biomarkers).filter(Boolean))].sort();
     
     filterContainer.innerHTML = `
         <div class="grid grid-cols-4 gap-3">
             <div>
-                <label class="text-xs font-semibold text-gray-700">Status</label>
+                <label class="text-xs font-semibold text-gray-700">Efficacy Status</label>
                 <select id="filter-status" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    ${statuses.map(status => `<option value="${status}">${status || 'All'}</option>`).join('')}
+                    ${efficacyStatuses.map(status => `<option value="${status}">${status || 'All'}</option>`).join('')}
                 </select>
             </div>
             <div>
-                <label class="text-xs font-semibold text-gray-700">Phase</label>
-                <select id="filter-phase" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    ${phases.map(phase => `<option value="${phase}">${phase || 'All'}</option>`).join('')}
+                <label class="text-xs font-semibold text-gray-700">Biomarker</label>
+                <select id="filter-biomarker" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    ${biomarkers.map(b => `<option value="${b}">${b || 'All'}</option>`).join('')}
                 </select>
             </div>
             <div>
-                <label class="text-xs font-semibold text-gray-700">Has Outcomes</label>
-                <select id="filter-outcomes" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <label class="text-xs font-semibold text-gray-700">Has Drug</label>
+                <select id="filter-drug" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="">All</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -127,7 +126,7 @@ function renderTrialsTable() {
             </div>
             <div>
                 <label class="text-xs font-semibold text-gray-700">Search</label>
-                <input id="filter-search" type="text" placeholder="Trial ID, title..." class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input id="filter-search" type="text" placeholder="NCT ID, title, drug..." class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
         </div>
     `;
@@ -185,7 +184,14 @@ function renderTrialsTable() {
     
     state.filteredTrials.forEach((trial, index) => {
         const row = document.createElement('tr');
-        row.className = index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50';
+        // Traffic light coloring based on efficacy status
+        const statusColors = {
+            'POSITIVE': 'bg-green-100 hover:bg-green-200',
+            'NEGATIVE': 'bg-red-100 hover:bg-red-200',
+            'UNCERTAIN': 'bg-yellow-100 hover:bg-yellow-200',
+            'MIXED': 'bg-purple-100 hover:bg-purple-200'
+        };
+        row.className = statusColors[trial.efficacy_status] || (index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50');
         row.style.cursor = 'pointer';
         row.addEventListener('click', () => showTrialDetailModal(trial));
         
@@ -211,8 +217,8 @@ function renderTrialsTable() {
     if (!document.getElementById('filter-status').dataset.listenersAttached) {
         const filters = {
             status: document.getElementById('filter-status'),
-            phase: document.getElementById('filter-phase'),
-            outcomes: document.getElementById('filter-outcomes'),
+            biomarker: document.getElementById('filter-biomarker'),
+            drug: document.getElementById('filter-drug'),
             search: document.getElementById('filter-search')
         };
         
@@ -233,29 +239,30 @@ function renderTrialsTable() {
 function updateTrialsTableBody(filters) {
     // Apply filters
     state.filteredTrials = state.trialsData.filter(trial => {
-        // Status filter
-        if (filters.status.value && trial.Overall_Status !== filters.status.value) {
+        // Efficacy status filter
+        if (filters.status.value && trial.efficacy_status !== filters.status.value) {
             return false;
         }
         
-        // Phase filter
-        if (filters.phase.value && trial.Study_Phase !== filters.phase.value) {
+        // Biomarker filter
+        if (filters.biomarker.value && trial.biomarkers !== filters.biomarker.value) {
             return false;
         }
         
-        // Outcomes filter
-        if (filters.outcomes.value === 'yes' && !trial.Has_Outcome_Data) {
+        // Has drug filter
+        if (filters.drug.value === 'yes' && !trial.experimental_drugs) {
             return false;
         }
-        if (filters.outcomes.value === 'no' && trial.Has_Outcome_Data) {
+        if (filters.drug.value === 'no' && trial.experimental_drugs) {
             return false;
         }
         
         // Search filter
         if (filters.search.value) {
             const searchTerm = filters.search.value.toLowerCase();
-            const matches = (trial.Trial_ID?.toLowerCase().includes(searchTerm)) ||
-                   (trial.Title?.toLowerCase().includes(searchTerm));
+            const matches = (trial.nct_id?.toLowerCase().includes(searchTerm)) ||
+                   (trial.official_title?.toLowerCase().includes(searchTerm)) ||
+                   (trial.experimental_drugs?.toLowerCase().includes(searchTerm));
             if (!matches) return false;
         }
         
@@ -286,13 +293,12 @@ function updateTrialsTableBody(filters) {
  */
 function updateTableBodyOnly() {
     const displayColumns = [
-        'Trial_ID',
-        'Title',
-        'Overall_Status',
-        'Study_Phase',
-        'Primary_Condition',
-        'Lead_Sponsor',
-        'Primary_Outcomes'
+        'nct_id',
+        'official_title',
+        'experimental_drugs',
+        'biomarkers',
+        'efficacy_status',
+        'primary_outcomes'
     ];
     
     // Update count in header
@@ -318,7 +324,14 @@ function updateTableBodyOnly() {
     tbody.innerHTML = '';
     state.filteredTrials.forEach((trial, index) => {
         const row = document.createElement('tr');
-        row.className = index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50';
+        // Traffic light coloring based on efficacy status
+        const statusColors = {
+            'POSITIVE': 'bg-green-100 hover:bg-green-200',
+            'NEGATIVE': 'bg-red-100 hover:bg-red-200',
+            'UNCERTAIN': 'bg-yellow-100 hover:bg-yellow-200',
+            'MIXED': 'bg-purple-100 hover:bg-purple-200'
+        };
+        row.className = statusColors[trial.efficacy_status] || (index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50');
         row.style.cursor = 'pointer';
         row.addEventListener('click', () => showTrialDetailModal(trial));
         
@@ -384,110 +397,77 @@ function showTrialDetailModal(trial) {
     const content = document.getElementById('modal-content');
     const viewAllLink = document.getElementById('view-all-link');
     
-    title.textContent = `${trial.Trial_ID} - ${trial.Title}`;
+    title.textContent = `${trial.nct_id}`;
     
     // Create detailed content
     const details = document.createElement('div');
     details.className = 'space-y-4';
     
-    // Basic info
-    const basicSection = document.createElement('div');
-    basicSection.innerHTML = `
-        <h3 class="text-sm font-semibold text-gray-900 mb-2">Basic Information</h3>
-        <div class="grid grid-cols-2 gap-3 text-xs">
-            <div><span class="font-medium text-gray-700">Trial ID:</span> <span class="text-gray-900 font-mono">${trial.Trial_ID}</span></div>
-            <div><span class="font-medium text-gray-700">Status:</span> <span class="text-gray-900">${trial.Overall_Status || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Phase:</span> <span class="text-gray-900">${trial.Study_Phase || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Type:</span> <span class="text-gray-900">${trial.Study_Type || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Enrollment:</span> <span class="text-gray-900">${trial.Enrollment || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Masking:</span> <span class="text-gray-900">${trial.Masking || 'N/A'}</span></div>
-        </div>
+    // Title section
+    const titleSection = document.createElement('div');
+    titleSection.innerHTML = `
+        <h3 class="text-sm font-semibold text-gray-900 mb-2">Official Title</h3>
+        <p class="text-xs text-gray-900">${trial.official_title || 'N/A'}</p>
     `;
-    details.appendChild(basicSection);
+    details.appendChild(titleSection);
     
-    // Dates
-    if (trial.Start_Date || trial.Completion_Date) {
-        const datesSection = document.createElement('div');
-        datesSection.innerHTML = `
-            <h3 class="text-sm font-semibold text-gray-900 mb-2">Trial Timeline</h3>
-            <div class="grid grid-cols-2 gap-3 text-xs">
-                ${trial.Start_Date ? `<div><span class="font-medium text-gray-700">Start Date:</span> <span class="text-gray-900">${trial.Start_Date}</span></div>` : ''}
-                ${trial.Primary_Completion_Date ? `<div><span class="font-medium text-gray-700">Primary Completion:</span> <span class="text-gray-900">${trial.Primary_Completion_Date}</span></div>` : ''}
-                ${trial.Completion_Date ? `<div><span class="font-medium text-gray-700">Completion Date:</span> <span class="text-gray-900">${trial.Completion_Date}</span></div>` : ''}
+    // Efficacy status with color coding
+    const statusColors = {
+        'POSITIVE': 'bg-green-50 border-green-200 text-green-900',
+        'NEGATIVE': 'bg-red-50 border-red-200 text-red-900',
+        'UNCERTAIN': 'bg-yellow-50 border-yellow-200 text-yellow-900',
+        'MIXED': 'bg-purple-50 border-purple-200 text-purple-900'
+    };
+    const statusColor = statusColors[trial.efficacy_status] || 'bg-gray-50 border-gray-200 text-gray-900';
+    
+    const statusSection = document.createElement('div');
+    statusSection.className = `${statusColor} border p-3 rounded`;
+    statusSection.innerHTML = `
+        <h3 class="text-sm font-semibold mb-2">Efficacy Status: ${trial.efficacy_status || 'N/A'}</h3>
+    `;
+    details.appendChild(statusSection);
+    
+    // Biomarkers and Drugs
+    if (trial.biomarkers || trial.experimental_drugs) {
+        const biomarkerDrugSection = document.createElement('div');
+        biomarkerDrugSection.className = 'bg-purple-50 border border-purple-200 p-3 rounded';
+        biomarkerDrugSection.innerHTML = `
+            <h3 class="text-sm font-semibold text-purple-900 mb-2">Biomarkers & Drugs</h3>
+            <div class="space-y-2 text-xs">
+                ${trial.biomarkers ? `<div><span class="font-medium text-purple-900">Biomarkers:</span> <span class="text-gray-900">${trial.biomarkers}</span></div>` : ''}
+                ${trial.experimental_drugs ? `<div><span class="font-medium text-purple-900">Experimental Drugs:</span> <span class="text-gray-900">${trial.experimental_drugs}</span></div>` : ''}
             </div>
         `;
-        details.appendChild(datesSection);
+        details.appendChild(biomarkerDrugSection);
     }
     
-    // Condition and Sponsor
-    const conditionSection = document.createElement('div');
-    conditionSection.innerHTML = `
-        <h3 class="text-sm font-semibold text-gray-900 mb-2">Clinical Information</h3>
-        <div class="space-y-2 text-xs">
-            <div><span class="font-medium text-gray-700">Primary Condition:</span> <span class="text-gray-900">${trial.Primary_Condition || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">All Conditions:</span> <span class="text-gray-900">${trial.All_Conditions || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Lead Sponsor:</span> <span class="text-gray-900">${trial.Lead_Sponsor || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Sponsor Type:</span> <span class="text-gray-900">${trial.Lead_Sponsor_Type || 'N/A'}</span></div>
-        </div>
-    `;
-    details.appendChild(conditionSection);
-    
-    // Design details
-    const designSection = document.createElement('div');
-    designSection.innerHTML = `
-        <h3 class="text-sm font-semibold text-gray-900 mb-2">Study Design</h3>
-        <div class="grid grid-cols-2 gap-3 text-xs">
-            <div><span class="font-medium text-gray-700">Arms:</span> <span class="text-gray-900">${trial.Num_Arms || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Interventions:</span> <span class="text-gray-900">${trial.Num_Interventions || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Intervention Types:</span> <span class="text-gray-900">${trial.Intervention_Types || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Gender:</span> <span class="text-gray-900">${trial.Gender || 'N/A'}</span></div>
-            <div><span class="font-medium text-gray-700">Allocation:</span> <span class="text-gray-900">${trial.Allocation || 'N/A'}</span></div>
-        </div>
-    `;
-    details.appendChild(designSection);
-    
-    // Outcomes
-    if (trial.Primary_Outcomes || trial.Secondary_Outcomes) {
+    // Primary Outcomes
+    if (trial.primary_outcomes) {
         const outcomesSection = document.createElement('div');
         outcomesSection.className = 'bg-blue-50 border border-blue-200 p-3 rounded';
         outcomesSection.innerHTML = `
-            <h3 class="text-sm font-semibold text-blue-900 mb-2">Outcome Measures</h3>
-            <div class="space-y-2 text-xs">
-                ${trial.Primary_Outcomes ? `<div><span class="font-medium text-blue-900">Primary:</span> <span class="text-gray-900">${trial.Primary_Outcomes}</span></div>` : ''}
-                ${trial.Secondary_Outcomes ? `<div><span class="font-medium text-blue-900">Secondary:</span> <span class="text-gray-900">${trial.Secondary_Outcomes}</span></div>` : ''}
-            </div>
+            <h3 class="text-sm font-semibold text-blue-900 mb-2">Primary Outcomes</h3>
+            <p class="text-xs text-gray-900">${trial.primary_outcomes}</p>
         `;
         details.appendChild(outcomesSection);
     }
     
-    // Standard outcome types
-    const outcomesStandardSection = document.createElement('div');
-    outcomesStandardSection.innerHTML = `<h3 class="text-sm font-semibold text-gray-900 mb-2">Outcome Types</h3>`;
-    
-    const outcomeTypes = ['OS', 'PFS', 'ORR', 'DFS', 'CR', 'PR', 'ToX', 'QOL'];
-    const outcomeGrid = document.createElement('div');
-    outcomeGrid.className = 'grid grid-cols-2 gap-2 text-xs';
-    
-    outcomeTypes.forEach(type => {
-        const key = `Outcome_${type}`;
-        if (trial[key]) {
-            const item = document.createElement('div');
-            item.className = 'p-2 bg-gray-50 rounded border border-gray-200';
-            item.innerHTML = `<span class="font-medium text-gray-700">${type}:</span> ${trial[key]}`;
-            outcomeGrid.appendChild(item);
-        }
-    });
-    
-    if (outcomeGrid.children.length > 0) {
-        outcomesStandardSection.appendChild(outcomeGrid);
-        details.appendChild(outcomesStandardSection);
+    // Reasoning
+    if (trial.reasoning) {
+        const reasoningSection = document.createElement('div');
+        reasoningSection.className = 'bg-gray-50 border border-gray-200 p-3 rounded';
+        reasoningSection.innerHTML = `
+            <h3 class="text-sm font-semibold text-gray-900 mb-2">Analysis Reasoning</h3>
+            <p class="text-xs text-gray-700">${trial.reasoning}</p>
+        `;
+        details.appendChild(reasoningSection);
     }
     
     content.innerHTML = '';
     content.appendChild(details);
     
     // Link to ClinicalTrials.gov
-    viewAllLink.href = `https://clinicaltrials.gov/study/${trial.Trial_ID}`;
+    viewAllLink.href = `https://clinicaltrials.gov/study/${trial.nct_id}`;
     viewAllLink.textContent = `View on ClinicalTrials.gov →`;
     
     modal.classList.remove('hidden');

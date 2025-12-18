@@ -8,7 +8,7 @@ const path = require('path');
 const csv = require('csv-parse/sync');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 // Serve static files
 app.use(express.static('.'));
@@ -65,7 +65,7 @@ app.get('/api/trials', (req, res) => {
         return res.json(trialsCache);
     }
     
-    const csvPath = path.join(__dirname, 'scripts/clinical_trials_summary.csv');
+    const csvPath = path.join(__dirname, 'trial_extractions.csv');
     
     try {
         const fileContent = fs.readFileSync(csvPath, 'utf8');
@@ -74,16 +74,6 @@ app.get('/api/trials', (req, res) => {
             skip_empty_lines: true,
             relax_quotes: false,
             quote: '"'
-        });
-        
-        // Parse boolean fields
-        records = records.map(record => {
-            record.Has_Outcome_Data = record.Has_Outcome_Data === 'True' || record.Has_Outcome_Data === 'true';
-            record.Accepts_Healthy_Volunteers = record.Accepts_Healthy_Volunteers === 'True' || record.Accepts_Healthy_Volunteers === 'true';
-            record.Num_Arms = parseInt(record.Num_Arms) || 0;
-            record.Num_Interventions = parseInt(record.Num_Interventions) || 0;
-            record.Condition_Count = parseInt(record.Condition_Count) || 0;
-            return record;
         });
         
         // Cache the data

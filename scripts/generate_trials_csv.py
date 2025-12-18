@@ -18,6 +18,61 @@ SAFETY_KEYWORDS = {
     'discontinuation', 'toxicity', 'adverse reaction', 'immune-mediated'
 }
 
+# Common biomarkers and their keywords
+BIOMARKER_KEYWORDS = {
+    'HER2': ['her2', 'her-2'],
+    'EGFR': ['egfr'],
+    'ALK': ['alk', 'anaplastic lymphoma kinase'],
+    'KRAS': ['kras'],
+    'BRAF': ['braf'],
+    'PD-L1': ['pd-l1', 'pd-1'],
+    'MSI': ['msi', 'microsatellite instability'],
+    'TMB': ['tmb', 'tumor mutational burden'],
+    'ROS1': ['ros1'],
+    'MET': ['met exon'],
+    'NTRK': ['ntrk'],
+    'PTEN': ['pten'],
+    'TP53': ['tp53', 'p53'],
+    'PIK3CA': ['pik3ca'],
+    'STK11': ['stk11', 'lkb1'],
+}
+
+# Common drug names and their keywords
+DRUG_KEYWORDS = {
+    'Erlotinib': ['erlotinib', 'tarceva'],
+    'Gefitinib': ['gefitinib', 'iressa'],
+    'Afatinib': ['afatinib', 'gilotrif'],
+    'Osimertinib': ['osimertinib', 'tagrisso'],
+    'Pembrolizumab': ['pembrolizumab', 'keytruda'],
+    'Nivolumab': ['nivolumab', 'opdivo'],
+    'Atezolizumab': ['atezolizumab', 'tecentriq'],
+    'Crizotinib': ['crizotinib', 'xalkori'],
+    'Alectinib': ['alectinib', 'alecensa'],
+    'Ceritinib': ['ceritinib', 'zykadia'],
+    'Bevacizumab': ['bevacizumab', 'avastin'],
+    'Sorafenib': ['sorafenib', 'nexavar'],
+    'Sunitinib': ['sunitinib', 'sutent'],
+    'Pemetrexed': ['pemetrexed', 'alimta'],
+    'Docetaxel': ['docetaxel', 'taxotere'],
+    'Paclitaxel': ['paclitaxel', 'taxol'],
+    'Carboplatin': ['carboplatin'],
+    'Cisplatin': ['cisplatin'],
+    'Etoposide': ['etoposide'],
+    'Gemcitabine': ['gemcitabine'],
+    'Vinorelbine': ['vinorelbine'],
+    'Doxorubicin': ['doxorubicin', 'adriamycin'],
+    'Pertuzumab': ['pertuzumab', 'perjeta'],
+    'Trastuzumab': ['trastuzumab', 'herceptin'],
+    'Cetuximab': ['cetuximab', 'erbitux'],
+    'Ramucirumab': ['ramucirumab', 'cyramza'],
+    'Bortezomib': ['bortezomib', 'velcade'],
+    'Lenalidomide': ['lenalidomide', 'revlimid'],
+    'Thalidomide': ['thalidomide', 'thalomid'],
+    'Talazoparib': ['talazoparib'],
+    'Olaparib': ['olaparib', 'lynparza'],
+    'Rucaparib': ['rucaparib', 'rubraca'],
+}
+
 # Standard oncology outcome metrics
 STANDARD_OUTCOMES = {
     'OS': ['overall survival', ' os ', ' os(', ' os)', 'os '],
@@ -44,6 +99,92 @@ def normalize_text(text: str) -> str:
     if not text:
         return ""
     return text.lower().strip()
+
+
+def extract_keywords_from_text(text: str, keyword_dict: Dict[str, List[str]]) -> Set[str]:
+    """Extract keywords from text based on a keyword dictionary."""
+    if not text:
+        return set()
+    
+    normalized_text = normalize_text(text)
+    found_keywords = set()
+    
+    for standard_name, keywords in keyword_dict.items():
+        for keyword in keywords:
+            if keyword in normalized_text:
+                found_keywords.add(standard_name)
+                break  # Found this keyword, move to next standard name
+    
+    return found_keywords
+
+
+def extract_biomarkers(trial_data: Dict) -> str:
+    """Extract biomarkers mentioned in trial."""
+    text_sources = []
+    
+    # Collect text from various sources
+    if 'protocolSection' in trial_data:
+        protocol = trial_data['protocolSection']
+        
+        # From title and description
+        if 'identificationModule' in protocol:
+            id_module = protocol['identificationModule']
+            text_sources.append(id_module.get('briefTitle', ''))
+            text_sources.append(id_module.get('officialTitle', ''))
+        
+        # From conditions
+        if 'conditionsModule' in protocol:
+            conditions = protocol['conditionsModule'].get('conditions', [])
+            text_sources.extend(conditions)
+        
+        # From eligibility criteria
+        if 'eligibilityModule' in protocol:
+            text_sources.append(protocol['eligibilityModule'].get('eligibilityCriteria', ''))
+        
+        # From outcomes
+        if 'outcomesModule' in protocol:
+            outcomes_module = protocol['outcomesModule']
+            for outcome in outcomes_module.get('primaryOutcomes', []):
+                text_sources.append(outcome.get('measure', ''))
+            for outcome in outcomes_module.get('secondaryOutcomes', []):
+                text_sources.append(outcome.get('measure', ''))
+    
+    combined_text = ' '.join(text_sources)
+    biomarkers = extract_keywords_from_text(combined_text, BIOMARKER_KEYWORDS)
+    
+    return '; '.join(sorted(biomarkers)) if biomarkers else ""
+
+
+def extract_drugs(trial_data: Dict) -> str:
+    """Extract drugs mentioned in trial."""
+    text_sources = []
+    
+    # Collect text from various sources
+    if 'protocolSection' in trial_data:
+        protocol = trial_data['protocolSection']
+        
+        # From title and description
+        if 'identificationModule' in protocol:
+            id_module = protocol['identificationModule']
+            text_sources.append(id_module.get('briefTitle', ''))
+            text_sources.append(id_module.get('officialTitle', ''))
+        
+        # From interventions
+        if 'armsInterventionsModule' in protocol:
+            arms_module = protocol['armsInterventionsModule']
+            for intervention in arms_module.get('interventions', []):
+                text_sources.append(intervention.get('name', ''))
+                text_sources.append(intervention.get('description', ''))
+        
+        # From conditions (sometimes mentions drugs)
+        if 'conditionsModule' in protocol:
+            conditions = protocol['conditionsModule'].get('conditions', [])
+            text_sources.extend(conditions)
+    
+    combined_text = ' '.join(text_sources)
+    drugs = extract_keywords_from_text(combined_text, DRUG_KEYWORDS)
+    
+    return '; '.join(sorted(drugs)) if drugs else ""
 
 
 def is_safety_measure(text: str) -> bool:
@@ -253,6 +394,10 @@ def extract_trial_data(trial_data: Dict, trial_id: str) -> Dict:
         measure_text = extract_measures_for_outcome_type(outcome_key, primary_outcomes, secondary_outcomes)
         result[f'Outcome_{outcome_key}'] = measure_text
     
+    # Extract biomarkers and drugs
+    result['Biomarkers'] = extract_biomarkers(trial_data)
+    result['Drugs'] = extract_drugs(trial_data)
+    
     # Results section info
     has_results = trial_data.get('hasResults', False)
     result['Has_Results'] = 'Yes' if has_results else 'No'
@@ -318,6 +463,8 @@ def main():
         'Num_Arms',
         'Num_Interventions',
         'Intervention_Types',
+        'Biomarkers',
+        'Drugs',
         'Gender',
         'Accepts_Healthy_Volunteers',
         'Primary_Outcome_Count',
