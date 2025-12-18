@@ -20,12 +20,10 @@ const HEADER_LABELS = ['Criteria', 'Management', 'Findings', 'Initial Presentati
  * Initialize the application
  */
 async function initApp() {
-    // Wait for DAGs to be loaded
-    if (Object.keys(TREES).length === 0) {
-        console.log('Waiting for DAGs to load...');
-        // Give dag_loader time to fetch and process
-        await new Promise(resolve => setTimeout(resolve, 500));
-    }
+    // Wait for DAGs to be fully loaded
+    console.log('Waiting for DAGs to load...');
+    await waitForDAGs();
+    console.log(`DAGs loaded, populating dropdown with ${Object.keys(TREES).length} trees`);
     
     // Load trials data
     await loadTrialsData();

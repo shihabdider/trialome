@@ -287,13 +287,21 @@ async function initializeDAGs() {
     }
 }
 
+// Promise that resolves when all DAGs are loaded
+let dagsLoadedPromise = null;
+
 // Auto-initialize if running in browser
 if (typeof window !== 'undefined') {
     // Load DAGs as soon as this script loads
     console.log('dag_loader.js loaded, starting DAG loading...');
-    loadDAGsFromServer().then(() => {
+    dagsLoadedPromise = loadDAGsFromServer().then(() => {
         console.log(`Successfully loaded ${Object.keys(TREES).length} DAGs`);
     }).catch(error => {
         console.error('Error in DAG loading:', error);
     });
+}
+
+// Function to wait for DAGs to be fully loaded
+function waitForDAGs() {
+    return dagsLoadedPromise || Promise.resolve();
 }
