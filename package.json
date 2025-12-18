@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/shihabdider/trialome#readme",
   "dependencies": {
+    "csv-parse": "^6.1.0",
     "express": "^5.2.1"
   }
 }

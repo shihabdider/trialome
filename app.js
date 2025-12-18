@@ -5,7 +5,11 @@ const state = {
     selectedNodeId: null,
     trialCache: {},
     navigationHistory: [],
-    historyIndex: -1
+    historyIndex: -1,
+    trialsData: [], // All trials from CSV
+    filteredTrials: [], // Currently filtered trials
+    sortColumn: 'Trial_ID',
+    sortDirection: 'asc'
 };
 
 // Category node types that become headers
@@ -23,8 +27,360 @@ async function initApp() {
         await new Promise(resolve => setTimeout(resolve, 500));
     }
     
+    // Load trials data
+    await loadTrialsData();
+    
     populateDiseaseSelector();
     setupEventListeners();
+}
+
+/**
+ * Load trials data from CSV endpoint
+ */
+async function loadTrialsData() {
+    try {
+        const response = await fetch('/api/trials');
+        state.trialsData = await response.json();
+        state.filteredTrials = [...state.trialsData];
+    } catch (error) {
+        console.error('Error loading trials data:', error);
+        state.trialsData = [];
+        state.filteredTrials = [];
+    }
+}
+
+/**
+ * Render the trials data table with sorting and filtering
+ */
+function renderTrialsTable() {
+    const canvas = document.getElementById('tree-canvas');
+    canvas.innerHTML = '';
+    
+    const container = document.createElement('div');
+    container.className = 'p-6 bg-white';
+    
+    // Header
+    const header = document.createElement('div');
+    header.className = 'mb-4';
+    header.innerHTML = `
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Clinical Trials Database</h2>
+        <p class="text-sm text-gray-600">${state.filteredTrials.length} trials</p>
+    `;
+    container.appendChild(header);
+    
+    // Essential columns for display
+    const displayColumns = [
+        'Trial_ID',
+        'Title',
+        'Overall_Status',
+        'Study_Phase',
+        'Primary_Condition',
+        'Lead_Sponsor',
+        'Primary_Outcomes'
+    ];
+    
+    // Create filter controls
+    const filterContainer = document.createElement('div');
+    filterContainer.className = 'mb-4 p-3 bg-gray-50 rounded border border-gray-200';
+    filterContainer.innerHTML = `
+        <div class="grid grid-cols-4 gap-3">
+            <div>
+                <label class="text-xs font-semibold text-gray-700">Status</label>
+                <select id="filter-status" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">All</option>
+                    <option value="COMPLETED">Completed</option>
+                    <option value="RECRUITING">Recruiting</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-xs font-semibold text-gray-700">Phase</label>
+                <select id="filter-phase" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">All</option>
+                    <option value="PHASE1">Phase 1</option>
+                    <option value="PHASE2">Phase 2</option>
+                    <option value="PHASE3">Phase 3</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-xs font-semibold text-gray-700">Has Outcomes</label>
+                <select id="filter-outcomes" class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="">All</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div>
+                <label class="text-xs font-semibold text-gray-700">Search</label>
+                <input id="filter-search" type="text" placeholder="Trial ID, title..." class="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+    `;
+    container.appendChild(filterContainer);
+    
+    // Table wrapper
+    const tableWrapper = document.createElement('div');
+    tableWrapper.className = 'overflow-x-auto border border-gray-200 rounded-lg';
+    
+    // Table
+    const table = document.createElement('table');
+    table.className = 'w-full text-sm';
+    
+    // Table header
+    const thead = document.createElement('thead');
+    thead.className = 'bg-gray-100 border-b border-gray-200 sticky top-0';
+    const headerRow = document.createElement('tr');
+    
+    displayColumns.forEach(col => {
+        const th = document.createElement('th');
+        th.className = 'px-4 py-2 text-left text-xs font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 transition whitespace-nowrap';
+        th.dataset.column = col;
+        
+        const sortIndicator = state.sortColumn === col ? (state.sortDirection === 'asc' ? ' ▲' : ' ▼') : '';
+        th.innerHTML = `${col.replace(/_/g, ' ')}${sortIndicator}`;
+        
+        th.addEventListener('click', () => sortTrialsTable(col));
+        headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    
+    // Table body
+    const tbody = document.createElement('tbody');
+    state.filteredTrials.forEach((trial, index) => {
+        const row = document.createElement('tr');
+        row.className = index % 2 === 0 ? 'bg-white hover:bg-blue-50' : 'bg-gray-50 hover:bg-blue-50';
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', () => showTrialDetailModal(trial));
+        
+        displayColumns.forEach(col => {
+            const td = document.createElement('td');
+            td.className = 'px-4 py-2 text-xs text-gray-900 max-w-xs';
+            
+            let value = trial[col] || '';
+            
+            // Truncate long text
+            if (typeof value === 'string' && value.length > 60) {
+                value = value.substring(0, 60) + '...';
+            }
+            
+            td.textContent = value;
+            row.appendChild(td);
+        });
+        
+        tbody.appendChild(row);
+    });
+    
+    table.appendChild(tbody);
+    tableWrapper.appendChild(table);
+    container.appendChild(tableWrapper);
+    
+    // Add table to canvas
+    canvas.innerHTML = '';
+    canvas.appendChild(container);
+    
+    // Setup filter listeners
+    const filters = {
+        status: document.getElementById('filter-status'),
+        phase: document.getElementById('filter-phase'),
+        outcomes: document.getElementById('filter-outcomes'),
+        search: document.getElementById('filter-search')
+    };
+    
+    Object.values(filters).forEach(filter => {
+        filter.addEventListener('change', () => applyTrialsFilters(filters));
+        filter.addEventListener('input', () => applyTrialsFilters(filters));
+    });
+}
+
+/**
+ * Apply filters to trials table
+ */
+function applyTrialsFilters(filters) {
+    state.filteredTrials = state.trialsData.filter(trial => {
+        // Status filter
+        if (filters.status.value && trial.Overall_Status !== filters.status.value) {
+            return false;
+        }
+        
+        // Phase filter
+        if (filters.phase.value && !trial.Study_Phase?.includes(filters.phase.value)) {
+            return false;
+        }
+        
+        // Outcomes filter
+        if (filters.outcomes.value === 'yes' && !trial.Has_Outcome_Data) {
+            return false;
+        }
+        if (filters.outcomes.value === 'no' && trial.Has_Outcome_Data) {
+            return false;
+        }
+        
+        // Search filter
+        if (filters.search.value) {
+            const searchTerm = filters.search.value.toLowerCase();
+            return trial.Trial_ID?.toLowerCase().includes(searchTerm) ||
+                   trial.Title?.toLowerCase().includes(searchTerm);
+        }
+        
+        return true;
+    });
+    
+    // Re-sort and render
+    sortAndRenderTrials();
+}
+
+/**
+ * Sort trials table
+ */
+function sortTrialsTable(column) {
+    if (state.sortColumn === column) {
+        state.sortDirection = state.sortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+        state.sortColumn = column;
+        state.sortDirection = 'asc';
+    }
+    
+    sortAndRenderTrials();
+}
+
+/**
+ * Sort and re-render the trials table
+ */
+function sortAndRenderTrials() {
+    state.filteredTrials.sort((a, b) => {
+        let aVal = a[state.sortColumn] || '';
+        let bVal = b[state.sortColumn] || '';
+        
+        // Handle numeric values
+        if (!isNaN(aVal) && !isNaN(bVal) && aVal !== '' && bVal !== '') {
+            aVal = parseFloat(aVal);
+            bVal = parseFloat(bVal);
+        }
+        
+        if (aVal < bVal) return state.sortDirection === 'asc' ? -1 : 1;
+        if (aVal > bVal) return state.sortDirection === 'asc' ? 1 : -1;
+        return 0;
+    });
+    
+    renderTrialsTable();
+}
+
+/**
+ * Show detailed trial information in modal
+ */
+function showTrialDetailModal(trial) {
+    const modal = document.getElementById('trial-modal');
+    const title = document.getElementById('modal-title');
+    const content = document.getElementById('modal-content');
+    const viewAllLink = document.getElementById('view-all-link');
+    
+    title.textContent = `${trial.Trial_ID} - ${trial.Title}`;
+    
+    // Create detailed content
+    const details = document.createElement('div');
+    details.className = 'space-y-4';
+    
+    // Basic info
+    const basicSection = document.createElement('div');
+    basicSection.innerHTML = `
+        <h3 class="text-sm font-semibold text-gray-900 mb-2">Basic Information</h3>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+            <div><span class="font-medium text-gray-700">Trial ID:</span> <span class="text-gray-900 font-mono">${trial.Trial_ID}</span></div>
+            <div><span class="font-medium text-gray-700">Status:</span> <span class="text-gray-900">${trial.Overall_Status || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Phase:</span> <span class="text-gray-900">${trial.Study_Phase || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Type:</span> <span class="text-gray-900">${trial.Study_Type || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Enrollment:</span> <span class="text-gray-900">${trial.Enrollment || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Masking:</span> <span class="text-gray-900">${trial.Masking || 'N/A'}</span></div>
+        </div>
+    `;
+    details.appendChild(basicSection);
+    
+    // Dates
+    if (trial.Start_Date || trial.Completion_Date) {
+        const datesSection = document.createElement('div');
+        datesSection.innerHTML = `
+            <h3 class="text-sm font-semibold text-gray-900 mb-2">Trial Timeline</h3>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+                ${trial.Start_Date ? `<div><span class="font-medium text-gray-700">Start Date:</span> <span class="text-gray-900">${trial.Start_Date}</span></div>` : ''}
+                ${trial.Primary_Completion_Date ? `<div><span class="font-medium text-gray-700">Primary Completion:</span> <span class="text-gray-900">${trial.Primary_Completion_Date}</span></div>` : ''}
+                ${trial.Completion_Date ? `<div><span class="font-medium text-gray-700">Completion Date:</span> <span class="text-gray-900">${trial.Completion_Date}</span></div>` : ''}
+            </div>
+        `;
+        details.appendChild(datesSection);
+    }
+    
+    // Condition and Sponsor
+    const conditionSection = document.createElement('div');
+    conditionSection.innerHTML = `
+        <h3 class="text-sm font-semibold text-gray-900 mb-2">Clinical Information</h3>
+        <div class="space-y-2 text-xs">
+            <div><span class="font-medium text-gray-700">Primary Condition:</span> <span class="text-gray-900">${trial.Primary_Condition || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">All Conditions:</span> <span class="text-gray-900">${trial.All_Conditions || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Lead Sponsor:</span> <span class="text-gray-900">${trial.Lead_Sponsor || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Sponsor Type:</span> <span class="text-gray-900">${trial.Lead_Sponsor_Type || 'N/A'}</span></div>
+        </div>
+    `;
+    details.appendChild(conditionSection);
+    
+    // Design details
+    const designSection = document.createElement('div');
+    designSection.innerHTML = `
+        <h3 class="text-sm font-semibold text-gray-900 mb-2">Study Design</h3>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+            <div><span class="font-medium text-gray-700">Arms:</span> <span class="text-gray-900">${trial.Num_Arms || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Interventions:</span> <span class="text-gray-900">${trial.Num_Interventions || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Intervention Types:</span> <span class="text-gray-900">${trial.Intervention_Types || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Gender:</span> <span class="text-gray-900">${trial.Gender || 'N/A'}</span></div>
+            <div><span class="font-medium text-gray-700">Allocation:</span> <span class="text-gray-900">${trial.Allocation || 'N/A'}</span></div>
+        </div>
+    `;
+    details.appendChild(designSection);
+    
+    // Outcomes
+    if (trial.Primary_Outcomes || trial.Secondary_Outcomes) {
+        const outcomesSection = document.createElement('div');
+        outcomesSection.className = 'bg-blue-50 border border-blue-200 p-3 rounded';
+        outcomesSection.innerHTML = `
+            <h3 class="text-sm font-semibold text-blue-900 mb-2">Outcome Measures</h3>
+            <div class="space-y-2 text-xs">
+                ${trial.Primary_Outcomes ? `<div><span class="font-medium text-blue-900">Primary:</span> <span class="text-gray-900">${trial.Primary_Outcomes}</span></div>` : ''}
+                ${trial.Secondary_Outcomes ? `<div><span class="font-medium text-blue-900">Secondary:</span> <span class="text-gray-900">${trial.Secondary_Outcomes}</span></div>` : ''}
+            </div>
+        `;
+        details.appendChild(outcomesSection);
+    }
+    
+    // Standard outcome types
+    const outcomesStandardSection = document.createElement('div');
+    outcomesStandardSection.innerHTML = `<h3 class="text-sm font-semibold text-gray-900 mb-2">Outcome Types</h3>`;
+    
+    const outcomeTypes = ['OS', 'PFS', 'ORR', 'DFS', 'CR', 'PR', 'ToX', 'QOL'];
+    const outcomeGrid = document.createElement('div');
+    outcomeGrid.className = 'grid grid-cols-2 gap-2 text-xs';
+    
+    outcomeTypes.forEach(type => {
+        const key = `Outcome_${type}`;
+        if (trial[key]) {
+            const item = document.createElement('div');
+            item.className = 'p-2 bg-gray-50 rounded border border-gray-200';
+            item.innerHTML = `<span class="font-medium text-gray-700">${type}:</span> ${trial[key]}`;
+            outcomeGrid.appendChild(item);
+        }
+    });
+    
+    if (outcomeGrid.children.length > 0) {
+        outcomesStandardSection.appendChild(outcomeGrid);
+        details.appendChild(outcomesStandardSection);
+    }
+    
+    content.innerHTML = '';
+    content.appendChild(details);
+    
+    // Link to ClinicalTrials.gov
+    viewAllLink.href = `https://clinicaltrials.gov/study/${trial.Trial_ID}`;
+    viewAllLink.textContent = `View on ClinicalTrials.gov →`;
+    
+    modal.classList.remove('hidden');
 }
 
 /**
@@ -52,7 +408,12 @@ function setupEventListeners() {
         state.currentDisease = e.target.value;
         if (state.currentDisease) {
             addToNavigationHistory(state.currentDisease);
-            renderTree(TREES[state.currentDisease].root);
+            // If in research view, show table; otherwise render tree
+            if (state.currentView === 'research') {
+                renderTrialsTable();
+            } else {
+                renderTree(TREES[state.currentDisease].root);
+            }
         }
     });
     
@@ -92,13 +453,16 @@ function setView(view) {
         }
     });
     
-    // Re-render if tree loaded
-    if (state.currentDisease) {
+    // Switch content based on view
+    const canvas = document.getElementById('tree-canvas');
+    
+    if (view === 'research') {
+        renderTrialsTable();
+    } else if (state.currentDisease) {
         renderTree(TREES[state.currentDisease].root);
-        
-        if (view === 'research') {
-            fetchAllTrialCounts(TREES[state.currentDisease].root);
-        }
+        fetchAllTrialCounts(TREES[state.currentDisease].root);
+    } else {
+        canvas.innerHTML = '<div class="text-center text-gray-500 py-8">Select a disease to begin</div>';
     }
 }
 
